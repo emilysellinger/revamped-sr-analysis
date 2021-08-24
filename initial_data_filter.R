@@ -46,16 +46,54 @@ for(x in 2:ncol(takers_rec)){
 }
 dev.off()
 
-# upon visual inspection, I've identified some recruitment time series that appear a bit suspect. I will remove those from
-# our main analysis for the time being. A list of the stocks I found strange are listed in a text file, I will also 
-# include code to plot those specific recruitment time series, so they can be reviewed more easily later
+# upon visual inspection of recruitment time series, I've identified some recruitment time series that appear a bit suspect. 
+# I'm going to look at each of the weird time series along with the ssb-recruitment curve
 
+sus_stocks <- c("BGROCKPCOAST", "BKCDLFENI", "BLACKOREOPR", "BLACKOREOWECR", "BLACKROCKORECOAST", "BNSNZ", "CHROCKCPCOAST",
+                "CHROCKNPCOAST", "CHROCKSPCOAST", "COD3M", "CRLOBSTERSA12", "CRLOBSTERSA34", "CRLOBSTERSA56",
+                "CRLOBSTERSA7", "CRLOBSTERSA8", "GRSPROCKNCAL", "GRSPROCKSCAL", "OROUGHYNZMEC", "OROUGHYSE",
+                "PILCHTSST", "PORSHARATL", "SAABALONESA", "SDOGBLKGSA29", "SMOOTHOREOBP", "SMOOTHOREOEPR", "SMOOTHOREOSLD","SMOOTHOREOWECR",
+                "SPSDOGPCOAST", "YNOSESKACSCH", "YNOSESKASCH")
+
+pdf("suspect_stock_SR.pdf")
+for(x in sus_stocks){
+  # set margins
+  par(mfrow=c(2,1),mar=c(.1,.1,.1,.1),oma=c(4,7,4,1))
+  
+  # plot stock-recruitment curve w/ observations
+  plot(takers_rec[,x]~takers_ssb[,x],ylim=c(0,max(takers_rec[,x],na.rm=T)),xlim=c(0,max(takers_ssb[,x],na.rm=T)),
+       las=1,xaxt='n')
+  
+  # axis argument
+  axis(side=3)
+  
+  # plot recruitment time series
+  plot(takers_rec[,x]~takers_rec[,1],type='l',
+       ylim=c(0,max(takers_rec[,x],na.rm=T)),las=1)
+  
+  # axis labels
+  mtext(outer=T,side=2,"Recruitment",line=4.2)
+  mtext(outer = T, side = 3, x, line = 2.5)
+  mtext(outer=T,side=3,"Spawning biomass",line=1.5)
+  mtext(outer=T,side=1,"Year",line=2.5)
+}
+dev.off()
+
+# After looking at these stock -recruitment curves, it looks like most of the weird time series are straight off the
+# S-R curve
+# the COD3M, PILCHTSST, SDOGBLKGSA29 stocks don't seem to be off the recruitment curve, will have to decide
+# what to do with them
+
+
+# Remove problematic stocks --------------------------------------------------------------------------------
 takers_rec <- takers_rec %>%
-  select(!c(BGROCKPCOAST, BKCDLFENI, BLACKOREOPR, BLACKOREOWECR, BLACKROCKORECOAST, BNSNZ, CHROCKCPCOAST,
-            CHROCKNPCOAST, CHROCKSPCOAST, COD3M, CRLOBSTERSA12, CRLOBSTERSA34, CRLOBSTERSA56,
+  select(!c(AMPL3Ps, BGROCKPCOAST, BKCDLFENI, BLACKOREOPR, BLACKOREOWECR, BLACKROCKORECOAST, BNSNZ, CHROCKCPCOAST,
+            CHROCKNPCOAST, CHROCKSPCOAST, CRLOBSTERSA12, CRLOBSTERSA34, CRLOBSTERSA56,
             CRLOBSTERSA7, CRLOBSTERSA8, GRSPROCKNCAL, GRSPROCKSCAL, OROUGHYNZMEC, OROUGHYSE, PANDALI.II,
-            PILCHTSST, PORSHARATL, SAABALONESA, SDOGBLKGSA29, SMOOTHOREOBP, SMOOTHOREOEPR, SMOOTHOREOSLD,SMOOTHOREOWECR,
+            PORSHARATL, SAABALONESA, SMOOTHOREOBP, SMOOTHOREOEPR, SMOOTHOREOSLD,SMOOTHOREOWECR,
             SPSDOGPCOAST, YNOSESKACSCH, YNOSESKASCH))
 
 takers_ssb <- takers_ssb %>%
   select(one_of(colnames(takers_rec)))
+
+

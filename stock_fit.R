@@ -1,7 +1,4 @@
 # Identify deterministic S-R relationships and remove those stocks from analysis
-library(nlmrt)
-library(FSA)
-
 
 # Define S-R models -------------------------------------------------------------------------------------
 bevholt <- logR~log((a*sb)/(1 + b*sb))
@@ -123,11 +120,38 @@ for(x in stock_names){
 }
 dev.off()
 
+# Fine-tune series start/end times ---------------------------------------------------------------------
+# I was able to eliminate some of the model run in times in my for loop above, but there are still some series that
+# could use extra years trimmed off. I will visually inspect the pdf plots I made and document the changes below
+
+# need to write code I changed max year for stock "SDOGATLC" to 2013 b/c data from 2014 was missing
+row <- which(use_stocks$stock_name == "SDOGATLC")
+use_stocks[row, "max_year"] <- 2013
+
 # Split stocks ----------------------------------------------------------------------------------------
-# In Szuwalski et al. 2014, the stocks suitable for analysis were split based on minimum AIC value
+# In Szuwalski et al. 2015, the stocks suitable for analysis were split based on relative likelihood value then
 # different procedures were then applied to each. The correlation analysis will be in a different script.
 
+use_stocks <- use_stocks %>%
+  add_column(min_model = "test") %>%
+  add_column(rel_likelihood = 1)
+
+# determine min AIC model and use it to calculate relative likelihood
+for(x in 1:nrow(use_stocks)){
+  if(use_stocks[x,"ricker_aicc"] < use_stocks[x, "bevholt_aicc"]){
+    use_stocks[x, "min_model"] = "ricker"
+    use_stocks[x,"rel_likelihood"] = 1/(1 + exp((pull(use_stocks[x,"ricker_aicc"]) - pull(use_stocks[x, "bevholt_aicc"]))/2))
+  }else{
+    use_stocks[x, "min_model"] = "bevholt"
+    use_stocks[x,"rel_likelihood"] = 1/(1 + exp((pull(use_stocks[x,"bevholt_aicc"]) - pull(use_stocks[x, "ricker_aicc"]))/2))
+  }
+}
+
+# ricker stocks are those with a relative likelihood > 0.75
 ricker_stocks <- use_stocks %>%
-  filter(ricker_aicc < bevholt_aicc)
+  filter(min_model == "ricker") %>%
+  filter(rel_likelihood > 0.75)
 bevholt_stocks <- use_stocks %>%
-  filter(bevholt_aicc < ricker_aicc)
+  filter(min_model == "bevholt" | rel_likelihood < 0.75)
+
+

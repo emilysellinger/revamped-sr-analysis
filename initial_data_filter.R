@@ -4,6 +4,9 @@ library(here)
 library(changepoint)
 library(bcp)
 library(data.table)
+library(nlmrt)
+library(FSA)
+
 # Load data ------------------------------------------------------------------
 rec_data <- read.csv(here("data", "R.csv")) # recruitment data
 
@@ -49,7 +52,7 @@ dev.off()
 # upon visual inspection of recruitment time series, I've identified some recruitment time series that appear a bit suspect. 
 # I'm going to look at each of the weird time series along with the ssb-recruitment curve
 
-sus_stocks <- c("BGROCKPCOAST", "BKCDLFENI", "BLACKOREOPR", "BLACKOREOWECR", "BLACKROCKORECOAST", "BNSNZ", "CHROCKCPCOAST",
+sus_stocks <- c("AMPL5YZ", "BGROCKPCOAST", "BKCDLFENI", "BLACKOREOPR", "BLACKOREOWECR", "BLACKROCKORECOAST", "BNSNZ", "CHROCKCPCOAST",
                 "CHROCKNPCOAST", "CHROCKSPCOAST", "COD3M", "CRLOBSTERSA12", "CRLOBSTERSA34", "CRLOBSTERSA56",
                 "CRLOBSTERSA7", "CRLOBSTERSA8", "GRSPROCKNCAL", "GRSPROCKSCAL", "OROUGHYNZMEC", "OROUGHYSE",
                 "PILCHTSST", "PORSHARATL", "SAABALONESA", "SDOGBLKGSA29", "SMOOTHOREOBP", "SMOOTHOREOEPR", "SMOOTHOREOSLD","SMOOTHOREOWECR",
@@ -87,7 +90,7 @@ dev.off()
 
 # Remove problematic stocks --------------------------------------------------------------------------------
 takers_rec <- takers_rec %>%
-  select(!c(AMPL3Ps, BGROCKPCOAST, BKCDLFENI, BLACKOREOPR, BLACKOREOWECR, BLACKROCKORECOAST, BNSNZ, CHROCKCPCOAST,
+  select(!c(AMPL3Ps, AMPL5YZ, BGROCKPCOAST, BKCDLFENI, BLACKOREOPR, BLACKOREOWECR, BLACKROCKORECOAST, BNSNZ, CHROCKCPCOAST,
             CHROCKNPCOAST, CHROCKSPCOAST, CRLOBSTERSA12, CRLOBSTERSA34, CRLOBSTERSA56,
             CRLOBSTERSA7, CRLOBSTERSA8, GRSPROCKNCAL, GRSPROCKSCAL, OROUGHYNZMEC, OROUGHYSE, PANDALI.II,
             PORSHARATL, SAABALONESA, SMOOTHOREOBP, SMOOTHOREOEPR, SMOOTHOREOSLD,SMOOTHOREOWECR,
@@ -96,4 +99,4 @@ takers_rec <- takers_rec %>%
 takers_ssb <- takers_ssb %>%
   select(one_of(colnames(takers_rec)))
 
-
+# note: AMPL5YZ has a gap in recruitment data, AMPL3Ps and PANDALI.II both don't have spawning biomass data

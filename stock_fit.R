@@ -9,12 +9,6 @@ ricker <- logR~log(a*sb*exp(-b*sb))
 use_stocks <- tibble()
 use_stocks <- use_stocks %>%
   add_column(stock_name = "test",
-             ricker_a = 1,
-             ricker_b = 1,
-             bevholt_a = 1,
-             bevholt_b = 1,
-             ricker_aicc = 1,
-             bevholt_aicc = 1,
              min_year = 1,
              max_year = 1)
 
@@ -44,6 +38,248 @@ for(x in 2:ncol(takers_rec)){
     
     # find starting values for nonlinear regression 
     ricker_starts <- srStarts(recruits~sb, data = stock, type = "Ricker", param = 1)
+    
+    if(ricker_starts[2] < 0){ricker_starts[2] <- 0.000001} # make sure ricker b param is positive
+    
+    # fit ricker model to stock
+    ricker_fit <- nlxb(ricker, data = stock, start = ricker_starts)
+    
+    # calculate RMSE using ricker model (can change to an average of BH and Ricker if needed)
+    RMSE <- sqrt(mean((ricker_fit$resid^2)))
+    
+    # If RMSE is less than 0.3, the S-R relationship is a deterministic estimate (RMSE cutoff can be adjusted)
+    if(RMSE > 0.3){
+      use_stocks <- use_stocks %>%
+        add_row(stock_name = colnames(takers_rec[x]), min_year = min(stock$year), max_year = max(stock$year))
+    }
+  }
+}
+
+# Plot filtered recruit data -------------------------------------------------------------------
+# Goal is to plot filtered recruit data to further eliminate model run in times
+stock_names <- c()
+for(i in 1:nrow(use_stocks)){
+  stock_names <- c(stock_names, use_stocks[i,1])
+}
+
+pdf("filtered_recruit_ts.pdf")
+for(x in stock_names){
+  row <- which(use_stocks$stock_name == x)
+  
+  stock <- tibble(year = takers_rec[,1],
+                  recruits = takers_rec[, x],
+                  sb = takers_ssb[, x])
+  
+  print(ggplot(data = stock, aes(x = year, y = recruits)) +
+          geom_line(size = 1) +
+          xlim(as.numeric(use_stocks[row, "min_year"]), as.numeric(use_stocks[row, "max_year"])) +
+          labs(title = x))
+  
+}
+dev.off()
+
+# Manually trim recruit ts ----------------------------------------------------------------------------
+# After visual inspection, I've adjusted the beginning and end time of recruitment time series to 
+# account for model burn in times and averages at the end of time series
+
+row <- which(use_stocks$stock_name == "ARFLOUNDBSAI")
+use_stocks[row, "max_year"] <- 2016
+
+row <- which(use_stocks$stock_name == "ARFLOUNDGA")
+use_stocks[row, "min_year"] <- 1971
+
+row <- which(use_stocks$stock_name == "ARFLOUNDPCOAST")
+use_stocks[row, "min_year"] <- 1971
+
+row <- which(use_stocks$stock_name == "ATKABSAI")
+use_stocks[row, "min_year"] <- 1981
+
+row <- which(use_stocks$stock_name == "BLACKROCKCAL")
+use_stocks[row, "min_year"] <- 1971
+
+row <- which(use_stocks$stock_name == "BLACKROCKWASH")
+use_stocks[row, "min_year"] <- 1961
+
+row <- which(use_stocks$stock_name == "BOCACCSPCOAST")
+use_stocks[row, "min_year"] <- 1961
+
+row <- which(use_stocks$stock_name == "ATKABSAI")
+use_stocks[row, "min_year"] <- 1981
+
+row <- which(use_stocks$stock_name == "BWHITNEA")
+use_stocks[row, "min_year"] <- 1985
+
+row <- which(use_stocks$stock_name == "ATKABSAI")
+use_stocks[row, "min_year"] <- 1981
+
+row <- which(use_stocks$stock_name == "CABEZSCAL")
+use_stocks[row, "max_year"] <- 2006
+
+row <- which(use_stocks$stock_name == "CAPENOR")
+use_stocks[row, "min_year"] <- 1983
+
+row <- which(use_stocks$stock_name == "CODNEAR")
+use_stocks[row, "min_year"] <- 1951
+
+row <- which(use_stocks$stock_name == "CROCKPCOAST")
+use_stocks[row, "min_year"] <- 1960
+
+row <- which(use_stocks$stock_name == "DKROCKPCOAST")
+use_stocks[row, "min_year"] <- 1970
+
+row <- which(use_stocks$stock_name == "DSOLEGA")
+use_stocks[row, "min_year"] <- 1982
+
+row <- which(use_stocks$stock_name == "FLSOLEBSAI")
+use_stocks[row, "min_year"] <- 1970
+
+row <- which(use_stocks$stock_name == "GAGSATLC")
+use_stocks[row, "min_year"] <- 1970
+
+row <- which(use_stocks$stock_name == "GHALBSAI")
+use_stocks[row, "min_year"] <- 1960
+
+row <- which(use_stocks$stock_name == "GKCRABAIES")
+use_stocks[row, "min_year"] <- 1995
+
+row <- which(use_stocks$stock_name == "GOPHERSPCOAST")
+use_stocks[row, "min_year"] <- 1977
+
+row <- which(use_stocks$stock_name == "GRAMBERGM")
+use_stocks[row, "min_year"] <- 1977
+
+row <- which(use_stocks$stock_name == "GRSNAPGM")
+use_stocks[row, "min_year"] <- 1976
+
+row <- which(use_stocks$stock_name == "HAD4X5Y")
+use_stocks[row, "max_year"] <- 2013
+
+row <- which(use_stocks$stock_name == "HADIS")
+use_stocks[row, "max_year"] <- 2015
+
+row <- which(use_stocks$stock_name == "HMACKIIa.IVa.Vb.VIa.VII.VIII")
+use_stocks[row, "min_year"] <- 1983
+
+row <- which(use_stocks$stock_name == "LINGCODSPCOAST")
+use_stocks[row, "min_year"] <- 1957
+
+row <- which(use_stocks$stock_name == "LSTHORNHPCOAST")
+use_stocks[row, "min_year"] <- 1975
+
+row <- which(use_stocks$stock_name == "MENATLAN")
+use_stocks[row, "min_year"] <- 1960
+
+row <- which(use_stocks$stock_name == "NROCKGA")
+use_stocks[row, "min_year"] <- 1965
+
+row <- which(use_stocks$stock_name == "NSHRIMPCSCH")
+use_stocks[row, "min_year"] <- 1960
+
+row <- which(use_stocks$stock_name == "NZLINGESE")
+use_stocks[row, "max_year"] <- 2005
+
+row <- which(use_stocks$stock_name == "NZLINGWSE")
+use_stocks[row, "max_year"] <- 2005
+
+row <- which(use_stocks$stock_name == "PCODGA")
+use_stocks[row, "min_year"] <- 1978
+
+row <- which(use_stocks$stock_name == "POPERCHGA")
+use_stocks[row, "min_year"] <- 1970
+
+row <- which(use_stocks$stock_name == "PTOOTHFISHPEI")
+use_stocks[row, "min_year"] <- 1980
+
+row <- which(use_stocks$stock_name == "RSROCKBCWN")
+use_stocks[row, "min_year"] <- 1980
+use_stocks[row, "max_year"] <- 2005
+
+row <- which(use_stocks$stock_name == "RSROCKBCWS")
+use_stocks[row, "min_year"] <- 1962
+
+row <- which(use_stocks$stock_name == "SABLEFPCOAST")
+use_stocks[row, "min_year"] <- 1965
+
+row <- which(use_stocks$stock_name == "SMOOTHOREOCR")
+use_stocks[row, "max_year"] <- 2002
+
+row <- which(use_stocks$stock_name == "SNAPSAUSSGSV")
+use_stocks[row, "min_year"] <- 1987
+
+row <- which(use_stocks$stock_name == "SNROCKPCOAST")
+use_stocks[row, "min_year"] <- 1977
+
+row <- which(use_stocks$stock_name == "SOUTHHAKECR")
+use_stocks[row, "min_year"] <- 1985
+
+row <- which(use_stocks$stock_name == "STFLOUNNPCOAST")
+use_stocks[row, "min_year"] <- 1984
+
+row <- which(use_stocks$stock_name == "STFLOUNSPCOAST")
+use_stocks[row, "min_year"] <- 1978
+
+row <- which(use_stocks$stock_name == "SDOGATLC")
+use_stocks[row, "max_year"] <- 2013
+
+row <- which(use_stocks$stock_name == "STMARLINNEPAC")
+use_stocks[row, "max_year"] <- 2007
+
+row <- which(use_stocks$stock_name == "TANNERCRABBSAI")
+use_stocks[row, "min_year"] <- 1980
+
+row <- which(use_stocks$stock_name == "THRSHARNPAC")
+use_stocks[row, "min_year"] <- 1975
+
+row <- which(use_stocks$stock_name == "WHITNS.VIId")
+use_stocks[row, "min_year"] <- 1980
+
+row <- which(use_stocks$stock_name == "WROCKPCOAST")
+use_stocks[row, "min_year"] <- 1969
+
+row <- which(use_stocks$stock_name == "YEYEROCKPCOAST")
+use_stocks[row, "min_year"] <- 1960
+
+row <- which(use_stocks$stock_name == "YTROCKNPCOAST")
+use_stocks[row, "min_year"] <- 1960
+
+
+# Compare Ricker and BevHolt fits --------------------------------------------------------------------------------
+filtered_stocks <- tibble(stock_name = "",
+                          ricker_a = numeric(),
+                          ricker_b = numeric(),
+                          ricker_AICc = numeric(),
+                          bevholt_a = numeric(),
+                          bevholt_b = numeric(),
+                          bevholt_AICc = numeric())
+
+for(x in use_stocks$stock_name){
+  row <- which(use_stocks$stock_name == x)
+  
+  # create a tibble for each stock's biomass and recruit data
+  stock <- tibble(
+    year = takers_rec[,1],
+    recruits = takers_rec[,x],
+    sb = takers_ssb[,x],
+    logR = log(takers_rec[,x]))
+  
+  # remove model run in time
+  min_year <- pull(use_stocks[row, "min_year"])
+  max_year <- pull(use_stocks[row, "max_year"])
+  
+  stock <- stock %>%
+    filter(year >= min_year) %>%
+    filter(year <= max_year)
+  
+  # Change any 0 recruit values to 1
+  stock <- stock %>%
+    mutate(logR = replace(logR, logR == -Inf, 1)) %>%
+    mutate(recruits = replace(recruits, recruits == 0, 1))
+  
+  # double check to make sure total number of years is at least 20
+  if(count(stock) != 0 && count(stock) >= 20 ){
+    
+    # find starting values for nonlinear regression 
+    ricker_starts <- srStarts(recruits~sb, data = stock, type = "Ricker", param = 1)
     bevholt_starts <- srStarts(recruits~sb, data = stock, type = "BevertonHolt", param = 1)
     
     if(ricker_starts[2] < 0){ricker_starts[2] <- 0.000001} # make sure ricker b param is positive
@@ -54,104 +290,97 @@ for(x in 2:ncol(takers_rec)){
     ricker_fit <- nlxb(ricker, data = stock, start = ricker_starts)
     bevholt_fit <- nlxb(bevholt, data = stock, start = bevholt_starts)
     
-    # calculate RMSE using ricker model (can change to an average of BH and Ricker if needed)
-    RMSE <- sqrt(mean((ricker_fit$resid^2)))
-    
     # calculate AICc for both models
     params <- 3
     n <- nrow(stock)
-    ricker_aicc <- n*log(mean(ricker_fit$resid^2)) + ((2*params*(params+1)) /(n - params - 1))
-    bevholt_aicc <- n*log(mean(bevholt_fit$resid^2)) + ((2*params*(params+1)) /(n - params - 1))
+    ricker_AICc <- n*log(mean(ricker_fit$resid^2)) + ((2*params*(params+1)) /(n - params - 1))
+    bevholt_AICc <- n*log(mean(bevholt_fit$resid^2)) + ((2*params*(params+1)) /(n - params - 1))
     
-    # If RMSE is less than 0.3, the S-R relationship is a deterministic estimate (RMSE cutoff can be adjusted)
-    if(RMSE > 0.3){
-      use_stocks <- use_stocks %>%
-        add_row(stock_name = colnames(takers_rec[x]), ricker_a = ricker_fit$coefficients[1],
-              ricker_b = ricker_fit$coefficients[2], 
+    # add data to filterd stocks tibble
+    filtered_stocks <- filtered_stocks %>%
+      add_row(stock_name = colnames(takers_rec[x]), ricker_a = ricker_fit$coefficients[1], 
+              ricker_b = ricker_fit$coefficients[2], ricker_AICc = ricker_AICc, 
               bevholt_a = bevholt_fit$coefficients[1], bevholt_b = bevholt_fit$coefficients[2],
-              ricker_aicc = ricker_aicc, bevholt_aicc = bevholt_aicc,
-              min_year = min(stock$year), max_year = max(stock$year))
-    }
+              bevholt_AICc = bevholt_AICc)
   }
 }
 
-# Plot filtered data -------------------------------------------------------------------
-stock_names <- c()
-for(i in 1:nrow(use_stocks)){
-  stock_names <- c(stock_names, use_stocks[i,1])
-}
-
-
+# Plot stock recruit fits -------------------------------------------------------------------------------------
 pdf("filtered_rec_sb.pdf")
-for(x in stock_names){
-  # get predictions for stock-recruit curve
-  row <- which(use_stocks$stock_name == x)
-  r_a <- as.numeric(use_stocks[row, 2])
-  r_b <- as.numeric(use_stocks[row, 3])
-  bh_a <- as.numeric(use_stocks[row, 4])
-  bh_b <- as.numeric(use_stocks[row, 5])
-  max_sb <- max(takers_ssb[,x], na.rm = TRUE)
-  min_sb <- min(takers_ssb[,x], na.rm = TRUE)
+for(x in filtered_stocks$stock_name){
+  row <- which(filtered_stocks$stock_name == x)
+  
+  r_a <- as.numeric(filtered_stocks[row, "ricker_a"])
+  r_b <- as.numeric(filtered_stocks[row, "ricker_b"])
+  bh_a <- as.numeric(filtered_stocks[row, "bevholt_a"])
+  bh_b <- as.numeric(filtered_stocks[row, "bevholt_b"])
+  
+  stock <- tibble(year = takers_rec[,1],
+                  recruits = takers_rec[, x],
+                  sb = takers_ssb[, x])
+  
+  # remove model run in time
+  min_year <- pull(use_stocks[row, "min_year"])
+  max_year <- pull(use_stocks[row, "max_year"])
+  
+  stock <- stock %>%
+    filter(year >= min_year) %>%
+    filter(year <= max_year)
+  
+  # simulate ricker and beverton holt data
+  max_sb <- max(stock$sb, na.rm = TRUE)
+  min_sb <- min(stock$sb, na.rm = TRUE)
   sb_values <- seq(min_sb, max_sb, length.out = 50)
   rec_pred_r <- r_a*sb_values*exp(-r_b*sb_values)
   rec_pred_bh <- (bh_a*sb_values)/(1 + (bh_b*sb_values))
   
-  #set margins
-  par(mfrow=c(2,1),mar=c(.1,.1,.1,.1),oma=c(4,7,4,1))
+  # create tibble with preditions
+  preds <- tibble(sb = sb_values,
+                  r_preds = rec_pred_r,
+                  bh_preds = rec_pred_bh)
   
-  # plot stock-recruitment curve w/ observations
-  plot(takers_rec[,x]~takers_ssb[,x],ylim=c(0,max(takers_rec[,x],na.rm=T)),xlim=c(0,max(takers_ssb[,x],na.rm=T)),
-       las=1,xaxt='n')
-  lines(sb_values, rec_pred_r, col = "red") #ricker model
-  lines(sb_values, rec_pred_bh, col = "blue")#bevholt model
+  # recruitment time series plot
+  rec_ts_plot <- ggplot(data = stock, aes(x = year, y = recruits)) +
+    geom_line(size = 1) +
+    labs(x = "Year", y = "Recruits", title = x)
   
-  # axis argument
-  axis(side=3)
+  # stock recruitment plot
+  sr_plot <- ggplot(data = stock, aes(x = sb, y = recruits)) +
+    geom_point() + 
+    geom_line(data = preds, aes(x = sb, y = r_preds), colour = "#E31A1C", size = 1) +
+    geom_line(data = preds, aes(x = sb, y = bh_preds), colour = "#1F78B4", size = 1) +
+    labs(x = "Spawning Biomass", y = "Recruits") 
   
-  # plot recruitment time series
-  plot(takers_rec[,x]~takers_rec[,1],type='l',xlim = c(as.numeric(use_stocks[row,6]), as.numeric(use_stocks[row,7])),
-       ylim=c(0,max(takers_rec[,x],na.rm=T)),las=1)
-  
-  # axis labels
-  mtext(outer=T,side=2,"Recruitment",line=4.2)
-  mtext(outer = T, side = 3, x, line = 2.5)
-  mtext(outer=T,side=3,"Spawning biomass",line=1.5)
-  mtext(outer=T,side=1,"Year",line=2.5)
+  # plot both graphs
+  print(grid.arrange(rec_ts_plot, sr_plot, nrow = 2))
 }
 dev.off()
-
-# Fine-tune series start/end times ---------------------------------------------------------------------
-# I was able to eliminate some of the model run in times in my for loop above, but there are still some series that
-# could use extra years trimmed off. I will visually inspect the pdf plots I made and document the changes below
-
-# need to write code I changed max year for stock "SDOGATLC" to 2013 b/c data from 2014 was missing
-row <- which(use_stocks$stock_name == "SDOGATLC")
-use_stocks[row, "max_year"] <- 2013
 
 # Split stocks ----------------------------------------------------------------------------------------
 # In Szuwalski et al. 2015, the stocks suitable for analysis were split based on relative likelihood value then
 # different procedures were then applied to each. The correlation analysis will be in a different script.
 
-use_stocks <- use_stocks %>%
+filtered_stocks <- filtered_stocks %>%
   add_column(min_model = "test") %>%
-  add_column(rel_likelihood = 1)
+  add_column(rel_likelihood = 1.0)
 
 # determine min AIC model and use it to calculate relative likelihood
-for(x in 1:nrow(use_stocks)){
-  if(use_stocks[x,"ricker_aicc"] < use_stocks[x, "bevholt_aicc"]){
-    use_stocks[x, "min_model"] = "ricker"
-    use_stocks[x,"rel_likelihood"] = 1/(1 + exp((pull(use_stocks[x,"ricker_aicc"]) - pull(use_stocks[x, "bevholt_aicc"]))/2))
+for(x in 1:nrow(filtered_stocks)){
+  if(filtered_stocks[x,"ricker_AICc"] < filtered_stocks[x, "bevholt_AICc"]){
+    filtered_stocks[x, "min_model"] = "ricker"
+    filtered_stocks[x,"rel_likelihood"] = 1/(1 + exp((pull(filtered_stocks[x,"ricker_AICc"]) - pull(filtered_stocks[x, "bevholt_AICc"]))/2))
   }else{
-    use_stocks[x, "min_model"] = "bevholt"
-    use_stocks[x,"rel_likelihood"] = 1/(1 + exp((pull(use_stocks[x,"bevholt_aicc"]) - pull(use_stocks[x, "ricker_aicc"]))/2))
+    filtered_stocks[x, "min_model"] = "bevholt"
+    filtered_stocks[x,"rel_likelihood"] = 1/(1 + exp((pull(filtered_stocks[x,"bevholt_AICc"]) - pull(filtered_stocks[x, "ricker_AICc"]))/2))
   }
 }
 
 # ricker stocks are those with a relative likelihood > 0.75
-ricker_stocks <- use_stocks %>%
+ricker_stocks <- filtered_stocks %>%
   filter(min_model == "ricker") %>%
   filter(rel_likelihood > 0.75)
-bevholt_stocks <- use_stocks %>%
+
+bevholt_stocks <- filtered_stocks %>%
   filter(min_model == "bevholt" | rel_likelihood < 0.75)
 
 

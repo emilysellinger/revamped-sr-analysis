@@ -6,6 +6,7 @@ library(bcp)
 library(data.table)
 library(nlmrt)
 library(FSA)
+library(gridExtra)
 
 # Load data ------------------------------------------------------------------
 rec_data <- read.csv(here("data", "R.csv")) # recruitment data

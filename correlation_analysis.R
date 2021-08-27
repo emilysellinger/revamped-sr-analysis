@@ -3,11 +3,12 @@
 # Ricker stocks ------------------------------------------------------------------------------------------------
 # going to add extra columns for rho estimate and p-value from spearman's correlation
 ricker_stocks <- ricker_stocks %>%
-  add_column(cor_coef = 1,
-             cor_pval = 1)
+  add_column(cor_coef = numeric(),
+             cor_pval = numeric())
 
 for(x in ricker_stocks$stock_name){
   row <- which(ricker_stocks$stock_name == x)
+  row2 <- which(use_stocks$stock_name == x)
   
   stock <- tibble(
     year = takers_rec[,1],
@@ -15,8 +16,8 @@ for(x in ricker_stocks$stock_name){
     sb = takers_ssb[,x])
   
   # remove model run in time
-  min_year <- pull(ricker_stocks[row, "min_year"])
-  max_year <- pull(ricker_stocks[row, "max_year"])
+  min_year <- pull(use_stocks[row2, "min_year"])
+  max_year <- pull(use_stocks[row2, "max_year"])
   
   stock <- stock %>%
     filter(year >= min_year) %>%
@@ -48,6 +49,7 @@ bevholt_stocks <- bevholt_stocks %>%
 
 for(x in bevholt_stocks$stock_name){
   row <- which(bevholt_stocks$stock_name == x)
+  row2 <- which(use_stocks$stock_name == x)
   
   stock <- tibble(
     year = takers_rec[,1],
@@ -55,8 +57,8 @@ for(x in bevholt_stocks$stock_name){
     sb = takers_ssb[,x])
   
   # remove model run in time
-  min_year <- pull(bevholt_stocks[row, "min_year"])
-  max_year <- pull(bevholt_stocks[row, "max_year"])
+  min_year <- pull(use_stocks[row2, "min_year"])
+  max_year <- pull(use_stocks[row2, "max_year"])
   
   stock <- stock %>%
     filter(year >= min_year) %>%
@@ -85,7 +87,7 @@ for(x in bevholt_stocks$stock_name){
 # have a significant zero lag correlation & negative lagged correlations less than or equal to the zero lag correlation 
 sb_driven_stocks <- tibble()
 sb_driven_stocks <- sb_driven_stocks %>%
-  add_column(stock_name = "test")
+  add_column(stock_name = "")
 
 # check Ricker stocks first
 for(x in 1:nrow(ricker_stocks)){
@@ -105,7 +107,7 @@ for(x in 1:nrow(bevholt_stocks)){
 # Combine environmentally driven stocks ----------------------------------------------------------------------------
 env_driven_stocks <- tibble()
 env_driven_stocks <- env_driven_stocks %>%
-  add_column(stock_name = "test")
+  add_column(stock_name = "")
 
 # find all ricker stocks with a p-value > 0.05
 for(x in 1:nrow(ricker_stocks)){
@@ -126,7 +128,7 @@ for(x in 1:nrow(bevholt_stocks)){
 # Edge Cases -----------------------------------------------------------------------------------------------
 edge_stocks <- tibble()
 edge_stocks <- edge_stocks %>%
-  add_column(stock_name = "test")
+  add_column(stock_name = "")
 
 for(x in 1:nrow(bevholt_stocks)){
   if(bevholt_stocks[x,"zero_lag"] > 0.5 && bevholt_stocks[x,"neg_lag"] == 0){

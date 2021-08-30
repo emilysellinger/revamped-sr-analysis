@@ -1,0 +1,300 @@
+stock_name,scientific_name,common_name,region,tsn,fishery_type,age,age_type,source
+ACADREDGOMGB,Sebastes fasciatus,Acadian redfish,US East Coast,166774,Rockfish,50,max reported,FishBase
+ALBASPAC,Thunnus alalunga,Albacore tuna,Pacific Ocean,172419,Tuna and Marlin,9,max reported,FishBase
+AMPL3LNO,Hippoglossoides platessoides,American plaice,Canada East Coast,172877,Flatfish,30,max reported,FishBase
+AMPL4T,Hippoglossoides platessoides,American plaice,Canada East Coast,172877,Flatfish,30,max reported,FishBase
+ANCHMEDGSA29,Engraulis encrasicolus,Anchovy,Mediterranean-Black Sea,161831,Forage Fish,5,max reported,FishBase
+ANCHOBAYB,Engraulis encrasicolus,Anchovy,European Union,161831,Forage Fish,5,max reported,FishBase
+ANCHOSA,Engraulis encrasicolus,Anchovy,Southern Africa,161831,Forage Fish,5,max reported,FishBase
+APOLLNSJ,Theragra chalcogramma,Walleye pollock,Japan,164722,Gadids,28,max reported,FishBase
+APOLLPJPN,Theragra chalcogramma,Walleye pollock,Japan,164722,Gadids,28,max reported,FishBase
+ARFLOUNDBSAI,Atheresthes stomias,Arrowtooth flounder,US Alaska,616029,Flatfish,23,max reported,FishBase
+ARFLOUNDGA,Atheresthes stomias,Arrowtooth flounder,US Alaska,616029,Flatfish,23,max reported,FishBase
+ARFLOUNDPCOAST,Atheresthes stomias,Arrowtooth flounder,US West Coast,616029,Flatfish,23,max reported,FishBase
+ARGANCHONARG,Engraulis anchoita,Argentine anchoita,South America,551338,Forage Fish,4,subbed from similar species,NA
+ARGANCHOSARG,Engraulis anchoita,Argentine anchoita,South America,551338,Forage Fish,4,subbed from similar species,NA
+ARGHAKESARG,Merluccius hubbsi,Argentine hake,South America,164800,Gadids,16,subbed from similar species,NA
+ATBTUNAEATL,Thunnus thynnus,Atlantic bluefin tuna,Atlantic Ocean,172421,Tuna and Marlin,32,max reported,FishBase
+ATHAL3NOPs4VWX5Zc,Hippoglossus hippoglossus,Atlantic halibut,Canada East Coast,172933,Flatfish,50,max reported,FishBase
+ATKABSAI,Pleurogrammus monopterygius,Atka mackerel,US Alaska,167120,Other Marine,15,max reported,FishBase
+ATLCROAKMATLC,Micropogonias undulatus,Atlantic croaker,US East Coast,169283,Other Marine,5,max reported,FishBase
+AWOLF5YZ,Anarhichas lupus,Atlantic wolffish,US East Coast,171341,Other Marine,NA,NA,NA
+BGRDRNSWWA,Macruronus novaezelandiae,Blue grenadier,Australia,623193,Gadids,25,max reported,FishBase
+BIGEYECWPAC,Thunnus obesus,Bigeye tuna,Pacific Ocean,172428,Tuna and Marlin,11,max reported,FishBase
+BLACKROCKCAL,Sebastes melanops,Black rockfish,US West Coast,166727,Rockfish,50,max reported,FishBase
+BLACKROCKWASH,Sebastes melanops,Black rockfish,US West Coast,166727,Rockfish,50,max reported,FishBase
+BLUEROCKCAL,Sebastes mystinus,Blue rockfish,US West Coast,166730,Rockfish,44,max reported,FishBase
+BMACKECS,Scomber australasicus,Spotted mackerel,Japan,172415,Forage Fish,7,max reported,New South Wales wild fisheries research program
+BMACKPJPN,Scomber australasicus,Spotted mackerel,Japan,172415,Forage Fish,7,max reported,New South Wales wild fisheries research program
+BOCACCSPCOAST,Sebastes paucispinis,Bocaccio,US West Coast,166733,Rockfish,50,max reported,FishBase
+BSBASSMATLC,Centropristis striata,Black sea bass,US East Coast,167687,Other Marine,20,max reported,FishBase
+BSBASSSATL,Centropristis striata,Black sea bass,US Southeast and Gulf,167687,Other Marine,20,max reported,FishBase
+BSQLOBSTERCSCH,Cervimunida johni,Yellow squat lobster,South America,-992,Invertebrate,NA,NA,NA
+BSQLOBSTERNCH,Cervimunida johni,Yellow squat lobster,South America,-992,Invertebrate,NA,NA,NA
+BWHITNEA,Micromesistius poutassou,Blue whiting,European Union,164774,Gadids,20,max reported,FishBase
+CABEZNCAL,Scorpaenichthys marmoratus,Cabezon,US West Coast,692068,Other Marine,13,max reported,FishBase
+CABEZSCAL,Scorpaenichthys marmoratus,Cabezon,US West Coast,692068,Other Marine,13,max reported,FishBase
+CALSCORPSCAL,Scorpaena guttata,California scorpionfish,US West Coast,166827,Other Marine,21,max reported,FishBase
+CAPENOR,Mallotus villosus,Capelin,Europe non EU,162035,Forage Fish,10,max reported,FishBase
+CHERRCHVX,Clupea bentincki,Chilean herring,South America,615818,Forage Fish,25,subbed from similar species,NA
+CHILISPCOAST,Sebastes goodei,Chilipepper,US West Coast,166722,Rockfish,35,max reported,FishBase
+CHTRACCH,Trachurus murphyi,Chilean jack mackerel,South America,168597,Forage Fish,16,max reported,FishBase
+CMACKPCOAST,Scomber japonicus,Pacific chub mackerel,US West Coast,172412,Forage Fish,18,max reported,FishBase
+CMACKPJPN,Scomber japonicus,Chub mackerel,Japan,172412,Forage Fish,18,max reported,FishBase
+CMACKTSST,Scomber japonicus,Chub mackerel,Japan,172412,Forage Fish,18,max reported,FishBase
+COBGM,Rachycentron canadum,Cobia,US Southeast and Gulf,168566,Other Marine,15,max reported,FishBase
+COD1F.XIV,Gadus morhua,Atlantic cod,Europe non EU,164712,Gadids,25,max reported,FishBase
+COD1IN,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,25,max reported,FishBase
+COD2J3KL,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,25,max reported,FishBase
+COD3M,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,25,max reported,FishBase
+COD3Pn4RS,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,25,max reported,FishBase
+COD3Ps,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,25,max reported,FishBase
+COD4TVn,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,25,max reported,FishBase
+COD5Zjm,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,25,max reported,FishBase
+CODBA2224,Gadus morhua,Atlantic cod,European Union,164712,Gadids,25,max reported,FishBase
+CODBA2532,Gadus morhua,Atlantic cod,European Union,164712,Gadids,25,max reported,FishBase
+CODFAPL,Gadus morhua,Atlantic cod,Europe non EU,164712,Gadids,25,max reported,FishBase
+CODICE,Gadus morhua,Atlantic cod,Europe non EU,164712,Gadids,25,max reported,FishBase
+CODIIIaW.IV.VIId,Gadus morhua,Atlantic cod,European Union,164712,Gadids,25,max reported,FishBase
+CODIS,Gadus morhua,Atlantic cod,European Union,164712,Gadids,25,max reported,FishBase
+CODKAT,Gadus morhua,Atlantic cod,European Union,164712,Gadids,25,max reported,FishBase
+CODNEAR,Gadus morhua,Atlantic cod,Europe non EU,164712,Gadids,25,max reported,FishBase
+CODVIa,Gadus morhua,Atlantic cod,European Union,164712,Gadids,25,max reported,FishBase
+CODVIIek,Gadus morhua,Atlantic cod,European Union,164712,Gadids,25,max reported,FishBase
+CROCKPCOAST,Sebastes pinniger,Canary rockfish,US West Coast,166734,Rockfish,84,max reported,FishBase
+CSARDCSCH,Strangomera bentincki,Chilean sardine,South America,551247,Forage Fish,13,max reported,NOAA
+CUSKVa.XIV,Brosme brosme,Tusk,European Union,164740,Gadids,20,max reported,FishBase
+DKROCKPCOAST,Sebastes crameri,Darkblotched rockfish,US West Coast,166715,Rockfish,105,max reported,FishBase
+DOYSFS,Ostrea chilensis,Dredge oyster,New Zealand,-970,Invertebrate,33,max reported,Fisheries New Zealand
+DSOLEGA,Microstomus pacificus,Dover sole,US Alaska,172887,Flatfish,56,max reported,FishBase
+DUSROCKGA,Sebastes variabilis,Dusky rockfish,US Alaska,644604,Rockfish,50,max reported,FishBase
+EBASSIVbc.VII,Dicentrarchus labrax,European seabass,European Union,170317,Other Marine,30,max reported,FishBase
+EBASSVIIIab,Dicentrarchus labrax,European seabass,European Union,170317,Other Marine,30,max reported,FishBase
+ESOLEPCOAST,Parophrys vetulus,English sole,US West Coast,172921,Flatfish,22,max reported,FishBase
+FLSOLEBSAI,Hippoglossoides elassodon,Flathead sole,US Alaska,172875,Flatfish,27,max reported,FishBase
+FMEG8c9a,Lepidorhombus boscii,Fourspotted megrim,European Union,172834,Flatfish,11,max reported,Robson et al 200
+GAGSATLC,Mycteroperca microlepis,Gag,US Southeast and Gulf,167759,Other Marine,31,max reported,FishBase
+GEMFISHNZ,Rexea solandri,Common gemfish,New Zealand,550883,Other Marine,16,max reported,FishBase
+GEMFISHSE,Rexea solandri,Common gemfish,Australia,550883,Other Marine,16,max reported,FishBase
+GHALBSAI,Reinhardtius hippoglossoides,Greenland halibut,US Alaska,172930,Flatfish,30,max reported,FishBase
+GHALNEAR,Reinhardtius hippoglossoides,Greenland halibut,Europe non EU,172930,Flatfish,30,max reported,FishBase
+GKCRABAIES,Lithodes aequispinus,Golden king crab,US Alaska,660179,Invertebrate,NA,NA,NA
+GOLDREDNEAR,Sebastes norvegicus,Golden redfish,Europe non EU,166781,Rockfish,60,max reported,FishBase
+GOLDREDV.VI.XII.XIV,Sebastes norvegicus,Golden redfish,European Union,166781,Rockfish,60,max reported,FishBase
+GOPHERSPCOAST,Sebastes carnatus,Gopher rockfish,US West Coast,166767,Rockfish,30,max reported,FishBase
+GRAMBERGM,Seriola dumerili,Greater amberjack,US Southeast and Gulf,168689,Other Marine,15,max reported,FishBase
+GRAMBERSATLC,Seriola dumerili,Greater amberjack,US Southeast and Gulf,168689,Other Marine,15,max reported,FishBase
+GRNSTROCKPCOAST,Sebastes elongatus,Greenstriped rockfish,US West Coast,166717,Rockfish,54,max reported,FishBase
+GRSNAPGM,Lutjanus griseus,Gray snapper,US Southeast and Gulf,168848,Other Marine,21,max reported,FishBase
+GSTRGZRSTA7,Kathetostoma giganteum,Giant stargazer,New Zealand,171064,Other Marine,20,max reported,FishBase
+HAD4X5Y,Melanogrammus aeglefinus,Haddock,Canada East Coast,164744,Gadids,20,max reported,FishBase
+HAD5Y,Melanogrammus aeglefinus,Haddock,US East Coast,164744,Gadids,20,max reported,FishBase
+HADFAPL,Melanogrammus aeglefinus,Haddock,Europe non EU,164744,Gadids,20,max reported,FishBase
+HADGB,Melanogrammus aeglefinus,Haddock,US East Coast,164744,Gadids,20,max reported,FishBase
+HADICE,Melanogrammus aeglefinus,Haddock,Europe non EU,164744,Gadids,20,max reported,FishBase
+HADIS,Melanogrammus aeglefinus,Haddock,European Union,164744,Gadids,20,max reported,FishBase
+HADNEAR,Melanogrammus aeglefinus,Haddock,Europe non EU,164744,Gadids,20,max reported,FishBase
+HADNS.IIIa.VIa,Melanogrammus aeglefinus,Haddock,European Union,164744,Gadids,20,max reported,FishBase
+HADROCK,Melanogrammus aeglefinus,Haddock,European Union,164744,Gadids,20,max reported,FishBase
+HADVIIb.k,Melanogrammus aeglefinus,Haddock,European Union,164744,Gadids,20,max reported,FishBase
+HAKENRTN,Merluccius merluccius,Hake,European Union,164795,Gadids,20,max reported,FishBase
+HAKESOTH,Merluccius merluccius,Hake,European Union,164795,Gadids,20,max reported,FishBase
+HAKESPPSAF,Merluccius spp,Hake spp,Southern Africa,-963,Gadids,16,subbed from similar species,NA
+HERR2224IIIa,Clupea harengus,Herring,European Union,161722,Forage Fish,25,max reported,FishBase
+HERR2529.32,Clupea harengus,Herring,European Union,161722,Forage Fish,25,max reported,FishBase
+HERR30.31,Clupea harengus,Herring,European Union,161722,Forage Fish,25,max reported,FishBase
+HERR4RFA,Clupea harengus,Herring,Canada East Coast,161722,Forage Fish,25,max reported,FishBase
+HERR4RSP,Clupea harengus,Herring,Canada East Coast,161722,Forage Fish,25,max reported,FishBase
+HERR4TFA,Clupea harengus,Herring,Canada East Coast,161722,Forage Fish,25,max reported,FishBase
+HERR4TSP,Clupea harengus,Herring,Canada East Coast,161722,Forage Fish,25,max reported,FishBase
+HERRCC,Clupea pallasii,Pacific herring,Canada West Coast,551209,Forage Fish,19,max reported,FishBase
+HERRIsum,Clupea harengus,Herring,Europe non EU,161722,Forage Fish,25,max reported,FishBase
+HERRNIRS,Clupea harengus,Herring,European Union,161722,Forage Fish,25,max reported,FishBase
+HERRNORSS,Clupea harengus,Herring,Europe non EU,161722,Forage Fish,25,max reported,FishBase
+HERRNS.IIIa.VIId,Clupea harengus,Herring,European Union,161722,Forage Fish,25,max reported,FishBase
+HERRNWATLC,Clupea harengus,Herring,US East Coast,161722,Forage Fish,25,max reported,FishBase
+HERRPRD,Clupea pallasii,Pacific herring,Canada West Coast,551209,Forage Fish,19,max reported,FishBase
+HERRPWS,Clupea pallasii,Pacific herring,US Alaska,551209,Forage Fish,19,max reported,FishBase
+HERRQCI,Clupea pallasii,Pacific herring,Canada West Coast,551209,Forage Fish,19,max reported,FishBase
+HERRRIGA,Clupea harengus,Herring,European Union,161722,Forage Fish,25,max reported,FishBase
+HERRSIRS,Clupea harengus,Herring,European Union,161722,Forage Fish,25,max reported,FishBase
+HERRSITKA,Clupea pallasii,Pacific herring,US Alaska,551209,Forage Fish,19,max reported,FishBase
+HERRSOG,Clupea pallasii,Pacific herring,Canada West Coast,551209,Forage Fish,19,max reported,FishBase
+HERRVIa,Clupea harengus,Herring,European Union,161722,Forage Fish,25,max reported,FishBase
+HERRVIaVIIbc,Clupea harengus,Herring,European Union,161722,Forage Fish,25,max reported,FishBase
+HERRWCVANI,Clupea pallasii,Pacific herring,Canada West Coast,551209,Forage Fish,19,max reported,FishBase
+HMACKIIa.IVa.Vb.VIa.VII.VIII,Trachurus trachurus,Horse mackerel,European Union,168588,Forage Fish,40,max reported,ICES CIEM
+HMACKIXa,Trachurus trachurus,Horse mackerel,European Union,168588,Forage Fish,40,max reported,ICES CIEM
+HOKIENZ,Macruronus novaezelandiae,Hoki,New Zealand,623193,Gadids,25,max reported,FishBase
+HOKIWNZ,Macruronus novaezelandiae,Hoki,New Zealand,623193,Gadids,25,max reported,FishBase
+JANCHOPJPN,Engraulis japonicus,Japanese anchovy,Japan,161835,Forage Fish,4,max reported,FishBase
+JANCHOSETO,Engraulis japonicus,Japanese anchovy,Japan,161835,Forage Fish,4,max reported,FishBase
+JMACKPJPN,Trachurus japonicus,Japanese jack mackerel,Japan,642012,Forage Fish,12,max reported,FishBase
+JMACKTSST,Trachurus japonicus,Japanese jack mackerel,Japan,642012,Forage Fish,12,max reported,FishBase
+JPUFFIMKB,Takifugu rubripes,Japanese pufferfish,Japan,646410,Other Marine,NA,NA,NA
+KELPGREENLINGORECOAST,Hexagrammos decagrammus,Kelp greenling,US West Coast,167110,Other Marine,18,max reported,FishBase
+KMACKGM,Scomberomorus cavalla,King mackerel,US Southeast and Gulf,172435,Tuna and Marlin,14,max reported,FishBase
+KMACKSATLC,Scomberomorus cavalla,King mackerel,US Southeast and Gulf,172435,Tuna and Marlin,14,max reported,FishBase
+KMFLOUNBSAI,Atheresthes evermanni,Kamchatka flounder,US Alaska,172861,Flatfish,33,max reported,FishBase
+LINGCODNPCOAST,Ophiodon elongatus,Lingcod,US West Coast,167116,Other Marine,25,max reported,FishBase
+LINGCODSPCOAST,Ophiodon elongatus,Lingcod,US West Coast,167116,Other Marine,25,max reported,FishBase
+LINGVa,Molva molva,Ling,Europe non EU,164760,Gadids,25,max reported,FishBase
+LOBSTERGB,Homarus americanus,American lobster,US East Coast,97314,Invertebrate,100,suspected upper limit,NOAA
+LSTHORNHPCOAST,Sebastolobus altivelis,Longspine thornyhead,US West Coast,166784,Rockfish,45,max reported,FishBase
+MACK5YCHATT,Scomber scombrus,Atlantic mackerel,US East Coast,172414,Forage Fish,17,max reported,FishBase
+MACKNWATLSA3.4,Scomber scombrus,Mackerel,Canada East Coast,172414,Forage Fish,17,max reported,FishBase
+MEG8c9a,Lepidorhombus whiffiagonis,Megrim,European Union,172835,Flatfish,16,max reported,FishBase
+MENATGM,Brevoortia patronus,Gulf menhaden,US Southeast and Gulf,161734,Forage Fish,12,upper age range,NOAA
+MENATLAN,Brevoortia tyrannus,Atlantic menhaden,US East Coast,161732,Forage Fish,12,upper age range,NOAA
+MORWONGESE,Nemadactylus macropterus,Jackass morwong,Australia,170262,Other Marine,50,max reported,FishBase
+MORWONGWSE,Nemadactylus macropterus,Jackass morwong,Australia,170262,Other Marine,50,max reported,FishBase
+MUTSNAPSATLCGM,Lutjanus analis,Mutton snapper,US Southeast and Gulf,168849,Other Marine,29,max reported,FishBase
+NPOUTIIIa.IV,Trisopterus esmarkii,Norway pout,European Union,164756,Gadids,5,max reported,FishBase
+NROCKBSAI,Sebastes polyspinis,Northern rockfish,US Alaska,166735,Rockfish,57,max reported,FishBase
+NROCKGA,Sebastes polyspinis,Northern rockfish,US Alaska,166735,Rockfish,57,max reported,FishBase
+NRSOLEEBSAI,Lepidopsetta polyxystra,Northern rock sole,US Alaska,616392,Flatfish,18,max reported,FishBase
+NRSOLEGA,Lepidopsetta polyxystra,Northern rock sole,US Alaska,616392,Flatfish,18,max reported,FishBase
+NSHRIMPCSCH,Heterocarpus reedi,Nylon shrimp,South America,97075,Invertebrate,NA,NA,NA
+NSHRIMPNCH,Heterocarpus reedi,Nylon shrimp,South America,97075,Invertebrate,NA,NA,NA
+NZLINGESE,Genypterus blacodes,Ling,Australia,165000,Other Marine,30,max reported,FishBase
+NZLINGLIN5.6,Genypterus blacodes,Ling,New Zealand,165000,Other Marine,30,max reported,FishBase
+NZLINGLIN72,Genypterus blacodes,Ling,New Zealand,165000,Other Marine,30,max reported,FishBase
+NZLINGLIN7WC,Genypterus blacodes,Ling,New Zealand,165000,Other Marine,30,max reported,FishBase
+NZLINGWSE,Genypterus blacodes,Ling,Australia,165000,Other Marine,30,max reported,FishBase
+NZSNAPNZ1ENLD,Chrysophrys auratus,New Zealand snapper,New Zealand,169231,Other Marine,54,max reported,FishBase
+NZSNAPNZ7,Chrysophrys auratus,New Zealand snapper,New Zealand,169231,Other Marine,54,max reported,FishBase
+NZSNAPNZ8,Chrysophrys auratus,New Zealand snapper,New Zealand,169231,Other Marine,54,max reported,FishBase
+PACBTUNA,Thunnus orientalis,Pacific bluefin tuna,Pacific Ocean,172422,Tuna and Marlin,15,max reported,FishBase
+PANCHCCH,Engraulis ringens,Peruvian anchoveta,South America,551340,Forage Fish,3,max reported,FishBase
+PANCHNCHSP,Engraulis ringens,Peruvian anchoveta,South America,551340,Forage Fish,3,max reported,FishBase
+PANCHPERUNC,Engraulis ringens,Peruvian anchoveta,South America,551340,Forage Fish,3,max reported,FishBase
+PANDALIIIaW.IVaE,Pandalus borealis,Northern shrimp,European Union,96967,Invertebrate,NA,NA,NA
+PATGRENADIERCH,Macruronus magellanicus,Patagonian grenadier,South America,550662,Gadids,25,subbed from similar species,NA
+PATGRENADIERSARG,Macruronus magellanicus,Patagonian grenadier,South America,550662,Gadids,25,subbed from similar species,NA
+PCEELARGS,Genypterus blacodes,Pink cusk eel,South America,165000,Other Marine,30,max reported,FishBase
+PCEELCSCH,Genypterus blacodes,Pink cusk eel,South America,165000,Other Marine,30,max reported,FishBase
+PCEELSCH,Genypterus blacodes,Pink cusk eel,South America,165000,Other Marine,30,max reported,FishBase
+PCODBS,Gadus macrocephalus,Pacific cod,US Alaska,164711,Gadids,25,max reported,FishBase
+PCODGA,Gadus macrocephalus,Pacific cod,US Alaska,164711,Gadids,25,max reported,FishBase
+PERCHEBSAI,Sebastes alutus,Pacific ocean perch,US Alaska,166707,Rockfish,103,max reported,FishBase
+PERCHQCI,Sebastes alutus,Pacific ocean perch,Canada West Coast,166707,Rockfish,103,max reported,FishBase
+PERCHWCVANI,Sebastes alutus,Pacific ocean perch,Canada West Coast,166707,Rockfish,103,max reported,FishBase
+PHAKEPCOAST,Merluccius productus,Pacific hake,US West Coast,164792,Gadids,16,subbed from similar species,FishBase
+PILCHPJPN,Sardinops melanostictus,Japanese sardine,Japan,551222,Forage Fish,25,max reported,FishBase
+PILCHTSST,Sardinops melanostictus,Japanese sardine,Japan,551222,Forage Fish,25,max reported,FishBase
+PLAIC7d,Pleuronectes platessa,European plaice,European Union,172902,Flatfish,50,max reported,FishBase
+PLAICECHW,Pleuronectes platessa,European plaice,European Union,172902,Flatfish,50,max reported,FishBase
+PLAICNS,Pleuronectes platessa,European plaice,European Union,172902,Flatfish,50,max reported,FishBase
+PLAICVIIh.k,Pleuronectes platessa,European plaice,European Union,172902,Flatfish,50,max reported,FishBase
+POLL5YZ,Pollachius virens,Pollock,US East Coast,164727,Gadids,25,max reported,FishBase
+POLLFAPL,Pollachius virens,Pollock,Europe non EU,164727,Gadids,25,max reported,FishBase
+POLLIEG,Pollachius virens,Pollock,Europe non EU,164727,Gadids,25,max reported,FishBase
+POLLNEAR,Pollachius virens,Pollock,Europe non EU,164727,Gadids,25,max reported,FishBase
+POLLNS.VI.IIIa,Pollachius virens,Pollock,European Union,164727,Gadids,25,max reported,FishBase
+POPERCHGA,Sebastes alutus,Pacific ocean perch,US Alaska,166707,Rockfish,103,max reported,FishBase
+POPERCHPCOAST,Sebastes alutus,Pacific ocean perch,US West Coast,166707,Rockfish,103,max reported,FishBase
+PTOOTHFISHMI,Dissostichus eleginoides,Patagonian toothfish,Australia,642807,Other Marine,31,max reported,FishBase
+PTOOTHFISHPEI,Dissostichus eleginoides,Patagonian toothfish,Southern Africa,642807,Other Marine,31,max reported,FishBase
+REDDEEPI.II,Sebastes mentella,Deepwater redfish,Europe non EU,166756,Rockfish,75,max reported,FishBase
+REDFEAUS,Centroberyx affinis,Redfish,Australia,622131,Other Marine,45,upper age range,AFMA
+REXSOLEGA,Glyptocephalus zachirus,Rex sole,US Alaska,172978,Flatfish,27,max reported,FishBase
+REYEROCKBSAI,Sebastes aleutianus,Rougheye rockfish,US Alaska,166706,Rockfish,205,max reported,FishBase
+REYEROCKGA,Sebastes aleutianus,Rougheye rockfish,US Alaska,166706,Rockfish,205,max reported,FishBase
+RGROUPGM,Epinephelus morio,Red grouper,US Southeast and Gulf,167702,Other Marine,25,max reported,FishBase
+RGROUPSATL,Epinephelus morio,Red grouper,US Southeast and Gulf,167702,Other Marine,25,max reported,FishBase
+RHERRTSST,Etrumeus teres,Round herring,Japan,161743,Forage Fish,4,upper age range,Honda et al 2002
+RKCRABBB,Paralithodes camtschaticus,Red king crab,US Alaska,97935,Invertebrate,NA,NA,NA
+RKCRABNS,Paralithodes camtschaticus,Red king crab,US Alaska,97935,Invertebrate,NA,NA,NA
+RMULLMEDGSA29,Mullus barbatus,Red mullet,Mediterranean-Black Sea,169419,Other Marine,4,max reported,Yildiz and Karakulak 2016
+RROCKLOBSTERSAUSNZ,Jasus edwardsii,Rock lobster,Australia,660225,Invertebrate,20,suspected upper limit,Western Australia Department of Fisheries
+RROCKLOBSTERSAUSSZ,Jasus edwardsii,Rock lobster,Australia,660225,Invertebrate,20,suspected upper limit,Western Australia Department of Fisheries
+RSNAPGM,Lutjanus campechanus,Red snapper,US Southeast and Gulf,168853,Other Marine,57,max reported,FishBase
+RSNAPSATLC,Lutjanus campechanus,Red snapper,US Southeast and Gulf,168853,Other Marine,57,max reported,FishBase
+RSOLE5AB,Lepidopsetta bilineata,Rock sole,Canada West Coast,172917,Flatfish,26,max reported,FishBase
+RSOLEGA,Lepidopsetta bilineata,Rock sole,US Alaska,172917,Flatfish,26,max reported,FishBase
+RSOLEHSTR,Lepidopsetta bilineata,Rock sole,Canada West Coast,172917,Flatfish,26,max reported,FishBase
+RSQLOBSTERCSCH,Pleuroncodes monodon,Red squat lobster,South America,-993,Invertebrate,NA,NA,NA
+RSROCKBCWN,Sebastes proriger,Redstripe rockfish,Canada West Coast,166736,Rockfish,55,max reported,FishBase
+RSROCKBCWS,Sebastes proriger,Redstripe rockfish,Canada West Coast,166736,Rockfish,55,max reported,FishBase
+SABLEFEBSAIGA,Anoplopoma fimbria,Sablefish,US Alaska,167123,Other Marine,94,max reported,FishBase
+SABLEFPCAN,Anoplopoma fimbria,Sablefish,Canada West Coast,167123,Other Marine,94,max reported,FishBase
+SABLEFPCOAST,Anoplopoma fimbria,Sablefish,US West Coast,167123,Other Marine,94,max reported,FishBase
+SARDPVIIIc.IXa,Sardina pilchardus,Sardine,European Union,161813,Forage Fish,15,max reported,FishBase
+SARDSAS,Sardinops sagax,Sardine,Southern Africa,161729,Forage Fish,25,max reported,FishBase
+SARDSAW,Sardinops sagax,Sardine,Southern Africa,161729,Forage Fish,25,max reported,FishBase
+SARDWSE,Sardinops sagax,Sardine,Australia,161729,Forage Fish,25,max reported,FishBase
+SBELLYROCKPCOAST,Sebastes jordani,Shortbelly rockfish,US West Coast,166725,Rockfish,31,max reported,FishBase
+SBT,Thunnus maccoyii,Southern bluefin tuna,Indian Ocean,172431,Tuna and Marlin,20,max reported,FishBase
+SBWHITACIR,Micromesistius australis,Southern blue whiting,New Zealand,164775,Gadids,20,subbed from similar species,
+SBWHITARGS,Micromesistius australis,Southern blue whiting,South America,164775,Gadids,20,subbed from similar species,
+SBWHITCH,Micromesistius australis,Southern blue whiting,South America,164775,Gadids,20,subbed from similar species,
+SCMPBP,Metanephrops challengeri,Scampi,New Zealand,552935,Invertebrate,NA,NA,NA
+SCMPMB,Metanephrops challengeri,Scampi,New Zealand,552935,Invertebrate,NA,NA,NA
+SCMPWHB,Metanephrops challengeri,Scampi,New Zealand,552935,Invertebrate,NA,NA,NA
+SCUPNWATLC,Stenotomus chrysops,Scup,US East Coast,169182,Other Marine,20,max reported,NOAA
+SDOGATLC,Squalus acanthias,Spiny dogfish,US East Coast,160617,Sharks Rays and Skates,75,max reported,FishBase
+SDOGBLKGSA29,Squalus acanthias,Spiny dogfish,Mediterranean-Black Sea,160617,Sharks Rays and Skates,75,max reported,FishBase
+SEELNSSA1,Ammodytes spp,Sand eel,European Union,171671,Forage Fish,3,upper assessment age,MacDonald et al 2019
+SEELNSSA2,Ammodytes spp,Sand eel,European Union,171671,Forage Fish,3,upper assessment age,MacDonald et al 2020
+SEELNSSA3,Ammodytes spp,Sand eel,European Union,171671,Forage Fish,3,upper assessment age,MacDonald et al 2021
+SEELNSSA4,Ammodytes spp,Sand eel,European Union,171671,Forage Fish,3,upper assessment age,MacDonald et al 2022
+SFLOUNMATLC,Paralichthys dentatus,Summer flounder,US East Coast,172735,Flatfish,9,max reported,FishBase
+SILVERFISHSE,Seriolella punctata,Silverfish,Australia,172534,Other Marine,15,max reported,FishBase
+SMOOTHOREOCR,Pseudocyttus maculatus,Smooth oreo,New Zealand,625280,Other Marine,100,max reported,FishBase
+SNAPSAUSNSG,Chrysophrys auratus,Snapper,Australia,169231,Other Marine,54,max reported,FishBase
+SNAPSAUSSSG,Chrysophrys auratus,Snapper,Australia,169231,Other Marine,54,max reported,FishBase
+SNOWCRABBS,Chionoecetes opilio,Snow crab,US Alaska,98428,Invertebrate,20,upper age range,NOAA
+SNROCKPCOAST,Sebastes diploproa,Splitnose rockfish,US West Coast,166716,Rockfish,86,max reported,FishBase
+SOLECS,Solea solea,Common sole,European Union,173002,Flatfish,26,max reported,FishBase
+SOLEIIIa.2224,Solea solea,Common sole,European Union,173002,Flatfish,26,max reported,FishBase
+SOLEIS,Solea solea,Common sole,European Union,173002,Flatfish,26,max reported,FishBase
+SOLENS,Solea solea,Common sole,European Union,173002,Flatfish,26,max reported,FishBase
+SOLEVIId,Solea solea,Common sole,European Union,173002,Flatfish,26,max reported,FishBase
+SOLEVIIh.k,Solea solea,Common sole,European Union,173002,Flatfish,26,max reported,FishBase
+SOUTHHAKECR,Merluccius australis,Southern hake,New Zealand,164797,Gadids,30,max reported,FishBase
+SOUTHHAKEWCSI,Merluccius australis,Southern hake,New Zealand,164797,Gadids,30,max reported,FishBase
+SPANMACKSETO,Scomberomorus niphonius,Japanese Spanish mackerel,Japan,172446,Tuna and Marlin,4,max reported,Nishikawa et al 2014
+SPHAKECH,Merluccius gayi,South Pacific hake,South America,164799,Gadids,16,subbed from similar species,NA
+SPRAT22.32,Sprattus sprattus,Sprat,European Union,161789,Forage Fish,6,max reported,FishBase
+SPRATIIIa.IV,Sprattus sprattus,Sprat,European Union,161789,Forage Fish,6,max reported,FishBase
+SSLOBSTERSASC,Palinurus gilchristi,Southern spiny lobster,Southern Africa,552965,Invertebrate,NA,NA,NA
+STFLOUNNPCOAST,Platichthys stellatus,Starry flounder,US West Coast,172893,Flatfish,24,max reported,FishBase
+STFLOUNSPCOAST,Platichthys stellatus,Starry flounder,US West Coast,172893,Flatfish,24,max reported,FishBase
+STMARLINNEPAC,Kajikia audax,Striped marlin,Pacific Ocean,768127,Tuna and Marlin,20,suspected upper limit,NOAA
+STMARLINWCNPAC,Kajikia audax,Striped marlin,Pacific Ocean,768127,Tuna and Marlin,20,suspected upper limit,NOAA
+TANNERCRABBSAI,Chionoecetes bairdi,Tanner crab,US Alaska,98429,Invertebrate,12,max reported,SeaLifeBase
+TARAKNZ,Nemadactylus macropterus,Tarakihi,New Zealand,170262,Other Marine,50,max reported,FishBase
+THRSHARNPAC,Alopias vulpinus,Thresher shark,Pacific Ocean,159916,Sharks Rays and Skates,25,max reported,FishBase
+TILEGM,Lopholatilus chamaeleonticeps,Tilefish,US Southeast and Gulf,168546,Other Marine,35,max reported,FishBase
+TILEMATLC,Lopholatilus chamaeleonticeps,Tilefish,US East Coast,168546,Other Marine,35,max reported,FishBase
+TILESATLC,Lopholatilus chamaeleonticeps,Tilefish,US Southeast and Gulf,168546,Other Marine,35,max reported,FishBase
+TREVALLYTRE7,Pseudocaranx dentex,Trevally,New Zealand,168641,Other Marine,49,max reported,FishBase
+TURBLKGSA29,Psetta maxima,Turbot,Mediterranean-Black Sea,616195,Flatfish,25,max reported,FishBase
+WANGLVIIIc.IXa,Lophius piscatorius,White anglerfish,European Union,164501,Other Marine,24,max reported,FishBase
+WANGLVII.VIIIabd,Lophius piscatorius,White anglerfish,European Union,164501,Other Marine,24,max reported,FishBase
+WAREHOUESE,Seriolella brama,Blue warehou,Australia,172531,Other Marine,15,max reported,FishBase
+WAREHOUWSE,Seriolella brama,Blue warehou,Australia,172531,Other Marine,15,max reported,FishBase
+WHAKE4T,Urophycis tenuis,White hake,Canada East Coast,164732,Gadids,23,max reported,FishBase
+WHAKEGBGOM,Urophycis tenuis,White hake,US East Coast,164732,Gadids,23,max reported,FishBase
+WHITMEDGSA29,Merlangius merlangus,Whiting,Mediterranean-Black Sea,164758,Gadids,20,max reported,FishBase
+WHITNS.VIId,Merlangius merlangus,Whiting,European Union,164758,Gadids,20,max reported,FishBase
+WHITVIa,Merlangius merlangus,Whiting,European Union,164758,Gadids,20,max reported,FishBase
+WHITVIIa,Merlangius merlangus,Whiting,European Union,164758,Gadids,20,max reported,FishBase
+WINFLOUN4T,Pseudopleuronectes americanus,Winter flounder,Canada East Coast,172905,Flatfish,14,max reported,FishBase
+WINFLOUN5Z,Pseudopleuronectes americanus,Winter flounder,US East Coast,172905,Flatfish,14,max reported,FishBase
+WINFLOUNSNEMATL,Pseudopleuronectes americanus,Winter flounder,US East Coast,172905,Flatfish,14,max reported,FishBase
+WITFLOUN4RST,Glyptocephalus cynoglossus,Witch flounder,Canada East Coast,172873,Flatfish,25,max reported,FishBase
+WITFLOUN5Y,Glyptocephalus cynoglossus,Witch flounder,US East Coast,172873,Flatfish,25,max reported,FishBase
+WMARLINATL,Tetrapturus albidus,White marlin,Atlantic Ocean,172499,Tuna and Marlin,30,upper age range,Maryland DNR
+WPOLLAI,Theragra chalcogramma,Walleye pollock,US Alaska,164722,Gadids,28,max reported,FishBase
+WPOLLEBS,Theragra chalcogramma,Walleye pollock,US Alaska,164722,Gadids,28,max reported,FishBase
+WPOLLGA,Theragra chalcogramma,Walleye pollock,US Alaska,164722,Gadids,28,max reported,FishBase
+WROCKBCW,Sebastes entomelas,Widow rockfish,Canada West Coast,166719,Rockfish,60,max reported,FishBase
+WROCKPCOAST,Sebastes entomelas,Widow rockfish,US West Coast,166719,Rockfish,60,max reported,FishBase
+YELLCCODGOM,Limanda ferruginea,Yellowtail flounder,US East Coast,172909,Flatfish,12,max reported,FishBase
+YELLGB,Limanda ferruginea,Yellowtail flounder,US East Coast,172909,Flatfish,12,max reported,FishBase
+YELLSNEMATL,Limanda ferruginea,Yellowtail flounder,US East Coast,172909,Flatfish,12,max reported,FishBase
+YEYEROCKPCOAST,Sebastes ruberrimus,Yelloweye rockfish,US West Coast,166740,Rockfish,118,max reported,FishBase
+YFINEIO,Thunnus albacares,Yellowfin tuna,Indian Ocean,172423,Tuna and Marlin,9,max reported,FishBase
+YSOLEBSAI,Limanda aspera,Yellowfin sole,US Alaska,172907,Flatfish,34,max reported,FishBase
+YTROCKNPCOAST,Sebastes flavidus,Yellowtail rockfish,US West Coast,166720,Rockfish,64,max reported,FishBase

@@ -1,13 +1,13 @@
 # correlation analysis to determine what is driving recruitment
 
-# Ricker stocks ------------------------------------------------------------------------------------------------
+# Dome-shaped stocks ------------------------------------------------------------------------------------------------
 # going to add extra columns for rho estimate and p-value from spearman's correlation
-ricker_stocks <- ricker_stocks %>%
-  add_column(cor_coef = numeric(),
-             cor_pval = numeric())
+dome_stocks <- dome_stocks %>%
+  add_column(cor_coef = 1,
+             cor_pval = 1)
 
-for(x in ricker_stocks$stock_name){
-  row <- which(ricker_stocks$stock_name == x)
+for(x in dome_stocks$stock_name){
+  row <- which(dome_stocks$stock_name == x)
   row2 <- which(use_stocks$stock_name == x)
   
   stock <- tibble(
@@ -37,18 +37,18 @@ for(x in ricker_stocks$stock_name){
   corrr <- cor.test(stock$recruits, stock$sb, method = 'spearman', exact = FALSE)
   
   # save rho estimate and p-value to data frame
-  ricker_stocks[row, "cor_coef"] <- corrr$estimate
-  ricker_stocks[row, "cor_pval"] <- corrr$p.value
+  dome_stocks[row, "cor_coef"] <- corrr$estimate
+  dome_stocks[row, "cor_pval"] <- corrr$p.value
 }
 
 # BevHolt stocks -----------------------------------------------------------------------------------------
 # add extra columns for correlation results
-bevholt_stocks <- bevholt_stocks %>%
+monotonic_stocks <- monotonic_stocks %>%
   add_column(zero_lag = 1,
              neg_lag = 1)
 
-for(x in bevholt_stocks$stock_name){
-  row <- which(bevholt_stocks$stock_name == x)
+for(x in monotonic_stocks$stock_name){
+  row <- which(monotonic_stocks$stock_name == x)
   row2 <- which(use_stocks$stock_name == x)
   
   stock <- tibble(
@@ -70,14 +70,14 @@ for(x in bevholt_stocks$stock_name){
                              acf = stock_ccf$acf)
   # save zero-lagged correlation value
   zero_lag <- stock_ccf_df[11,2]
-  bevholt_stocks[row, "zero_lag"] <- zero_lag
+  monotonic_stocks[row, "zero_lag"] <- zero_lag
   
   # determine if negative lags are <= zero lag value (if yes, spbio driven, if no, either env and/or spbio)
   for(x in 1:10){
     if(stock_ccf_df[x,2] <= zero_lag){
-      bevholt_stocks[row, "neg_lag"] <- 1
+      monotonic_stocks[row, "neg_lag"] <- 1
     }else{
-      bevholt_stocks[row, "neg_lag"] <- 0
+      monotonic_stocks[row, "neg_lag"] <- 0
     }
   }
 }
@@ -87,52 +87,59 @@ for(x in bevholt_stocks$stock_name){
 # have a significant zero lag correlation & negative lagged correlations less than or equal to the zero lag correlation 
 sb_driven_stocks <- tibble()
 sb_driven_stocks <- sb_driven_stocks %>%
-  add_column(stock_name = "")
+  add_column(stock_name = "",
+             curve_shape = "")
 
-# check Ricker stocks first
-for(x in 1:nrow(ricker_stocks)){
-  if(ricker_stocks[x,"cor_pval"] <= 0.05){
+# check dome-shaped stocks first
+for(x in 1:nrow(dome_stocks)){
+  if(dome_stocks[x,"cor_pval"] <= 0.05){
     sb_driven_stocks <- sb_driven_stocks %>%
-      add_row(stock_name = pull(ricker_stocks[x,1]))
+      add_row(stock_name = pull(dome_stocks[x,1]),
+              curve_shape = "dome")
   }
 }
 
-# check BevHolt stocks
-for(x in 1:nrow(bevholt_stocks)){
-  if(bevholt_stocks[x,"zero_lag"] >= 0.5 && bevholt_stocks[x,"neg_lag"] == 1){
+# check monotonic stocks
+for(x in 1:nrow(monotonic_stocks)){
+  if(monotonic_stocks[x,"zero_lag"] >= 0.5 && monotonic_stocks[x,"neg_lag"] == 1){
     sb_driven_stocks <- sb_driven_stocks %>%
-      add_row(stock_name = pull(bevholt_stocks[x,1]))
+      add_row(stock_name = pull(monotonic_stocks[x,1]),
+              curve_shape = "monotonic")
   }
 }
 # Combine environmentally driven stocks ----------------------------------------------------------------------------
 env_driven_stocks <- tibble()
 env_driven_stocks <- env_driven_stocks %>%
-  add_column(stock_name = "")
+  add_column(stock_name = "",
+             curve_shape = "")
 
-# find all ricker stocks with a p-value > 0.05
-for(x in 1:nrow(ricker_stocks)){
-  if(ricker_stocks[x,"cor_pval"] > 0.05){
+# find all dome shaped stocks with a p-value > 0.05
+for(x in 1:nrow(dome_stocks)){
+  if(dome_stocks[x,"cor_pval"] > 0.05){
     env_driven_stocks <- env_driven_stocks %>%
-      add_row(stock_name = pull(ricker_stocks[x,1]))
+      add_row(stock_name = pull(dome_stocks[x,1]),
+              curve_shape = "dome")
   }
 }
 
-# find all bevholt stocks with a non-significant zero lagged correlation
-for(x in 1:nrow(bevholt_stocks)){
-  if(bevholt_stocks[x,"zero_lag"] < 0.5){
+# find all monotonic stocks with a non-significant zero lagged correlation
+for(x in 1:nrow(monotonic_stocks)){
+  if(monotonic_stocks[x,"zero_lag"] < 0.5){
     env_driven_stocks <- env_driven_stocks %>%
-      add_row(stock_name = pull(bevholt_stocks[x,1]))
+      add_row(stock_name = pull(monotonic_stocks[x,1]),
+              curve_shape = "monotonic")
   }
 }
 
 # Edge Cases -----------------------------------------------------------------------------------------------
 edge_stocks <- tibble()
 edge_stocks <- edge_stocks %>%
-  add_column(stock_name = "")
+  add_column(stock_name = "",
+             curve_shape = "")
 
-for(x in 1:nrow(bevholt_stocks)){
-  if(bevholt_stocks[x,"zero_lag"] > 0.5 && bevholt_stocks[x,"neg_lag"] == 0){
+for(x in 1:nrow(monotonic_stocks)){
+  if(monotonic_stocks[x,"zero_lag"] > 0.5 && monotonic_stocks[x,"neg_lag"] == 0){
     edge_stocks <- edge_stocks %>%
-      add_row(stock_name = pull(bevholt_stocks[x,1]))
+      add_row(stock_name = pull(monotonic_stocks[x,1]), curve_shape = "monotonic")
   }
 }

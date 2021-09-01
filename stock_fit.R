@@ -375,12 +375,12 @@ for(x in 1:nrow(filtered_stocks)){
   }
 }
 
-# ricker stocks are those with a relative likelihood > 0.75
-ricker_stocks <- filtered_stocks %>%
+# dome-shaped stocks are those with a relative likelihood > 0.75
+dome_stocks <- filtered_stocks %>%
   filter(min_model == "ricker") %>%
   filter(rel_likelihood > 0.75)
 
-bevholt_stocks <- filtered_stocks %>%
+monotonic_stocks <- filtered_stocks %>%
   filter(min_model == "bevholt" | rel_likelihood < 0.75)
 
 

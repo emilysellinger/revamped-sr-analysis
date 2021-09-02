@@ -138,5 +138,11 @@ ggplot(all_drivers, aes(x = age, color = driver, fill = driver)) +
 
 # will compare age and regime length
 ggplot(env_change_pt, aes(x = age, y = regime_length, color = curve_shape)) +
-  geom_point()
+  geom_point() +
+  geom_text(aes(label = ifelse(age > 100, as.character(stock_name),"")), hjust = 0, vjust = 0)
+
+ggplot(env_change_pt, aes(x = age, y = regime_length, color = curve_shape)) +
+  geom_point() +
+  coord_fixed(xlim = c(0,100))
+
 

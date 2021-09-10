@@ -1,48 +1,6 @@
-# Lifespan summary 
+# Lifespan summary
 
-# Load data --------------------------------------------------------------------------------------------------
-taxonomy <- read.csv(here("data", "taxonomy.csv")) # taxonomic info for each species
-
-stock_info <- read.csv(here("data", "stock_info.csv")) # information for each stock, links to taxonomic data
-
-
-# Match taxonomic info to current stocks ---------------------------------------------------------------------
-
-# in the taxonomy and stock info datasets, there are some discrepancies in the naming conventions for some stocks
-# a - is used instead of . To deal with this, going to replace the . w/ -
-filtered_stocks$stock_name <- str_replace_all(filtered_stocks$stock_name, "\\.", "-")
-
-lifespan <- tibble(stock_name = "",
-                         scientific_name = "",
-                         common_name = "",
-                         region = "",
-                         tsn = numeric())
-# match data
-for(x in filtered_stocks$stock_name){
-  
-  # find row in stock info dataset
-  row <- which(stock_info$stockid == x)
-  
-  lifespan <- lifespan %>%
-    add_row(stock_name = x, scientific_name = stock_info[row, "scientificname"], common_name = stock_info[row, "commonname"],
-            region = stock_info[row, "region"], tsn = stock_info[row, "tsn"])
-}
-
-# Add fishery type data --------------------------------------------------------------------------------------
-stock_lifespan <- stock_lifespan %>%
-  add_column(fishery_type = "")
-
-for(x in stock_lifespan$tsn){
-  row <- which(stock_lifespan$tsn == x)
-  row2 <- which(taxonomy$tsn == x)
-  
-  stock_lifespan[row, "fishery_type"] <- taxonomy[row2,"FisheryType"]
-}
-
-# Write lifespan data frame to csv --------------------------------------------------------------------------------
-write_csv(lifespan, file.path("data", "lifespan.csv"))
-
-# Re-load populated lifespan data ---------------------------------------------------------------------------------
+# Load populated lifespan data ---------------------------------------------------------------------------------
 # researched max age data for each of the stocks in the analysis, most from FishBase
 
 lifespan <- read.csv(here("data", "lifespan.csv"))
@@ -111,16 +69,70 @@ all_drivers <- rbind(sb_driven_stocks, env_driven_stocks, edge_stocks)
 
 # Summarize with recruitment regimes ------------------------------------------------------------------------------
 env_change_pt %>%
-  group_by(stock_name) %>%
-  summarise(n = n())
+  summarise(n = unique(stock_name)) # 82 stocks with regime changes
 
 env_drivers <- rbind(env_driven_stocks, edge_stocks)
+
+# add lifespan data to change point data
 env_change_pt <- env_change_pt %>%
   left_join(env_drivers)
+
+# calculate average regime length/sd across all ages
 env_change_pt %>%
   summarise(mean = mean(regime_length), sd = sd(regime_length))
-  
+
+# want to determine what the mean regime length/sd is for different age categories
+# first will determine what seems like an appropriate age breakdown
+env_change_pt %>%
+  summarise(min_age = min(age, na.rm = TRUE), max_age = max(age, na.rm = TRUE))
+
+# get total number of stocks for each age category
+env_change_pt %>%
+  filter(age <= 10) %>%
+  summarise(stock_name = unique(stock_name))
+
+env_change_pt %>%
+  filter(age > 10) %>%
+  filter(age <= 20) %>%
+  summarise(n = unique(stock_name))
+
+env_change_pt %>%
+  filter(age > 20) %>%
+  filter(age <= 40) %>%
+  summarise(n = unique(stock_name))
+
+env_change_pt %>%
+  filter(age > 40) %>%
+  summarise(n = unique(stock_name))
+
+# calculate mean regime length/sd for each category
+env_change_pt %>%
+  filter(age <= 10) %>%
+  summarise(mean_length = mean(regime_length), sd = sd(regime_length))
+
+env_change_pt %>%
+  filter(age > 10) %>%
+  filter(age <= 20) %>%
+  summarise(mean_length = mean(regime_length), sd = sd(regime_length))
+
+env_change_pt %>%
+  filter(age > 20) %>%
+  filter(age <= 40) %>%
+  summarise(mean_length = mean(regime_length), sd = sd(regime_length))
+
+env_change_pt %>%
+  filter(age > 40) %>%
+  summarise(mean_length = mean(regime_length), sd = sd(regime_length))
+
+# want to know how many stocks with regime changes don't have age data
+env_change_pt %>%
+  filter(is.na(age)) %>%
+  summarise(stocks = unique(stock_name))
+
+
 # Data visualization -----------------------------------------------------------------------------------------------
+
+
 ggplot(sb_driven_stocks, aes(x = age, color = curve_shape,  fill = curve_shape)) +
   geom_histogram(binwidth = 5, alpha = 0.5)
 
@@ -146,3 +158,13 @@ ggplot(env_change_pt, aes(x = age, y = regime_length, color = curve_shape)) +
   coord_fixed(xlim = c(0,100))
 
 
+# want some general information about the stocks in the analysis
+stock_info <- rename(stock_info, stock_name = stockid)
+
+all_drivers <- all_drivers %>%
+  left_join(stock_info)
+all_drivers %>%
+  summarise(total_reg = unique(region))
+
+all_drivers %>%
+  summarise(total_species = unique(scientificname))

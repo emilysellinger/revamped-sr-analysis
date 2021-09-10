@@ -4,8 +4,8 @@
 # Breakpoint fit ---------------------------------------------
 stock_change_pts <- tibble(stock_name = "",
                            change_pt = numeric())
-pdf("change_point_graphs.pdf") 
-for(x in filtered_stocks$stock_name)
+pdf("results/recruitment_change_points.pdf") 
+for(x in stock_model_fits$stock_name)
 {
   row <- which(use_stocks$stock_name == x)
   
@@ -22,7 +22,7 @@ for(x in filtered_stocks$stock_name)
     mutate(recruits = replace(recruits, recruits == 0, 1))
     
   # Fit regime model
-  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6,pen.value=0.05)
+  fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
   
   
   changes	<- fitPelt@cpts
@@ -86,7 +86,7 @@ for(x in env_driven_stocks$stock_name)
     mutate(recruits = replace(recruits, recruits == 0, 1))
   
   # Fit regime model
-  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6,pen.value=0.05)
+  fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
   changes	<- fitPelt@cpts
   
   # calculate regime length
@@ -105,7 +105,7 @@ for(x in env_driven_stocks$stock_name)
   }
 }
 
-# will now add the 10 stocks where we can't determine if they are environmentally driven or spbio driven (or both)
+# will now add the 28 stocks where we can't determine if they are environmentally driven or spbio driven (or both)
 for(x in edge_stocks$stock_name)
 {
   row <- which(use_stocks$stock_name == x)
@@ -123,7 +123,7 @@ for(x in edge_stocks$stock_name)
     mutate(recruits = replace(recruits, recruits == 0, 1))
   
   # Fit regime model
-  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6,pen.value=0.05)
+  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
   changes	<- fitPelt@cpts
   
   # calculate regime length
@@ -146,9 +146,11 @@ for(x in edge_stocks$stock_name)
 counts <- env_change_pt %>%
   count(stock_name)
 
+
 for(x in 1:nrow(counts)){
   y <- pull(counts[x,1])
   nums <- pull(counts[x,2])
+  
   
   if(nums < 2){
     env_change_pt <- env_change_pt %>%
@@ -156,3 +158,8 @@ for(x in 1:nrow(counts)){
   }
 }
 
+
+# want to know the number of environmentally driven stocks with a regime change in the time series
+counts %>%
+  filter(n > 1)
+# 193 stocks have regime changes

@@ -40,7 +40,7 @@ for(x in 2:ncol(takers_rec)){
 # inital data exploration found some recruitment time series that were extrapolated every few years
 # we want to remove those prior to S-R function fits (more filtering will be done following that)
 
-pdf("recruitment_time_series.pdf")
+pdf("results/initial_recruitment_time_series.pdf")
 for(x in 2:ncol(takers_rec)){
   
   # plot recruitment time series
@@ -59,7 +59,7 @@ sus_stocks <- c("AMPL5YZ", "BGROCKPCOAST", "BKCDLFENI", "BLACKOREOPR", "BLACKORE
                 "PILCHTSST", "PORSHARATL", "SAABALONESA", "SDOGBLKGSA29", "SMOOTHOREOBP", "SMOOTHOREOEPR", "SMOOTHOREOSLD","SMOOTHOREOWECR",
                 "SPSDOGPCOAST", "YNOSESKACSCH", "YNOSESKASCH")
 
-pdf("suspect_stock_SR.pdf")
+pdf("results/suspect_stock_SR.pdf")
 for(x in sus_stocks){
   # set margins
   par(mfrow=c(2,1),mar=c(.1,.1,.1,.1),oma=c(4,7,4,1))

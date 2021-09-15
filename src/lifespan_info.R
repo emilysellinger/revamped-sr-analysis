@@ -69,11 +69,11 @@ all_drivers <- rbind(sb_driven_stocks, env_driven_stocks, edge_stocks)
 
 # Summarize with recruitment regimes ------------------------------------------------------------------------------
 env_change_pt %>%
-  summarise(n = unique(stock_name)) # 82 stocks with regime changes
+  summarise(n = unique(stock_name)) # 206 stocks with regime changes
 
 env_drivers <- rbind(env_driven_stocks, edge_stocks)
 
-# add lifespan data to change point data
+# Add lifespan data to change point data ----------------------------------------------------------------------------
 env_change_pt <- env_change_pt %>%
   left_join(env_drivers)
 
@@ -130,41 +130,10 @@ env_change_pt %>%
   summarise(stocks = unique(stock_name))
 
 
-# Data visualization -----------------------------------------------------------------------------------------------
-
-
-ggplot(sb_driven_stocks, aes(x = age, color = curve_shape,  fill = curve_shape)) +
-  geom_histogram(binwidth = 5, alpha = 0.5)
-
-ggplot(env_driven_stocks, aes(x = age, color = curve_shape,  fill = curve_shape)) +
-  geom_histogram(binwidth = 5, alpha = 0.5)
-
-ggplot(edge_stocks, aes(x = age)) +
-  geom_histogram(binwidth = 5, alpha = 0.5)
-
-# doesn't seem to be much difference in max age distributions among spawning biomass and environmentally driven stocks
-# will make another graph with both drivers to confirm
-
-ggplot(all_drivers, aes(x = age, color = driver, fill = driver)) +
-  geom_histogram(binwidth = 5, alpha = 0.5)
-
-# will compare age and regime length
-ggplot(env_change_pt, aes(x = age, y = regime_length, color = curve_shape)) +
-  geom_point() +
-  geom_text(aes(label = ifelse(age > 100, as.character(stock_name),"")), hjust = 0, vjust = 0)
-
-ggplot(env_change_pt, aes(x = age, y = regime_length, color = curve_shape)) +
-  geom_point() +
-  coord_fixed(xlim = c(0,100))
-
-
 # want some general information about the stocks in the analysis
-stock_info <- rename(stock_info, stock_name = stockid)
+lifespan %>%
+  summarise(species = unique(scientific_name))
 
-all_drivers <- all_drivers %>%
-  left_join(stock_info)
-all_drivers %>%
-  summarise(total_reg = unique(region))
-
-all_drivers %>%
-  summarise(total_species = unique(scientificname))
+lifespan %>%
+  filter(is.na(age)) %>%
+  summarise(species = unique(scientific_name))

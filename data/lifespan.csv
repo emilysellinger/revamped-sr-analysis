@@ -312,3 +312,6 @@ YFINEIO,Thunnus albacares,Yellowfin tuna,Indian Ocean,172423,Tuna and Marlin,9,m
 YFINEPAC,Thunnus albacares,Yellowfin tuna,Pacific Ocean,172423,Tuna and Marlin,9,max reported,FishBase
 YSOLEBSAI,Limanda aspera,Yellowfin sole,US Alaska,172907,Flatfish,34,max reported,FishBase
 YTROCKNPCOAST,Sebastes flavidus,Yellowtail rockfish,US West Coast,166720,Rockfish,64,max reported,FishBase
+GTRIGGM,Balistes capriscus,Gray triggerfish,US Southeast and Gulf,173138,Other Marine,16,estimate,NOAA
+MEG8c9a,Lepidorhombus whiffiagonis,Megrim,European Union,172835,Flatfish,16,max reported,FishBase
+SCUPNWATLC,Stenotomus chrysops,Scup,US East Coast,169182,Other Marine,20,estimate,NOAA

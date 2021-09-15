@@ -123,7 +123,7 @@ for(x in edge_stocks$stock_name)
     mutate(recruits = replace(recruits, recruits == 0, 1))
   
   # Fit regime model
-  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
+  fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
   changes	<- fitPelt@cpts
   
   # calculate regime length
@@ -162,4 +162,4 @@ for(x in 1:nrow(counts)){
 # want to know the number of environmentally driven stocks with a regime change in the time series
 counts %>%
   filter(n > 1)
-# 193 stocks have regime changes
+# 206 stocks have regime changes

@@ -221,7 +221,7 @@ use_stocks[row, "min_year"] <- 1977
 use_stocks[row, "max_year"] <- 2005
 
 row <- which(use_stocks$stock_name == "GTRIGGM")
-use_stocks[row, "min_year"] <- 1980
+use_stocks[row, "min_year"] <- 1977
 
 row <- which(use_stocks$stock_name == "HAD4X5Y")
 use_stocks[row, "max_year"] <- 2013
@@ -431,18 +431,20 @@ row <- which(use_stocks$stock_name == "YTROCKNPCOAST")
 use_stocks[row, "min_year"] <- 1960
 
 # going to also remove stocks that look like they've been extrapolated for several years or won't have enough data
-# after removing model run in time
+# after removing model run in time (CODIS doesn't have as much SSB data as it did when Szuwalski analysis done, won't include)
 
 use_stocks <- use_stocks %>%
-  filter(!(stock_name %in% c("CODKAT", "CODIS", "COD3M", "DOYSFS","GEMFISHNZ","GTRIGGM","MEG8c9a", "MORWONGWSE", "NZLINGLIN6b", "PANCHCSCH", "PAUAPAU5D", "PILCHPJPN",
+  filter(!(stock_name %in% c("CODKAT", "CODIS", "COD3M", "DOYSFS","GEMFISHNZ", "MORWONGWSE", "NZLINGLIN6b", "PANCHCSCH", "PAUAPAU5D", "PILCHPJPN",
                          "PILCHTSST", "PLAIC2123", "PLAICCELT", "PTOOTHFISHCH", "REDDEEPDP.1.2.V.XII.XIV",
                          "REDDEEPI.II", "SARDSAW", "SARDWSE", "SBWHITARGS", "SCMPBP", "SCMPMB", "SCMPWHB",
-                         "SCUPNWATLC", "SDOGATLC", "SNAPSAUSSSG", "SSLOBSTERSASC", "SSTHORNHPCOAST", "STFLOUNNPCOAST",
+                          "SDOGATLC", "SNAPSAUSSSG", "SSLOBSTERSASC", "SSTHORNHPCOAST", "STFLOUNNPCOAST",
                          "TARAKNZ", "TILEGM", "TILEMATLC", "TURBLKGSA29", "WHITVIIbce.k", "WHITNS.VIId")))
 
 # I still have about 100 more stocks than the original analysis, which could be due to the updates to RAM
 # in the years following Szuwalski et al 2015, but I just want to make sure that without the model run in times,
 # the stocks I currently have are not off of the S-R curve
+
+
 
 RMSE_test <- tibble(stock_name = "",
                     rmse = numeric())

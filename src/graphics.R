@@ -1,13 +1,42 @@
 # Graphs for project report
 
+# Max age histogram -------------------------------------------------------------------------------------------------
+age_data <- lifespan %>%
+  select(scientific_name, age)
+age_data <- age_data %>%
+  distinct(scientific_name, .keep_all = TRUE)
+
 png("results/age_hist.png")
-ggplot(lifespan, aes(x = age, res = 120)) +
+ggplot(age_data, aes(x = age, res = 120)) +
   geom_histogram(binwidth = 5, alpha = 0.8, color = "black", fill = "gray") +
   labs(x = "Max age reported", y = "Count")
 dev.off()
 
+# Map of stocks ----------------------------------------------------------------------------------------------------
+library(sf)
+library(RColorBrewer)
 
+fao <- read.csv(here("data", "fao_region.csv"))
+fao$stock_name <- str_replace_all(fao$stock_name, "-", "\\.")
 
+lifespan <- lifespan %>%
+  left_join(fao)
+
+lifespan %>%
+  group_by(primary_FAOarea) %>%
+  summarise(n = n())
+
+fao_regions <- st_read("data/major_fao_region.shp")
+
+fao_regions$num_stocks <- c(0, 20, 67, 4, 75, 20, 0, 1, 8, 2, 16, 8, 27, 1, 0, 0, 17, 4, 46) # stocks in each fao region
+
+win.metafile("results/stock_map.wmf")
+ggplot() +
+  geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = rev(brewer.pal(5, "YlGnBu"))) +
+  theme_classic() 
+dev.off() 
+
+# Stock-recruitment curves -----------------------------------------------------------------------------------------
 pdf("results/final_rec_sb.pdf")
 for(x in stock_model_fits$stock_name){
   row <- which(stock_model_fits$stock_name == x)
@@ -182,7 +211,7 @@ for(x in stock_model_fits$stock_name){
 dev.off()
 
 
-# graphs for project report
+# Specific S-R graphs for project report -----------------------------------------------------------------------------
 proj_report_stocks <- c("AMPL4T", "ARFLOUNDBSAI", "WHITVIa", "GOPHERSPCOAST", "SOLEIS" )
 
 for(x in proj_report_stocks){

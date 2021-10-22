@@ -83,6 +83,13 @@ dev.off()
 row <- which(use_stocks$stock_name == "ACADREDGOMGB")
 use_stocks[row, "min_year"] <- 1976
 
+row <- which(use_stocks$stock_name == "ALSKABSAI")
+use_stocks[row, "min_year"] <- 1980
+
+row <- which(use_stocks$stock_name == "APOLLPJPN")
+use_stocks[row, "min_year"] <- 2011
+
+
 row <- which(use_stocks$stock_name == "ARFLOUNDBSAI")
 use_stocks[row, "max_year"] <- 2016
 
@@ -98,6 +105,9 @@ use_stocks[row, "min_year"] <- 1981
 row <- which(use_stocks$stock_name == "ALSKABSAI")
 use_stocks[row, "min_year"] <- 1982
 
+row <- which(use_stocks$stock_name == "AUROCKPCOAST")
+use_stocks[row, "min_year"] <- 1990
+
 row <- which(use_stocks$stock_name == "AUSSALMONNZ")
 use_stocks[row, "min_year"] <- 1985
 
@@ -106,6 +116,10 @@ use_stocks[row, "max_year"] <- 2011
 
 row <- which(use_stocks$stock_name == "BGRDRNSWWA")
 use_stocks[row, "min_year"] <- 1975
+
+row <- which(use_stocks$stock_name == "BIGHTREDSE")
+use_stocks[row, "max_year"] <- 2005
+
 
 row <- which(use_stocks$stock_name == "BLACKROCKCAL")
 use_stocks[row, "min_year"] <- 1971
@@ -118,6 +132,9 @@ use_stocks[row, "min_year"] <- 1960
 
 row <- which(use_stocks$stock_name == "BOCACCSPCOAST")
 use_stocks[row, "min_year"] <- 1961
+
+row <- which(use_stocks$stock_name == "BSQLOBSTERNCH")
+use_stocks[row, "min_year"] <- 1987
 
 
 row <- which(use_stocks$stock_name == "BWHITNEA")
@@ -141,6 +158,10 @@ use_stocks[row, "min_year"] <- 1983
 row <- which(use_stocks$stock_name == "CHILISPCOAST")
 use_stocks[row, "min_year"] <- 1965
 
+row <- which(use_stocks$stock_name == "CMACKPJPN")
+use_stocks[row, "max_year"] <- 2018
+
+
 row <- which(use_stocks$stock_name == "COBGM")
 use_stocks[row, "min_year"] <- 1980
 
@@ -152,6 +173,14 @@ use_stocks[row, "min_year"] <- 1951
 
 row <- which(use_stocks$stock_name == "CROCKPCOAST")
 use_stocks[row, "min_year"] <- 1960
+
+row <- which(use_stocks$stock_name == "CSALMJDFS")
+use_stocks[row, "min_year"] <- 1973
+use_stocks[row, "max_year"] <- 1994
+
+row <- which(use_stocks$stock_name == "CSALMWILLB")
+use_stocks[row, "min_year"] <- 1970
+use_stocks[row, "max_year"] <- 1990
 
 row <- which(use_stocks$stock_name == "DEEPCHAKESA")
 use_stocks[row, "min_year"] <- 1985
@@ -171,12 +200,18 @@ row <- which(use_stocks$stock_name == "DSOLEPCOAST")
 use_stocks[row, "min_year"] <- 1973
 use_stocks[row, "max_year"] <- 2010
 
+row <- which(use_stocks$stock_name == "DUSROCKGA")
+use_stocks[row, "max_year"] <- 2011
+
 row <- which(use_stocks$stock_name == "EBASSVIIIab")
 use_stocks[row, "min_year"] <- 1990
 use_stocks[row, "max_year"] <- 2015
 
 row <- which(use_stocks$stock_name == "EBASSIVbc.VII")
 use_stocks[row, "max_year"] <- 2016
+
+row <- which(use_stocks$stock_name == "ESOLEPCOAST")
+use_stocks[row, "min_year"] <- 1940
 
 row <- which(use_stocks$stock_name == "FLSOLEBSAI")
 use_stocks[row, "min_year"] <- 1970
@@ -191,6 +226,10 @@ use_stocks[row, "max_year"] <- 2015
 
 row <- which(use_stocks$stock_name == "GAGSATLC")
 use_stocks[row, "min_year"] <- 1970
+
+row <- which(use_stocks$stock_name == "GEMFISHNZ")
+use_stocks[row, "min_year"] <- 1980
+use_stocks[row, "max_year"] <- 2000
 
 row <- which(use_stocks$stock_name == "GHALBSAI")
 use_stocks[row, "min_year"] <- 1960
@@ -229,6 +268,12 @@ use_stocks[row, "max_year"] <- 2013
 row <- which(use_stocks$stock_name == "HADIS")
 use_stocks[row, "max_year"] <- 2015
 
+row <- which(use_stocks$stock_name == "HAKENRTN")
+use_stocks[row, "max_year"] <- 2017
+
+row <- which(use_stocks$stock_name == "HERRNWATLC")
+use_stocks[row, "min_year"] <- 1970
+
 row <- which(use_stocks$stock_name == "HMACKIIa.IVa.Vb.VIa.VII.VIII")
 use_stocks[row, "min_year"] <- 1983
 
@@ -250,20 +295,35 @@ use_stocks[row, "min_year"] <- 1971
 row <- which(use_stocks$stock_name == "KMACKSATLC")
 use_stocks[row, "min_year"] <- 1980
 
+row <- which(use_stocks$stock_name == "LINGCODNPCOAST")
+use_stocks[row, "min_year"] <- 1962
+
 row <- which(use_stocks$stock_name == "LINGCODSPCOAST")
 use_stocks[row, "min_year"] <- 1957
 
 row <- which(use_stocks$stock_name == "LSTHORNHPCOAST")
 use_stocks[row, "min_year"] <- 1975
 
+
 row <- which(use_stocks$stock_name == "MENATLAN")
 use_stocks[row, "min_year"] <- 1960
+
+row <- which(use_stocks$stock_name == "MORWONGESE")
+use_stocks[row, "min_year"] <- 1948
+
+row <- which(use_stocks$stock_name == "MORWONGWSE")
+use_stocks[row, "min_year"] <- 1987
+use_stocks[row, "max_year"] <- 2013
 
 row <- which(use_stocks$stock_name == "NROCKGA")
 use_stocks[row, "min_year"] <- 1965
 use_stocks[row, "max_year"] <- 2010
 
 row <- which(use_stocks$stock_name == "NROCKBSAI")
+use_stocks[row, "max_year"] <- 2010
+
+row <- which(use_stocks$stock_name == "NROCKGA")
+use_stocks[row, "min_year"] <- 1967
 use_stocks[row, "max_year"] <- 2010
 
 row <- which(use_stocks$stock_name == "NSHRIMPCSCH")
@@ -279,6 +339,9 @@ row <- which(use_stocks$stock_name == "NZLINGLIN5.6")
 use_stocks[row, "min_year"] <- 1973
 use_stocks[row, "max_year"] <- 1997
 
+row <- which(use_stocks$stock_name == "NZLINGLIN6b")
+use_stocks[row, "max_year"] <- 1998
+
 row <- which(use_stocks$stock_name == "NZLINGWSE")
 use_stocks[row, "max_year"] <- 2005
 
@@ -292,8 +355,17 @@ row <- which(use_stocks$stock_name == "NZSNAPNZ1ENLD")
 use_stocks[row, "min_year"] <- 1965
 use_stocks[row, "max_year"] <- 2009
 
+row <- which(use_stocks$stock_name == "NZSNAPNZ7")
+use_stocks[row, "min_year"] <- 1965
+
+row <- which(use_stocks$stock_name == "PANCHCSCH")
+use_stocks[row, "max_year"] <- 2010
+
 row <- which(use_stocks$stock_name == "PATGRENADIERSARG")
 use_stocks[row, "min_year"] <- 1990
+
+row <- which(use_stocks$stock_name == "PAUAPAU5D")
+use_stocks[row, "min_year"] <- 1988
 
 row <- which(use_stocks$stock_name == "PCODBS")
 use_stocks[row, "min_year"] <- 1977
@@ -304,15 +376,27 @@ use_stocks[row, "min_year"] <- 1978
 row <- which(use_stocks$stock_name == "PERCHEBSAI")
 use_stocks[row, "min_year"] <- 1965
 
+row <- which(use_stocks$stock_name == "PERCHQCI")
+use_stocks[row, "max_year"] <- 2004
+
 row <- which(use_stocks$stock_name == "PERCHWCVANI")
 use_stocks[row, "min_year"] <- 1977
 use_stocks[row, "max_year"] <- 2005
+
+row <- which(use_stocks$stock_name == "POLLFAPL")
+use_stocks[row, "max_year"] <- 2002
 
 row <- which(use_stocks$stock_name == "POPERCHGA")
 use_stocks[row, "min_year"] <- 1970
 
 row <- which(use_stocks$stock_name == "POPERCHPCOAST")
 use_stocks[row, "min_year"] <- 1970
+
+row <- which(use_stocks$stock_name == "PSALMAKPSWUD")
+use_stocks[row, "min_year"] <- 1975
+
+row <- which(use_stocks$stock_name == "PSALMATNARKO")
+use_stocks[row, "min_year"] <- 1993
 
 row <- which(use_stocks$stock_name == "PSOLEPCOAST")
 use_stocks[row, "min_year"] <- 1960
@@ -322,9 +406,16 @@ use_stocks[row, "max_year"] <- 2002
 
 row <- which(use_stocks$stock_name == "PTOOTHFISHPEI")
 use_stocks[row, "min_year"] <- 1980
+use_stocks[row, "max_year"] <- 2005
+
+row <- which(use_stocks$stock_name == "REXSOLEGA")
+use_stocks[row, "max_year"] <- 2011
 
 row <- which(use_stocks$stock_name == "REYEROCKBSAI")
 use_stocks[row, "min_year"] <- 1995
+
+row <- which(use_stocks$stock_name == "REYEROCKGA")
+use_stocks[row, "max_year"] <- 2002
 
 row <- which(use_stocks$stock_name == "RSNAPGM")
 use_stocks[row, "min_year"] <- 1970
@@ -350,6 +441,10 @@ use_stocks[row, "min_year"] <- 1975
 
 row <- which(use_stocks$stock_name == "SBWHITACIR")
 use_stocks[row, "min_year"] <- 1980
+
+row <- which(use_stocks$stock_name == "SCMPBP")
+use_stocks[row, "min_year"] <- 1987
+use_stocks[row, "max_year"] <- 2008
 
 row <- which(use_stocks$stock_name == "SFLOUNMATCL")
 use_stocks[row, "min_year"] <- 1990
@@ -379,11 +474,21 @@ use_stocks[row, "min_year"] <- 1972
 row <- which(use_stocks$stock_name == "SPRATIIIa.IV")
 use_stocks[row, "min_year"] <- 1982
 
+row <- which(use_stocks$stock_name == "SSALMNADINA")
+use_stocks[row, "max_year"] <- 1995
+
+row <- which(use_stocks$stock_name == "SSLOBSTERSASC")
+use_stocks[row, "max_year"] <- 2006
+
 row <- which(use_stocks$stock_name == "STFLOUNNPCOAST")
 use_stocks[row, "min_year"] <- 1984
+use_stocks[row, "max_year"] <- 2002
 
 row <- which(use_stocks$stock_name == "STFLOUNSPCOAST")
 use_stocks[row, "min_year"] <- 1978
+
+row <- which(use_stocks$stock_name == "STMARLINNEPAC")
+use_stocks[row, "max_year"] <- 2006
 
 row <- which(use_stocks$stock_name == "SDOGATLC")
 use_stocks[row, "max_year"] <- 2013
@@ -401,16 +506,20 @@ use_stocks[row, "max_year"] <- 2014
 row <- which(use_stocks$stock_name == "THRSHARNPAC")
 use_stocks[row, "min_year"] <- 1975
 
+row <- which(use_stocks$stock_name == "TIGERFLATSE")
+use_stocks[row, "min_year"] <- 1940
+
 row <- which(use_stocks$stock_name == "TILESATLC")
 use_stocks[row, "min_year"] <- 1990
-
-row <- which(use_stocks$stock_name == "WHITNS.VIId")
-use_stocks[row, "min_year"] <- 1974
-use_stocks[row, "max_year"] <- 2006
+use_stocks[row, "max_year"] <- 2007
 
 row <- which(use_stocks$stock_name == "TREVALLYTRE7")
-use_stocks[row, "min_year"] <- 1969
+use_stocks[row, "min_year"] <- 1970
 use_stocks[row, "max_year"] <- 2010
+
+row <- which(use_stocks$stock_name == "WHITNS.VIId")
+use_stocks[row, "min_year"] <- 1980
+
 
 row <- which(use_stocks$stock_name == "VSNAPSATLC")
 use_stocks[row, "min_year"] <- 1975
@@ -419,7 +528,8 @@ row <- which(use_stocks$stock_name == "WMARLINATL")
 use_stocks[row, "min_year"] <- 1976
 
 row <- which(use_stocks$stock_name == "WROCKBCW")
-use_stocks[row, "min_year"] <- 2005
+use_stocks[row, "min_year"] <- 1960
+use_stocks[row, "max_year"] <- 2005
 
 row <- which(use_stocks$stock_name == "WROCKPCOAST")
 use_stocks[row, "min_year"] <- 1969
@@ -430,21 +540,18 @@ use_stocks[row, "min_year"] <- 1960
 row <- which(use_stocks$stock_name == "YTROCKNPCOAST")
 use_stocks[row, "min_year"] <- 1960
 
-# going to also remove stocks that look like they've been extrapolated for several years or won't have enough data
-# after removing model run in time (CODIS doesn't have as much SSB data as it did when Szuwalski analysis done, won't include)
 
+# these stocks were removed after they were off the stock-recruitment curve for the bev-holt model
+# see code below
 use_stocks <- use_stocks %>%
-  filter(!(stock_name %in% c("CODKAT", "CODIS", "COD3M", "DOYSFS","GEMFISHNZ", "MORWONGWSE", "NZLINGLIN6b", "PANCHCSCH", "PAUAPAU5D", "PILCHPJPN",
-                         "PILCHTSST", "PLAIC2123", "PLAICCELT", "PTOOTHFISHCH", "REDDEEPDP.1.2.V.XII.XIV",
-                         "REDDEEPI.II", "SARDSAW", "SARDWSE", "SBWHITARGS", "SCMPBP", "SCMPMB", "SCMPWHB",
-                          "SDOGATLC", "SNAPSAUSSSG", "SSLOBSTERSASC", "SSTHORNHPCOAST", "STFLOUNNPCOAST",
-                         "TARAKNZ", "TILEGM", "TILEMATLC", "TURBLKGSA29", "WHITVIIbce.k", "WHITNS.VIId")))
+  filter(!(stock_name %in% c("CSALMJDFS", "PSALMCHINAP", "PSALMHUMPCY","PSALMKUSKOKWIM","PSALMMPNBNS", 
+                             "SSALMGATES", "SSALMLLAKE", "TARAKNZ")))
 
-# I still have about 100 more stocks than the original analysis, which could be due to the updates to RAM
+
+# RMSE Values -------------------------------------------------------------
+# I still have about 200 more stocks than the original analysis, which could be due to the updates to RAM
 # in the years following Szuwalski et al 2015, but I just want to make sure that without the model run in times,
 # the stocks I currently have are not off of the S-R curve
-
-
 
 RMSE_test <- tibble(stock_name = "",
                     rmse = numeric())
@@ -554,6 +661,7 @@ for(x in use_stocks$stock_name){
 pdf("results/stock_sr_fits.pdf")
 for(x in stock_model_fits$stock_name){
   row <- which(stock_model_fits$stock_name == x)
+  row2 <- which(use_stocks$stock_name == x)
   
   r_a <- as.numeric(stock_model_fits[row, "ricker_a"])
   r_b <- as.numeric(stock_model_fits[row, "ricker_b"])
@@ -563,10 +671,9 @@ for(x in stock_model_fits$stock_name){
   stock <- tibble(year = takers_rec[,1],
                   recruits = takers_rec[, x],
                   sb = takers_ssb[, x])
-  
   # remove model run in time
-  min_year <- pull(use_stocks[row, "min_year"])
-  max_year <- pull(use_stocks[row, "max_year"])
+  min_year <- pull(use_stocks[row2, "min_year"])
+  max_year <- pull(use_stocks[row2, "max_year"])
   
   stock <- stock %>%
     filter(year >= min_year) %>%

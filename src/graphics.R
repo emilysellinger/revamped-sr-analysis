@@ -12,9 +12,31 @@ ggplot(age_data, aes(x = age, res = 120)) +
   labs(x = "Max age reported", y = "Count")
 dev.off()
 
+
+# bar chart ---------------------------------------------------------------
+df <- tibble(
+  group = c("Environment", "Spawning Biomass", "SB and/or Environment"),
+  value = c(234, 49, 122),
+)
+
+bar <- ggplot(data = df, aes(x = group, y = value)) +
+  geom_col(fill = "#2c7fb8") + coord_flip() + labs(x = "primary driver", y = "number of stocks") +
+  theme_minimal()
+  
+
+
+
 # Map of stocks ----------------------------------------------------------------------------------------------------
 library(sf)
 library(RColorBrewer)
+
+savepdf <- function(file, width=16, height=10)
+{
+  fname <- paste("results/",file,".pdf",sep="")
+  pdf(fname, width=width/2.54, height=height/2.54,
+      pointsize=10)
+  par(mgp=c(2.2,0.45,0), tcl=-0.4, mar=c(3.3,3.6,1.1,1.1))
+}
 
 fao <- read.csv(here("data", "fao_region.csv"))
 fao$stock_name <- str_replace_all(fao$stock_name, "-", "\\.")
@@ -30,7 +52,7 @@ fao_regions <- st_read("data/major_fao_region.shp")
 
 fao_regions$num_stocks <- c(0, 20, 67, 4, 75, 20, 0, 1, 8, 2, 16, 8, 27, 1, 0, 0, 17, 4, 46) # stocks in each fao region
 
-win.metafile("results/stock_map.wmf")
+savepdf("stock_map")
 ggplot() +
   geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = rev(brewer.pal(5, "YlGnBu"))) +
   theme_classic() 
@@ -212,7 +234,7 @@ dev.off()
 
 
 # Specific S-R graphs for project report -----------------------------------------------------------------------------
-proj_report_stocks <- c("AMPL4T", "ARFLOUNDBSAI", "WHITVIa", "GOPHERSPCOAST", "SOLEIS" )
+proj_report_stocks <- c("AMPL4T", "ARFLOUNDBSAI", "WHITVIa", "GOPHERSPCOAST", "SOLEIS", "HERRSITKA", "ARFLOUNDBSAI")
 
 for(x in proj_report_stocks){
   png(paste("results/",x, "_sb.png", sep = ""))

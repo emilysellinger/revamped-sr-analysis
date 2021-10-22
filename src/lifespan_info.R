@@ -69,7 +69,7 @@ all_drivers <- rbind(sb_driven_stocks, env_driven_stocks, edge_stocks)
 
 # Summarize with recruitment regimes ------------------------------------------------------------------------------
 env_change_pt %>%
-  summarise(n = unique(stock_name)) # 206 stocks with regime changes
+  summarise(n = unique(stock_name)) # 327 stocks with regime changes
 
 env_drivers <- rbind(env_driven_stocks, edge_stocks)
 

@@ -3,8 +3,9 @@
 # Dome-shaped stocks ------------------------------------------------------------------------------------------------
 # going to add extra columns for rho estimate and p-value from spearman's correlation
 dome_stocks <- dome_stocks %>%
-  add_column(cor_coef = 1,
-             cor_pval = 1)
+  add_column(zero_lag = 1,
+             zero_lag_pval = 1,
+             driver = "")
 
 for(x in dome_stocks$stock_name){
   row <- which(dome_stocks$stock_name == x)
@@ -34,11 +35,21 @@ for(x in dome_stocks$stock_name){
   }
   
   # find spearman's correlation
-  corrr <- cor.test(stock$recruits, stock$sb, method = 'spearman', exact = FALSE)
+  corrr <- cor.test(rank(stock$recruits), rank(stock$sb))
   
   # save rho estimate and p-value to data frame
-  dome_stocks[row, "cor_coef"] <- corrr$estimate
-  dome_stocks[row, "cor_pval"] <- corrr$p.value
+  dome_stocks[row, "zero_lag"] <- corrr$estimate
+  dome_stocks[row, "zero_lag_pval"] <- corrr$p.value
+  
+  # determine driver - if lag0 is positive and significant, the stock is primarily driven by
+  # spawning biomass
+  if(corrr$estimate > 0 && corrr$p.value < 0.05){
+    dome_stocks[row, "driver"] <- "spawning biomass"
+  }else{
+    dome_stocks[row, "driver"] <- "environment"
+  }
+  
+  
 }
 
 # Monotonic stocks -----------------------------------------------------------------------------------------
@@ -46,7 +57,7 @@ for(x in dome_stocks$stock_name){
 monotonic_stocks <- monotonic_stocks %>%
   add_column(zero_lag = 1,
              zero_lag_pval = 1,
-             neg_lag = 1)
+             driver = "")
 
 for(x in monotonic_stocks$stock_name){
   row <- which(monotonic_stocks$stock_name == x)
@@ -54,8 +65,8 @@ for(x in monotonic_stocks$stock_name){
   
   stock <- tibble(
     year = takers_rec[,1],
-    recruits = takers_rec[,x],
-    sb = takers_ssb[,x])
+    recruits = takers_rec[, x],
+    sb = takers_ssb[, x])
   
   # remove model run in time
   min_year <- pull(use_stocks[row2, "min_year"])
@@ -72,25 +83,35 @@ for(x in monotonic_stocks$stock_name){
   
   
   # find cross correlation values
-  stock_ccf <- ccf(stock$sb_rank, stock$rec_rank, plot = FALSE, lag.max = 10)
+  stock_ccf <- ccf(stock$rec_rank, stock$sb_rank, lag.max = 10)
   stock_ccf_df <- data.frame(lag = stock_ccf$lag,
                              ccf = stock_ccf$acf)
-  # save zero-lagged correlation value
-  zero_lag <- stock_ccf_df[11,2]
-  monotonic_stocks[row, "zero_lag"] <- zero_lag
+
+  
+  
+  # save zero-lagged correlation value and threshold significance value
+  monotonic_stocks[row, "zero_lag"] <- zero_lag <- stock_ccf_df[11,2]
+ 
+  stock_ccf_df <- stock_ccf_df %>% 
+    filter(lag < 0)
   
   # save zero-lagged correlation p value
-  corrr <- cor.test(stock$recruits, stock$sb, method = 'spearman', exact = FALSE)
+  corrr <- cor.test(rank(stock$rec_rank), rank(stock$sb_rank))
   monotonic_stocks[row, "zero_lag_pval"] <- corrr$p.value
   
-  # determine if negative lags are <= zero lag value (if yes, spbio driven, if no, either env and/or spbio)
-  for(x in 1:10){
-    if(stock_ccf_df[x,2] <= zero_lag){
-      monotonic_stocks[row, "neg_lag"] <- 1
+  # check negative lags - if lag0 is significant and positive AND all of the negative lags are 
+  # less than lag0, the primary driver of the stock is spawning biomass.
+  
+  if(zero_lag > 0 && corrr$p.value < 0.05){
+    if(all(stock_ccf_df$ccf < zero_lag)){
+      monotonic_stocks[row, "driver"] <- "spawning biomass" 
     }else{
-      monotonic_stocks[row, "neg_lag"] <- 0
+      monotonic_stocks[row, "driver"] <- "edge case"
     }
-  }
+  }else{
+    monotonic_stocks[row, "driver"] <- "environment"
+    }
+  
 }
 
 # Combine SB driven stocks -----------------------------------------------------------------------------------------
@@ -99,35 +120,26 @@ for(x in monotonic_stocks$stock_name){
 sb_driven_stocks <- tibble()
 sb_driven_stocks <- sb_driven_stocks %>%
   add_column(stock_name = "",
-             curve_shape = "",
-             cor_coef = 1,
-             cor_pval = 1)
+             curve_shape = "")
 
 # check dome-shaped stocks first
 for(x in 1:nrow(dome_stocks)){
-  if(dome_stocks[x, "cor_coef"] > 0 && dome_stocks[x,"cor_pval"] <= 0.05){
+  if(dome_stocks[x, "driver"] == "spawning biomass"){
     sb_driven_stocks <- sb_driven_stocks %>%
-      add_row(stock_name = pull(dome_stocks[x,1]),
-              curve_shape = "dome",
-              cor_coef = pull(dome_stocks[x,"cor_coef"]),
-              cor_pval = pull(dome_stocks[x, "cor_pval"]))
+      add_row(stock_name = pull(dome_stocks[x,"stock_name"]), curve_shape = "dome")
   }
 }
 
 # check monotonic stocks
 for(x in 1:nrow(monotonic_stocks)){
-  if(monotonic_stocks[x,"zero_lag"] > 0 && monotonic_stocks[x,"zero_lag_pval"] <= 0.05){
-    if(monotonic_stocks[x,"neg_lag"] == 1){
-      sb_driven_stocks <- sb_driven_stocks %>%
-        add_row(stock_name = pull(monotonic_stocks[x,1]),
-                curve_shape = "monotonic",
-                cor_coef = pull(monotonic_stocks[x, "zero_lag"]),
-                cor_pval = pull(monotonic_stocks[x, "zero_lag_pval"]))
+  if(monotonic_stocks[x, "driver"] == "spawning biomass"){
+    sb_driven_stocks <- sb_driven_stocks %>%
+        add_row(stock_name = pull(monotonic_stocks[x, "stock_name"]), curve_shape = "monotonic")
     }
     
-  }
 }
-# Combine environmentally driven stocks ----------------------------------------------------------------------------
+
+# Combine environmentally driven stocks ---------------------------------------------------------
 env_driven_stocks <- tibble()
 env_driven_stocks <- env_driven_stocks %>%
   add_column(stock_name = "",
@@ -135,19 +147,17 @@ env_driven_stocks <- env_driven_stocks %>%
 
 # find all dome shaped stocks with a p-value > 0.05
 for(x in 1:nrow(dome_stocks)){
-  if(dome_stocks[x,"cor_pval"] > 0.05 | dome_stocks[x, "cor_coef"] < 0){
+  if(dome_stocks[x,"driver"] == "environment"){
     env_driven_stocks <- env_driven_stocks %>%
-      add_row(stock_name = pull(dome_stocks[x,1]),
-              curve_shape = "dome")
+      add_row(stock_name = pull(dome_stocks[x, "stock_name"]), curve_shape = "dome")
   }
 }
 
 # find all monotonic stocks with a non-significant zero lagged correlation
 for(x in 1:nrow(monotonic_stocks)){
-  if(monotonic_stocks[x,"zero_lag_pval"] > 0.05){
+  if(monotonic_stocks[x,"driver"] == "environment"){
     env_driven_stocks <- env_driven_stocks %>%
-      add_row(stock_name = pull(monotonic_stocks[x,1]),
-              curve_shape = "monotonic")
+      add_row(stock_name = pull(monotonic_stocks[x,"stock_name"]), curve_shape = "monotonic")
   }
 }
 
@@ -158,15 +168,9 @@ edge_stocks <- edge_stocks %>%
              curve_shape = "")
 
 for(x in 1:nrow(monotonic_stocks)){
-  if(monotonic_stocks[x,"zero_lag_pval"] <= 0.05 && monotonic_stocks[x,"neg_lag"] == 0){
+  if(monotonic_stocks[x,"driver"] == "edge case"){
     edge_stocks <- edge_stocks %>%
-      add_row(stock_name = pull(monotonic_stocks[x,1]), curve_shape = "monotonic")
+      add_row(stock_name = pull(monotonic_stocks[x,"stock_name"]), curve_shape = "monotonic")
   }
 }
 
-# there are 3 stocks that have a significant negative zero lag coefficient and negative lagged correlations smaller
-# than the zero lag value. I am going to put these three stocks in the edge case, as they don't fit with 
-# the qualification that spbio correlation must be positive, as stated in Szuwalski et al. 2015
-
-edge_stocks <- edge_stocks %>%
-  add_row(stock_name = c("BIGEYECWPAC", "COD4TVn", "YSOLEBSAI"), curve_shape = c("monotonic", "monotonic", "monotonic"))

@@ -137,3 +137,16 @@ lifespan %>%
 lifespan %>%
   filter(is.na(age)) %>%
   summarise(species = unique(scientific_name))
+
+# want to investigate if the number of regime shifts is related to age of the species
+# will also see if regime changes are correlated with number of years of data
+
+counts <- counts %>%
+  left_join(lifespan)
+plot(counts$age, counts$n) # doesn't look like there is a clear effect
+
+counts %>% filter(age <= 10) %>% summarise(avg_regimes = mean(n))
+counts %>% filter(age > 10) %>% filter(age <= 20) %>% summarise(avg_regimes = mean(n))
+counts %>% filter(age > 20) %>% filter(age <= 40) %>% summarise(avg_regimes = mean(n))
+counts %>% filter(age > 40) %>% summarise(avg_regimes = mean(n))
+

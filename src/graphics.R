@@ -6,22 +6,55 @@ age_data <- lifespan %>%
 age_data <- age_data %>%
   distinct(scientific_name, .keep_all = TRUE)
 
-png("results/age_hist.png")
+svg("results/age_hist.svg")
 ggplot(age_data, aes(x = age, res = 120)) +
-  geom_histogram(binwidth = 5, alpha = 0.8, color = "black", fill = "gray") +
-  labs(x = "Max age reported", y = "Count")
+  geom_histogram(binwidth = 5, alpha = 0.8, color = "#253494", fill = "#253494") +
+  labs(x = "Max age reported", y = "Count") + theme_minimal()
 dev.off()
+
+
+# regime length bar chart -------------------------------------------------
+df <- env_change_pt %>% drop_na()
+df$age_cat <- rep(0, length(df$age))
+
+for(i in 1:nrow(df)){
+  if(df[i, "age"] <= 10){
+    df[i, "age_cat"] <- 1
+  }else if(df[i, "age"] <= 20){
+    df[i, "age_cat"] <- 2
+  }else if(df[i, "age"] <= 40){
+    df[i, "age_cat"] <- 3
+  }else{
+    df[i, "age_cat"] <- 4
+  }
+}
+
+df2 <- df %>% group_by(age_cat) %>% summarise(mean = mean(regime_length), sd = sd(regime_length))
+
+svg("results/mean_regime.svg")
+ggplot(data = df2, aes(x = age_cat, y = mean)) +
+  geom_bar(stat = "identity", fill = "#41B6C4") + 
+  geom_errorbar(aes(ymin = mean-sd, ymax = mean+sd), stat = "identity", width =.2) +
+  ylim(0, 20) +
+  labs(x = "age category", y = "mean regime length (yrs)") +
+  theme_minimal()
+dev.off()
+ 
 
 
 # bar chart ---------------------------------------------------------------
 df <- tibble(
-  group = c("Environment", "Spawning Biomass", "SB and/or Environment"),
-  value = c(234, 49, 122),
+  analysis = c("2015", "2015", "2015", "current", "current", "current"),
+  group = c("Environment", "Spawning Biomass", "SB and/or Environment","Environment", "Spawning Biomass", "SB and/or Environment" ),
+  value = c(61, 16, 23, 58, 12, 30),
 )
 
-bar <- ggplot(data = df, aes(x = group, y = value)) +
-  geom_col(fill = "#2c7fb8") + coord_flip() + labs(x = "primary driver", y = "number of stocks") +
+svg("results/barplot.svg")
+ggplot(data = df, aes(x = group, y = value, fill = analysis)) +
+  geom_bar(stat = "identity", position = position_dodge()) + scale_fill_manual(values = c("#253494", "#41B6C4")) +
+  coord_flip() + labs(x = "primary driver", y = "percentage of stocks") +
   theme_minimal()
+dev.off()
   
 
 
@@ -48,11 +81,16 @@ lifespan %>%
   group_by(primary_FAOarea) %>%
   summarise(n = n())
 
+# going to reassign the inland FAO regions to ocean ones 
+lifespan$primary_FAOarea[lifespan$primary_FAOarea == 2] <- 67
+lifespan$primary_FAOarea[lifespan$primary_FAOarea == 5] <- 61
+lifespan$primary_FAOarea[lifespan$primary_FAOarea == 4] <- 61
+
 fao_regions <- st_read("data/major_fao_region.shp")
 
-fao_regions$num_stocks <- c(0, 20, 67, 4, 75, 20, 0, 1, 8, 2, 16, 8, 27, 1, 0, 0, 17, 4, 46) # stocks in each fao region
+fao_regions$num_stocks <- c(0, 29, 133, 4, 82, 21, 0, 1, 9, 2, 17, 9, 34, 1, 0, 0, 17, 5, 48) # stocks in each fao region
 
-savepdf("stock_map")
+svg("results/stock_map.svg")
 ggplot() +
   geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = rev(brewer.pal(5, "YlGnBu"))) +
   theme_classic() 
@@ -90,7 +128,7 @@ for(x in stock_model_fits$stock_name){
     mutate(sb_rank = rank(sb))
   
   # calculate cross-correlation values
-  stock_ccf <- ccf(stock$sb_rank, stock$rec_rank, plot = FALSE, lag.max = 10)
+  stock_ccf <- ccf(stock$rec_rank, stock$sb_rank, plot = FALSE, lag.max = 10)
   stock_ccf_df <- data.frame(lag = stock_ccf$lag,
                              ccf = stock_ccf$acf)
   zero_lag <- subset(stock_ccf_df, lag == 0)
@@ -234,7 +272,7 @@ dev.off()
 
 
 # Specific S-R graphs for project report -----------------------------------------------------------------------------
-proj_report_stocks <- c("AMPL4T", "ARFLOUNDBSAI", "WHITVIa", "GOPHERSPCOAST", "SOLEIS", "HERRSITKA", "ARFLOUNDBSAI")
+proj_report_stocks <- c("AMPL4T", "ARFLOUNDBSAI", "WHITVIa", "GOPHERSPCOAST", "BLACKROCKCAL", "COD5Zjm", "AUROCKPCOAST")
 
 for(x in proj_report_stocks){
   png(paste("results/",x, "_sb.png", sep = ""))
@@ -335,20 +373,25 @@ for(x in proj_report_stocks){
   region <- paste("Region:", as.character(lifespan[row3, "region"]))
   stock_id <- paste("Stock ID:", as.character(lifespan[row3, "stock_name"]))
   
+  # spawning biomass time series plot
+  sb_ts_plot <- ggplot(data = stock, aes(x = year, y = sb)) +
+    geom_line(linetype = 2, size = 0.8) + labs(y = "Spawning Biomass" , title = common_name, subtitle = paste(region, stock_id, sep = "\n")) + 
+    theme_minimal() + theme(axis.title.x = element_blank(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
+  
   # recruitment time series plot
   rec_ts_plot <- ggplot(data = stock, aes(x = year, y = recruits)) +
     geom_line(size = 1) +
     geom_rect(data = rectangle_data, inherit.aes = FALSE, aes(xmin = xmin, xmax = xmax, ymin = ymin,
                                                               ymax = ymax, fill = as.factor(color_factor)), alpha = 0.3) +
-    guides(fill = FALSE) +
-    labs(x = "Year", y = "Recruits", title = common_name, subtitle = paste(region, stock_id, sep = "\n")) +
+    guides(fill = "none") +
+    labs(x = "Year", y = "Recruits") +
     theme_minimal()
   
   # add regime factor to spawning biomass recruitment data
   stock <- stock %>%
     add_column(color_factor = as.factor(regime_colors))
   
-  # retrive ricker and bevholt model weights
+  # retrieve ricker and bevholt model weights
   min_model <- pull(stock_model_fits[row, "min_model"])
   if(min_model == "bevholt"){
     ricker_lik <- formatC((1 - pull(stock_model_fits[row, "rel_likelihood"])), digits = 3)
@@ -365,7 +408,7 @@ for(x in proj_report_stocks){
     labs(x = "Spawning Biomass", y = "Recruits") + 
     scale_linetype_discrete(labels = c(paste("Ricker", ricker_lik), paste("BevHolt", bev_lik))) +
     theme_minimal() +
-    theme(legend.position = c(0.1, 0.9), legend.background = element_rect(fill = FALSE, color = FALSE),
+    theme(legend.position = "bottom", legend.background = element_rect(fill = FALSE, color = FALSE),
           legend.title = element_blank())
   
   # cross-correlation plot
@@ -404,7 +447,8 @@ for(x in proj_report_stocks){
   }
   
   # plot both graphs
-  print(grid.arrange(rec_ts_plot, sr_plot, cc_plot, nrow = 3))
+  print(grid.arrange(sb_ts_plot, rec_ts_plot, sr_plot, cc_plot, ncol = 2, nrow = 4, 
+                     layout_matrix = rbind(c(1,1), c(2,2), c(3,4), c(3,4))))
   
   dev.off()
 }

@@ -150,3 +150,13 @@ counts %>% filter(age > 10) %>% filter(age <= 20) %>% summarise(avg_regimes = me
 counts %>% filter(age > 20) %>% filter(age <= 40) %>% summarise(avg_regimes = mean(n))
 counts %>% filter(age > 40) %>% summarise(avg_regimes = mean(n))
 
+
+# Linear/GAM Model Tests  -----------------------------------------------------------
+library(mgcv)
+
+mod1 <- lm(log(regime_length)~log(age), data = env_change_pt)
+mod2 <- gam(regime_length~s(age, bs = "cr"), data = env_change_pt)
+
+
+# Median regime length ----------------------------------------------------
+quantile(env_change_pt$regime_length)

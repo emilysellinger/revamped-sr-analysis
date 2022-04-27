@@ -365,7 +365,7 @@ for(x in proj_report_stocks){
                   bh_preds = rec_pred_bh)
   preds <- preds %>%
     select(sb, r_preds, bh_preds) %>%
-    gather(key = "model", value = "rec_pred", -sb) # put in a more convienent plotting format
+    gather(key = "model", value = "rec_pred", -sb) # put in a more convenient plotting format
   
   # Make string with common name and stock location
   row3 <- which(lifespan$stock_name == x)

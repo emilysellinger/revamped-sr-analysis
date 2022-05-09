@@ -2,6 +2,8 @@ library(MARSS)
 library(tidyverse)
 library(here)
 library(onlineBcp)
+library(bcp)
+library(gridExtra)
 RShowDoc("Chapter_StructuralBreaks.R", package = "MARSS")
 
 # MARSS Structural Break example
@@ -43,7 +45,7 @@ regime_change_plot <- function(x){
   ymin <- min(stock$recruits)
   ymax <- max(stock$recruits)
   
-  # save regime mean/sd data
+  # save regime mean data
   for(y in 1:length(changes))
   {
     if(y==1)
@@ -109,8 +111,17 @@ regime_change_plot <- function(x){
     geom_hline(yintercept = -2, linetype = "dashed") + geom_hline(yintercept = 2, linetype = "dashed") +
     ylim(-4,4) + labs(y = "standardized residuals", x = "year") + theme_minimal()
   
+  
+  # BCP analysis of log recruitment change points
+  bcp_fit <- bcp(log(stock$recruits))
+  bcp_dat <- tibble(year = years,
+                    pt_prob = bcp_fit$posterior.prob)
+  
+  bcp_plot <- ggplot(data = bcp_dat, aes(x = year, y = pt_prob)) + geom_line() +
+    ylim(0, 1) + labs(x = "year", y = "posterior prob of change point") + theme_minimal()
+  
   # print both graphs
-  print(grid.arrange(rec_ts_plot, level_change_plot, nrow = 2))
+  print(grid.arrange(rec_ts_plot, level_change_plot, bcp_plot, nrow = 3))
 }
 
 
@@ -120,6 +131,41 @@ for(i in unique(env_change_pt$stock_name)){
   regime_change_plot(i)
 }
 dev.off()
+
+
+
+# MARSS issues ------------------------------------------------------------
+x <- "BSBASSMATLC"
+row <- which(stock_model_fits$stock_name == x)
+
+# create tibble with s-r data
+stock <- tibble(year = takers_rec[,1],
+                recruits = takers_rec[, x],
+                sb = takers_ssb[, x])
+
+# remove model run in time
+row2 <- which(use_stocks$stock_name == x)
+min_year <- pull(use_stocks[row2, "min_year"])
+max_year <- pull(use_stocks[row2, "max_year"])
+
+stock <- stock %>%
+  filter(year >= min_year) %>%
+  filter(year <= max_year) %>%
+  mutate(recruits = replace(recruits, recruits == 0, 1))
+
+
+# MARSS stochastic level model
+mod <- list(
+  Z = matrix(1), A = matrix(0), R = matrix("r"),
+  B = matrix(1), U = matrix(0), Q = matrix("q"),
+  x0 = matrix("pi")
+)
+
+# fit model
+dat <- t(as.matrix(log(stock$recruits)))
+rownames(dat) <- "logrecruits"
+kem.2 <- MARSS(dat, model = mod, silent = TRUE, method = "BFGS")
+
 
 
 
@@ -143,4 +189,4 @@ stock <- stock %>%
   filter(year <= max_year) %>%
   mutate(recruits = replace(recruits, recruits == 0, 1))
 
-bcp <- online_cp(stock$recruits)
+bcp_fit <- bcp(log(stock$recruits), burnin = 100, mcmc = 1000)

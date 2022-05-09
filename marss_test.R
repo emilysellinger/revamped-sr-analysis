@@ -171,7 +171,7 @@ kem.2 <- MARSS(dat, model = mod, silent = TRUE, method = "BFGS")
 
 # BCP detection -----------------------------------------------------------
 
-x <- "SNROCKPCOAST"
+x <- "ALSKABSAI"
 row <- which(stock_model_fits$stock_name == x)
 
 # create tibble with s-r data
@@ -189,4 +189,7 @@ stock <- stock %>%
   filter(year <= max_year) %>%
   mutate(recruits = replace(recruits, recruits == 0, 1))
 
-bcp_fit <- bcp(log(stock$recruits), burnin = 100, mcmc = 1000)
+bcp_fit <- bcp(log(stock$recruits), burnin = 100, mcmc = 1000, return.mcmc = TRUE)
+bcp_mcmc <- as.mcmc(t(bcp_fit$mcmc.means))
+summary(bcp_mcmc)
+heidel.diag(bcp_mcmc)

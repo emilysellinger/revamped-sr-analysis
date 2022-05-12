@@ -25,7 +25,8 @@ for(x in dome_stocks$stock_name){
     filter(year <= max_year)
   
   # find max SpBio
-  max_sb <- max(stock[, "sb"], na.rm = TRUE)
+  ricker_b <- as.matrix(dome_stocks[row, "ricker_b"])[1]
+  max_sb <- 1/ricker_b
   
   # find S-R pairs greater than 50% of max & remove from dataset
   for(y in 1:nrow(stock)){

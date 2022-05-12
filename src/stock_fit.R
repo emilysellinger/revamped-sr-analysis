@@ -735,3 +735,8 @@ monotonic_stocks <- stock_model_fits %>%
   filter(min_model == "bevholt" | rel_likelihood < 0.75)
 
 
+
+# Output to CSV  ----------------------------------------------------------
+write.csv(dome_stocks, file = here("results", "dome_stocks.csv"))
+write.csv(monotonic_stocks, file = here("results", "monotonic_stocks.csv"))
+

@@ -739,4 +739,22 @@ monotonic_stocks <- stock_model_fits %>%
 # Output to CSV  ----------------------------------------------------------
 write.csv(dome_stocks, file = here("results", "dome_stocks.csv"))
 write.csv(monotonic_stocks, file = here("results", "monotonic_stocks.csv"))
+write.csv(use_stocks, file = here("data", "use_stocks.csv"))
+write.csv(takers_rec, file = here("data", "takers_rec.csv"))
+write.csv(takers_ssb, file = here("data", "takers_ssb.csv"))
 
+# Read in CSV files -------------------------------------------------------
+dome_stocks <- read.csv(here("results", "dome_stocks.csv"))
+dome_stocks <- as_tibble(dome_stocks[,-1])
+
+monotonic_stocks <- read_csv(here("results", "monotonic_stocks.csv"))
+monotonic_stocks <- as_tibble(monotonic_stocks[,-1])
+
+use_stocks <- read_csv(here("data", "use_stocks.csv"))
+use_stocks <- use_stocks[,-1]
+
+takers_rec <- read_csv(here("data", "takers_rec.csv"))
+takers_rec <- takers_rec[,-1]
+
+takers_ssb <- read_csv(here("data", "takers_ssb.csv"))
+takers_ssb <- takers_ssb[,-1]

@@ -162,4 +162,4 @@ for(x in 1:nrow(counts)){
 # want to know the number of environmentally driven stocks with a regime change in the time series
 counts %>%
   filter(n > 1)
-# 327 stocks have regime changes
+# 329 stocks have regime changes

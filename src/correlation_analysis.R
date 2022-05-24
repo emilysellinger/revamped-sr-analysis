@@ -175,3 +175,103 @@ for(x in 1:nrow(monotonic_stocks)){
   }
 }
 
+
+# DCCA comparison ---------------------------------------------------------
+# going to calculate the DCCA correlation coefficient for comparison to 
+# Spearman's
+library(DCCA)
+
+rho_comparison <- tibble(stock_name = c(dome_stocks$stock_name, monotonic_stocks$stock_name),
+                         sp_zero_lag = c(dome_stocks$zero_lag, monotonic_stocks$zero_lag),
+                         sp_pval = c(dome_stocks$zero_lag_pval, monotonic_stocks$zero_lag_pval),
+                         dcca_rho = rep(NA, 405),
+                         driver = c(dome_stocks$driver, monotonic_stocks$driver))
+
+
+for(x in rho_comparison$stock_name){
+  row <- which(rho_comparison$stock_name == x)
+  row2 <- which(use_stocks$stock_name == x)
+  
+  stock <- tibble(
+    year = takers_rec[,1],
+    recruits = takers_rec[,x],
+    sb = takers_ssb[,x])
+  
+  # remove model run in time
+  min_year <- pull(use_stocks[row2, "min_year"])
+  max_year <- pull(use_stocks[row2, "max_year"])
+  
+  stock <- stock %>%
+    filter(year >= min_year) %>%
+    filter(year <= max_year)
+  
+  # calculate DCCA rho
+  dcca <- rhodcca(pull(stock$recruits), pull(stock$sb), m = 5, nu = 2)
+  rho_comparison[row, "dcca_rho"] <- dcca$rhodcca
+}
+
+# going to try to compare the values by primary influence classification
+
+# spawning biomass
+rho_comparison_sb <- rho_comparison %>% 
+  filter(driver == "spawning biomass")
+rho_comparison_sb <- pivot_longer(rho_comparison_sb, !c(stock_name, driver, sp_pval), 
+               names_to = "method", values_to = "rho") %>% 
+  mutate(paired = rep(1:(n()/2), each = 2))
+rho_comparison_sb$method <-  sub("sp_zero_lag", "spearmans", rho_comparison_sb$method)
+rho_comparison_sb$method <-  sub("dcca_rho", "dcca", rho_comparison_sb$method)
+
+# environment
+rho_comparison_env <- rho_comparison %>% 
+  filter(driver == "environment")
+rho_comparison_env <- pivot_longer(rho_comparison_env, !c(stock_name, driver, sp_pval), 
+               names_to = "method", values_to = "rho") %>% 
+  mutate(paired = rep(1:(n()/2), each = 2))
+rho_comparison_env$method <-  sub("sp_zero_lag", "spearmans", rho_comparison_env$method)
+rho_comparison_env$method <-  sub("dcca_rho", "dcca", rho_comparison_env$method)
+
+# edge cases
+rho_comparison_edge <- rho_comparison %>% 
+  filter(driver == "edge case")
+rho_comparison_edge <- pivot_longer(rho_comparison_edge, !c(stock_name, driver, sp_pval), 
+                                   names_to = "method", values_to = "rho") %>% 
+  mutate(paired = rep(1:(n()/2), each = 2))
+rho_comparison_edge$method <-  sub("sp_zero_lag", "spearmans", rho_comparison_edge$method)
+rho_comparison_edge$method <-  sub("dcca_rho", "dcca", rho_comparison_edge$method)
+
+
+# make dumbbell plots to show differences
+# spawning biomass
+rho_comparison_sb %>% 
+  ggplot(aes(x = rho, y = stock_name)) +
+  geom_line(aes(group = paired), color = "grey") +
+  geom_point(aes(color = method), size = 4) +
+  geom_vline(xintercept = 0, color = "black") +
+  labs(x = "correlation coefficient", y = "stock identifier", 
+       title = "Stocks with primary influence of spawning biomass on recruitment") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+ggsave(here("dcca_sim_figs", "sb_rho_comp.pdf"), height = 7)
+
+# environment
+rho_comparison_env %>% 
+  ggplot(aes(x = rho, y = stock_name)) +
+  geom_line(aes(group = paired), color = "grey") +
+  geom_point(aes(color = method), size = 4) +
+  geom_vline(xintercept = 0, color = "black") +
+  labs(x = "correlation coefficient", y = "stock identifier", 
+       title = "Stocks with primary influence of environment on recruitment") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+ggsave(here("dcca_sim_figs", "env_case_rho_comp.pdf"), height = 30)
+
+rho_comparison_edge %>% 
+  ggplot(aes(x = rho, y = stock_name)) +
+  geom_line(aes(group = paired), color = "grey") +
+  geom_point(aes(color = method), size = 4) +
+  geom_vline(xintercept = 0, color = "black") +
+  labs(x = "correlation coefficient", y = "stock identifier", 
+       title = "Edge case stocks") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+ggsave(here("dcca_sim_figs", "edge_case_rho_comp.pdf"), height = 15)

@@ -275,3 +275,71 @@ rho_comparison_edge %>%
   theme_minimal() +
   theme(legend.position = "bottom")
 ggsave(here("dcca_sim_figs", "edge_case_rho_comp.pdf"), height = 15)
+
+
+
+# PACF in SBiomass ---------------------------------------------------------
+# going to calculate the PACF for the stocks included in the anaylsis because
+# for the DCCA simulations, I ran some using an AR(1) model with a correlation coefficient of 0.5
+# want to make sure that is a reasonable estimate for simulations
+
+stock_sb_pacf <- tibble(stock_name = "test",
+                        pacf_val = 1)
+
+for(x in dome_stocks$stock_name){
+  row <- which(dome_stocks$stock_name == x)
+  row2 <- which(use_stocks$stock_name == x)
+  
+  stock <- tibble(
+    year = takers_rec[,1],
+    sb = takers_ssb[,x])
+  
+  # remove model run in time
+  min_year <- pull(use_stocks[row2, "min_year"])
+  max_year <- pull(use_stocks[row2, "max_year"])
+  
+  stock <- stock %>%
+    filter(year >= min_year) %>%
+    filter(year <= max_year)
+  
+  sb_pacf <- pacf(stock$sb, plot = FALSE)
+  
+  stock_sb_pacf <- stock_sb_pacf %>% 
+    add_row(stock_name = x,
+            pacf_val = sb_pacf$acf[1])
+  
+}
+
+for(x in monotonic_stocks$stock_name){
+  row <- which(monotonic_stocks$stock_name == x)
+  row2 <- which(use_stocks$stock_name == x)
+  
+  stock <- tibble(
+    year = takers_rec[,1],
+    sb = takers_ssb[,x])
+  
+  # remove model run in time
+  min_year <- pull(use_stocks[row2, "min_year"])
+  max_year <- pull(use_stocks[row2, "max_year"])
+  
+  stock <- stock %>%
+    filter(year >= min_year) %>%
+    filter(year <= max_year)
+  
+  sb_pacf <- pacf(stock$sb, plot = FALSE)
+  
+  stock_sb_pacf <- stock_sb_pacf %>% 
+    add_row(stock_name = x,
+            pacf_val = sb_pacf$acf[1])
+  
+}
+
+stock_sb_pacf <- stock_sb_pacf[-1,]
+
+mean(stock_sb_pacf$pacf_val) # 0.723
+
+plot(stock_sb_pacf$pacf_val)
+quantile(stock_sb_pacf$pacf_val, probs = c(0.025, 0.975))
+quantile(stock_sb_pacf$pacf_val, probs = c(0.25, 0.75))
+
+# should probably up the AR(1) coefficient value when I get the chance

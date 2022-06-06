@@ -77,11 +77,13 @@ for(x in use_stocks$stock_name){
   row <- which(use_stocks$stock_name == x)
   
   # create a tibble for each stock's biomass and recruit data
-  stock <- tibble(
-    year = takers_rec[,1],
-    recruits = takers_rec[,x],
-    sb = takers_ssb[,x],
-    logR = log(takers_rec[,x]))
+  stock <- data.frame(
+    takers_rec[,1],
+    takers_rec[,x],
+    takers_ssb[,x],
+    log(takers_rec[,x]))
+  
+  colnames(stock) <- c("year", "recruits", "sb", "logR")
   
   # remove model run in time
   min_year <- pull(use_stocks[row, "min_year"])
@@ -95,6 +97,7 @@ for(x in use_stocks$stock_name){
   stock <- stock %>%
     mutate(logR = replace(logR, logR == -Inf, 1)) %>%
     mutate(recruits = replace(recruits, recruits == 0, 1))
+    
   
   # double check to make sure total number of years is at least 20
   if(count(stock) != 0 && count(stock) >= 20 ){
@@ -137,9 +140,10 @@ for(x in stock_model_fits$stock_name){
   bh_a <- as.numeric(stock_model_fits[row, "bevholt_a"])
   bh_b <- as.numeric(stock_model_fits[row, "bevholt_b"])
   
-  stock <- tibble(year = takers_rec[,1],
-                  recruits = takers_rec[, x],
-                  sb = takers_ssb[, x])
+  stock <- data.frame(takers_rec[,1],
+                  takers_rec[, x],
+                  takers_ssb[, x])
+  colnames(stock) <- c("year", "recruits", "sb")
   # remove model run in time
   min_year <- pull(use_stocks[row2, "min_year"])
   max_year <- pull(use_stocks[row2, "max_year"])

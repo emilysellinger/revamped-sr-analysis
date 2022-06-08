@@ -184,7 +184,7 @@ library(DCCA)
 rho_comparison <- tibble(stock_name = c(dome_stocks$stock_name, monotonic_stocks$stock_name),
                          sp_zero_lag = c(dome_stocks$zero_lag, monotonic_stocks$zero_lag),
                          sp_pval = c(dome_stocks$zero_lag_pval, monotonic_stocks$zero_lag_pval),
-                         dcca_rho = rep(NA, 405),
+                         dcca_rho = rep(NA, 432),
                          driver = c(dome_stocks$driver, monotonic_stocks$driver))
 
 
@@ -276,8 +276,31 @@ rho_comparison_edge %>%
   theme(legend.position = "bottom")
 ggsave(here("dcca_sim_figs", "edge_case_rho_comp.pdf"), height = 15)
 
+# Committee would like scatter plots as well as dumbell plots
+rho_comparison %>% 
+  filter(driver == "spawning biomass") %>% 
+  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point() +
+  labs(x = "Spearman's correlation coefficient", y = "DCCA correlation coefficient",
+       title = "Spawning biomass stocks") + xlim(0, 1) + ylim(-1, 1) +
+  theme_minimal()
+ggsave(here("dcca_sim_figs", "sb_case_rho_scatter.pdf"))
+
+rho_comparison %>% 
+  filter(driver == "environment") %>% 
+  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point() +
+  labs(x = "Spearman's correlation coefficient", y = "DCCA correlation coefficient",
+        title = "Environment stocks") + xlim(-1, 1) + ylim(-1, 1) +
+  theme_minimal()
+ggsave(here("dcca_sim_figs", "env_case_rho_scatter.pdf"))
 
 
+rho_comparison %>% 
+  filter(driver == "edge case") %>% 
+  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point() +
+  labs(x = "Spearman's correlation coefficient", y = "DCCA correlation coefficient",
+       title = "Edge case stocks") + xlim(0, 1) + ylim(-1, 1) +
+  theme_minimal()
+ggsave(here("dcca_sim_figs", "edge_case_rho_scatter.pdf"))
 # PACF in SBiomass ---------------------------------------------------------
 # going to calculate the PACF for the stocks included in the anaylsis because
 # for the DCCA simulations, I ran some using an AR(1) model with a correlation coefficient of 0.5

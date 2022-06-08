@@ -1,12 +1,68 @@
 # going to calculate contrast for Cody's stocks
-library(devtools)
-install_github("ropensci/ramlegacy")
-library(ramlegacy)
+# got these from his supplementary information
 
-takers_rec_stocks <- as.data.frame(colnames(takers_rec))
+cody_stocks <- read.csv(here("data", "cody_stocks.csv"))
 
-use_stocks <- read_csv(here("data", "use_stocks.csv"))
-use_stocks <- use_stocks[,-1]
+# i'm going to first just calculate contrast for stocks that haven't been modified
+# beyond having more data added
 
-old_stocks <- read_csv(here("data", "cody_stocks.csv"))
-old_stocks <- old_stocks %>% left_join(use_stocks)
+cody_stocks2 <- cody_stocks[46:224,] # this is 179 stocks
+# need to remove CODCOASTNOR
+cody_stocks2 <- cody_stocks2[-37,]
+
+cody_stocks2$Odepletion <- rep(NA, 178)
+cody_stocks2$Cdepletion <- rep(NA, 178)
+
+
+for(x in cody_stocks2$stock_name){
+  row <- which(cody_stocks2$stock_name == x)
+  row2 <- which(use_stocks$stock_name == x)
+  
+  # Cody's data
+  stock <- tibble(
+    year = takers_rec[,1],
+    sb = takers_ssb[,x])
+  
+  # remove model run in time
+  min_year <- cody_stocks2[row, "old_min_year"]
+  max_year <- cody_stocks2[row, "old_max_year"]
+  
+  stock <- stock %>%
+    filter(year >= min_year) %>%
+    filter(year <= max_year)
+  # Current data
+  stock2 <- tibble(
+    year = takers_rec[,1],
+    sb = takers_ssb[,x])
+  
+  # remove model run in time
+  min_year2 <- pull(use_stocks[row2, "min_year"])
+  max_year2 <- pull(use_stocks[row2, "max_year"])
+  
+  stock2 <- stock2 %>%
+    filter(year >= min_year2) %>%
+    filter(year <= max_year2)
+  
+  # find lower 5th and upper 5th quantile sb
+  quants1 <- unname(quantile(pull(stock$sb), probs = c(0.05, 0.95), na.rm = TRUE))
+  quants2 <- unname(quantile(pull(stock2$sb), probs = c(0.05, 0.95), na.rm = TRUE))
+  
+  # save depletion levels
+  cody_stocks2[row, "Odepletion"] <- quants1[1]/quants1[2]
+  cody_stocks2[row, "Cdepletion"] <- quants2[1]/quants2[2]
+}
+
+# print results
+cody_stocks3 <- pivot_longer(cody_stocks2, 
+                             !c(stock_name, old_min_year, old_max_year, original._driver, change, note),
+                             names_to = "analysis", values_to = "depletion")
+cody_stocks3$analysis <- sub("Odepletion", "Szuwalski et al", cody_stocks3$analysis)
+cody_stocks3$analysis <- sub("Cdepletion", "Current", cody_stocks3$analysis)
+
+pdf(here("sb_contrast", "cody_stocks_contrast_boxplot.pdf"))
+a <- ggplot(data = cody_stocks3) + geom_boxplot(aes(x = original._driver, y = depletion, fill = analysis)) + 
+  labs(x = "original recruitment driver classification", y = "depletion", 
+       title = "Historical spawning biomass depletion",
+       subtitle = "calculated for 178 of the 224 stocks in Szuwalski et al. (2015)")
+print(a)
+dev.off()

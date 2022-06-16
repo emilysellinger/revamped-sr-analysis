@@ -151,6 +151,11 @@ for(x in 1:nrow(monotonic_stocks)){
 }
 
 
+# Write to CSV files ------------------------------------------------------
+write_csv(sb_driven_stocks, here("results/original_analysis/csv_files", "sb_driven_stocks.csv"))
+write_csv(env_driven_stocks, here("results/original_analysis/csv_files", "env_driven_stocks.csv"))
+write_csv(edge_stocks, here("results/original_analysis/csv_files", "edge_stocks.csv"))
+
 # DCCA comparison ---------------------------------------------------------
 # going to calculate the DCCA correlation coefficient for comparison to 
 # Spearman's
@@ -166,7 +171,7 @@ for(x in rho_comparison$stock_name){
   stock <- retrieve_sr_data(x)
   
   # calculate DCCA rho
-  dcca <- rhodcca(stock$logR, log(stock$sb), m = 5, nu = 1)
+  dcca <- rhodcca(pull(stock$logR), pull(log(stock$sb)), m = 5, nu = 2)
   rho_comparison[row, "dcca_rho"] <- dcca$rhodcca
 }
 
@@ -265,25 +270,12 @@ rho_comparison %>%
 ggsave(here("results/original_analysis/figures", "edge_case_rho_scatter.pdf"))
 
 
-# Committee would also like an diagram illustrating the detrended cross correlation
+# Supplementary DCCA explanation ------------------------------------------
+stock <- retrieve_sr_data("ARFLOUNDBSAI")
 row <- which(dome_stocks$stock_name == "ARFLOUNDBSAI")
-row2 <- which(use_stocks$stock_name == "ARFLOUNDBSAI")
-
-stock <- data.frame(
-  year = takers_rec[,1],
-  recruits = takers_rec[,"ARFLOUNDBSAI"],
-  sb = takers_ssb[,"ARFLOUNDBSAI"])
-colnames(stock) <- c("year", "recruits", "sb")
-# remove model run in time
-min_year <- pull(use_stocks[row2, "min_year"])
-max_year <- pull(use_stocks[row2, "max_year"])
-
-stock <- stock %>%
-  filter(year >= min_year) %>%
-  filter(year <= max_year)
 
 # plot stock and recruit relationship
-ggplot(stock) + geom_point(aes(x = sb, y = recruits)) +
+ggplot(stock) + geom_point(aes(x = log(sb), y = logR)) +
   labs(x = "spawning biomass", y = "recruits")
 
 # get ranks for recruitment and spawning biomass
@@ -292,61 +284,62 @@ stock <- stock %>%
   mutate(sb_rank = rank(sb))
 
 ggplot(data = stock) + geom_point(aes(x = sb_rank, y = rec_rank)) + 
-  labs(x = "ranked spawning biomass",y = "ranked recruitment", title = "Spearman's correlation") +
+  labs(x = "ranked spawning biomass",y = "ranked recruitment", 
+       title = "Spearman's correlation", subtitle = "correlation = 0.146") +
   geom_abline(slope = 0.1463, intercept = 17.5)
 
-# DCCA example
+
 short_stock1 <- stock %>% 
   filter(year <= 1980)
-lm1 <- lm(short_stock1$recruits~short_stock1$year)
+lm1 <- lm(short_stock1$logR~short_stock1$year)
 lm1_resids <- lm1$residuals
 
 c <- stock %>% 
   filter(year <= 1990) %>% 
   add_column(win = c(rep(1,5), rep(0,10))) %>% 
-  ggplot() + geom_point(aes(x = year, y = recruits, color = as.factor(win)), size = 3) +
-  geom_line(aes(x = year, y = recruits), linetype = 2) +
+  ggplot() + geom_point(aes(x = year, y = logR, color = as.factor(win)), size = 3) +
+  geom_line(aes(x = year, y = logR), linetype = 2) +
   labs(title = "window 1") + 
-  geom_abline(slope =  7.677e+07, intercept = -1.517e+11, color = "#00BFC4", size = 1) +
+  geom_abline(slope =  lm1$coefficients[2], intercept = lm1$coefficients[1], color = "#00BFC4", size = 1) +
   theme(legend.position = "none")
 
 c2 <- short_stock1 %>% 
   add_column(resids = lm1_resids) %>% 
   ggplot() + geom_point(aes(x = year, y = resids), color = "#00BFC4", size = 3) +
   geom_hline(yintercept = 0) + 
-  labs(x = "year", y = "residuals", subtitle = "stdev = 3,999,211")
+  labs(x = "year", y = "residuals")
 
-lm2 <- lm(short_stock1$sb~short_stock1$year)
+lm2 <- lm(log(short_stock1$sb)~short_stock1$year)
 lm2_resids <- lm2$residuals
 
 d <- stock %>% 
   filter(year <= 1990) %>% 
   add_column(win = c(rep(1,5), rep(0,10))) %>% 
-  ggplot() + geom_point(aes(x = year, y = sb, color = as.factor(win)), size = 3) +
-  geom_line(aes(x = year, y = sb), linetype = 2) +
+  ggplot() + geom_point(aes(x = year, y = log(sb), color = as.factor(win)), size = 3) +
+  geom_line(aes(x = year, y = log(sb)), linetype = 2) +
   labs(y = "spawning biomass") + 
-  geom_abline(slope =  5868, intercept = -11447796, color = "#00BFC4", size = 1) +
+  geom_abline(slope = lm2$coefficients[2], intercept = lm2$coefficients[1], color = "#00BFC4", size = 1) +
   theme(legend.position = "none")
 
 d2 <- short_stock1 %>% 
   add_column(resids = lm2_resids) %>% 
   ggplot() + geom_point(aes(x = year, y = resids), color = "#00BFC4", size = 3) +
   geom_hline(yintercept = 0) + 
-  labs(x = "year", y = "residuals", subtitle = "stdev = 4,965.35")
+  labs(x = "year", y = "residuals")
 
-lm3 <- lm(short_stock1$recruits~short_stock1$sb)
+lm3 <- lm(short_stock1$logR~log(short_stock1$sb))
 lm3_resids <- lm3$residuals
 
 e <- short_stock1 %>% 
   filter(year <= 1980) %>% 
   add_column(rec_resids = lm1_resids, sb_resids = lm2_resids) %>% 
   ggplot() + geom_point(aes(x = sb_resids, y = rec_resids), size = 3, color = "#00BFC4") +
-  labs(x = "detrended spawning biomass", y = "detrended recruits", subtitle = "cov = 177,090,285,055")
+  labs(x = "detrended spawning biomass", y = "detrended recruits")
 
 
 grid.arrange(c, c2, d, d2, e, nrow = 3)
-#ggsave(here("results/original_analysis/figures", "dcca_explainer_graph1"))
 
+# Need to change to log if you want to make a second graph
 short_stock1 <- stock %>% 
   filter(year >= 1977) %>% 
   filter(year <= 1981)
@@ -398,68 +391,3 @@ e <- short_stock1 %>%
 
 
 grid.arrange(c, c2, d, d2, e, nrow = 3)
-# PACF in SBiomass ---------------------------------------------------------
-# going to calculate the PACF for the stocks included in the anaylsis because
-# for the DCCA simulations, I ran some using an AR(1) model with a correlation coefficient of 0.5
-# want to make sure that is a reasonable estimate for simulations
-
-stock_sb_pacf <- tibble(stock_name = "test",
-                        pacf_val = 1)
-
-for(x in dome_stocks$stock_name){
-  row <- which(dome_stocks$stock_name == x)
-  row2 <- which(use_stocks$stock_name == x)
-  
-  stock <- tibble(
-    year = takers_rec[,1],
-    sb = takers_ssb[,x])
-  
-  # remove model run in time
-  min_year <- pull(use_stocks[row2, "min_year"])
-  max_year <- pull(use_stocks[row2, "max_year"])
-  
-  stock <- stock %>%
-    filter(year >= min_year) %>%
-    filter(year <= max_year)
-  
-  sb_pacf <- pacf(stock$sb, plot = FALSE)
-  
-  stock_sb_pacf <- stock_sb_pacf %>% 
-    add_row(stock_name = x,
-            pacf_val = sb_pacf$acf[1])
-  
-}
-
-for(x in monotonic_stocks$stock_name){
-  row <- which(monotonic_stocks$stock_name == x)
-  row2 <- which(use_stocks$stock_name == x)
-  
-  stock <- tibble(
-    year = takers_rec[,1],
-    sb = takers_ssb[,x])
-  
-  # remove model run in time
-  min_year <- pull(use_stocks[row2, "min_year"])
-  max_year <- pull(use_stocks[row2, "max_year"])
-  
-  stock <- stock %>%
-    filter(year >= min_year) %>%
-    filter(year <= max_year)
-  
-  sb_pacf <- pacf(stock$sb, plot = FALSE)
-  
-  stock_sb_pacf <- stock_sb_pacf %>% 
-    add_row(stock_name = x,
-            pacf_val = sb_pacf$acf[1])
-  
-}
-
-stock_sb_pacf <- stock_sb_pacf[-1,]
-
-mean(stock_sb_pacf$pacf_val) # 0.723
-
-plot(stock_sb_pacf$pacf_val)
-quantile(stock_sb_pacf$pacf_val, probs = c(0.025, 0.975))
-quantile(stock_sb_pacf$pacf_val, probs = c(0.25, 0.75))
-
-# should probably up the AR(1) coefficient value when I get the chance

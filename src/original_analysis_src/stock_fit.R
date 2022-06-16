@@ -1,10 +1,5 @@
 # Identify deterministic S-R relationships and remove those stocks from analysis
 
-# Define S-R models -------------------------------------------------------------------------------------
-bevholt <- logR~log((a*sb)/(1 + b*sb))
-
-ricker <- logR~log(a*sb*exp(-b*sb))
-
 # RMSE Values -------------------------------------------------------------
 # I still have about 200 more stocks than the original analysis, which could be due to the updates to RAM
 # in the years following Szuwalski et al 2015, but I just want to make sure that without the model run in times,

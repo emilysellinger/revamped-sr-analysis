@@ -1,26 +1,12 @@
-
-
 # Collect regime length --------------------------------------------------------------------------------
 env_change_pt <- tibble(
   stock_name = "",
   regime_length = numeric())
 
 # will first calculate for strictly environmentally driven stocks
-for(x in env_driven_stocks$stock_name)
-{
-  row <- which(use_stocks$stock_name == x)
-  
-  stock <- tibble(year = takers_rec[,1],
-                  recruits = takers_rec[,x])
-  
-  # remove model run in time from changepoint
-  min_year <- pull(use_stocks[row, "min_year"])
-  max_year <- pull(use_stocks[row, "max_year"])
-  
-  stock <- stock %>%
-    filter(year >= min_year) %>%
-    filter(year <= max_year) %>%
-    mutate(recruits = replace(recruits, recruits == 0, 1))
+for(x in env_driven_stocks$stock_name){
+  # get stock and recruitment data
+  stock <- retrieve_sr_data(x)
   
   # Fit regime model
   fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
@@ -43,21 +29,9 @@ for(x in env_driven_stocks$stock_name)
 }
 
 # will now add the 28 stocks where we can't determine if they are environmentally driven or spbio driven (or both)
-for(x in edge_stocks$stock_name)
-{
-  row <- which(use_stocks$stock_name == x)
-  
-  stock <- tibble(year = takers_rec[,1],
-                  recruits = takers_rec[,x])
-  
-  # remove model run in time from changepoint
-  min_year <- pull(use_stocks[row, "min_year"])
-  max_year <- pull(use_stocks[row, "max_year"])
-  
-  stock <- stock %>%
-    filter(year >= min_year) %>%
-    filter(year <= max_year) %>%
-    mutate(recruits = replace(recruits, recruits == 0, 1))
+for(x in edge_stocks$stock_name){
+  # get stock and recruitment data
+  stock <- retrieve_sr_data(x)
   
   # Fit regime model
   fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
@@ -83,11 +57,9 @@ for(x in edge_stocks$stock_name)
 counts <- env_change_pt %>%
   count(stock_name)
 
-
 for(x in 1:nrow(counts)){
   y <- pull(counts[x,1])
   nums <- pull(counts[x,2])
-  
   
   if(nums < 2){
     env_change_pt <- env_change_pt %>%
@@ -95,8 +67,20 @@ for(x in 1:nrow(counts)){
   }
 }
 
-
 # want to know the number of environmentally driven stocks with a regime change in the time series
 counts %>%
   filter(n > 1)
-# 329 stocks have regime changes
+# 340 stocks have regime changes
+
+# Write to CSV ------------------------------------------------------------
+# will write this data to a csv file because it will be used to compare methods
+write_csv(env_change_pt, here("results/original_analysis/csv_files", "env_change_pt.csv"))
+
+
+
+# Contrast and SigmaR -----------------------------------------------------
+# we want to look at the estimated value of sigmaR and the spawning biomass contrast
+# for stocks that our method can detect a regime change
+
+
+

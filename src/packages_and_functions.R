@@ -11,8 +11,6 @@ library(gridExtra)
 library(stats4)
 library(DCCA)
 library(MARSS)
-library(MuMIn)
-
 
 # Functions ---------------------------------------------------------------
 
@@ -91,21 +89,21 @@ ricker <- function(stock){
 }
 
 # Read in CSV files -------------------------------------------------------
-dome_stocks <- read.csv(here("results", "dome_stocks.csv"))
+dome_stocks <- read.csv(here("results/original_analysis/csv_files", "dome_stocks.csv"))
 dome_stocks <- as_tibble(dome_stocks[,-1])
 
-monotonic_stocks <- read_csv(here("results", "monotonic_stocks.csv"))
+monotonic_stocks <- read_csv(here("results/original_analysis/csv_files", "monotonic_stocks.csv"))
 monotonic_stocks <- as_tibble(monotonic_stocks[,-1])
 
-stock_model_fits <- read_csv(here("results", "stock_model_fits.csv"))
+stock_model_fits <- read_csv(here("results/original_analysis/csv_files", "stock_model_fits.csv"))
 stock_model_fits <- as_tibble(stock_model_fits[,-1])
 
-use_stocks <- read_csv(here("data", "use_stocks.csv"))
+use_stocks <- read_csv(here("results/original_analysis/csv_files", "use_stocks.csv"))
 use_stocks <- use_stocks[,-1]
 
-takers_rec <- read_csv(here("data", "takers_rec.csv"))
+takers_rec <- read_csv(here("results/original_analysis/csv_files", "takers_rec.csv"))
 takers_rec <- takers_rec[,-1]
 
-takers_ssb <- read_csv(here("data", "takers_ssb.csv"))
+takers_ssb <- read_csv(here("results/original_analysis/csv_files", "takers_ssb.csv"))
 takers_ssb <- takers_ssb[,-1]
 

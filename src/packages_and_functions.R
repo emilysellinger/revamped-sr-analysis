@@ -1,0 +1,111 @@
+# Script for loading packages and functions used in the rest of the analysis
+# Load packages -----------------------------------------------------------
+library(tidyverse)
+library(here)
+library(changepoint)
+library(bcp)
+library(data.table)
+library(nlmrt)
+library(FSA)
+library(gridExtra)
+library(stats4)
+library(DCCA)
+library(MARSS)
+library(MuMIn)
+
+
+# Functions ---------------------------------------------------------------
+
+retrieve_sr_data <- function(x){
+  row <- which(use_stocks$stock_name == x)
+  
+  # create a tibble for each stock's biomass and recruit data
+  stock <- tibble(
+    year = takers_rec[,1],
+    recruits = takers_rec[,x],
+    sb = takers_ssb[,x],
+    logR = log(takers_rec[,x]))
+  
+  # remove model run in time
+  min_year <- pull(use_stocks[row, "min_year"])
+  max_year <- pull(use_stocks[row, "max_year"])
+  
+  stock <- stock %>%
+    filter(year >= min_year) %>%
+    filter(year <= max_year)
+  
+  # Change any 0 recruit values to 1
+  stock <- stock %>%
+    mutate(logR = replace(logR, logR == -Inf, 1)) %>%
+    mutate(recruits = replace(recruits, recruits == 0, 1))
+  
+  return(stock)
+}
+
+bevholt <- function(stock){
+  dats <- stock$sb
+  datr <- stock$recruits
+  
+  BHminusLL <- function(loga, logb, logsigmaR){
+    # extract parameters
+    a <- exp(loga); b <- exp(logb); sigmaR <- exp(logsigmaR)
+    
+    # make predictions
+    pred <- log(a*dats/(1 + b*dats))
+    
+    #calculate negative log like
+    NegLogL <- (-1)*sum(dnorm(log(datr), pred, sigmaR, log = TRUE))
+    return(NegLogL)
+  }
+  
+  
+  starts <- list(loga = log(bevholt_starts$a), logb = log(bevholt_starts$b), logsigmaR = 5)
+  mle_out <- mle(BHminusLL, start = starts)
+  
+  # return output
+  return(mle_out)
+}
+
+ricker <- function(stock){
+  dats <- stock$sb
+  datr <- stock$recruits
+  
+  RminusLL <- function(loga, logb, logsigmaR){
+    # extract parameters
+    a <- exp(loga); b <- exp(logb); sigmaR <- exp(logsigmaR)
+    
+    # make predictions
+    pred <- log(a*dats*exp(-b*dats))
+    
+    #calculate negative log like
+    NegLogL <- (-1)*sum(dnorm(log(datr), pred, sigmaR, log = TRUE))
+    return(NegLogL)
+  }
+  
+  
+  starts <- list(loga = log(ricker_starts$a), logb = log(ricker_starts$b), logsigmaR = 5)
+  mle_out <- mle(RminusLL, start = starts)
+  
+  # return output
+  return(mle_out)
+}
+
+# Read in CSV files -------------------------------------------------------
+dome_stocks <- read.csv(here("results", "dome_stocks.csv"))
+dome_stocks <- as_tibble(dome_stocks[,-1])
+
+monotonic_stocks <- read_csv(here("results", "monotonic_stocks.csv"))
+monotonic_stocks <- as_tibble(monotonic_stocks[,-1])
+
+stock_model_fits <- read_csv(here("results", "stock_model_fits.csv"))
+stock_model_fits <- as_tibble(stock_model_fits[,-1])
+
+use_stocks <- read_csv(here("data", "use_stocks.csv"))
+use_stocks <- use_stocks[,-1]
+
+takers_rec <- read_csv(here("data", "takers_rec.csv"))
+takers_rec <- takers_rec[,-1]
+
+takers_ssb <- read_csv(here("data", "takers_ssb.csv"))
+takers_ssb <- takers_ssb[,-1]
+

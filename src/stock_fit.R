@@ -235,3 +235,65 @@ takers_rec <- takers_rec[,-1]
 
 takers_ssb <- read_csv(here("data", "takers_ssb.csv"))
 takers_ssb <- takers_ssb[,-1]
+
+
+
+# Quantify sigmaR vs sigmaE -----------------------------------------------
+row <- which(use_stocks$stock_name == "ACADREDGOMGB")
+
+# create a tibble for each stock's biomass and recruit data
+stock <- data.frame(
+  takers_rec[,1],
+  takers_rec[,"ACADREDGOMGB"],
+  takers_ssb[,"ACADREDGOMGB"],
+  log(takers_rec[,"ACADREDGOMGB"]))
+
+colnames(stock) <- c("year", "recruits", "sb", "logR")
+
+# remove model run in time
+min_year <- pull(use_stocks[row, "min_year"])
+max_year <- pull(use_stocks[row, "max_year"])
+
+stock <- stock %>%
+  filter(year >= min_year) %>%
+  filter(year <= max_year)
+
+ricker_starts <- srStarts(recruits~sb, data = stock, type = "Ricker", param = 1)
+bevholt_starts <- srStarts(recruits~sb, data = stock, type = "BevertonHolt", param = 1)
+
+if(ricker_starts[2] < 0){ricker_starts[2] <- 0.000001} # make sure ricker b param is positive
+if(bevholt_starts[1] < 0){bevholt_starts[1] <- 0.000001} # make sure bevholt a param is positive
+if(bevholt_starts[2] < 0){bevholt_starts[2] <- 0.000001} # make sure bevholt b param is positive
+
+# fit ricker and beverton holt models to stock
+ricker_fit <- nlxb(ricker, data = stock, start = ricker_starts)
+bevholt_fit <- nlxb(bevholt, data = stock, start = bevholt_starts)
+
+
+# going to try this with my mle function
+dats <- stock$sb
+datr <- stock$recruits
+
+BHminusLL <- function(loga, logb, logsigmaR){
+  # extract parameters
+  a <- exp(loga); b <- exp(logb); sigmaR <- exp(logsigmaR)
+  
+  # make predictions
+  pred <- log(a*dats/(1 + b*dats))
+  
+  # calculate sigma for each year with abundance data
+  sig <- sqrt(cv^2 + sigmaR^2)
+  
+  #calculate negative log like
+  NegLogL <- (-1)*sum(dnorm(log(datr), pred, sig, log = TRUE))
+  return(NegLogL)
+}
+
+
+starts <- list(loga = log(640), logb = log(5.0e-06), logsigmaR = 5)
+mle_out <- mle(BHminusLL, start = starts)
+
+# extract parameters
+a <- exp(coef(mle_out)[1])
+b <- exp(coef(mle_out)[2])
+sigmaR <- exp(coef(mle_out)[3])

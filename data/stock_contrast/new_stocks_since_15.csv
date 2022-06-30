@@ -1,230 +1,273 @@
-﻿stock_name,scientific_name,common_name,region,tsn,fishery_type,changes
-ACMACKSARG,Scomber colias,Argentine chub mackerel,South America,172413,Forage Fish,
-ALBANPAC,Thunnus alalunga,Albacore tuna,Pacific Ocean,172419,Tuna and Marlin,
-AMPL4T,Hippoglossoides platessoides,American plaice,Canada East Coast,172877,Flatfish,
-ANCHMEDGSA29,Engraulis encrasicolus,Anchovy,Mediterranean-Black Sea,161831,Forage Fish,
-APOLLNSJ,Theragra chalcogramma,Walleye pollock,Japan,164722,Gadids,
-ARGANCHONARG,Engraulis anchoita,Argentine anchoita,South America,551338,Forage Fish,
-ARGANCHOSARG,Engraulis anchoita,Argentine anchoita,South America,551338,Forage Fish,
-ATHAL3NOPS4VWX5ZC,Hippoglossus hippoglossus,Atlantic halibut,Canada East Coast,172933,Flatfish,
-AUROCKPCOAST,Sebastes aurora,Aurora rockfish,US West Coast,166709,Rockfish,
-AWOLF5YZ,Anarhichas lupus,Atlantic wolffish,US East Coast,171341,Other Marine,
-BGRDRNSWWA,Macruronus novaezelandiae,Blue grenadier,Australia,623193,Gadids,
-BIGEYECWPAC,Thunnus obesus,Bigeye tuna,Pacific Ocean,172428,Tuna and Marlin,
-BIGEYEIO,Thunnus obesus,Bigeye tuna,Indian Ocean,172428,Tuna and Marlin,
-BIGHTREDSE,Centroberyx gerrardi,Bight redfish,Australia,622143,Other Marine,
-BLACKROCKCAL,Sebastes melanops,Black rockfish,US West Coast,166727,Rockfish,part of split
-BMACKECS,Scomber australasicus,Spotted mackerel,Japan,172415,Forage Fish,
-BMACKPJPN,Scomber australasicus,Spotted mackerel,Japan,172415,Forage Fish,
-BRMSOJ,Dentex tumifrons,Yellow sea bream,Japan,647939,Other Marine,
-BRNSHRIMPGM,Farfantepenaeus aztecus,Brown shrimp,US Southeast and Gulf,551570,Invertebrate,
-BSBASSSATL,Centropristis striata,Black sea bass,US Southeast and Gulf,167687,Other Marine,
-BSQLOGSTERNCH,Cervimunida johni,Yellow squat lobster,South America,-992,Invertebrate,part of split in 2012
-CABEZORECOAST,Scorpaenichthys marmoratus,Cabezon,US West Coast,692068,Other Marine,
-CALSCORPSCAL,Scorpaena guttata,California scorpionfish,US West Coast,166827,Other Marine,
-CAPENOR,Mallotus villosus,Capelin,Europe non EU,162035,Forage Fish,
-CHERRCHVX,Clupea bentincki,Chilean herring,South America,615818,Forage Fish,
-CMACKPJPN,Scomber japonicus,Chub mackerel,Japan,172412,Forage Fish,
-CMACKTSST,Scomber japonicus,Chub mackerel,Japan,172412,Forage Fish,
-COBGM,Rachycentron canadum,Cobia,US Southeast and Gulf,168566,Other Marine,
-COD1F.XIV,Gadus morhua,Atlantic cod,Europe non EU,164712,Gadids,
-COD1IN,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,
-COD2J3KL,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,
-COD3M,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids,
-CODIIIAW.IV.VIID,Gadus morhua,Atlantic cod,European Union,164712,Gadids,
-CODVIIek,Gadus morhua,Atlantic cod,European Union,164712,Gadids,
-CSALMANDREAR,Oncorhynchus keta,Chum salmon,US Alaska,161976,Pacific Salmon,
-CSALMANVIKR,Oncorhynchus keta,Chum salmon,US Alaska,161976,Pacific Salmon,
-CSALMHOODC,Oncorhynchus keta,Chum salmon,US Alaska,161976,Pacific Salmon,
-CSALMISCFPM,Oncorhynchus keta,Chum salmon,Canada West Coast,161976,Pacific Salmon,
-CSALMKTRNS,Oncorhynchus keta,Chum salmon,US Alaska,161976,Pacific Salmon,
-CSALMNSR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon,
-CSALMSKAGR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon,
-CSALMSSOUNDFR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon,
-CSALMSSOUNDSR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon,
-CSALMSSOUNDWR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon,
-CSALMSSR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon,
-CSALMWILLB,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon,
-CSALMYUKONRFR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon,
-CSARDCSCH,Strangomera bentincki,Chilean sardine,South America,551247,Forage Fish,
-CUSKVA.XIV,Brosme brosme,Tusk,European Union,164740,Gadids,
-DEEPCHAKESA,Merluccius paradoxus,Deep water cape hake,Southern Africa,164796,Gadids,
-EBASSIVbc.VII,Dicentrarchus labrax,European seabass,European Union,170317,Other Marine,
-EBASSVIIIab,Dicentrarchus labrax,European seabass,European Union,170317,Other Marine,
-GHALBSAI,Reinhardtius hippoglossoides,Greenland halibut,US Alaska,172930,Flatfish,
-GKCRABAIES,Lithodes aequispinus,Golden king crab,US Alaska,660179,Invertebrate,
-GKCRABAIWS,Lithodes aequispinus,Golden king crab,US Alaska,660179,Invertebrate,
-GOLDREDNEAR,Sebastes norvegicus,Golden redfish,Europe non EU,166781,Rockfish,
-GOLDREDV.VI.XII.XIV,Sebastes norvegicus,Golden redfish,Europe non EU,166781,Rockfish,
-GRAMBERGM,Seriola dumerili,Greater amberjack,US Southeast and Gulf,168689,Other Marine,
-GRNSTROCKPCOAST,Sebastes elongatus,Greenstriped rockfish,US West Coast,166717,Rockfish,
-GRSNAPGM,Lutjanus griseus,Gray snapper,US Southeast and Gulf,168848,Other Marine,
-GSTRGZRSTA7,Kathetostoma giganteum,Giant stargazer,New Zealand,171064,Other Marine,
-HADIS,Melanogrammus aeglefinus,Haddock,European Union,164744,Gadids,
-HAKESPPSAF,Merluccius spp,Hake spp,Southern Africa,-963,Gadids,
-HERR2224IIIa,Clupea harengus,Herring,European Union,161722,Forage Fish,
-HERR2529.32,Clupea harengus,Herring,European Union,161722,Forage Fish,
-HERRNORSS,Clupea harengus,Herring,Europe non EU,161722,Forage Fish,
-HERRNS.IIIa.VIId,Clupea harengus,Herring,European Union,161722,Forage Fish,
-HERRPWS,Clupea pallasii,Pacific herring,US Alaska,551209,Forage Fish,
-HERRSIRS,Clupea harengus,Herring,European Union,161722,Forage Fish,
-HMACKIIa.IVa.Vb.VIa.VII.VIII,Trachurus trachurus,Horse mackerel,European Union,168588,Forage Fish,
-HMACKIXA,Trachurus trachurus,Horse mackerel,European Union,168588,Forage Fish,
-JANCHOPJPN,Engraulis japonicus,Japanese anchovy,Japan,161835,Forage Fish,
-JANCHOSETO,Engraulis japonicus,Japanese anchovy,Japan,161835,Forage Fish,
-JANCHOTSST,Engraulis japonicus,Japanese anchovy,Japan,161835,Forage Fish,
-JMACKPJPN,Trachurus japonicus,Japanese jack mackerel,Japan,642012,Forage Fish,
-JMACKTSST,Trachurus japonicus,Japanese jack mackerel,Japan,642012,Forage Fish,
-JPUFFIMKB,Takifugu rubripes,Japanese pufferfish,Japan,646410,Other Marine,
-KMACKGM,Scomberomorus cavalla,King mackerel,US Southeast and Gulf,172435,Tuna and Marlin,
-KMACKSATLC,Scomberomorus cavalla,King mackerel,US Southeast and Gulf,172435,Tuna and Marlin,
-KMFLOUNBSAI,Atheresthes evermanni,Kamchatka flounder,US Alaska,172861,Flatfish,
-LINGVa,Molva molva,Ling,Europe non EU,164760,Gadids,
-MACK5YCHATT,Scomber scombrus,Atlantic mackerel,US East Coast,172414,Forage Fish,
-MACKNWATLSA3.4,Scomber scombrus,Mackerel,Canada East Coast,172414,Forage Fish,
-MANATLAN,Brevoortia tyrannus,Atlantic menhaden,US East Coast,161732,Forage Fish,
-MORWONGESE,Nemadactylus macropterus,Jackass morwong,Australia,170262,Other Marine,part of split
-MORWONGWSE,Nemadactylus macropterus,Jackass morwong,Australia,170262,Other Marine,part of split
-NPOUTIIIa.IV,Trisopterus esmarkii,Norway pout,European Union,164756,Gadids,
-NRSOLEGA,Lepidopsetta polyxystra,Northern rock sole,US Alaska,616392,Flatfish,
-NSHRIMPCSCH,Heterocarpus reedi,Nylon shrimp,South America,97075,Invertebrate,part of split
-NSHRIMPNCH,Heterocarpus reedi,Nylon shrimp,South America,97075,Invertebrate,part of split
-NZSNAPNZ1ENLD,Chrysophrys auratus,New Zealand snapper,New Zealand,169231,Other Marine,
-OFLOUNECS,Paralichthys olivaceus,Japanese flounder,Japan,172744,Flatfish,
-PACBTUNA,Thunnus orientalis,Pacific bluefin tuna,Pacific Ocean,172422,Tuna and Marlin,
-PANCHCCH,Engraulis ringens,Peruvian anchoveta,South America,551340,Forage Fish,part of split
-PANCHNCHSP,Engraulis ringens,Peruvian anchoveta,South America,551340,Forage Fish,part of split
-PANDALIIIaW.IVaE,Pandalus borealis,Northern shrimp,European Union,96967,Invertebrate,
-PATGRENADIERCH,Macruronus magellanicus,Patagonian grenadier,South America,550662,Gadids,
-PAUAPAU5D,Haliotis iris,Paua,New Zealand,-997,Invertebrate,
-PCEELARGS,Genypterus blacodes,Pink cusk eel,South America,165000,Other Marine,
-PCEELCSCH,Genypterus blacodes,Pink cusk eel,South America,165000,Other Marine,
-PCEELSCH,Genypterus blacodes,Pink cusk eel,South America,165000,Other Marine,
-PERCHQCI,Sebastes alutus,Pacific ocean perch,Canada West Coast,166707,Rockfish,
-PERCHWCVANI,Sebastes alutus,Pacific ocean perch,Canada West Coast,166707,Rockfish,
-PILCHPJPN,Sardinops melanostictus,Japanese sardine,Japan,551222,Forage Fish,
-PILCHTSST,Sardinops melanostictus,Japanese sardine,Japan,551222,Forage Fish,
-PINKSHRIMPGM,Farfantepenaeus duorarum,Pink shrimp,US Southeast and Gulf,551574,Invertebrate,
-PLAIC2123,Pleuronectes platessa,European plaice,European Union,172902,Flatfish,
-PLAICVIIh.k,Pleuronectes platessa,European plaice,European Union,172902,Flatfish,
-POLL5YZ,Pollachius virens,Pollock,US East Coast,164727,Gadids,
-POLLIEG,Pollachius virens,Pollock,Europe non EU,164727,Gadids,
-PSALMAKPSWUD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMAMURPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon,
-PSALMCHIGNIKCD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMCHIGNIKED,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMCHIGNIKWD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMEKAMPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon,
-PSALMESAKPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon,
-PSALMHUMPYCCISD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMJCPH,Oncorhynchus gorbuscha,Pink salmon,Japan,161975,Pacific Salmon,
-PSALMJCPW,Oncorhynchus gorbuscha,Pink salmon,Japan,161975,Pacific Salmon,
-PSALMAKPSESCD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMMONTD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMPDICK,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMPERRYVILLED,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMPGRAHMSD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMPRIMPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon,
-PSALMPWESD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMPWSSED,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMROCKYROD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMSELDOVIAB,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMTUTKASD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSALMWINDYC,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon,
-PSOLEPCOAST,Eopsetta jordani,Petrale sole,US West Coast,172868,Flatfish,
-PTOOTFISHPEI,Dissostichus eleginoides,Patagonian toothfish,Southern Africa,642807,Other Marine,
-PTOOTFISHCH,Dissostichus eleginoides,Patagonian toothfish,South America,642807,Other Marine,
-RBRMSETOW,Pagrus major,Red seabream,Japan,647892,Other Marine,
-REDDEEPDP.1.2.V.XII.XIV,Sebastes mentella,Beaked redfish,Russia,166756,Rockfish,
-REDFEAUS,Centroberyx affinis,Redfish,Australia,622131,Other Marine,
-REYEROCKGA,Sebastes aleutianus,Rougheye rockfish,US Alaska,166706,Rockfish,
-RGROUPGM,Epinephelus morio,Red grouper,US Southeast and Gulf,167702,Other Marine,
-RGROUPSATL,Epinephelus morio,Red grouper,US Southeast and Gulf,167702,Other Marine,
-RHERRTSST,Etrumeus teres,Round herring,Japan,161743,Forage Fish,
-RKCRABBB,Paralithodes camtschaticus,Red king crab,US Alaska,97935,Invertebrate,
-RKCRABNS,Paralithodes camtschaticus,Red king crab,US Alaska,97935,Invertebrate,
-RMULLMEDGSA29,Mullus barbatus,Red mullet,Mediterranean-Black Sea,169419,Other Marine,
-RSNAPGM,Lutjanus campechanus,Red snapper,US Southeast and Gulf,168853,Other Marine,
-RROCKLOBSTERSAUSNZ,Jasus edwardsii,Rock lobster,Australia,660225,Invertebrate,
-RROCKLOBSTERSAUSSZ,Jasus edwardsii,Rock lobster,Australia,660225,Invertebrate,
-RSFLOUNSOJ,Eopsetta grigorjewi,Round nose flounder,Japan,172869,Flatfish,
-RSOLE5AB,Lepidopsetta bilineata,Rock sole,Canada West Coast,172917,Flatfish,
-RSOLEGA,Lepidopsetta bilineata,Rock sole,US Alaska,172917,Flatfish,
-RSQLOBSTERCSCH,Pleuroncodes monodon,Red squat lobster,South America,-993,Invertebrate,
-RSROCKBCWN,Sebastes proriger,Redstripe rockfish,Canada West Coast,166736,Rockfish,
-RSROCKBCWS,Sebastes proriger,Redstripe rockfish,Canada West Coast,166736,Rockfish,
-SABLEFPCAN,Anoplopoma fimbria,Sablefish,Canada West Coast,167123,Other Marine,
-SARDWSE,Sardinops sagax,Sardine,Australia,161730,Forage Fish,
-SBELLYROCKPCOAST,Sebastes jordani,Shortbelly rockfish,US West Coast,166725,Rockfish,
-SBWHITCH,Micromesistius australis,Southern blue whiting,South America,164775,Gadids,
-SCMPBP,Metanephrops challengeri,Scampi,New Zealand,552935,Invertebrate,
-SCMPMB,Metanephrops challengeri,Scampi,New Zealand,552935,Invertebrate,
-SCMPWHB,Metanephrops challengeri,Scampi,New Zealand,552935,Invertebrate,
-SDOGBLKGSA29,Squalus acanthias,Spiny dogfish,Mediterranean-Black Sea,160617,Sharks Rays and Skates,
-SELLNSSA1,Ammodytes spp,Sand eel,European Union,171671,Forage Fish,
-SELLNSSA2,Ammodytes spp,Sand eel,European Union,171671,Forage Fish,
-SELLNSSA3,Ammodytes spp,Sand eel,European Union,171671,Forage Fish,
-SELLNSSA4,Ammodytes spp,Sand eel,European Union,171671,Forage Fish,
-SMOOTHOREOCR,Pseudocyttus maculatus,Smooth oreo,New Zealand,625280,Other Marine,
-SNAPSAUSNSG,Chrysophrys auratus,Snapper,Australia,169231,Other Marine,
-SNAPSAUSSSG,Chrysophrys auratus,Snapper,Australia,169231,Other Marine,
-SNOWCRABBS,Chionoecetes opilio,Snow crab,US Alaska,98428,Invertebrate,
-SNROCKPCOAST,Sebastes diploproa,Splitnose rockfish,US West Coast,166716,Rockfish,
-SOLEVIIh.k,Solea solea,Common sole,European Union,173002,Flatfish,
-SOUTHHAKEWCSI,Merluccius australis,Southern hake,New Zealand,164797,Gadids,
-SPANMACKSETO,Scomberomorus niphonius,Japanese Spanish mackerel,Japan,172446,Tuna and Marlin,
-SPHAKECH,Merluccius gayi,South Pacific hake,South America,164799,Gadids,
-SPRATIIIa.IV,Sprattus sprattus,Sprat,European Union,161789,Forage Fish,
-SSALMBIRKENH,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMBLACKL,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMBOWRON,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMBRANCH,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMCHIGNIKL,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMCHILKATL,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMCHILKO,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMCULTUS,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMEALSEKDR,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMEGEGIK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMEUPPERS,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMHARRISON,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMIGUSHIK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMKLUKSHUR,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMKVICHAK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMLWASH,Oncorhynchus nerka,Sockeye salmon,US West Coast,161979,Pacific Salmon,
-SSALMNADINA,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMNAHANTLATCH,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMNAKNEK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMNASS,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMNUSHAGAK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMOWIKENOL,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMPITT,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMQUIN,Oncorhynchus nerka,Sockeye salmon,US West Coast,161979,Pacific Salmon,
-SSALMRAFT,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMSEYMOUR,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMSITUKR,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMSKEENA,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMSTELLAKO,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMTOGIAK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMUCOOKI,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMUGASHIK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSALMWEAVER,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon,
-SSALMWOOD,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-SSSALMLUPPERS,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon,
-STMARLINNEPAC,Kajikia audax,Striped marlin,Pacific Ocean,768127,Tuna and Marlin,
-STMARLINWCNPAC,Kajikia audax,Striped marlin,Pacific Ocean,768127,Tuna and Marlin,
-TANNERCRABBSAI,Chionoecetes bairdi,Tanner crab,US Alaska,98429,Invertebrate,
-TIGERFLATSE,Neoplatycephalus richardsoni,Tiger flathead,Australia,644187,Other Marine,
-TILEGM,Lopholatilus chamaeleonticeps,Tilefish,US Southeast and Gulf,168546,Other Marine,
-TILEMATLC,Lopholatilus chamaeleonticeps,Tilefish,US East Coast,168546,Other Marine,
-TURIV,Scophthalmus maximus,Turbot,European Union,172748,Flatfish,
-WANGLVII.VIIIabd,Lophius piscatorius,White anglerfish,European Union,164501,Other Marine,
-WANGLVIIIc.Ixa,Lophius piscatorius,White anglerfish,European Union,164501,Other Marine,
-WHAKE4T,Urophycis tenuis,White hake,Canada East Coast,164732,Gadids,
-WHITMEDGSA29,Merlangius merlangus,Whiting,Mediterranean-Black Sea,164758,Gadids,
-WHITVIIa,Merlangius merlangus,Whiting,European Union,164758,Gadids,
-WHITVIIbce.k,Merlangius merlangus,Whiting,European Union,164759,Gadids,
-WINFLOUN4RST,Glyptocephalus cynoglossus,Witch flounder,Canada East Coast,172873,Flatfish,
-WINFLOUN4T,Pseudopleuronectes americanus,Winter flounder,Canada East Coast,172905,Flatfish,
-WMARLINATL,Tetrapturus albidus,White marlin,Atlantic Ocean,172499,Tuna and Marlin,
-WROCKBCW,Sebastes entomelas,Widow rockfish,Canada West Coast,166718,Rockfish,
-YFINEIO,Thunnus albacares,Yellowfin tuna,Indian Ocean,172423,Tuna and Marlin,
+﻿stock_name,scientific_name,common_name,region,tsn,fishery_type
+ACMACKSARG,Scomber colias,Argentine chub mackerel,South America,172413,Forage Fish
+ALBANPAC,Thunnus alalunga,Albacore tuna,Pacific Ocean,172419,Tuna and Marlin
+ALSKABSAI,Bathyraja parmifera,Alaska skate,US Alaska,160939,Sharks Rays and Skates
+AMPL4T,Hippoglossoides platessoides,American plaice,Canada East Coast,172877,Flatfish
+ANCHMEDGSA29,Engraulis encrasicolus,Anchovy,Mediterranean-Black Sea,161831,Forage Fish
+APOLLNSJ,Theragra chalcogramma,Walleye pollock,Japan,164722,Gadids
+ARGANCHONARG,Engraulis anchoita,Argentine anchoita,South America,551338,Forage Fish
+ARGANCHOSARG,Engraulis anchoita,Argentine anchoita,South America,551338,Forage Fish
+ATHAL3NOPs4VWX5Zc,Hippoglossus hippoglossus,Atlantic halibut,Canada East Coast,172933,Flatfish
+AUROCKPCOAST,Sebastes aurora,Aurora rockfish,US West Coast,166709,Rockfish
+AWOLF5YZ,Anarhichas lupus,Atlantic wolffish,US East Coast,171341,Other Marine
+BGRDRNSWWA,Macruronus novaezelandiae,Blue grenadier,Australia,623193,Gadids
+BIGEYECWPAC,Thunnus obesus,Bigeye tuna,Pacific Ocean,172428,Tuna and Marlin
+BIGEYEIO,Thunnus obesus,Bigeye tuna,Indian Ocean,172428,Tuna and Marlin
+BIGHTREDSE,Centroberyx gerrardi,Bight redfish,Australia,622143,Other Marine
+BLACKROCKCAL,Sebastes melanops,Black rockfish,US West Coast,166727,Rockfish
+BLACKROCKWASH,Sebastes melanops,Black rockfish,US West Coast,166727,Rockfish
+BMACKECS,Scomber australasicus,Spotted mackerel,Japan,172415,Forage Fish
+BMACKPJPN,Scomber australasicus,Spotted mackerel,Japan,172415,Forage Fish
+BMARLINPAC,Makaira nigricans,Blue marlin,Pacific Ocean,172491,Tuna and Marlin
+BRMSOJ,Dentex tumifrons,Yellow sea bream,Japan,647939,Other Marine
+BRNSHRIMPGM,Farfantepenaeus aztecus,Brown shrimp,US Southeast and Gulf,551570,Invertebrate
+BSBASSSATL,Centropristis striata,Black sea bass,US Southeast and Gulf,167687,Other Marine
+BSQLOBSTERCSCH,Cervimunida johni,Yellow squat lobster,South America,-992,Invertebrate
+BSQLOBSTERNCH,Cervimunida johni,Yellow squat lobster,South America,-992,Invertebrate
+CABEZORECOAST,Scorpaenichthys marmoratus,Cabezon,US West Coast,692068,Other Marine
+CALSCORPSCAL,Scorpaena guttata,California scorpionfish,US West Coast,166827,Other Marine
+CAPENOR,Mallotus villosus,Capelin,Europe non EU,162035,Forage Fish
+CHERRCHVX,Clupea bentincki,Chilean herring,South America,615818,Forage Fish
+CHSQUIDSA,Loligo reynaudii,Cape Hope squid,Southern Africa,557249,Invertebrate
+CMACKPJPN,Scomber japonicus,Chub mackerel,Japan,172412,Forage Fish
+CMACKTSST,Scomber japonicus,Chub mackerel,Japan,172412,Forage Fish
+COBGM,Rachycentron canadum,Cobia,US Southeast and Gulf,168566,Other Marine
+COD1F.XIV,Gadus morhua,Atlantic cod,Europe non EU,164712,Gadids
+COD1IN,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids
+COD2J3KL,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids
+COD3M,Gadus morhua,Atlantic cod,Canada East Coast,164712,Gadids
+CODIIIaW.IV.VIId,Gadus morhua,Atlantic cod,European Union,164712,Gadids
+CODNEARNCW,Gadus morhua,Atlantic cod,Europe non EU,164712,Gadids
+CODVIIek,Gadus morhua,Atlantic cod,European Union,164712,Gadids
+CSALMANDREAR,Oncorhynchus keta,Chum salmon,US Alaska,161976,Pacific Salmon
+CSALMANVIKR,Oncorhynchus keta,Chum salmon,US Alaska,161976,Pacific Salmon
+CSALMHOODC,Oncorhynchus keta,Chum salmon,US Alaska,161976,Pacific Salmon
+CSALMISCFPM,Oncorhynchus keta,Chum salmon,Canada West Coast,161976,Pacific Salmon
+CSALMKTRNS,Oncorhynchus keta,Chum salmon,US Alaska,161976,Pacific Salmon
+CSALMNSR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon
+CSALMSKAGR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon
+CSALMSSOUNDFR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon
+CSALMSSOUNDSR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon
+CSALMSSOUNDWR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon
+CSALMSSR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon
+CSALMWILLB,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon
+CSALMYUKONRFR,Oncorhynchus keta,Chum salmon,US West Coast,161976,Pacific Salmon
+CSARDCSCH,Strangomera bentincki,Chilean sardine,South America,551247,Forage Fish
+CTRACSA,Trachurus capensis,Cape horse mackerel,Southern Africa,168598,Forage Fish
+CUSKVa.XIV,Brosme brosme,Tusk,European Union,164740,Gadids
+DEEPCHAKESA,Merluccius paradoxus,Deep water cape hake,Southern Africa,164796,Gadids
+DOYSFS,Ostrea chilensis,Dredge oyster,New Zealand,-970,Invertebrate
+EBASSIVbc.VII,Dicentrarchus labrax,European seabass,European Union,170317,Other Marine
+EBASSVIIIab,Dicentrarchus labrax,European seabass,European Union,170317,Other Marine
+GHALBSAI,Reinhardtius hippoglossoides,Greenland halibut,US Alaska,172930,Flatfish
+GKCRABAIES,Lithodes aequispinus,Golden king crab,US Alaska,660179,Invertebrate
+GKCRABAIWS,Lithodes aequispinus,Golden king crab,US Alaska,660179,Invertebrate
+GOLDREDNEAR,Sebastes norvegicus,Golden redfish,Europe non EU,166781,Rockfish
+GOLDREDV.VI.XII.XIV,Sebastes norvegicus,Golden redfish,Europe non EU,166781,Rockfish
+GRAMBERGM,Seriola dumerili,Greater amberjack,US Southeast and Gulf,168689,Other Marine
+GRNSTROCKPCOAST,Sebastes elongatus,Greenstriped rockfish,US West Coast,166717,Rockfish
+GRSNAPGM,Lutjanus griseus,Gray snapper,US Southeast and Gulf,168848,Other Marine
+GSTRGZRSTA7,Kathetostoma giganteum,Giant stargazer,New Zealand,171064,Other Marine
+HADIS,Melanogrammus aeglefinus,Haddock,European Union,164744,Gadids
+HADNS.IIIa.VIa,Melanogrammus aeglefinus,Haddock,European Union,164744,Gadids
+HAKESPPSAF,Merluccius spp,Hake spp,Southern Africa,-963,Gadids
+HERR2224IIIa,Clupea harengus,Herring,European Union,161722,Forage Fish
+HERR2529.32,Clupea harengus,Herring,European Union,161722,Forage Fish
+HERR30.31,Clupea harengus,Herring,European Union,161722,Forage Fish
+HERRNORSS,Clupea harengus,Herring,Europe non EU,161722,Forage Fish
+HERRNS.IIIa.VIId,Clupea harengus,Herring,European Union,161722,Forage Fish
+HERRPWS,Clupea pallasii,Pacific herring,US Alaska,551209,Forage Fish
+HERRSIRS,Clupea harengus,Herring,European Union,161722,Forage Fish
+HMACKIIa.IVa.Vb.VIa.VII.VIII,Trachurus trachurus,Horse mackerel,European Union,168588,Forage Fish
+HMACKIXa,Trachurus trachurus,Horse mackerel,European Union,168588,Forage Fish
+JANCHOPJPN,Engraulis japonicus,Japanese anchovy,Japan,161835,Forage Fish
+JANCHOSETO,Engraulis japonicus,Japanese anchovy,Japan,161835,Forage Fish
+JANCHOTSST,Engraulis japonicus,Japanese anchovy,Japan,161835,Forage Fish
+JMACKPJPN,Trachurus japonicus,Japanese jack mackerel,Japan,642012,Forage Fish
+JMACKTSST,Trachurus japonicus,Japanese jack mackerel,Japan,642012,Forage Fish
+JPUFFIMKB,Takifugu rubripes,Japanese pufferfish,Japan,646410,Other Marine
+KMACKGM,Scomberomorus cavalla,King mackerel,US Southeast and Gulf,172435,Tuna and Marlin
+KMACKSATLC,Scomberomorus cavalla,King mackerel,US Southeast and Gulf,172435,Tuna and Marlin
+KMFLOUNBSAI,Atheresthes evermanni,Kamchatka flounder,US Alaska,172861,Flatfish
+LINGVa,Molva molva,Ling,Europe non EU,164760,Gadids
+MACK5YCHATT,Scomber scombrus,Atlantic mackerel,US East Coast,172414,Forage Fish
+MACKNWATLSA3.4,Scomber scombrus,Mackerel,Canada East Coast,172414,Forage Fish
+MANATLAN,Brevoortia tyrannus,Atlantic menhaden,US East Coast,161732,Forage Fish
+MEGVII.VIIIabd,Lepidorhombus whiffiagonis,Megrim,European Union,172835,Flatfish
+MENATLAN,Brevoortia tyrannus,Atlantic menhaden,US East Coast,161732,Forage Fish
+MORWONGESE,Nemadactylus macropterus,Jackass morwong,Australia,170262,Other Marine
+MORWONGWSE,Nemadactylus macropterus,Jackass morwong,Australia,170262,Other Marine
+NPOUTIIIa.IV,Trisopterus esmarkii,Norway pout,European Union,164756,Gadids
+NRSOLEGA,Lepidopsetta polyxystra,Northern rock sole,US Alaska,616392,Flatfish
+NSHRIMPCSCH,Heterocarpus reedi,Nylon shrimp,South America,97075,Invertebrate
+NSHRIMPNCH,Heterocarpus reedi,Nylon shrimp,South America,97075,Invertebrate
+NZSNAPNZ1ENLD,Chrysophrys auratus,New Zealand snapper,New Zealand,169231,Other Marine
+NZSNAPNZ7,Chrysophrys auratus,New Zealand snapper,New Zealand,169231,Other Marine
+OFLOUNECS,Paralichthys olivaceus,Japanese flounder,Japan,172744,Flatfish
+PACBTUNA,Thunnus orientalis,Pacific bluefin tuna,Pacific Ocean,172422,Tuna and Marlin
+PANCHCCH,Engraulis ringens,Peruvian anchoveta,South America,551340,Forage Fish
+PANCHNCHSP,Engraulis ringens,Peruvian anchoveta,South America,551340,Forage Fish
+PANDALIIIaW.IVaE,Pandalus borealis,Northern shrimp,European Union,96967,Invertebrate
+PATGRENADIERCH,Macruronus magellanicus,Patagonian grenadier,South America,550662,Gadids
+PAUAPAU5B,Haliotis iris,Paua,New Zealand,-997,Invertebrate
+PAUAPAU5D,Haliotis iris,Paua,New Zealand,-997,Invertebrate
+PAUAPAU7,Haliotis iris,Paua,New Zealand,-997,Invertebrate
+PCEELARGS,Genypterus blacodes,Pink cusk eel,South America,165000,Other Marine
+PCEELCSCH,Genypterus blacodes,Pink cusk eel,South America,165000,Other Marine
+PCEELSCH,Genypterus blacodes,Pink cusk eel,South America,165000,Other Marine
+PCODBS,Gadus macrocephalus,Pacific cod,US Alaska,164711,Gadids
+PERCHQCI,Sebastes alutus,Pacific ocean perch,Canada West Coast,166707,Rockfish
+PERCHWCVANI,Sebastes alutus,Pacific ocean perch,Canada West Coast,166707,Rockfish
+PILCHPJPN,Sardinops melanostictus,Japanese sardine,Japan,551222,Forage Fish
+PILCHTSST,Sardinops melanostictus,Japanese sardine,Japan,551222,Forage Fish
+PINKSHRIMPGM,Farfantepenaeus duorarum,Pink shrimp,US Southeast and Gulf,551574,Invertebrate
+PLAIC2123,Pleuronectes platessa,European plaice,European Union,172902,Flatfish
+PLAICVIIh.k,Pleuronectes platessa,European plaice,European Union,172902,Flatfish
+POLL5YZ,Pollachius virens,Pollock,US East Coast,164727,Gadids
+POLLIEG,Pollachius virens,Pollock,Europe non EU,164727,Gadids
+PSALMAKPSESCD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMAKPSWUD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMAMURPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon
+PSALMANADYRPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon
+PSALMCHIGNIKCD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMCHIGNIKED,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMCHIGNIKWD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMEKAMPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon
+PSALMESAKPH,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon
+PSALMESAKPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon
+PSALMHUMPYCCISD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMJCPH,Oncorhynchus gorbuscha,Pink salmon,Japan,161975,Pacific Salmon
+PSALMJCPW,Oncorhynchus gorbuscha,Pink salmon,Japan,161975,Pacific Salmon
+PSALMMONTD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMOKPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon
+PSALMPDICK,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMPERRYVILLED,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMPGRAHAMSD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMPGRAHMSD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMPRIMPW,Oncorhynchus gorbuscha,Pink salmon,Russia,161975,Pacific Salmon
+PSALMPWESD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMPWSED,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMPWSSED,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMROCKYROD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMSELDOVIAB,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMTUTKASD,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSALMWINDYC,Oncorhynchus gorbuscha,Pink salmon,US Alaska,161975,Pacific Salmon
+PSOLEPCOAST,Eopsetta jordani,Petrale sole,US West Coast,172868,Flatfish
+PTOOTFISHCH,Dissostichus eleginoides,Patagonian toothfish,South America,642807,Other Marine
+PTOOTFISHPEI,Dissostichus eleginoides,Patagonian toothfish,Southern Africa,642807,Other Marine
+PTOOTHFISHCH,Dissostichus eleginoides,Patagonian toothfish,South America,642807,Other Marine
+PTOOTHFISHPEI,Dissostichus eleginoides,Patagonian toothfish,Southern Africa,642807,Other Marine
+RBRMSETOE,Pagrus major,Red seabream,Japan,647892,Other Marine
+RBRMSETOW,Pagrus major,Red seabream,Japan,647892,Other Marine
+REDDEEPDP.1.2.V.XII.XIV,Sebastes mentella,Beaked redfish,Russia,166756,Rockfish
+REDFEAUS,Centroberyx affinis,Redfish,Australia,622131,Other Marine
+REYEROCKGA,Sebastes aleutianus,Rougheye rockfish,US Alaska,166706,Rockfish
+RGROUPGM,Epinephelus morio,Red grouper,US Southeast and Gulf,167702,Other Marine
+RGROUPSATL,Epinephelus morio,Red grouper,US Southeast and Gulf,167702,Other Marine
+RHERRTSST,Etrumeus teres,Round herring,Japan,161743,Forage Fish
+RKCRABBB,Paralithodes camtschaticus,Red king crab,US Alaska,97935,Invertebrate
+RKCRABNS,Paralithodes camtschaticus,Red king crab,US Alaska,97935,Invertebrate
+RMULLMEDGSA29,Mullus barbatus,Red mullet,Mediterranean-Black Sea,169419,Other Marine
+RROCKLOBSTERSAUSNZ,Jasus edwardsii,Rock lobster,Australia,660225,Invertebrate
+RROCKLOBSTERSAUSSZ,Jasus edwardsii,Rock lobster,Australia,660225,Invertebrate
+RSFLOUNSOJ,Eopsetta grigorjewi,Round nose flounder,Japan,172869,Flatfish
+RSNAPGM,Lutjanus campechanus,Red snapper,US Southeast and Gulf,168853,Other Marine
+RSOLE5AB,Lepidopsetta bilineata,Rock sole,Canada West Coast,172917,Flatfish
+RSOLEGA,Lepidopsetta bilineata,Rock sole,US Alaska,172917,Flatfish
+RSQLOBSTERCSCH,Pleuroncodes monodon,Red squat lobster,South America,-993,Invertebrate
+RSROCKBCWN,Sebastes proriger,Redstripe rockfish,Canada West Coast,166736,Rockfish
+RSROCKBCWS,Sebastes proriger,Redstripe rockfish,Canada West Coast,166736,Rockfish
+SABLEFPCAN,Anoplopoma fimbria,Sablefish,Canada West Coast,167123,Other Marine
+SARDMEDGSA17.18,Sardina pilchardus,Sardine,Mediterranean-Black Sea,161813,Forage Fish
+SARDSAS,Sardinops sagax,Sardine,Southern Africa,161729,Forage Fish
+SARDSAW,Sardinops sagax,Sardine,Southern Africa,161729,Forage Fish
+SARDWSE,Sardinops sagax,Sardine,Australia,161730,Forage Fish
+SBELLYROCKPCOAST,Sebastes jordani,Shortbelly rockfish,US West Coast,166725,Rockfish
+SBWHITCH,Micromesistius australis,Southern blue whiting,South America,164775,Gadids
+SCMPBP,Metanephrops challengeri,Scampi,New Zealand,552935,Invertebrate
+SCMPMB,Metanephrops challengeri,Scampi,New Zealand,552935,Invertebrate
+SCMPWHB,Metanephrops challengeri,Scampi,New Zealand,552935,Invertebrate
+SDOGBLKGSA29,Squalus acanthias,Spiny dogfish,Mediterranean-Black Sea,160617,Sharks Rays and Skates
+SEELNSSA1,Ammodytes spp,Sand eel,European Union,171671,Forage Fish
+SEELNSSA2,Ammodytes spp,Sand eel,European Union,171671,Forage Fish
+SEELNSSA3,Ammodytes spp,Sand eel,European Union,171671,Forage Fish
+SEELNSSA4,Ammodytes spp,Sand eel,European Union,171671,Forage Fish
+SELLNSSA1,Ammodytes spp,Sand eel,European Union,171671,Forage Fish
+SELLNSSA2,Ammodytes spp,Sand eel,European Union,171671,Forage Fish
+SELLNSSA3,Ammodytes spp,Sand eel,European Union,171671,Forage Fish
+SELLNSSA4,Ammodytes spp,Sand eel,European Union,171671,Forage Fish
+SMOOTHOREOCR,Pseudocyttus maculatus,Smooth oreo,New Zealand,625280,Other Marine
+SNAPSAUSNSG,Chrysophrys auratus,Snapper,Australia,169231,Other Marine
+SNAPSAUSSSG,Chrysophrys auratus,Snapper,Australia,169231,Other Marine
+SNOWCRABBS,Chionoecetes opilio,Snow crab,US Alaska,98428,Invertebrate
+SNROCKPCOAST,Sebastes diploproa,Splitnose rockfish,US West Coast,166716,Rockfish
+SOLEIIIa.2224,Solea solea,Common sole,European Union,173002,Flatfish
+SOLEVIIh.k,Solea solea,Common sole,European Union,173002,Flatfish
+SOLEVIIIab,Solea solea,Common sole,European Union,173002,Flatfish
+SOUTHHAKECH,Merluccius australis,Southern hake,South America,164797,Gadids
+SOUTHHAKEWCSI,Merluccius australis,Southern hake,New Zealand,164797,Gadids
+SPANMACKGM,Scomberomorus maculatus,Spanish mackerel,US Southeast and Gulf,172436,Tuna and Marlin
+SPANMACKSETO,Scomberomorus niphonius,Japanese Spanish mackerel,Japan,172446,Tuna and Marlin
+SPHAKECH,Merluccius gayi,South Pacific hake,South America,164799,Gadids
+SPRATIIIa.IV,Sprattus sprattus,Sprat,European Union,161789,Forage Fish
+SSALMBIRKENH,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMBLACKL,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMBOWRON,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMBRANCH,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMCHIGNIKL,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMCHILKATL,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMCHILKO,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMCULTUS,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMEALSEKDR,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMEGEGIK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMEUPPERS,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMHARRISON,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMIGUSHIK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMKLUKSHUR,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMKVICHAK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMLUPPERS,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMLWASH,Oncorhynchus nerka,Sockeye salmon,US West Coast,161979,Pacific Salmon
+SSALMNADINA,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMNAHANTLATCH,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMNAKNEK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMNASS,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMNUSHAGAK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMNUYAKUK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMOWIKENOL,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMPITT,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMQUIN,Oncorhynchus nerka,Sockeye salmon,US West Coast,161979,Pacific Salmon
+SSALMRAFT,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMSEYMOUR,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMSITUKR,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMSKEENA,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMSTELLAKO,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMTOGIAK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMUCOOKI,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMUGASHIK,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSALMWEAVER,Oncorhynchus nerka,Sockeye salmon,Canada West Coast,161979,Pacific Salmon
+SSALMWOOD,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSSALMLUPPERS,Oncorhynchus nerka,Sockeye salmon,US Alaska,161979,Pacific Salmon
+SSTHORNHPCOAST,Sebastolobus alascanus,Shortspine thornyhead,US West Coast,166783,Rockfish
+STMARLINNEPAC,Kajikia audax,Striped marlin,Pacific Ocean,768127,Tuna and Marlin
+STMARLINWCNPAC,Kajikia audax,Striped marlin,Pacific Ocean,768127,Tuna and Marlin
+TANNERCRABBSAI,Chionoecetes bairdi,Tanner crab,US Alaska,98429,Invertebrate
+TIGERFLATSE,Neoplatycephalus richardsoni,Tiger flathead,Australia,644187,Other Marine
+TILEGM,Lopholatilus chamaeleonticeps,Tilefish,US Southeast and Gulf,168546,Other Marine
+TILEMATLC,Lopholatilus chamaeleonticeps,Tilefish,US East Coast,168546,Other Marine
+TURBLKGSA29,Psetta maxima,Turbot,Mediterranean-Black Sea,616195,Other Marine
+TURIV,Scophthalmus maximus,Turbot,European Union,172748,Flatfish
+WANGLVII.VIIIabd,Lophius piscatorius,White anglerfish,European Union,164501,Other Marine
+WANGLVIIIc.Ixa,Lophius piscatorius,White anglerfish,European Union,164501,Other Marine
+WANGLVIIIc.IXa,Lophius piscatorius,White anglerfish,European Union,164501,Other Marine
+WHAKE4T,Urophycis tenuis,White hake,Canada East Coast,164732,Gadids
+WHITMEDGSA29,Merlangius merlangus,Whiting,Mediterranean-Black Sea,164758,Gadids
+WHITNS.VIId,Merlangius merlangus,Whiting,European Union,164758,Gadids
+WHITVIIa,Merlangius merlangus,Whiting,European Union,164758,Gadids
+WHITVIIbce.k,Merlangius merlangus,Whiting,European Union,164759,Gadids
+WINFLOUN4T,Pseudopleuronectes americanus,Winter flounder,Canada East Coast,172905,Flatfish
+WITFLOUN4RST,Glyptocephalus cynoglossus,Witch flounder,Canada East Coast,172873,Flatfish
+WMARLINATL,Tetrapturus albidus,White marlin,Atlantic Ocean,172499,Tuna and Marlin
+WROCKBCW,Sebastes entomelas,Widow rockfish,Canada West Coast,166718,Rockfish
+WSHRIMPGM,Litopenaeus setiferus,White shrimp,US Southeast and Gulf,551680,Invertebrate
+YEGROUPGM,Epinephelus flavolimbatus,Yellowedge grouper,US Southeast and Gulf,167699,Other Marine
+YFINEIO,Thunnus albacares,Yellowfin tuna,Indian Ocean,172423,Tuna and Marlin

@@ -1,7 +1,7 @@
 # going to calculate contrast for Cody's stocks
 # got these from his supplementary information
 
-cody_stocks <- read.csv(here("data", "cody_stocks.csv"))
+cody_stocks <- read_csv(here("data/stock_contrast/cody_stocks.csv"))
 
 # i'm going to first just calculate contrast for stocks that haven't been modified
 # beyond having more data added
@@ -66,3 +66,4 @@ a <- ggplot(data = cody_stocks3) + geom_boxplot(aes(x = original._driver, y = de
        subtitle = "calculated for 178 of the 224 stocks in Szuwalski et al. (2015)")
 print(a)
 dev.off()
+

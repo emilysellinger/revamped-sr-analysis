@@ -11,7 +11,7 @@ library(gridExtra)
 library(stats4)
 library(DCCA)
 library(MARSS)
-
+library(sf)
 # Functions ---------------------------------------------------------------
 
 retrieve_sr_data <- function(x){
@@ -108,8 +108,6 @@ monotonic_stocks <- read_csv(here("results/original_analysis/csv_files", "monoto
 monotonic_stocks <- as_tibble(monotonic_stocks[,-1])
 
 # stocks divided by primary driver of recruitment (over observed biomass)
-
-
 stock_model_fits <- read_csv(here("results/original_analysis/csv_files", "stock_model_fits.csv"))
 stock_model_fits <- as_tibble(stock_model_fits[,-1])
 

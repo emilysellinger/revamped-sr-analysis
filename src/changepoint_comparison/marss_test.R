@@ -14,22 +14,10 @@ regime_change_plot <- function(x){
   row <- which(stock_model_fits$stock_name == x)
   
   # create tibble with s-r data
-  stock <- tibble(year = takers_rec[,1],
-                  recruits = takers_rec[, x],
-                  sb = takers_ssb[, x])
-  
-  # remove model run in time
-  row2 <- which(use_stocks$stock_name == x)
-  min_year <- pull(use_stocks[row2, "min_year"])
-  max_year <- pull(use_stocks[row2, "max_year"])
-  
-  stock <- stock %>%
-    filter(year >= min_year) %>%
-    filter(year <= max_year) %>%
-    mutate(recruits = replace(recruits, recruits == 0, 1))
+  stock <- retrieve_sr_data(x)
   
   # Fit regime model
-  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6,pen.value=0.05)
+  fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
   
   # save change point locations for regimes
   changes	<- fitPelt@cpts
@@ -100,7 +88,7 @@ regime_change_plot <- function(x){
   resids <- MARSSresiduals(kem.2, type = "tT")$mar.residuals
   
   # plot test for level changes
-  years <- seq(min_year, max_year, 1)
+  years <- seq(head(stock$year, 1), tail(stock$year, 1), 1)
   
   # create data frame for ggplot
   level_changes <- tibble(year = years,
@@ -118,7 +106,8 @@ regime_change_plot <- function(x){
                     pt_prob = bcp_fit$posterior.prob)
   
   bcp_plot <- ggplot(data = bcp_dat, aes(x = year, y = pt_prob)) + geom_line() +
-    ylim(0, 1) + labs(x = "year", y = "posterior prob of change point") + theme_minimal()
+    ylim(0, 1) + labs(x = "year", y = "posterior prob of change point") + 
+    geom_hline(yintercept = 0.75, linetype = 2) + theme_minimal()
   
   # print both graphs
   print(grid.arrange(rec_ts_plot, level_change_plot, bcp_plot, nrow = 3))
@@ -126,7 +115,7 @@ regime_change_plot <- function(x){
 
 
 # want to do this with stocks I did change point detection on
-pdf("results/MARSS_test.pdf")
+pdf("results/changepoint_comparison/regime_detection_comparison.pdf")
 for(i in unique(env_change_pt$stock_name)){
   regime_change_plot(i)
 }

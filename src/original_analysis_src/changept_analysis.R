@@ -76,6 +76,7 @@ counts %>%
 # will write this data to a csv file because it will be used to compare methods
 write_csv(env_change_pt, here("results/original_analysis/csv_files", "env_change_pt.csv"))
 
+env_change_pt <- read_csv(here("results/original_analysis/csv_files/env_change_pt.csv"))
 
 
 # Contrast and SigmaR -----------------------------------------------------

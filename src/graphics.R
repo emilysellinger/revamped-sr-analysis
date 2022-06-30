@@ -63,34 +63,42 @@ dev.off()
 library(sf)
 library(RColorBrewer)
 
-savepdf <- function(file, width=16, height=10)
-{
-  fname <- paste("results/",file,".pdf",sep="")
-  pdf(fname, width=width/2.54, height=height/2.54,
-      pointsize=10)
-  par(mgp=c(2.2,0.45,0), tcl=-0.4, mar=c(3.3,3.6,1.1,1.1))
-}
-
-fao <- read.csv(here("data", "fao_region.csv"))
+fao <- read.csv(here("data/original_analysis", "fao_region.csv"))
 fao$stock_name <- str_replace_all(fao$stock_name, "-", "\\.")
 
-lifespan <- lifespan %>%
+# going to redo this so it is without the lifespan issue
+env_driven_stocks <- env_driven_stocks %>% 
+  left_join(fao)
+edge_stocks <- edge_stocks %>% 
+  left_join(fao)
+sb_driven_stocks <- sb_driven_stocks %>% 
   left_join(fao)
 
-lifespan %>%
-  group_by(primary_FAOarea) %>%
-  summarise(n = n())
+all_stocks <- rbind(env_driven_stocks, edge_stocks, sb_driven_stocks)
+fao_num_stocks <- all_stocks %>% 
+  group_by(primary_FAOarea) %>% 
+  summarise(n = n()) %>% 
+  rename(zone = primary_FAOarea) %>% 
+  rename(num_stocks = n)
 
 # going to reassign the inland FAO regions to ocean ones 
-lifespan$primary_FAOarea[lifespan$primary_FAOarea == 2] <- 67
-lifespan$primary_FAOarea[lifespan$primary_FAOarea == 5] <- 61
-lifespan$primary_FAOarea[lifespan$primary_FAOarea == 4] <- 61
+all_stocks$primary_FAOarea[all_stocks$primary_FAOarea == 2] <- 67
+all_stocks$primary_FAOarea[all_stocks$primary_FAOarea == 5] <- 61
+all_stocks$primary_FAOarea[all_stocks$primary_FAOarea == 4] <- 61
 
-fao_regions <- st_read("data/major_fao_region.shp")
+fao_regions <- st_read("data/original_analysis/World_FAO_Zones.shp")
+# stocks in each fao region
+fao_regions <- fao_regions %>% 
+  left_join(fao_num_stocks) %>% 
+  mutate(num_stocks = replace_na(num_stocks, 0))
+ 
 
-fao_regions$num_stocks <- c(0, 29, 133, 4, 82, 21, 0, 1, 9, 2, 17, 9, 34, 1, 0, 0, 17, 5, 48) # stocks in each fao region
-
-svg("results/stock_map.svg")
+pdf("results/original_analysis/figures/stock_map.pdf")
+ggplot() +
+  geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = rev(brewer.pal(5, "YlGnBu"))) +
+  theme_classic() 
+dev.off() 
+svg("results/original_analysis/figures/stock_map.svg")
 ggplot() +
   geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = rev(brewer.pal(5, "YlGnBu"))) +
   theme_classic() 
@@ -272,10 +280,9 @@ dev.off()
 
 
 # Specific S-R graphs for project report -----------------------------------------------------------------------------
-proj_report_stocks <- c("AMPL4T", "ARFLOUNDBSAI", "WHITVIa", "GOPHERSPCOAST", "BLACKROCKCAL", "COD5Zjm", "AUROCKPCOAST")
-
+proj_report_stocks <- c("WHITVIa", "ARFLOUNDBSAI")
 for(x in proj_report_stocks){
-  png(paste("results/",x, "_sb.png", sep = ""))
+  svg(paste("results/original_analysis/figures/", x, "_sb.svg", sep = ""))
   row <- which(stock_model_fits$stock_name == x)
   
   # pull s-r model parameters
@@ -285,19 +292,7 @@ for(x in proj_report_stocks){
   bh_b <- as.numeric(stock_model_fits[row, "bevholt_b"])
   
   # create tibble with s-r data
-  stock <- tibble(year = takers_rec[,1],
-                  recruits = takers_rec[, x],
-                  sb = takers_ssb[, x])
-  
-  # remove model run in time
-  row2 <- which(use_stocks$stock_name == x)
-  min_year <- pull(use_stocks[row2, "min_year"])
-  max_year <- pull(use_stocks[row2, "max_year"])
-  
-  stock <- stock %>%
-    filter(year >= min_year) %>%
-    filter(year <= max_year) %>%
-    mutate(recruits = replace(recruits, recruits == 0, 1))
+  stock <- retrieve_sr_data(x)
   
   # get ranks for recruitment and spawning biomass
   stock <- stock %>%
@@ -312,7 +307,7 @@ for(x in proj_report_stocks){
   neg_lags <- subset(stock_ccf_df, lag < 0)
   
   # Fit regime model
-  fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6,pen.value=0.05)
+  fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
   
   # save change point locations for regimes
   changes	<- fitPelt@cpts
@@ -437,7 +432,8 @@ for(x in proj_report_stocks){
       geom_hline(aes(yintercept = lim1), linetype = 2, color = 'blue') +
       geom_hline(aes(yintercept = lim0), linetype = 2, color = 'blue') + ylim(-0.5,1) + xlim(-10,10) + 
       theme_minimal() + geom_text(data = lab_points,
-                                  aes(label = formatC(ccf, digits = 2)), vjust = -1)
+                                  aes(label = formatC(ccf, digits = 2)), vjust = -1,
+                                  position = position_dodge(width = 0.5))
   }else{
     cc_plot <- ggplot(data = stock_ccf_df, aes(x = lag, y = ccf)) +
       geom_hline(aes(yintercept = 0)) + geom_segment(mapping = aes(xend = lag, yend = 0)) +

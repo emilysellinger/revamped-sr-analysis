@@ -3,7 +3,7 @@
 # Load populated lifespan data ---------------------------------------------------------------------------------
 # researched max age data for each of the stocks in the analysis, most from FishBase
 
-lifespan <- read.csv(here("data", "lifespan.csv"))
+lifespan <- read.csv(here("data/lifespan_analysis", "lifespan.csv"))
 
 # Going to switch back to the stock naming conventions that the rest of the data frames have
 lifespan$stock_name <- str_replace_all(lifespan$stock_name, "-", "\\.")

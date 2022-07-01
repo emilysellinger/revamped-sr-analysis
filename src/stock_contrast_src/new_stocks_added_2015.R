@@ -46,3 +46,4 @@ cody_edge_stocks$added_time <- added_time
 
 ggplot(cody_edge_stocks) + geom_boxplot(aes(x = driver, y = added_time)) 
 # no real difference between categories
+

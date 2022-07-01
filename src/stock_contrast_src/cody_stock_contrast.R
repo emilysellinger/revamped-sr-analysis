@@ -5,9 +5,10 @@ cody_stocks <- read_csv(here("data/stock_contrast/cody_stocks.csv"))
 
 # i'm going to first just calculate contrast for stocks that haven't been modified
 # beyond having more data added
-
-cody_stocks2 <- cody_stocks[46:224,] # this is 179 stocks
-# need to remove CODCOASTNOR
+cody_stocks <- cody_stocks %>%
+  filter(is.na(change)) %>% 
+  filter(is.na(note))
+# need to remove CODCOASTNOR (why??)
 cody_stocks2 <- cody_stocks2[-37,]
 
 cody_stocks2$Odepletion <- rep(NA, 178)
@@ -67,3 +68,37 @@ a <- ggplot(data = cody_stocks3) + geom_boxplot(aes(x = original._driver, y = de
 print(a)
 dev.off()
 
+
+# Recruitment Variation ---------------------------------------------------
+# will find recruitment variation for each stock, then print
+# also want to look specifically at the edge stocks that were modified, to see if variation has
+# gone down
+
+stock_sigmaR <- tibble(stock_name = stock_model_fits$stock_name,
+                 sigmaR = rep(NA, nrow(stock_model_fits)))
+
+for(i in 1:nrow(stock_model_fits)){
+  if(pull(stock_model_fits[i, "min_model"]) == "ricker" && pull(stock_model_fits[i, "rel_likelihood"]) >= 0.75){
+    stock_sigmaR[i, "sigmaR"] <- pull(stock_model_fits[i, "ricker_sigmaR"])
+  }else{
+    stock_sigmaR[i, "sigmaR"] <- pull(stock_model_fits[i, "bevholt_sigmaR"])
+  }
+}
+
+stock_sigmaR$driver <- rep(NA, nrow(stock_sigmaR))
+
+for(i in 1:nrow(stock_sigmaR)){
+  if(pull(stock_sigmaR[i, "stock_name"]) %in% sb_driven_stocks$stock_name){
+    stock_sigmaR[i, "driver"] <- "spawning biomass"
+  }else if(pull(stock_sigmaR[i, "stock_name"]) %in% env_driven_stocks$stock_name){
+    stock_sigmaR[i, "driver"] <- "environment"
+  }else{
+    stock_sigmaR[i, "driver"] <- "edge case"
+  }
+}
+
+pdf(here("results/stock_contrast", "stock_rec_simga.pdf"))
+a <- ggplot(stock_sigmaR) + geom_boxplot(aes(x = driver, y = sigmaR)) + 
+  xlab("primary influence on recruitment")
+print(a)
+dev.off()

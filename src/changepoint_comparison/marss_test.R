@@ -137,11 +137,11 @@ cody_stocks2 <- cody_stocks %>%
 
 # combine with regime count data
 cody_stocks2 <- cody_stocks2 %>% 
-  left_join(counts, by = "stock_name")
+  left_join(counts2, by = "stock_name")
 
 # remove stocks that were reclassified
 cody_stocks2 <- cody_stocks2 %>% 
-  filter(stock_name != c("TILESATLC", "STFLOUNNPCOAST", "STFLOUNSPCOAST"))
+  filter(!is.na(nregimes))
 
 a <- cody_stocks2 %>% 
   filter(regime_changes == nshifts)
@@ -149,3 +149,25 @@ b <- cody_stocks2 %>%
   filter(regime_changes < nshifts)
 c <- cody_stocks2 %>% 
   filter(regime_changes > nshifts)
+
+
+
+# STARS Algorithm ---------------------------------------
+# Note: is not working. I don't know why
+library(rshift)
+
+env_influenced <- rbind(env_driven_stocks, edge_stocks)
+stars_cpt <- tibble()
+
+stock <- retrieve_sr_data("CHTRACCH")
+fit <- Rodionov(stock, "resids", "year", 32, prob = 0.1, merge = TRUE)
+RSI_graph(fit, "resids", "year", "RSI")
+
+
+fit2 <- cpt.mean(stock$logR, method = "PELT", minseglen = 6, penalty = "BIC")
+
+stock$resids <- (stock$logR - mean(stock$logR))/sd(stock$logR)
+
+for(x in env_influenced$stock_name){
+  
+}

@@ -111,5 +111,7 @@ monotonic_stocks <- as_tibble(monotonic_stocks[,-1])
 stock_model_fits <- read_csv(here("results/original_analysis/csv_files", "stock_model_fits.csv"))
 stock_model_fits <- as_tibble(stock_model_fits[,-1])
 
-
-
+# categorized stocks
+sb_driven_stocks <- read_csv(here("results/original_analysis/csv_files", "sb_driven_stocks.csv"))
+env_driven_stocks <- read_csv(here("results/original_analysis/csv_files", "env_driven_stocks.csv"))
+edge_stocks <- read_csv(here("results/original_analysis/csv_files", "edge_stocks.csv"))

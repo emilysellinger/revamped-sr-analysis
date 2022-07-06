@@ -123,62 +123,29 @@ dev.off()
 
 
 
-# MARSS issues ------------------------------------------------------------
-x <- "BSBASSMATLC"
-row <- which(stock_model_fits$stock_name == x)
+# Comparison of regimes to Szuwalski et al --------------------------------
+# will determine how many stocks in original analysis had at least 1 regime
+# shift and if it has changed since adding
 
-# create tibble with s-r data
-stock <- tibble(year = takers_rec[,1],
-                recruits = takers_rec[, x],
-                sb = takers_ssb[, x])
+cody_stocks <- read_csv(here("data/stock_contrast/cody_stocks.csv"))
+View(cody_stocks)
 
-# remove model run in time
-row2 <- which(use_stocks$stock_name == x)
-min_year <- pull(use_stocks[row2, "min_year"])
-max_year <- pull(use_stocks[row2, "max_year"])
+# extract the stocks that are environmentally influenced and not modified
+cody_stocks2 <- cody_stocks %>% 
+  filter(original_driver != "spawning biomass") %>% 
+  filter(is.na(change))
 
-stock <- stock %>%
-  filter(year >= min_year) %>%
-  filter(year <= max_year) %>%
-  mutate(recruits = replace(recruits, recruits == 0, 1))
+# combine with regime count data
+cody_stocks2 <- cody_stocks2 %>% 
+  left_join(counts, by = "stock_name")
 
+# remove stocks that were reclassified
+cody_stocks2 <- cody_stocks2 %>% 
+  filter(stock_name != c("TILESATLC", "STFLOUNNPCOAST", "STFLOUNSPCOAST"))
 
-# MARSS stochastic level model
-mod <- list(
-  Z = matrix(1), A = matrix(0), R = matrix("r"),
-  B = matrix(1), U = matrix(0), Q = matrix("q"),
-  x0 = matrix("pi")
-)
-
-# fit model
-dat <- t(as.matrix(log(stock$recruits)))
-rownames(dat) <- "logrecruits"
-kem.2 <- MARSS(dat, model = mod, silent = TRUE, method = "BFGS")
-
-
-
-
-# BCP detection -----------------------------------------------------------
-
-x <- "ALSKABSAI"
-row <- which(stock_model_fits$stock_name == x)
-
-# create tibble with s-r data
-stock <- tibble(year = takers_rec[,1],
-                recruits = takers_rec[, x],
-                sb = takers_ssb[, x])
-
-# remove model run in time
-row2 <- which(use_stocks$stock_name == x)
-min_year <- pull(use_stocks[row2, "min_year"])
-max_year <- pull(use_stocks[row2, "max_year"])
-
-stock <- stock %>%
-  filter(year >= min_year) %>%
-  filter(year <= max_year) %>%
-  mutate(recruits = replace(recruits, recruits == 0, 1))
-
-bcp_fit <- bcp(log(stock$recruits), burnin = 100, mcmc = 1000, return.mcmc = TRUE)
-bcp_mcmc <- as.mcmc(t(bcp_fit$mcmc.means))
-summary(bcp_mcmc)
-heidel.diag(bcp_mcmc)
+a <- cody_stocks2 %>% 
+  filter(regime_changes == nshifts)
+b <- cody_stocks2 %>% 
+  filter(regime_changes < nshifts)
+c <- cody_stocks2 %>% 
+  filter(regime_changes > nshifts)

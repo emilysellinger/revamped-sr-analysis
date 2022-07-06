@@ -1,225 +1,225 @@
-﻿stock_name,old_min_year,old_max_year,original_driver,change,note
-ALBASPAC,1959,2006,edge case,,
-ANCHOSA,1984,2006,edge case,,
-ARFLOUNDBSAI,1970,2008,edge case,,
-BIGEYEATL,1950,2005,edge case,,no information
-CHTRACCH,1950,2010,edge case,,
-CMACKPCOAST,1929,2008,edge case,,
-COD3NO,1953,2007,edge case,,no information
-COD4TVn,1965,2009,edge case,,
-CODBA2224,1969,2007,edge case,,
-CODBA2532,1964,2007,edge case,,
-CODGB,1960,2008,edge case,,
-CODICE,1952,2006,edge case,,
-CODIS,1968,2006,edge case,,
-CODNEAR,1943,2006,edge case,,
-CODNS,1962,2007,edge case,,no information
-ESOLEPCOAST,1876,2007,edge case,,
-GEMFISHSE,1966,2007,edge case,,
-GHALNEAR,1959,2007,edge case,,
-GTRIGGM,1981,2004,edge case,,
-HADGB,1930,2008,edge case,,
-HADNEAR,1947,2006,edge case,,
-HERR30,1972,2007,edge case,merged,now HERR30.31
-HERRNIRS,1960,2006,edge case,,
-HERRNS,1960,2007,edge case,redefined,renamed to HERRNS.IIIa.VIId
-HERRNWATLC,1960,2005,edge case,,
-HERRRIGA,1976,2007,edge case,,
-HERRSITKA,1978,2007,edge case,,
-HERRSOG,1951,2007,edge case,,
-HERRVIa,1957,2006,edge case,,
-LOBSTERGOM,1981,2007,edge case,,
-MEG8c9a,1985,2007,edge case,,
-MENATGM,1964,2004,edge case,,
-MORWONGSE,1913,2007,edge case,split,"now MORWONGESE, MORWONGWSE"
-PANCHPERUNC,1963,2004,edge case,,
-POPERCHPCOAST,1953,2007,edge case,,
-PSOLESPCOAST,1874,2005,edge case,merged,now PSOLEPCOAST
-RSNAPSATLC,1945,2006,edge case,,
-SARDPCOAST,1981,2007,edge case,,no information
-SARDSA,1984,2006,edge case,split,"now SARDSAS, SARDSAW"
-SCUPNWATLC,1960,2007,edge case,,
-SKJCWPAC,1972,2006,edge case,,
-SPRAT22.32,1973,2007,edge case,,
-STMARLINSWPO,1950,2003,edge case,,no information
-WHITVIa,1984,2007,edge case,,
-WPOLLAI,1976,2008,edge case,,
-WPOLLGA,1964,2008,edge case,,
-WROCKPCOAST,1955,2006,edge case,,
-YELLSNEMATL,1935,2008,edge case,,
-YFINCWPAC,1952,2005,edge case,,no information
-YFINEPAC,1975,2007,edge case,,
-ACADREDGOMGB,1913,2007,environment,,
-ALBANATL,1929,2005,environment,,no recruitment info in old version
-ALPLAICBSAI,1972,2008,environment,,
-AMPL5YZ,1960,2008,environment,excluded,missing data
-ANCHOBAYB,1986,2007,environment,,
-ARFLOUNDPCOAST,1916,2007,environment,,
-ARGHAKESARG,1985,2008,environment,,
-ATBTUNAEATL,1969,2007,environment,,
-ATKABSAI,1976,2009,environment,,
-ATLCROAKMATLC,1973,2002,environment,,
-AUSSALMONNZ,1975,2006,environment,,
-BGROCKPCOAST,1950,2005,environment,excluded,current data right off of stock recruit curve
-BIGEYEEPAC,1975,2007,environment,,
-BIGEYEWPO,1952,2006,environment,,no information
-BLACKROCKNPCOAST,1914,2006,environment,split,"now BLACKROCKCAL, BLACKROCKORECOAST, BLACKROCKWASH"
-BLACKROCKSPCOAST,1915,2007,environment,split,"now BLACKROCKCAL, BLACKROCKORECOAST, BLACKROCKWASH"
-BLUEROCKCAL,1916,2007,environment,,
-BSBASSMATLC,1968,2007,environment,,
-BUTTERGOMCHATT,1965,2005,environment,,
-BWHITNEA,1980,2007,environment,,
-CABEZNCAL,1916,2005,environment,,
-CABEZSCAL,1932,2005,environment,,
-CAPEICE,1977,2007,environment,,no recruitment info in old version
-CHAKESA,1917,2008,environment,,
-CHILISPCOAST,1892,2007,environment,,
-COD3Ps,1959,2004,environment,,
-CODFAPL,1959,2006,environment,,
-CODGOM,1893,2008,environment,,no recruitment info in old version
-DEEPFLATHEADSE,1978,2007,environment,,
-DKROCKPCOAST,1928,2007,environment,,
-DSOLEGA,1978,2010,environment,,
-DSOLEPCOAST,1910,2005,environment,,
-DUSROCKGA,1973,2008,environment,,
-FLSOLEBSAI,1977,2008,environment,,
-FLSOLEGA,1978,2010,environment,,
-FMEG8c9a,1986,2006,environment,,
-GAGGM,1963,2004,environment,,no recruitment info in old version
-GAGSATLC,1962,2005,environment,,
-GEMFISHNZ,1952,2007,environment,,
-GOPHERSPCOAST,1965,2005,environment,,
-GRAMBERSATLC,1946,2006,environment,,
-HAD4X5Y,1960,2003,environment,,
-HAD5Y,1956,2008,environment,,
-HAD5Zejm,1968,2003,environment,,no information
-HADFAPL,1955,2006,environment,,
-HADICE,1977,2007,environment,,
-HADNS.IIIa,1963,2006,environment,merged,now HADNS.IIIa.Via
-HADROCK,1990,2007,environment,,
-HADVIa,1977,2006,environment,merged,now HADNS.IIIa.Via
-HADVIIb.k,1993,2006,environment,,
-HERR31,1979,2006,environment,merged,now HERR30.31
-HERR4RFA,1971,2003,environment,,
-HERR4RSP,1963,2004,environment,,
-HERR4TFA,1974,2007,environment,,
-HERR4TSP,1974,2007,environment,,
-HERR4VWX,1964,2006,environment,excluded,not enough data
-HERRCC,1951,2007,environment,,
-HERRIsum,1983,2007,environment,,
-HERRPRD,1951,2007,environment,,
-HERRPWS,1980,2006,environment,,
-HERRQCI,1951,2007,environment,,
-HERRVIaVIIbc,1969,2000,environment,,
-HERRWCVANI,1951,2007,environment,,
-HOKIENZ,1972,2007,environment,,
-KELPGREENLINGORECOAST,1979,2005,environment,,
-LINGCODNPCOAST,1956,2005,environment,,
-LINGCODSPCOAST,1956,2005,environment,,
-LOBSTERGB,1981,2007,environment,,
-MACKGOMCHATT,1960,2005,environment,,no recruitment info in old version
-MACKNEICES,1972,2007,environment,,
-MUTSNAPSATLCGM,1981,2006,environment,,
-NPOUTNS,1983,2007,environment,,no information
-NROCKBSAI,1974,2009,environment,,
-NROCKGA,1959,2008,environment,,
-NRSOLEEBSAI,1971,2008,environment,,
-NZLINGESE,1968,2007,environment,,
-NZLINGLIN3.4,1972,2007,environment,,
-NZLINGLIN5.6,1972,2007,environment,,
-NZLINGLIN72,1972,2007,environment,,
-NZLINGLIN7WC,1972,2008,environment,,
-NZLINGWSE,1968,2007,environment,,
-NZSNAPNZ8,1931,2005,environment,,
-PATGRENADIERSARG,1983,2006,environment,,
-PCODBSAI,1964,2008,environment,split,"now PCODAI, PCODBS"
-PCODGA,1964,2008,environment,,
-PERCHEBSAI,1974,2009,environment,,
-PHAKEPCOAST,1966,2008,environment,,
-PLAIC7d,1979,2006,environment,,
-PLAICCELT,1976,2006,environment,,
-PLAICECHW,1975,2006,environment,,
-PLAICIIIa,1976,2006,environment,redefined,now PLAICNS
-PLAICIS,1962,2006,environment,,
-PLAICNS,1956,2006,environment,,
-POLL4X5YZ,1980,2006,environment,,no recruitment info in old version
-POLLFAPL,1958,2006,environment,,
-POLLNEAR,1957,2006,environment,,
-POLLNS.VI.IIIa,1964,2006,environment,,
-POPERCHGA,1959,2010,environment,,
-PSOLENPCOAST,1910,2005,environment,merged,now PSOLEPCOAST
-PTOOTHFISHMI,1975,2010,environment,,
-REXSOLEGA,1979,2008,environment,,
-REYEROCKBSAI,1974,2009,environment,,
-RSNAPEGM,1872,2003,environment,,no information
-RSNAPWGM,1880,2003,environment,,no information
-RSOLEHSTR,1945,2001,environment,,
-SABLEFEBSAIGA,1956,2008,environment,,
-SARDPVIIIc.IXa,1978,2007,environment,,
-SBELLYROCKPCOAST,1950,2005,environment,,
-SBWHITACIR,1979,2006,environment,,
-SBWHITARGS,1985,2007,environment,,
-SEELNS,1983,2007,environment,split,"now SEELNSSA1, SEELNSSA2, SEELNSSA3, SEELNSSA4"
-SFLOUNMATLC,1940,2007,environment,,
-SILVERFISHSE,1978,2006,environment,,
-SNOWGROUPSATLC,1961,2002,environment,,no information
-SOLECS,1970,2006,environment,,
-SOLEIIIa,1982,2007,environment,,no information
-SOLEIS,1968,2006,environment,,
-SOLENS,1956,2006,environment,,
-SOLEVIId,1981,2006,environment,,
-SOLEVIII,1982,2006,environment,,no information
-SOUTHHAKESA,1975,2007,environment,,
-STFLOUNNPCOAST,1970,2005,environment,,
-STFLOUNSPCOAST,1970,2005,environment,,
-SWHITSE,1945,2007,environment,,
-SWORDNATL,1978,2007,environment,,no information
-TILESATLC,1961,2002,environment,,
-TREVALLYTRE7,1944,2005,environment,,
-VSNAPGM,1981,2004,environment,,no information
-VSNAPSATLC,1946,2008,environment,,
-WAREHOUWSE,1984,2006,environment,,
-WHITVIIek,1982,2007,environment,redefined,now WHITVIIbce.k
-WINFLOUN5Z,1982,2007,environment,,
-WITFLOUN5Y,1982,2008,environment,,
-WPOLLEBS,1963,2008,environment,,
-YELLCCODGOM,1935,2008,environment,,
-YELLGB,1935,2008,environment,,
-YFINATL,1970,2006,environment,,no information
-YSOLEBSAI,1959,2008,environment,,
-YTROCKNPCOAST,1967,2005,environment,,
-AMPL3LNO,1955,2007,spawning biomass,,
-ARFLOUNDGA,1958,2010,spawning biomass,,
-ARGHAKENARG,1985,2007,spawning biomass,,
-ATBTUNAWATL,1969,2007,spawning biomass,,
-BLUEFISHATLC,1981,2007,spawning biomass,,
-BOCACCSPCOAST,1951,2006,spawning biomass,,
-BTSHRIMPNAUST,1970,2006,spawning biomass,,
-COD3Pn4RS,1964,2007,spawning biomass,,
-COD5Zjm,1978,2003,spawning biomass,,
-CODCOASTNOR,1982,2006,spawning biomass,,
-CODKAT,1970,2006,spawning biomass,,
-CODVIa,1977,2006,spawning biomass,,
-CROCKPCOAST,1916,2009,spawning biomass,,
-GHAL23KLMNO,1960,2006,spawning biomass,,
-GTPRAWNNAUST,1970,2006,spawning biomass,,
-HAKENRTN,1977,2007,spawning biomass,,
-HAKESOTH,1982,2007,spawning biomass,,
-HERR2532,1973,2006,spawning biomass,redefined,now HERR2529.32
-HOKIWNZ,1972,2007,spawning biomass,,
-LOBSTERSNE,1981,2007,spawning biomass,,
-LSTHORNHPCOAST,1962,2005,spawning biomass,,
-NZLINGLIN6b,1980,2006,spawning biomass,,
-RPORGYSATLC,1972,2004,spawning biomass,,no recruitment info in old version
-SABLEFPCOAST,1900,2007,spawning biomass,,
-SBT,1931,2009,spawning biomass,,
-SOLEVIIe,1968,2006,spawning biomass,,
-SOUTHHAKECR,1975,2006,spawning biomass,,
-SSLOBSTERSASC,1973,2008,spawning biomass,,
-STRIPEDBASSGOMCHATT,1982,2006,spawning biomass,,
-WAREHOUESE,1984,2006,spawning biomass,,
-WHAKEGBGOM,1963,2007,spawning biomass,,
-WHITNS.VIId.IIIa,1979,2006,spawning biomass,redefined,now WHITNS.VIId
-WINFLOUNSNEMATL,1940,2007,spawning biomass,,
-YEYEROCKPCOAST,1923,2006,spawning biomass,,
-YTSNAPSATLC,1962,2001,spawning biomass,,no information
+﻿stock_name,old_min_year,old_max_year,original_driver,regime_changes,change,note
+ALBASPAC,1959,2006,edge case,1,,
+ANCHOSA,1984,2006,edge case,1,,
+ARFLOUNDBSAI,1970,2008,edge case,1,,
+BIGEYEATL,1950,2005,edge case,3,deprecated,no information
+CHTRACCH,1950,2010,edge case,5,,
+CMACKPCOAST,1929,2008,edge case,1,,
+COD3NO,1953,2007,edge case,4,deprecated,no information
+COD4TVn,1965,2009,edge case,4,,
+CODBA2224,1969,2007,edge case,1,,
+CODBA2532,1964,2007,edge case,3,,
+CODGB,1960,2008,edge case,1,,
+CODICE,1952,2006,edge case,1,,
+CODIS,1968,2006,edge case,2,,
+CODNEAR,1943,2006,edge case,1,,
+CODNS,1962,2007,edge case,2,deprecated,no information
+ESOLEPCOAST,1876,2007,edge case,3,,
+GEMFISHSE,1966,2007,edge case,3,,
+GHALNEAR,1959,2007,edge case,5,,
+GTRIGGM,1981,2004,edge case,2,,
+HADGB,1930,2008,edge case,2,,
+HADNEAR,1947,2006,edge case,1,,
+HERR30,1972,2007,edge case,3,merged,now HERR30.31
+HERRNIRS,1960,2006,edge case,5,,
+HERRNS,1960,2007,edge case,3,redefined,renamed to HERRNS.IIIa.VIId
+HERRNWATLC,1960,2005,edge case,1,,
+HERRRIGA,1976,2007,edge case,2,,
+HERRSITKA,1978,2007,edge case,0,,
+HERRSOG,1951,2007,edge case,3,,
+HERRVIa,1957,2006,edge case,1,,
+LOBSTERGOM,1981,2007,edge case,3,,
+MEG8c9a,1985,2007,edge case,2,,
+MENATGM,1964,2004,edge case,3,,
+MORWONGSE,1913,2007,edge case,0,split,"now MORWONGESE, MORWONGWSE"
+PANCHPERUNC,1963,2004,edge case,4,,
+POPERCHPCOAST,1953,2007,edge case,3,,
+PSOLESPCOAST,1874,2005,edge case,2,merged,now PSOLEPCOAST
+RSNAPSATLC,1945,2006,edge case,3,,
+SARDPCOAST,1981,2007,edge case,2,deprecated,no information
+SARDSA,1984,2006,edge case,3,split,"now SARDSAS, SARDSAW"
+SCUPNWATLC,1960,2007,edge case,2,,
+SKJCWPAC,1972,2006,edge case,2,,
+SPRAT22.32,1973,2007,edge case,1,,
+STMARLINSWPO,1950,2003,edge case,5,deprecated,no information
+WHITVIa,1984,2007,edge case,2,,
+WPOLLAI,1976,2008,edge case,4,,
+WPOLLGA,1964,2008,edge case,0,,
+WROCKPCOAST,1955,2006,edge case,2,,
+YELLSNEMATL,1935,2008,edge case,1,,
+YFINCWPAC,1952,2005,edge case,2,deprecated,no information
+YFINEPAC,1975,2007,edge case,2,,
+ACADREDGOMGB,1913,2007,environment,4,,
+ALBANATL,1929,2005,environment,5,deprecated,no recruitment info in old version
+ALPLAICBSAI,1972,2008,environment,3,,
+AMPL5YZ,1960,2008,environment,2,excluded,missing data
+ANCHOBAYB,1986,2007,environment,1,,
+ARFLOUNDPCOAST,1916,2007,environment,0,,
+ARGHAKESARG,1985,2008,environment,3,,
+ATBTUNAEATL,1969,2007,environment,4,,
+ATKABSAI,1976,2009,environment,1,,
+ATLCROAKMATLC,1973,2002,environment,0,,
+AUSSALMONNZ,1975,2006,environment,0,,
+BGROCKPCOAST,1950,2005,environment,1,excluded,current data right off of stock recruit curve
+BIGEYEEPAC,1975,2007,environment,3,,
+BIGEYEWPO,1952,2006,environment,1,deprecated,no information
+BLACKROCKNPCOAST,1914,2006,environment,1,split,"now BLACKROCKCAL, BLACKROCKORECOAST, BLACKROCKWASH"
+BLACKROCKSPCOAST,1915,2007,environment,4,split,"now BLACKROCKCAL, BLACKROCKORECOAST, BLACKROCKWASH"
+BLUEROCKCAL,1916,2007,environment,5,,
+BSBASSMATLC,1968,2007,environment,1,,
+BUTTERGOMCHATT,1965,2005,environment,1,,
+BWHITNEA,1980,2007,environment,3,,
+CABEZNCAL,1916,2005,environment,2,,
+CABEZSCAL,1932,2005,environment,0,,
+CAPEICE,1977,2007,environment,3,deprecated,no recruitment info in old version
+CHAKESA,1917,2008,environment,4,,
+CHILISPCOAST,1892,2007,environment,0,,
+COD3Ps,1959,2004,environment,2,,
+CODFAPL,1959,2006,environment,3,,
+CODGOM,1893,2008,environment,1,deprecated,no recruitment info in old version
+DEEPFLATHEADSE,1978,2007,environment,1,,
+DKROCKPCOAST,1928,2007,environment,4,,
+DSOLEGA,1978,2010,environment,2,,
+DSOLEPCOAST,1910,2005,environment,5,,
+DUSROCKGA,1973,2008,environment,1,,
+FLSOLEBSAI,1977,2008,environment,1,,
+FLSOLEGA,1978,2010,edge case,2,,
+FMEG8c9a,1986,2006,environment,1,,
+GAGGM,1963,2004,environment,2,deprecated,no recruitment info in old version
+GAGSATLC,1962,2005,environment,3,,
+GEMFISHNZ,1952,2007,environment,0,,
+GOPHERSPCOAST,1965,2005,environment,2,,
+GRAMBERSATLC,1946,2006,environment,0,,
+HAD4X5Y,1960,2003,environment,2,,
+HAD5Y,1956,2008,environment,3,,
+HAD5Zejm,1968,2003,environment,2,deprecated,no information
+HADFAPL,1955,2006,environment,5,,
+HADICE,1977,2007,environment,2,,
+HADNS.IIIa,1963,2006,environment,0,merged,now HADNS.IIIa.Via
+HADROCK,1990,2007,environment,0,,
+HADVIa,1977,2006,environment,0,merged,now HADNS.IIIa.Via
+HADVIIb.k,1993,2006,environment,1,,
+HERR31,1979,2006,environment,0,merged,now HERR30.31
+HERR4RFA,1971,2003,environment,1,,
+HERR4RSP,1963,2004,environment,0,,
+HERR4TFA,1974,2007,environment,2,,
+HERR4TSP,1974,2007,environment,1,,
+HERR4VWX,1964,2006,environment,0,excluded,not enough data
+HERRCC,1951,2007,environment,1,,
+HERRIsum,1983,2007,environment,1,,
+HERRPRD,1951,2007,environment,2,,
+HERRPWS,1980,2006,environment,0,,
+HERRQCI,1951,2007,environment,4,,
+HERRVIaVIIbc,1969,2000,environment,2,,
+HERRWCVANI,1951,2007,environment,4,,
+HOKIENZ,1972,2007,environment,0,,
+KELPGREENLINGORECOAST,1979,2005,environment,0,,
+LINGCODNPCOAST,1956,2005,environment,1,,
+LINGCODSPCOAST,1956,2005,environment,0,,
+LOBSTERGB,1981,2007,environment,1,,
+MACKGOMCHATT,1960,2005,environment,1,deprecated,no recruitment info in old version
+MACKNEICES,1972,2007,environment,0,,
+MUTSNAPSATLCGM,1981,2006,environment,3,,
+NPOUTNS,1983,2007,environment,1,deprecated,no information
+NROCKBSAI,1974,2009,environment,1,,
+NROCKGA,1959,2008,environment,1,,
+NRSOLEEBSAI,1971,2008,environment,4,,
+NZLINGESE,1968,2007,environment,0,,
+NZLINGLIN3.4,1972,2007,environment,1,,
+NZLINGLIN5.6,1972,2007,environment,3,,
+NZLINGLIN72,1972,2007,environment,2,,
+NZLINGLIN7WC,1972,2008,environment,1,,
+NZLINGWSE,1968,2007,environment,2,,
+NZSNAPNZ8,1931,2005,environment,0,,
+PATGRENADIERSARG,1983,2006,environment,2,,
+PCODBSAI,1964,2008,environment,0,split,"now PCODAI, PCODBS"
+PCODGA,1964,2008,environment,1,,
+PERCHEBSAI,1974,2009,environment,3,,
+PHAKEPCOAST,1966,2008,environment,1,,
+PLAIC7d,1979,2006,environment,0,,
+PLAICCELT,1976,2006,edge case,3,,
+PLAICECHW,1975,2006,environment,2,,
+PLAICIIIa,1976,2006,environment,1,redefined,now PLAICNS
+PLAICIS,1962,2006,environment,4,,
+PLAICNS,1956,2006,environment,2,,
+POLL4X5YZ,1980,2006,environment,2,deprecated,no recruitment info in old version
+POLLFAPL,1958,2006,environment,4,,
+POLLNEAR,1957,2006,environment,2,,
+POLLNS.VI.IIIa,1964,2006,environment,1,,
+POPERCHGA,1959,2010,environment,1,,
+PSOLENPCOAST,1910,2005,environment,5,merged,now PSOLEPCOAST
+PTOOTHFISHMI,1975,2010,environment,2,,
+REXSOLEGA,1979,2008,environment,2,,
+REYEROCKBSAI,1974,2009,environment,2,,
+RSNAPEGM,1872,2003,environment,1,deprecated,no information
+RSNAPWGM,1880,2003,environment,2,deprecated,no information
+RSOLEHSTR,1945,2001,environment,5,,
+SABLEFEBSAIGA,1956,2008,environment,1,,
+SARDPVIIIc.IXa,1978,2007,environment,2,,
+SBELLYROCKPCOAST,1950,2005,environment,0,,
+SBWHITACIR,1979,2006,environment,1,,
+SBWHITARGS,1985,2007,environment,2,,
+SEELNS,1983,2007,environment,0,split,"now SEELNSSA1, SEELNSSA2, SEELNSSA3, SEELNSSA4"
+SFLOUNMATLC,1940,2007,environment,1,,
+SILVERFISHSE,1978,2006,environment,1,,
+SNOWGROUPSATLC,1961,2002,environment,3,deprecated,no information
+SOLECS,1970,2006,environment,1,,
+SOLEIIIa,1982,2007,environment,2,deprecated,no information
+SOLEIS,1968,2006,environment,1,,
+SOLENS,1956,2006,environment,0,,
+SOLEVIId,1981,2006,environment,2,,
+SOLEVIII,1982,2006,environment,2,deprecated,no information
+SOUTHHAKESA,1975,2007,environment,2,,
+STFLOUNNPCOAST,1970,2005,environment,0,,
+STFLOUNSPCOAST,1970,2005,environment,1,,
+SWHITSE,1945,2007,environment,0,,
+SWORDNATL,1978,2007,environment,4,deprecated,no information
+TILESATLC,1961,2002,environment,1,,
+TREVALLYTRE7,1944,2005,environment,5,,
+VSNAPGM,1981,2004,environment,0,deprecated,no information
+VSNAPSATLC,1946,2008,environment,0,,
+WAREHOUWSE,1984,2006,environment,1,,
+WHITVIIek,1982,2007,environment,3,redefined,now WHITVIIbce.k
+WINFLOUN5Z,1982,2007,environment,4,,
+WITFLOUN5Y,1982,2008,environment,1,,
+WPOLLEBS,1963,2008,environment,3,,
+YELLCCODGOM,1935,2008,environment,1,,
+YELLGB,1935,2008,environment,3,,
+YFINATL,1970,2006,environment,2,deprecated,no information
+YSOLEBSAI,1959,2008,spawning biomass,,,
+YTROCKNPCOAST,1967,2005,environment,2,,
+AMPL3LNO,1955,2007,spawning biomass,,,
+ARFLOUNDGA,1958,2010,spawning biomass,,,
+ARGHAKENARG,1985,2007,spawning biomass,,,
+ATBTUNAWATL,1969,2007,spawning biomass,,,
+BLUEFISHATLC,1981,2007,spawning biomass,,,
+BOCACCSPCOAST,1951,2006,spawning biomass,,,
+BTSHRIMPNAUST,1970,2006,spawning biomass,,,
+COD3Pn4RS,1964,2007,spawning biomass,,,
+COD5Zjm,1978,2003,spawning biomass,,,
+CODCOASTNOR,1982,2006,spawning biomass,,,
+CODKAT,1970,2006,spawning biomass,,,
+CODVIa,1977,2006,spawning biomass,,,
+CROCKPCOAST,1916,2009,spawning biomass,,,
+GHAL23KLMNO,1960,2006,spawning biomass,,,
+GTPRAWNNAUST,1970,2006,spawning biomass,,,
+HAKENRTN,1977,2007,spawning biomass,,,
+HAKESOTH,1982,2007,spawning biomass,,,
+HERR2532,1973,2006,spawning biomass,,redefined,now HERR2529.32
+HOKIWNZ,1972,2007,spawning biomass,,,
+LOBSTERSNE,1981,2007,spawning biomass,,,
+LSTHORNHPCOAST,1962,2005,spawning biomass,,,
+NZLINGLIN6b,1980,2006,spawning biomass,,,
+RPORGYSATLC,1972,2004,spawning biomass,,deprecated,no recruitment info in old version
+SABLEFPCOAST,1900,2007,spawning biomass,,,
+SBT,1931,2009,spawning biomass,,,
+SOLEVIIe,1968,2006,spawning biomass,,,
+SOUTHHAKECR,1975,2006,spawning biomass,,,
+SSLOBSTERSASC,1973,2008,spawning biomass,,,
+STRIPEDBASSGOMCHATT,1982,2006,spawning biomass,,,
+WAREHOUESE,1984,2006,spawning biomass,,,
+WHAKEGBGOM,1963,2007,spawning biomass,,,
+WHITNS.VIId.IIIa,1979,2006,spawning biomass,,redefined,now WHITNS.VIId
+WINFLOUNSNEMATL,1940,2007,spawning biomass,,,
+YEYEROCKPCOAST,1923,2006,spawning biomass,,,
+YTSNAPSATLC,1962,2001,spawning biomass,,deprecated,no information

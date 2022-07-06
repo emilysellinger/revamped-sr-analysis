@@ -9,9 +9,9 @@ for(x in env_driven_stocks$stock_name){
   stock <- retrieve_sr_data(x)
   
   # Fit regime model
-  fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
+  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
   changes	<- fitPelt@cpts
-  
+  #print(changes)
   # calculate regime length
   for(y in 1:length(changes))
   {
@@ -34,7 +34,7 @@ for(x in edge_stocks$stock_name){
   stock <- retrieve_sr_data(x)
   
   # Fit regime model
-  fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
+  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
   changes	<- fitPelt@cpts
   
   # calculate regime length
@@ -53,35 +53,21 @@ for(x in edge_stocks$stock_name){
   }
 }
 
-# need to remove stocks that don't have any regime changes during the observed series
+# Want to know how many stocks have a recruitment regime shift
 counts <- env_change_pt %>%
-  count(stock_name)
+  count(stock_name) %>% 
+  rename(nregimes = n) %>%  # number of regimes in time series
+  mutate(nshifts = nregimes - 1) # number of times regime shift (1 regime = 0 shifts)
 
-for(x in 1:nrow(counts)){
-  y <- pull(counts[x,1])
-  nums <- pull(counts[x,2])
-  
-  if(nums < 2){
-    env_change_pt <- env_change_pt %>%
-      filter(stock_name != y)
-  }
-}
 
-# want to know the number of environmentally driven stocks with a regime change in the time series
-counts %>%
-  filter(n > 1)
-# 340 stocks have regime changes
+counts %>% filter(nshifts > 0)
+# 172 stocks have regime changes
 
 # Write to CSV ------------------------------------------------------------
 # will write this data to a csv file because it will be used to compare methods
 write_csv(env_change_pt, here("results/original_analysis/csv_files", "env_change_pt.csv"))
 
 env_change_pt <- read_csv(here("results/original_analysis/csv_files/env_change_pt.csv"))
-
-
-# Contrast and SigmaR -----------------------------------------------------
-# we want to look at the estimated value of sigmaR and the spawning biomass contrast
-# for stocks that our method can detect a regime change
 
 
 

@@ -40,6 +40,32 @@ retrieve_sr_data <- function(x){
   return(stock)
 }
 
+retrieve_old_sr_data <- function(x){
+  row <- which(cody_stocks$stock_name == x)
+  
+  # create a tibble for each stock's biomass and recruit data
+  stock = tibble(
+    year = pull(takers_rec[,1]),
+    recruits = pull(takers_rec[,x]),
+    sb = pull(takers_ssb[,x]),
+    logR = pull(log(takers_rec[,x])))
+  
+  # remove model run in time
+  min_year <- pull(cody_stocks[row, "old_min_year"])
+  max_year <- pull(cody_stocks[row, "old_max_year"])
+  
+  stock <- stock %>%
+    filter(year >= min_year) %>%
+    filter(year <= max_year)
+  
+  # Change any 0 recruit values to 1
+  stock <- stock %>%
+    mutate(logR = replace(logR, logR == -Inf, 1)) %>%
+    mutate(recruits = replace(recruits, recruits == 0, 1))
+  
+  return(stock)
+}
+
 bevholt <- function(stock){
   dats <- stock$sb
   datr <- stock$recruits

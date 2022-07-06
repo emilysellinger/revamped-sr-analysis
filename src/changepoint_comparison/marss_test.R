@@ -168,6 +168,62 @@ fit2 <- cpt.mean(stock$logR, method = "PELT", minseglen = 6, penalty = "BIC")
 
 stock$resids <- (stock$logR - mean(stock$logR))/sd(stock$logR)
 
-for(x in env_influenced$stock_name){
+# Going to just compare the regimes over the original years of Cody's analysis
+cody_env_change_pt <- tibble(
+  stock_name = "",
+  regime_length = numeric())
+
+for(x in cody_stocks2$stock_name){
+  # get stock and recruitment data
+  stock <- retrieve_old_sr_data(x)
   
+  stock <- stock[complete.cases(stock), ]
+  # Fit regime model
+  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
+  changes	<- fitPelt@cpts
+  #print(changes)
+  # calculate regime length
+  for(y in 1:length(changes))
+  {
+    if(y==1)
+      ind1	<- 1
+    if(y>1)
+      ind1	<-changes[y-1]+1
+    ind2	<-changes[y]
+    regime_length	<-length(stock$recruits[ind1:ind2])
+    
+    cody_env_change_pt <- cody_env_change_pt %>%
+      add_row(stock_name = x,
+              regime_length = regime_length)
+  }
 }
+
+
+counts <- cody_env_change_pt %>%
+  count(stock_name) %>% 
+  rename(nregimes = n) %>%  # number of regimes in time series
+  mutate(nshifts = nregimes - 1) # number of times regime shift (1 regime = 0 shifts)
+
+
+counts %>% filter(nshifts > 0) # 62 have regime shifts
+
+# combine with regime count data
+cody_stocks2 <- cody_stocks2 %>% 
+  left_join(counts, by = "stock_name")
+
+# remove stocks that were reclassified
+cody_stocks2 <- cody_stocks2 %>% 
+  filter(!is.na(nregimes))
+
+regime_comp <- cody_stocks2 %>% 
+  select(stock_name, nshifts, regime_changes) %>% 
+  mutate(diffs = nshifts - regime_changes)
+
+pdf(here("results", "peltVstars.pdf"))
+a <- ggplot(regime_comp, aes(diffs)) + 
+  geom_histogram(color = "black", fill = "gray", binwidth = 1) + 
+  xlab("difference in number of identified regime shifts") +
+  geom_vline(xintercept = -1.2, linetype = 2) +
+  theme_minimal()
+print(a)
+dev.off()

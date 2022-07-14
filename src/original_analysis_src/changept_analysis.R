@@ -56,16 +56,6 @@ for(x in edge_stocks$stock_name){
   }
 }
 
-# Want to know how many stocks have a recruitment regime shift
-counts2 <- env_change_pt2 %>%
-  count(stock_name) %>% 
-  rename(nregimes = n) %>%  # number of regimes in time series
-  mutate(nshifts = nregimes - 1) # number of times regime shift (1 regime = 0 shifts)
-
-
-counts2 %>% filter(nshifts > 0)
-# 172 stocks have regime changes when only mean changes
-# 340 stocks have regime changes when mean and variance change in regimes
 
 # Write to CSV ------------------------------------------------------------
 # will write this data to a csv file because it will be used to compare methods
@@ -75,5 +65,19 @@ write_csv(env_change_pt2, here("results/original_analysis/csv_files", "env_chang
 env_change_pt <- read_csv(here("results/original_analysis/csv_files/env_change_pt.csv"))
 
 
+# Filter stocks -----------------------------------------------------------
+# Want to know how many stocks have a recruitment regime shift
+counts <- env_change_pt %>%
+  count(stock_name) %>% 
+  rename(nregimes = n) %>%  # number of regimes in time series
+  mutate(nshifts = nregimes - 1) # number of times a regime shifts (1 regime = 0 shifts)
 
+
+stocks <- counts %>% filter(nshifts > 0) %>% select(stock_name)
+# 172 stocks have regime changes when only mean changes
+# 340 stocks have regime changes when mean and variance change in regimes
+
+# remove stocks that do not have any regime shifts
+env_change_pt <- env_change_pt %>%
+  filter((stock_name %in% stocks$stock_name))
 

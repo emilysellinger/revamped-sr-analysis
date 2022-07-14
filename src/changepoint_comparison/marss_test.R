@@ -17,7 +17,7 @@ regime_change_plot <- function(x){
   stock <- retrieve_sr_data(x)
   
   # Fit regime model
-  fitPelt	<-cpt.meanvar(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
+  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
   
   # save change point locations for regimes
   changes	<- fitPelt@cpts
@@ -59,7 +59,7 @@ regime_change_plot <- function(x){
   
   # Make string with common name and stock location
   row3 <- which(lifespan$stock_name == x)
-  common_name <- as.character(lifespan[row3, "common_name"])
+  species_name <- as.character(lifespan[row3, "scientific_name"])
   region <- paste("Region:", as.character(lifespan[row3, "region"]))
   stock_id <- paste("Stock ID:", as.character(lifespan[row3, "stock_name"]))
   
@@ -69,7 +69,7 @@ regime_change_plot <- function(x){
     geom_rect(data = rectangle_data, inherit.aes = FALSE, aes(xmin = xmin, xmax = xmax, ymin = ymin,
                                                               ymax = ymax, fill = as.factor(color_factor)), alpha = 0.3) +
     guides(fill = "none") +
-    labs(x = "Year", y = "Recruits", title = common_name, subtitle = paste(region, stock_id, sep = "\n")) +
+    labs(x = "Year", y = "Recruits", title = stock_id, subtitle = paste(species_name, region, sep = "\n")) +
     theme_minimal()
   
   # MARSS stochastic level model

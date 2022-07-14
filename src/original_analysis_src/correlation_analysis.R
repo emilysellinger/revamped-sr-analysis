@@ -171,7 +171,7 @@ for(x in rho_comparison$stock_name){
   stock <- retrieve_sr_data(x)
   
   # calculate DCCA rho
-  dcca <- rhodcca(pull(stock$logR), pull(log(stock$sb)), m = 5, nu = 2)
+  dcca <- rhodcca(stock$logR, log(stock$sb), m = 5, nu = 2)
   rho_comparison[row, "dcca_rho"] <- dcca$rhodcca
 }
 
@@ -268,6 +268,32 @@ rho_comparison %>%
        title = "Edge case stocks") + xlim(0, 1) + ylim(-1, 1) +
   theme_minimal()
 ggsave(here("results/original_analysis/figures", "edge_case_rho_scatter.pdf"))
+
+# combine all scatter plots into 1 panel
+a <- rho_comparison %>% 
+  filter(driver == "spawning biomass") %>% 
+  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point() +
+  labs(x = "Spearman's correlation coefficient", y = "DCCA correlation coefficient",
+       title = "Spawning biomass stocks") + xlim(0, 1) + ylim(-1, 1) +
+  theme_minimal()
+
+b <- rho_comparison %>% 
+  filter(driver == "environment") %>% 
+  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point() +
+  labs(x = "Spearman's correlation coefficient", y = "DCCA correlation coefficient",
+       title = "Environment stocks") + xlim(-1, 1) + ylim(-1, 1) +
+  theme_minimal()
+
+c <- rho_comparison %>% 
+  filter(driver == "edge case") %>% 
+  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point() +
+  labs(x = "Spearman's correlation coefficient", y = "DCCA correlation coefficient",
+       title = "Edge case stocks") + xlim(0, 1) + ylim(-1, 1) +
+  theme_minimal()
+
+pdf(here("results/original_analysis/figures", "combined_rho_scatter.pdf"))
+print(grid.arrange(a,b,c, ncol = 2))
+dev.off()
 
 
 # Supplementary DCCA explanation ------------------------------------------

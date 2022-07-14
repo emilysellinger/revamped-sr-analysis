@@ -8,15 +8,14 @@ cody_stocks <- read_csv(here("data/stock_contrast/cody_stocks.csv"))
 cody_stocks <- cody_stocks %>%
   filter(is.na(change)) %>% 
   filter(is.na(note))
-# need to remove CODCOASTNOR (why??)
-cody_stocks2 <- cody_stocks2[-37,]
+# excluding codcoastnor
+cody_stocks <- cody_stocks[-158, ]
+cody_stocks$Odepletion <- rep(NA, 178)
+cody_stocks$Cdepletion <- rep(NA, 178)
 
-cody_stocks2$Odepletion <- rep(NA, 178)
-cody_stocks2$Cdepletion <- rep(NA, 178)
 
-
-for(x in cody_stocks2$stock_name){
-  row <- which(cody_stocks2$stock_name == x)
+for(x in cody_stocks$stock_name){
+  row <- which(cody_stocks$stock_name == x)
   row2 <- which(use_stocks$stock_name == x)
   
   # Cody's data
@@ -25,8 +24,8 @@ for(x in cody_stocks2$stock_name){
     sb = takers_ssb[,x])
   
   # remove model run in time
-  min_year <- cody_stocks2[row, "old_min_year"]
-  max_year <- cody_stocks2[row, "old_max_year"]
+  min_year <- pull(cody_stocks[row, "old_min_year"])
+  max_year <- pull(cody_stocks[row, "old_max_year"])
   
   stock <- stock %>%
     filter(year >= min_year) %>%
@@ -49,8 +48,8 @@ for(x in cody_stocks2$stock_name){
   quants2 <- unname(quantile(pull(stock2$sb), probs = c(0.05, 0.95), na.rm = TRUE))
   
   # save depletion levels
-  cody_stocks2[row, "Odepletion"] <- quants1[1]/quants1[2]
-  cody_stocks2[row, "Cdepletion"] <- quants2[1]/quants2[2]
+  cody_stocks[row, "Odepletion"] <- quants1[1]/quants1[2]
+  cody_stocks[row, "Cdepletion"] <- quants2[1]/quants2[2]
 }
 
 # print results
@@ -68,37 +67,10 @@ a <- ggplot(data = cody_stocks3) + geom_boxplot(aes(x = original._driver, y = de
 print(a)
 dev.off()
 
-
-# Recruitment Variation ---------------------------------------------------
-# will find recruitment variation for each stock, then print
-# also want to look specifically at the edge stocks that were modified, to see if variation has
-# gone down
-
-stock_sigmaR <- tibble(stock_name = stock_model_fits$stock_name,
-                 sigmaR = rep(NA, nrow(stock_model_fits)))
-
-for(i in 1:nrow(stock_model_fits)){
-  if(pull(stock_model_fits[i, "min_model"]) == "ricker" && pull(stock_model_fits[i, "rel_likelihood"]) >= 0.75){
-    stock_sigmaR[i, "sigmaR"] <- pull(stock_model_fits[i, "ricker_sigmaR"])
-  }else{
-    stock_sigmaR[i, "sigmaR"] <- pull(stock_model_fits[i, "bevholt_sigmaR"])
-  }
-}
-
-stock_sigmaR$driver <- rep(NA, nrow(stock_sigmaR))
-
-for(i in 1:nrow(stock_sigmaR)){
-  if(pull(stock_sigmaR[i, "stock_name"]) %in% sb_driven_stocks$stock_name){
-    stock_sigmaR[i, "driver"] <- "spawning biomass"
-  }else if(pull(stock_sigmaR[i, "stock_name"]) %in% env_driven_stocks$stock_name){
-    stock_sigmaR[i, "driver"] <- "environment"
-  }else{
-    stock_sigmaR[i, "driver"] <- "edge case"
-  }
-}
-
-pdf(here("results/stock_contrast", "stock_rec_simga.pdf"))
-a <- ggplot(stock_sigmaR) + geom_boxplot(aes(x = driver, y = sigmaR)) + 
-  xlab("primary influence on recruitment")
+# Box plot for the difference in original and current depletion
+cody_stocks$diff_deplet <- cody_stocks$Odepletion - cody_stocks$Cdepletion
+pdf(here("results/stock_contrast", "cody_stocks_diff_contrast_boxplot.pdf"))
+a <- ggplot(data = cody_stocks) + geom_boxplot(aes(x = original_driver, y = diff_deplet)) + 
+  labs(x = "original recruitment driver classification", y = "difference in depletion")
 print(a)
 dev.off()

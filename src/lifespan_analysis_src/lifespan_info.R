@@ -9,32 +9,19 @@ lifespan <- read.csv(here("data/lifespan_analysis", "lifespan.csv"))
 lifespan$stock_name <- str_replace_all(lifespan$stock_name, "-", "\\.")
 
 # Match max age to stock driver ------------------------------------------------------------------------------------
+sb_driven_stocks <- left_join(sb_driven_stocks, lifespan)
+env_driven_stocks <- left_join(env_driven_stocks, lifespan)
+edge_stocks <- left_join(edge_stocks, lifespan)
+
 sb_driven_stocks <- sb_driven_stocks %>%
-  add_column(age = 1)
-for(x in sb_driven_stocks$stock_name){
-  row <- which(sb_driven_stocks$stock_name == x)
-  row2 <- which(lifespan$stock_name == x)
-  
-  sb_driven_stocks[row, "age"] <- lifespan[row2, "age"]
-}
-
+  add_column(driver = "spawning biomass")
 env_driven_stocks <- env_driven_stocks %>%
-  add_column(age = 1)
-for(x in env_driven_stocks$stock_name){
-  row <- which(env_driven_stocks$stock_name == x)
-  row2 <- which(lifespan$stock_name == x)
-  
-  env_driven_stocks[row, "age"] <- lifespan[row2, "age"]
-}
-
+  add_column(driver = "environment")
 edge_stocks <- edge_stocks %>%
-  add_column(age = 1)
-for(x in edge_stocks$stock_name){
-  row <- which(edge_stocks$stock_name == x)
-  row2 <- which(lifespan$stock_name == x)
-  
-  edge_stocks[row, "age"] <- lifespan[row2, "age"]
-}
+  add_column(driver = "spbio or env") 
+
+all_drivers <- rbind(sb_driven_stocks, env_driven_stocks, edge_stocks)
+
 # Summarize data ----------------------------------------------------------------------------------------------------
 sb_driven_stocks %>%
   group_by(curve_shape) %>%
@@ -58,92 +45,63 @@ env_driven_stocks %>%
 edge_stocks %>%
   summarise(qs = quantile(age, c(0.25, 0.75), na.rm = TRUE), prob = c(0.25, 0.75))
 
-sb_driven_stocks <- sb_driven_stocks %>%
-  add_column(driver = "spawning biomass")
-env_driven_stocks <- env_driven_stocks %>%
-  add_column(driver = "environment")
-edge_stocks <- edge_stocks %>%
-  add_column(driver = "spbio or env") 
+all_drivers %>% 
+  summarise(unique(scientific_name)) # 182 species in analysis
 
-all_drivers <- rbind(sb_driven_stocks, env_driven_stocks, edge_stocks)
+all_drivers %>% 
+  filter(!is.na(age)) %>% 
+  summarise(unique(scientific_name)) # 157 with age data
+
+all_drivers %>% 
+  filter(is.na(age)) %>% 
+  group_by(fishery_type) %>% 
+  summarise(n = n())
 
 # Summarize with recruitment regimes ------------------------------------------------------------------------------
 env_change_pt %>%
-  summarise(n = unique(stock_name)) # 327 stocks with regime changes
+  summarise(n = unique(stock_name)) # 172 stocks with regime changes
 
 env_drivers <- rbind(env_driven_stocks, edge_stocks)
 
 # Add lifespan data to change point data ----------------------------------------------------------------------------
-env_change_pt <- env_change_pt %>%
-  left_join(env_drivers)
+env_change_pt <- left_join(env_change_pt, env_drivers)
 
 # calculate average regime length/sd across all ages
 env_change_pt %>%
   summarise(mean = mean(regime_length), sd = sd(regime_length))
 
-# want to determine what the mean regime length/sd is for different age categories
-# first will determine what seems like an appropriate age breakdown
-env_change_pt %>%
-  summarise(min_age = min(age, na.rm = TRUE), max_age = max(age, na.rm = TRUE))
-
-# get total number of stocks for each age category
-env_change_pt %>%
-  filter(age <= 10) %>%
-  summarise(stock_name = unique(stock_name))
-
-env_change_pt %>%
-  filter(age > 10) %>%
-  filter(age <= 20) %>%
-  summarise(n = unique(stock_name))
-
-env_change_pt %>%
-  filter(age > 20) %>%
-  filter(age <= 40) %>%
-  summarise(n = unique(stock_name))
-
-env_change_pt %>%
-  filter(age > 40) %>%
-  summarise(n = unique(stock_name))
-
-# calculate mean regime length/sd for each category
-env_change_pt %>%
-  filter(age <= 10) %>%
-  summarise(mean_length = mean(regime_length), sd = sd(regime_length))
-
-env_change_pt %>%
-  filter(age > 10) %>%
-  filter(age <= 20) %>%
-  summarise(mean_length = mean(regime_length), sd = sd(regime_length))
-
-env_change_pt %>%
-  filter(age > 20) %>%
-  filter(age <= 40) %>%
-  summarise(mean_length = mean(regime_length), sd = sd(regime_length))
-
-env_change_pt %>%
-  filter(age > 40) %>%
-  summarise(mean_length = mean(regime_length), sd = sd(regime_length))
-
-# want to know how many stocks with regime changes don't have age data
-env_change_pt %>%
-  filter(is.na(age)) %>%
-  summarise(stocks = unique(stock_name))
+# find the number of stocks with age data
+env_change_pt %>% 
+  filter(!is.na(age)) %>% 
+  summarise(unique(stock_name))
 
 
-# want some general information about the stocks in the analysis
-lifespan %>%
-  summarise(species = unique(scientific_name))
 
-lifespan %>%
-  filter(is.na(age)) %>%
-  summarise(species = unique(scientific_name))
+
+# create a scatter plot of age versus regime length
+fit <- lm(regime_length ~ age, data = env_change_pt)
+summary(fit)
+pdf(here("results/lifespan_analysis", "max_age_regime_plot.pdf"))
+a <- ggplot(env_change_pt) + 
+  geom_point(aes(x = age, y = regime_length, color = as.factor(fishery_type))) + 
+  geom_abline(slope = 0.04876, intercept = 14.67006) +
+  ylab("regime length") + labs(col = "fishery type") + xlab("species maximum age")
+print(a)
+dev.off()
+
 
 # want to investigate if the number of regime shifts is related to age of the species
-# will also see if regime changes are correlated with number of years of data
-
 counts <- counts %>%
   left_join(lifespan)
-plot(counts$age, counts$n) # doesn't look like there is a clear effect
+
+ggplot(counts) +
+  geom_histogram(aes(x = age, fill = fishery_type), position = "identity", alpha = 0.6, bins = 35)
+
+ggplot(counts) +
+  geom_bar(aes(y = nregimes, fill = fishery_type))
+
+ggplot(counts) + 
+  geom_point(aes(x = age, y = nregimes))
 
 counts %>% filter(age <= 10) %>% summarise(avg_regimes = mean(n))
 counts %>% filter(age > 10) %>% filter(age <= 20) %>% summarise(avg_regimes = mean(n))

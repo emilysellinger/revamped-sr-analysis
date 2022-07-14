@@ -1,5 +1,4 @@
 # going to calculate the contrast of each of the stock included in the analysis
-# two measures of contrast - current SSB/max SSB and min SSB/max SSB
 stock_ssb_contrast <- tibble()
 stock_ssb_contrast <- stock_ssb_contrast %>% 
   add_column(stock_name = "test",
@@ -57,20 +56,44 @@ for(x in monotonic_stocks$stock_name){
     add_row(stock_name = x, contrast = (quants[1]/quants[2]), driver = monotonic_stocks[row, "driver"][[1]])
 }
 
-pdf(here("sb_contrast", "all_stocks_contrast_boxplot.pdf"))
-a <- ggplot(data = stock_ssb_contrast) + geom_boxplot(aes(x = type, y = contrast)) + 
-  labs(x = "contrast type", y = "spawning biomass contrast", 
-       title = "Comparision of current and historical spawning biomass contrast",
-       subtitle = "calculated for each of the 405 stocks in the analysis")
-print(a)
-dev.off()
 
-# will do this again with stocks by primary influence to see if there are trends
-pdf(here("sb_contrast", "primary_influence_contrast_boxplot.pdf"))
+# Recruitment Variation ---------------------------------------------------
+# will find recruitment variation for each stock, then print
+# also want to look specifically at the edge stocks that were modified, to see if variation has
+# gone down
+
+stock_sigmaR <- tibble(stock_name = stock_model_fits$stock_name,
+                       sigmaR = rep(NA, nrow(stock_model_fits)))
+
+for(i in 1:nrow(stock_model_fits)){
+  if(pull(stock_model_fits[i, "min_model"]) == "ricker" && pull(stock_model_fits[i, "rel_likelihood"]) >= 0.75){
+    stock_sigmaR[i, "sigmaR"] <- pull(stock_model_fits[i, "ricker_sigmaR"])
+  }else{
+    stock_sigmaR[i, "sigmaR"] <- pull(stock_model_fits[i, "bevholt_sigmaR"])
+  }
+}
+
+stock_sigmaR$driver <- rep(NA, nrow(stock_sigmaR))
+
+for(i in 1:nrow(stock_sigmaR)){
+  if(pull(stock_sigmaR[i, "stock_name"]) %in% sb_driven_stocks$stock_name){
+    stock_sigmaR[i, "driver"] <- "spawning biomass"
+  }else if(pull(stock_sigmaR[i, "stock_name"]) %in% env_driven_stocks$stock_name){
+    stock_sigmaR[i, "driver"] <- "environment"
+  }else{
+    stock_sigmaR[i, "driver"] <- "edge case"
+  }
+}
+
+
+# Plot results ------------------------------------------------------------
+
+pdf(here("results/stock_contrast", "contrast_sigmaR_plots.pdf"))
 a <- ggplot(data = stock_ssb_contrast) + 
   geom_boxplot(aes(x = driver, y = contrast)) +
-  labs(title = "Historical spawning biomass depletion",
-       subtitle = "depletion = 0.05 quantile/0.95 quantile ",
-       x = "primary influence on recruitment", y = "spawning biomass depletion")
-print(a)
+  labs(x = "primary influence on recruitment", y = "spawning biomass depletion")
+b <- ggplot(stock_sigmaR) + geom_boxplot(aes(x = driver, y = sigmaR)) + 
+  xlab("primary influence on recruitment")
+print(grid.arrange(a, b, ncol = 2))
 dev.off()
+

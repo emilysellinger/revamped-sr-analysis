@@ -56,6 +56,19 @@ for(x in edge_stocks$stock_name){
   }
 }
 
+<<<<<<< Updated upstream
+=======
+# Want to know how many stocks have a recruitment regime shift
+counts <- env_change_pt %>%
+  count(stock_name) %>% 
+  rename(nregimes = n) %>%  # number of regimes in time series
+  mutate(nshifts = nregimes - 1) # number of times regime shift (1 regime = 0 shifts)
+
+
+counts %>% filter(nshifts > 0)
+# 172 stocks have regime changes when only mean changes
+# 340 stocks have regime changes when mean and variance change in regimes
+>>>>>>> Stashed changes
 
 # Write to CSV ------------------------------------------------------------
 # will write this data to a csv file because it will be used to compare methods

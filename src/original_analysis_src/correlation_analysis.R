@@ -171,7 +171,7 @@ for(x in rho_comparison$stock_name){
   stock <- retrieve_sr_data(x)
   
   # calculate DCCA rho
-  dcca <- rhodcca(stock$logR, log(stock$sb), m = 5, nu = 2)
+  dcca <- rhodcca(stock$logR, log(stock$sb), m = 15, nu = 2)
   rho_comparison[row, "dcca_rho"] <- dcca$rhodcca
 }
 

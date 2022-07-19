@@ -7,7 +7,7 @@ ggplot(data = added_stocks, aes(x = fishery_type)) + geom_bar() +
    theme_minimal() + coord_flip() 
 
 ggplot(data = added_stocks, aes(x = region)) + geom_bar() +
-  labs(x = "primary stock region", title = "Stocks added since Szuwalski (2015)") +
+  labs(x = "primary stock region") +
   theme_minimal() + coord_flip()
 
 

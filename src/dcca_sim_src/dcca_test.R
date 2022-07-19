@@ -253,3 +253,66 @@ for(i in deps){
 dev.off()
 
 
+# Window sensitivity test -------------------------------------------------
+window_test_stocks <- rbind(env_driven_stocks, edge_stocks, sb_driven_stocks)
+window_test_stocks$driver <- c(rep("environment", 244), rep("edge", 127), 
+                               rep("spawning biomass", 61))
+window_test_stocks$win5_rho <- rep(NA, nrow(window_test_stocks))
+window_test_stocks$win10_rho <- rep(NA, nrow(window_test_stocks))
+window_test_stocks$win15_rho <- rep(NA, nrow(window_test_stocks))
+
+window_size <- c(5, 10, 15)
+
+for(i in 1:nrow(window_test_stocks)){
+  for(j in 1:length(window_size)){
+    # retrieve S-R data
+    stock_name <- pull(window_test_stocks[i, "stock_name"])
+    stock <- retrieve_sr_data(stock_name)
+    
+    # calculate dcca rho
+    dc_cor <- rhodcca(stock$recruits, stock$sb, m = window_size[j], nu = 2)
+    
+    # save rho value
+    if(j == 1){
+      window_test_stocks[i, "win5_rho"] <- dc_cor$rhodcca
+    } else if(j == 2){
+      window_test_stocks[i, "win10_rho"] <- dc_cor$rhodcca
+    } else{
+      window_test_stocks[i, "win15_rho"] <- dc_cor$rhodcca
+    }
+  }
+}
+
+
+# plot results
+window_test_stocks2 <- window_test_stocks %>% 
+  pivot_longer(!c(stock_name, curve_shape, driver), names_to = "window_size", values_to = "dcca_rho")
+window_test_stocks2$window_size[window_test_stocks2$window_size == "win5_rho"] <- 5
+window_test_stocks2$window_size[window_test_stocks2$window_size == "win10_rho"] <- 10
+window_test_stocks2$window_size[window_test_stocks2$window_size == "win15_rho"] <- 15
+
+pdf(here("results/dcca_sim", "window_rho_sensitivity.pdf"))
+aa <- ggplot(data = subset(window_test_stocks2, driver == "environment")) + 
+  geom_density(aes(x = dcca_rho, fill = as.factor(window_size)), position = "identity", alpha = 0.3) +
+  labs(x = "DCCA correlation coefficient", fill = "window size", subtitle = "(a) environmentally driven")
+bb <- ggplot(data = subset(window_test_stocks2, driver == "edge")) + 
+  geom_density(aes(x = dcca_rho, fill = as.factor(window_size)), position = "identity", alpha = 0.3) +
+  labs(x = "DCCA correlation coefficient", fill = "window size", subtitle = "(b) undetermined")
+cc <- ggplot(data = subset(window_test_stocks2, driver == "spawning biomass")) + 
+  geom_density(aes(x = dcca_rho, fill = as.factor(window_size)), position = "identity", alpha = 0.3) +
+  labs(x = "DCCA correlation coefficient", fill = "window size", subtitle = "(c) spawning biomass driven")
+print(grid.arrange(aa, bb, cc, nrow = 3))
+dev.off()
+
+# find max absolute rho value for each sample stock
+rho_vals <- abs(window_test_stocks[,3:5])
+win_max_rho <- colnames(rho_vals)[apply(rho_vals, 1, which.max)]
+window_test_stocks$max_abs_rho <- win_max_rho
+
+window_test_stocks %>% 
+  group_by(driver, max_abs_rho) %>% 
+  summarise(n = n())
+
+window_test_stocks %>% 
+  group_by(curve_shape, max_abs_rho) %>% 
+  summarise(n = n())

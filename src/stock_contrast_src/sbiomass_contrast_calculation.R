@@ -90,10 +90,12 @@ for(i in 1:nrow(stock_sigmaR)){
 
 pdf(here("results/stock_contrast", "contrast_sigmaR_plots.pdf"))
 a <- ggplot(data = stock_ssb_contrast) + 
-  geom_boxplot(aes(x = driver, y = contrast)) +
-  labs(x = "primary influence on recruitment", y = "spawning biomass depletion")
-b <- ggplot(stock_sigmaR) + geom_boxplot(aes(x = driver, y = sigmaR)) + 
-  xlab("primary influence on recruitment")
-print(grid.arrange(a, b, ncol = 2))
+  geom_boxplot(aes(x = driver, y = contrast), fill = "#00A1B7") +
+  labs(x = "primary influence on recruitment", y = "spawning biomass depletion", subtitle = "(a)") +
+  theme_minimal()
+b <- ggplot(stock_sigmaR) + geom_boxplot(aes(x = driver, y = sigmaR), fill = "#00A1B7") + 
+  xlab("primary influence on recruitment") + labs(subtitle = "(b)") +
+  theme_minimal()
+print(grid.arrange(a, b, nrow = 2))
 dev.off()
 

@@ -3,9 +3,6 @@ env_change_pt <- tibble(
   stock_name = "",
   regime_length = numeric())
 
-env_change_pt2 <- tibble(
-  stock_name = "",
-  regime_length = numeric())
 # will first calculate for strictly environmentally driven stocks
 for(x in env_driven_stocks$stock_name){
   # get stock and recruitment data
@@ -25,7 +22,7 @@ for(x in env_driven_stocks$stock_name){
     ind2	<-changes[y]
     regime_length	<-length(stock$recruits[ind1:ind2])
     
-    env_change_pt2 <- env_change_pt2 %>%
+    env_change_pt <- env_change_pt %>%
       add_row(stock_name = x,
               regime_length = regime_length)
   }
@@ -50,14 +47,12 @@ for(x in edge_stocks$stock_name){
     ind2	<-changes[y]
     regime_length	<-length(stock$recruits[ind1:ind2])
     
-    env_change_pt2 <- env_change_pt2 %>%
+    env_change_pt <- env_change_pt %>%
       add_row(stock_name = x,
               regime_length = regime_length)
   }
 }
 
-<<<<<<< Updated upstream
-=======
 # Want to know how many stocks have a recruitment regime shift
 counts <- env_change_pt %>%
   count(stock_name) %>% 
@@ -68,12 +63,11 @@ counts <- env_change_pt %>%
 counts %>% filter(nshifts > 0)
 # 172 stocks have regime changes when only mean changes
 # 340 stocks have regime changes when mean and variance change in regimes
->>>>>>> Stashed changes
+
 
 # Write to CSV ------------------------------------------------------------
 # will write this data to a csv file because it will be used to compare methods
 write_csv(env_change_pt, here("results/original_analysis/csv_files", "env_change_pt.csv"))
-write_csv(env_change_pt2, here("results/original_analysis/csv_files", "env_change_pt2.csv"))
 
 env_change_pt <- read_csv(here("results/original_analysis/csv_files/env_change_pt.csv"))
 

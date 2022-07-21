@@ -1,0 +1,1433 @@
+stockid,tsn,scientificname,commonname,areaid
+ACADRED2J3K,166774,Sebastes fasciatus,Acadian redfish,Canada-DFO-2J3K
+ACADRED3LNO-UT12,166774,Sebastes fasciatus,Acadian redfish,Canada-DFO-3LNO-UT12
+ACADREDGOMGB,166774,Sebastes fasciatus,Acadian redfish,USA-NMFS-5YZ
+ACADREDUT3,166774,Sebastes fasciatus,Acadian redfish,Canada-DFO-UT3
+ACMACKSARG,172413,Scomber colias,Argentine chub mackerel,Argentina-CFP-ARG-S
+AFLONCH,166156,Beryx splendens,Alfonsino,multinational-SPRFMO-CHL
+ALBAIO,172419,Thunnus alalunga,Albacore tuna,multinational-IOTC-IO
+ALBAMED,172419,Thunnus alalunga,Albacore tuna,multinational-ICCAT-MED
+ALBANATL,172419,Thunnus alalunga,Albacore tuna,multinational-ICCAT-NATL
+ALBANPAC,172419,Thunnus alalunga,Albacore tuna,multinational-ISC-NPAC
+ALBASATL,172419,Thunnus alalunga,Albacore tuna,multinational-ICCAT-SATL
+ALBASPAC,172419,Thunnus alalunga,Albacore tuna,multinational-WCPFC-SPAC
+ALPLAICBSAI,172901,Pleuronectes quadrituberculatus,Alaska plaice,USA-NMFS-BSAI
+ALSKABSAI,160939,Bathyraja parmifera,Alaska skate,USA-NMFS-BSAI
+AMPL23K,172877,Hippoglossoides platessoides,American plaice,Canada-DFO-23K
+AMPL3LNO,172877,Hippoglossoides platessoides,American plaice,multinational-NAFO-3LNO
+AMPL3M,172877,Hippoglossoides platessoides,American plaice,multinational-NAFO-3M
+AMPL3Ps,172877,Hippoglossoides platessoides,American plaice,Canada-DFO-3Ps
+AMPL4T,172877,Hippoglossoides platessoides,American plaice,Canada-DFO-4T
+AMPL4VWX,172877,Hippoglossoides platessoides,American plaice,Canada-DFO-4VWX
+AMPL5YZ,172877,Hippoglossoides platessoides,American plaice,USA-NMFS-5YZ
+ANCHIXa,161831,Engraulis encrasicolus,Anchovy,multinational-ICES-IXa
+ANCHMEDGSA1,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA1
+ANCHMEDGSA16,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA16
+ANCHMEDGSA17,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA17
+ANCHMEDGSA17-18,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA17-18
+ANCHMEDGSA19,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA19
+ANCHMEDGSA20,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA20
+ANCHMEDGSA22,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA22
+ANCHMEDGSA29,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA29
+ANCHMEDGSA6,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA6
+ANCHMEDGSA7,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA7
+ANCHMEDGSA9,161831,Engraulis encrasicolus,Anchovy,multinational-GFCM-GSA9
+ANCHOBAYB,161831,Engraulis encrasicolus,Anchovy,multinational-ICES-VIII
+ANCHOCWACIV-BEN,161831,Engraulis encrasicolus,Anchovy,multinational-FAO-CWACIV-BEN
+ANCHOCWAGAB-AGO,161831,Engraulis encrasicolus,Anchovy,multinational-FAO-CWAGAB-AGO
+ANCHONWA,161831,Engraulis encrasicolus,Anchovy,multinational-FAO-NWA
+ANCHOSA,161831,Engraulis encrasicolus,Anchovy,South Africa-DETMCM-SA
+ANCHOVYKILKACS,551220,Clupeonella engrauliformis,Anchovy kilka,Iran-Iran-CS
+ANGLMEDGSA15-16,164502,Lophius budegassa,Black bellied angler,multinational-GFCM-GSA15-16
+ANGLMEDGSA5,164502,Lophius budegassa,Black bellied angler,multinational-GFCM-GSA5
+ANGLMEDGSA6,164502,Lophius budegassa,Black bellied angler,multinational-GFCM-GSA6
+ANGLMEDGSA7,164502,Lophius budegassa,Black bellied angler,multinational-GFCM-GSA7
+ANGLVIIIc-IXa,164502,Lophius budegassa,Black bellied angler,multinational-ICES-VIIIc-IXa
+ANGLVII-VIIIabd,164502,Lophius budegassa,Black bellied angler,multinational-ICES-VII-VIIIabd
+APOLLNEMS,164722,Theragra chalcogramma,Walleye pollock,Japan-FAJ-NEMS
+APOLLNSJ,164722,Theragra chalcogramma,Walleye pollock,Japan-FAJ-NSJ
+APOLLOKS,164722,Theragra chalcogramma,Walleye pollock,Japan-FAJ-OKS
+APOLLPJPN,164722,Theragra chalcogramma,Walleye pollock,Japan-FAJ-PJPN
+APSHRIMPSOJ,621110,Pandalus eous,Alaskan pink shrimp,Japan-FAJ-SOJ
+ARCSURF4RST,80983,Mactromeris polynyma,Arctic surfclam,Canada-DFO-Q4RST
+ARCSURFBANQ,80983,Mactromeris polynyma,Arctic surfclam,Canada-DFO-BANQ
+ARCSURFGB,80983,Mactromeris polynyma,Arctic surfclam,Canada-DFO-3LNO
+ARCSURFQCW,80983,Mactromeris polynyma,Arctic surfclam,Canada-DFO-QCW
+ARFLOUNDBSAI,616029,Atheresthes stomias,Arrowtooth flounder,USA-NMFS-BSAI
+ARFLOUNDGA,616029,Atheresthes stomias,Arrowtooth flounder,USA-NMFS-GA
+ARFLOUNDPCOAST,616029,Atheresthes stomias,Arrowtooth flounder,USA-NMFS-PCOAST
+ARGANCHONARG,551338,Engraulis anchoita,Argentine anchoita,Argentina-CFP-ARG-N
+ARGANCHOSARG,551338,Engraulis anchoita,Argentine anchoita,Argentina-CFP-ARG-S
+ARGHAKENARG,164800,Merluccius hubbsi,Argentine hake,Argentina-CFP-ARG-N
+ARGHAKESARG,164800,Merluccius hubbsi,Argentine hake,Argentina-CFP-ARG-S
+ARGREENNEMS,644357,Pleurogrammus azonus,Arabesque greenling,Japan-FAJ-NEMS
+ARGREENNHOKK,644357,Pleurogrammus azonus,Arabesque greenling,Japan-FAJ-NHOKK
+ARGREENSHOKK,644357,Pleurogrammus azonus,Arabesque greenling,Japan-FAJ-SHOKK
+ASCADECS,168736,Decapterus muroadsi,Amberstripe scad,Japan-FAJ-ECS
+ASHARNEATL,160788,Squatina squatina,Angel shark,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-X-XII-XIV
+ATBTUNAEATL,172421,Thunnus thynnus,Atlantic bluefin tuna,multinational-ICCAT-EATL
+ATBTUNAWATL,172421,Thunnus thynnus,Atlantic bluefin tuna,multinational-ICCAT-WATL
+ATHAL3NOPs4VWX5Zc,172933,Hippoglossus hippoglossus,Atlantic halibut,Canada-DFO-3NOPs4VWX5Zc
+ATHAL4RST,172933,Hippoglossus hippoglossus,Atlantic halibut,Canada-DFO-4RST
+ATHAL5YZ,172933,Hippoglossus hippoglossus,Atlantic halibut,USA-NMFS-5YZ
+ATKABSAI,167120,Pleurogrammus monopterygius,Atka mackerel,USA-NMFS-BSAI
+ATKAGA,167120,Pleurogrammus monopterygius,Atka mackerel,USA-NMFS-GA
+ATLCROAKMATLC,169283,Micropogonias undulatus,Atlantic croaker,USA-NMFS-MATLC
+ATOOTHFISHRS,642808,Dissostichus mawsoni,Antarctic toothfish,multinational-CCAMLR-RS
+AUROCKPCOAST,166709,Sebastes aurora,Aurora rockfish,USA-NMFS-PCOAST
+AUSSALMONNZ,168827,Arripis trutta,Australian salmon,New Zealand-MFish-NZ
+AWOLF5YZ,171341,Anarhichas lupus,Atlantic wolffish,USA-NMFS-5YZ
+BCRABCHESB,98696,Callinectes sapidus,Blue crab,USA-MDSTATE-CHESB
+BCROAKCWAGIN-LBR,646550,Pseudotolithus elongatus,Bobo croaker,multinational-FAO-CWAGIN-LBR
+BERYXSPPNEATL,166154,Beryx spp,Beryx spp,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-X-XII-XIV
+BGRDRNSWWA,623193,Macruronus novaezelandiae,Blue grenadier,Australia-AFMA-NSWWA
+BGRDRSE,623193,Macruronus novaezelandiae,Blue grenadier,Australia-AFMA-SE
+BGROCKPCOAST,166728,Sebastes melanostomus,Blackgill rockfish,USA-NMFS-PCOAST
+BGRUNTCWACIV-BEN,169108,Brachydeuterus auritus,Bigeye grunt,multinational-FAO-CWACIV-BEN
+BGRUNTCWACOG_AGO,169108,Brachydeuterus auritus,Bigeye grunt,multinational-FAO-CWACOG_AGO
+BHAKECWAAGO,550664,Merluccius polli,Benguela hake,multinational-FAO-CWAAGO
+BHEADSHARATL,160502,Sphyrna tiburo,Bonnethead shark,USA-NMFS-ATL
+BIGEYEATL,172428,Thunnus obesus,Bigeye tuna,multinational-ICCAT-ATL
+BIGEYECWPAC,172428,Thunnus obesus,Bigeye tuna,multinational-WCPFC-CWPAC
+BIGEYEEPAC,172428,Thunnus obesus,Bigeye tuna,multinational-IATTC-EPAC
+BIGEYEIO,172428,Thunnus obesus,Bigeye tuna,multinational-IOTC-IO
+BIGHTREDSE,622143,Centroberyx gerrardi,Bight redfish,Australia-AFMA-SE
+BIGSKA3CD,160848,Raja binoculata,Big skate,Canada-DFO-WCVANI
+BIGSKA4B,160848,Raja binoculata,Big skate,Canada-DFO-SOG
+BIGSKA5AB,160848,Raja binoculata,Big skate,Canada-DFO-5AB
+BIGSKA5CDE,160848,Raja binoculata,Big skate,Canada-DFO-HS
+BJMACKXa2,168593,Trachurus picturatus,Blue jack mackerel,multinational-ICES-Xa2
+BKCDLFENI,168298,Epigonus telescopus,Black cardinalfish,New Zealand-MFish-ENI
+BKINGCRABPI,97936,Paralithodes platypus,Blue king crab,USA-NMFS-PI
+BKINGCRABSMI,97936,Paralithodes platypus,Blue king crab,USA-NMFS-SMI
+BKSFNEATL,172389,Aphanopus carbo,Black scabbardfish,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-XII-XIV
+BLACKGROUPERGMSATL,167760,Mycteroperca bonaci,Black grouper,USA-NMFS-GMSATL
+BLACKOREOPR,625296,Allocyttus niger,Black oreo,New Zealand-MFish-PR
+BLACKOREOWECR,625296,Allocyttus niger,Black oreo,New Zealand-MFish-WECR
+BLACKROCKCAL,166727,Sebastes melanops,Black rockfish,USA-NMFS-CAL
+BLACKROCKNPCOAST,166727,Sebastes melanops,Black rockfish,USA-NMFS-NPCOAST
+BLACKROCKORECOAST,166727,Sebastes melanops,Black rockfish,USA-NMFS-ORECOAST
+BLACKROCKSPCOAST,166727,Sebastes melanops,Black rockfish,USA-NMFS-SPCOAST
+BLACKROCKWASH,166727,Sebastes melanops,Black rockfish,USA-NMFS-WASH
+BLINGI-II-IIIa-IVa-VIII-IX-XII,164761,Molva dypterygia,Blue ling,multinational-ICES-I-II-IIIa-IVa-VIII-IX-XII
+BLINGVa-XIV,164761,Molva dypterygia,Blue ling,multinational-ICES-Va-XIV
+BLINGVb-VI-VII,164761,Molva dypterygia,Blue ling,multinational-ICES-Vb-VI-VII
+BLKMARLINIO,768125,Istiompax indica,Black marlin,multinational-IOTC-IO
+BLRAYIVa-VI,160880,Raja brachyura,Blonde ray,multinational-ICES-IVa-VI
+BLRAYIVc-VIId,160880,Raja brachyura,Blonde ray,multinational-ICES-IVc-VIId
+BLRAYIXa,160880,Raja brachyura,Blonde ray,multinational-ICES-IXa
+BLRAYVIIafg,160880,Raja brachyura,Blonde ray,multinational-ICES-VIIafg
+BLRAYVIIe,160880,Raja brachyura,Blonde ray,multinational-ICES-VIIe
+BLSHARNPAC,160424,Prionace glauca,Blue shark,multinational-ISC-NPAC
+BLTILESATLC,168543,Caulolatilus microps,Blueline tilefish,USA-NMFS-SATLC
+BLUEFISHATLC,168559,Pomatomus saltatrix,Bluefish,USA-NMFS-ATLC
+BLUEROCKCAL,166730,Sebastes mystinus,Blue rockfish,USA-NMFS-CAL
+BMACKECS,172415,Scomber australasicus,Spotted mackerel,Japan-FAJ-ECS
+BMACKPJPN,172415,Scomber australasicus,Spotted mackerel,Japan-FAJ-PJPN
+BMARLINATL,172491,Makaira nigricans,Blue marlin,multinational-ICCAT-ATL
+BMARLINIO,172497,Makaira mazara,Indo Pacific blue marlin,multinational-IOTC-IO
+BMARLINPAC,172491,Makaira nigricans,Blue marlin,multinational-ISC-PAC
+BMDOGVIII-IXa,160034,Galeus melastomus,Blackmouth dogfish,multinational-ICES-VIII-IXa
+BMDOGVI-VII,160034,Galeus melastomus,Blackmouth dogfish,multinational-ICES-VI-VII
+BNKROCKCAL,166761,Sebastes rufus,Bank rockfish,USA-NMFS-CAL
+BNOSESHARATL,160304,Carcharhinus acronotus,Blacknose shark,USA-NMFS-ATL
+BNSNZ,172514,Hyperoglyphe antarctica,Bluenose,New Zealand-MFish-NZ
+BOARVI-VIII,166320,Capros aper,Boarfish,multinational-ICES-VI-VIII
+BOCACCBCW,166733,Sebastes paucispinis,Bocaccio,Canada-DFO-BCW
+BOCACCSPCOAST,166733,Sebastes paucispinis,Bocaccio,USA-NMFS-SPCOAST
+BONGACWAGAB-COD,551295,Ethmalosa fimbriata,Bonga,multinational-FAO-CWAGAB-COD
+BONGANWA,551295,Ethmalosa fimbriata,Bonga,multinational-FAO-NWA
+BRILL2232,172749,Scophthalmus rhombus,Brill,multinational-ICES-22-32
+BRILLIIIa-IV-VIIde,172749,Scophthalmus rhombus,Brill,multinational-ICES-IIIa-IV-VIIde
+BRMSOJ,647939,Dentex tumifrons,Yellow sea bream,Japan-FAJ-SOJ
+BRMSPPCWACIV-BEN,-985,Dentex spp,Seabream,multinational-FAO-CWACIV-BEN
+BRMSPPCWAGAB-AGO,-985,Dentex spp,Seabream,multinational-FAO-CWAGAB-AGO
+BRMSPPCWAGIN-LBR,-985,Dentex spp,Seabream,multinational-FAO-CWAGIN-LBR
+BRNROCKPCOAST,166708,Sebastes auriculatus,Brown rockfish,USA-NMFS-PCOAST
+BRNSHRIMPGM,551570,Farfantepenaeus aztecus,Brown shrimp,USA-NMFS-GM
+BSBASSMATLC,167687,Centropristis striata,Black sea bass,USA-NMFS-MATLC
+BSBASSSATL,167687,Centropristis striata,Black sea bass,USA-NMFS-SATL
+BSCRAPERSOJECS,646253,Thamnaconus modestus,Black scraper,Japan-FAJ-SOJECS
+BSKAT5YZSNE,564139,Dipturus laevis,Barndoor skate,USA-NMFS-5YZSNE
+BSKATCANATL,564139,Dipturus laevis,Barndoor skate,Canada-DFO-ATL
+BSKSHARNEATL,159907,Cetorhinus maximus,Basking shark,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-XII-XIV
+BSQLOBSTERCH,-992,Cervimunida johni,Yellow squat lobster,Chile-SUBPESCA-CH
+BSQLOBSTERCSCH,-992,Cervimunida johni,Yellow squat lobster,Chile-SUBPESCA-CH-CS
+BSQLOBSTERNCH,-992,Cervimunida johni,Yellow squat lobster,Chile-SUBPESCA-CH-N
+BTIPSHARATL,160318,Carcharhinus limbatus,Blacktip shark,USA-NMFS-ATL
+BTIPSHARGM,160318,Carcharhinus limbatus,Blacktip shark,USA-NMFS-GM
+BTSHRIMPNAUST,95625,Penaeus esculentus,Brown tiger shrimp,Australia-AFMA-NAUST
+BUTTERGOMCHATT,172567,Peprilus triacanthus,Atlantic butterfish,USA-NMFS-5YCHATT
+BWHITMEDGSA1,164774,Micromesistius poutassou,Blue whiting,multinational-GFCM-GSA1
+BWHITMEDGSA6,164774,Micromesistius poutassou,Blue whiting,multinational-GFCM-GSA6
+BWHITMEDGSA9,164774,Micromesistius poutassou,Blue whiting,multinational-GFCM-GSA9
+BWHITNEA,164774,Micromesistius poutassou,Blue whiting,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-XII-XIV
+BZCRABSOJ,-965,Chionoecetes japonicus,Beni zuwai crab,Japan-FAJ-SOJ
+CABEZNCAL,692068,Scorpaenichthys marmoratus,Cabezon,USA-NMFS-NCAL
+CABEZORECOAST,692068,Scorpaenichthys marmoratus,Cabezon,USA-NMFS-ORECOAST
+CABEZSCAL,692068,Scorpaenichthys marmoratus,Cabezon,USA-NMFS-SCAL
+CABEZWASH,692068,Scorpaenichthys marmoratus,Cabezon,USA-NMFS-WASH
+CALSCORPSCAL,166827,Scorpaena guttata,California scorpionfish,USA-NMFS-SCAL
+CAPE2J3KL,162035,Mallotus villosus,Capelin,Canada-DFO-2J3KL
+CAPE4RST,162035,Mallotus villosus,Capelin,Canada-DFO-4RST
+CAPEIIa-V-XIV,162035,Mallotus villosus,Capelin,multinational-ICES-IIa-V-XIV
+CAPENOR,162035,Mallotus villosus,Capelin,multinational-ICES-I
+CATCWAGAB,-987,Arius spp,Catfish,multinational-FAO-CWAGAB
+CATCWAGIN-LBR,-987,Arius spp,Catfish,multinational-FAO-CWAGIN-LBR
+CHAKESA,164798,Merluccius capensis,Shallow water cape hake,South Africa-DETMCM-SA
+CHERRCHVX,615818,Clupea bentincki,Chilean herring,Chile-SUBPESCA-CH-CS
+CHILISPCOAST,166722,Sebastes goodei,Chilipepper,USA-NMFS-SPCOAST
+CHMACKCWAGAB-AGO,168595,Trachurus trecae,Cunene horse mackerel,multinational-FAO-CWAGAB-AGO
+CHMACKCWAGNB-LBR,168595,Trachurus trecae,Cunene horse mackerel,multinational-FAO-CWAGNB-LBR
+CHMACKNWA,168595,Trachurus trecae,Cunene horse mackerel,multinational-FAO-NWA
+CHROCKCPCOAST,166731,Sebastes nebulosus,China rockfish,USA-NMFS-CPCOAST
+CHROCKNPCOAST,166731,Sebastes nebulosus,China rockfish,USA-NMFS-NPCOAST
+CHROCKSPCOAST,166731,Sebastes nebulosus,China rockfish,USA-NMFS-SPCOAST
+CHSQUIDSA,557249,Loligo reynaudii,Cape Hope squid,South Africa-DETMCM-SA
+CHTRACCH,168597,Trachurus murphyi,Chilean jack mackerel,multinational-SPRFMO-CH
+CJOBMHI,168916,Pristipomoides filamentosus,Crimson jobfish,USA-NMFS-MHI
+CJOBOKWI,168916,Pristipomoides filamentosus,Crimson jobfish,Japan-FAJ-OKWI
+CKRAYIIIa-IV,564143,Leucoraja naevus,Cuckoo ray,multinational-ICES-IIIa-IV
+CKRAYIXa,564143,Leucoraja naevus,Cuckoo ray,multinational-ICES-IXa
+CKRAYVIIIc,564143,Leucoraja naevus,Cuckoo ray,multinational-ICES-VIIIc
+CKRAYVI-VII,564143,Leucoraja naevus,Cuckoo ray,multinational-ICES-VI-VII
+CMACKNWA,172412,Scomber japonicus,Chub mackerel,multinational-FAO-NWA
+CMACKPCOAST,172412,Scomber japonicus,Pacific chub mackerel,USA-NMFS-PCOAST
+CMACKPJPN,172412,Scomber japonicus,Chub mackerel,Japan-FAJ-PJPN
+CMACKTSST,172412,Scomber japonicus,Chub mackerel,Japan-FAJ-TSST
+COBGM,168566,Rachycentron canadum,Cobia,USA-NMFS-GM
+COBSATLC,168566,Rachycentron canadum,Cobia,USA-NMFS-SATLC
+COD1ABCDE,164712,Gadus morhua,Atlantic cod,multinational-ICES-1ABCDE
+COD1F-XIV,164712,Gadus morhua,Atlantic cod,multinational-ICES-1F-XIV
+COD1IN,164712,Gadus morhua,Atlantic cod,multinational-ICES-1IN
+COD2J3KL,164712,Gadus morhua,Atlantic cod,Canada-DFO-2J3KL
+COD3M,164712,Gadus morhua,Atlantic cod,multinational-NAFO-3M
+COD3NO,164712,Gadus morhua,Atlantic cod,multinational-NAFO-3NO
+COD3Pn4RS,164712,Gadus morhua,Atlantic cod,Canada-DFO-3Pn4RS
+COD3Ps,164712,Gadus morhua,Atlantic cod,Canada-DFO-3Ps
+COD4TVn,164712,Gadus morhua,Atlantic cod,Canada-DFO-4T
+COD4VsW,164712,Gadus morhua,Atlantic cod,Canada-DFO-4VsW
+COD4X,164712,Gadus morhua,Atlantic cod,Canada-DFO-4X
+COD4X5Yb,164712,Gadus morhua,Atlantic cod,Canada-DFO-4X5Yb
+COD5Zjm,164712,Gadus morhua,Atlantic cod,multinational-TRAC-5Zjm
+CODBA2224,164712,Gadus morhua,Atlantic cod,multinational-ICES-22-24
+CODBA2532,164712,Gadus morhua,Atlantic cod,multinational-ICES-25-32
+CODFABNK,164712,Gadus morhua,Atlantic cod,multinational-ICES-Vb2
+CODFAPL,164712,Gadus morhua,Atlantic cod,multinational-ICES-Vb1
+CODGB,164712,Gadus morhua,Atlantic cod,USA-NMFS-5Z
+CODGOM,164712,Gadus morhua,Atlantic cod,USA-NMFS-5Y
+CODICE,164712,Gadus morhua,Atlantic cod,multinational-ICES-Va
+CODIIIaW-IV-VIId,164712,Gadus morhua,Atlantic cod,multinational-ICES-IIIaW-IV-VIId
+CODIS,164712,Gadus morhua,Atlantic cod,multinational-ICES-VIIa
+CODKAT,164712,Gadus morhua,Atlantic cod,multinational-ICES-21
+CODNEAR,164712,Gadus morhua,Atlantic cod,multinational-ICES-I-II
+CODNEARNCW,164712,Gadus morhua,Atlantic cod,multinational-ICES-I-II-NCW
+CODVIa,164712,Gadus morhua,Atlantic cod,multinational-ICES-VIa
+CODVIb,164712,Gadus morhua,Atlantic cod,multinational-ICES-VIb
+CODVIIek,164712,Gadus morhua,Atlantic cod,multinational-ICES-VIIe-k
+COWCODSCAL,166754,Sebastes levis,Cowcod,USA-NMFS-SCAL
+CPANDMEDGSA15-16,169215,Pagellus erythrinus,Common pandora,multinational-GFCM-GSA15-16
+CPANDMEDGSA9,169215,Pagellus erythrinus,Common pandora,multinational-GFCM-GSA9
+CPRROCKPCOAST,166713,Sebastes caurinus,Copper rockfish,USA-NMFS-PCOAST
+CRLOBSTERSA12,552953,Jasus lalandii,West coast rock lobster,South Africa-DETMCM-1-2
+CRLOBSTERSA34,552953,Jasus lalandii,West coast rock lobster,South Africa-DETMCM-3-4
+CRLOBSTERSA56,552953,Jasus lalandii,West coast rock lobster,South Africa-DETMCM-5-6
+CRLOBSTERSA7,552953,Jasus lalandii,West coast rock lobster,South Africa-DETMCM-7
+CRLOBSTERSA8,552953,Jasus lalandii,West coast rock lobster,South Africa-DETMCM-8
+CROAKSPPCWACIV-BEN,-989,Pseudotolithus spp,Croaker,multinational-FAO-CWACIV-BEN
+CROAKSPPCWAGAB-AGO,-989,Pseudotolithus spp,Croaker,multinational-FAO-CWAGAB-AGO
+CROAKSPPCWAGIN-LBR,-989,Pseudotolithus spp,Croaker,multinational-FAO-CWAGIN-LBR
+CROCKPCOAST,166734,Sebastes pinniger,Canary rockfish,USA-NMFS-PCOAST
+CROCKWCVANISOGQCI,166734,Sebastes pinniger,Canary rockfish,Canada-DFO-WCVANI-SOG-QCI
+CSALMA1,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A1
+CSALMA10,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A10
+CSALMA11,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A11
+CSALMA12,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A12
+CSALMA13,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A13
+CSALMA14,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A14
+CSALMA15,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A15
+CSALMA16,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A16
+CSALMA17,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A17
+CSALMA18,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A18
+CSALMA19,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A19
+CSALMA20,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A20
+CSALMA22,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A22
+CSALMA23,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A23
+CSALMA24,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A24
+CSALMA25,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A25
+CSALMA26,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A26
+CSALMA27,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A27
+CSALMA29,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A29
+CSALMA2E,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A2E
+CSALMA2W,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A2W
+CSALMA3,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A3
+CSALMA4,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A4
+CSALMA5,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A5
+CSALMA6,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A6
+CSALMA7,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A7
+CSALMA8,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A8
+CSALMA9,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-A9
+CSALMAKPSESCD,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-AKPSESCD
+CSALMAKPSWUD,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-AKPSWUD
+CSALMAMURCH,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-AMURCH
+CSALMAMURCW,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-AMURCW
+CSALMANADYRCW,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-ANADYRCW
+CSALMANDREAR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-ANDREAR
+CSALMANVIKR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-ANVIKR
+CSALMBEARR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-BEARR
+CSALMBECHSNWD,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-BECHSNWD
+CSALMBLKAMR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-BLKAMR
+CSALMBRUINR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-BRUINR
+CSALMCARIBOUF,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-CARIBOUF
+CSALMCHIDWD,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-CHIDWD
+CSALMCHIGCD,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-CHIGCD
+CSALMCHIGED,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-CHIGED
+CSALMCINDERR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-CINDERR
+CSALMCOLR,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-COLR
+CSALMCWCIR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-CWCIR
+CSALMDFL,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-DFL
+CSALMEALSEKR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-EALSEKR
+CSALMEKAMCH,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-EKAMCH
+CSALMEKAMCW,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-EKAMCW
+CSALMESAKCH,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-ESAKCH
+CSALMFISHC,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-FISHC
+CSALMGOLOVIN,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-GOLOVIN
+CSALMGOODNEWSR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-GOODNEWSR
+CSALMGRAYH,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-GRAYH
+CSALMHOODC,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-HOODC
+CSALMHSCH,161976,Oncorhynchus keta,Chum salmon,Japan-FAJ-HSCH
+CSALMHSCW,161976,Oncorhynchus keta,Chum salmon,Japan-FAJ-HSCW
+CSALMISCFPM,161976,Oncorhynchus keta,Chum salmon,Canada-DFO-ISCFPM
+CSALMIZEMBEKMNWD,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-IZEMBEKMNWD
+CSALMJCCH,161976,Oncorhynchus keta,Chum salmon,Japan-FAJ-JCCH
+CSALMJDFS,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-JDFS
+CSALMKADASHANC,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-KADASHANC
+CSALMKANEKTOKR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-KANEKTOKR
+CSALMKOTZEBUES,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-KOTZEBUES
+CSALMKTRNS,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-KTRNS
+CSALMKUSKOKWIM,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-KUSKOKWIM
+CSALMMNRSD,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-MNRSD
+CSALMNELSONL,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-NELSONL
+CSALMNORTONB,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-NORTONB
+CSALMNORTONSD1,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-NORTONSD1
+CSALMNSR,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-NSR
+CSALMNUSHAGAKD,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-NUSHAGAKD
+CSALMOKCH,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-OKCH
+CSALMOKCW,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-OKCW
+CSALMPDIC,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-PDIC
+CSALMPERRYVILLED,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-PERRYVILLED
+CSALMPGRAHAM,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-PGRAHAM
+CSALMPHEIDEN,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-PHEIDEN
+CSALMPMOLLERBT,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-PMOLLERBT
+CSALMPRIMCH,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-PRIMCH
+CSALMPRIMCW,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-PRIMCW
+CSALMROCKYR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-ROCKYR
+CSALMSHAKTOOLIK,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-SHAKTOOLIK
+CSALMSKAGR,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-SKAGR
+CSALMSSOUNDFR,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-SSOUNDFR
+CSALMSSOUNDSR,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-SSOUNDSR
+CSALMSSOUNDWR,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-SSOUNDWR
+CSALMSSR,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-SSR
+CSALMTHREEH,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-THREEH
+CSALMTOGD,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-TOGD
+CSALMUCOOKI,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-UCOOKI
+CSALMUNALAKLEET,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-UNALAKLEET
+CSALMURSUSCL,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-URSUSCL
+CSALMWILLB,161976,Oncorhynchus keta,Chum salmon,USA-WASTATE-WILLB
+CSALMWKAMCH,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-WKAMCH
+CSALMWKAMCW,161976,Oncorhynchus keta,Chum salmon,Russia-TINRO-WKAMCW
+CSALMYUKONRFR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-YUKONRFR
+CSALMYUKONRSR,161976,Oncorhynchus keta,Chum salmon,USA-AKSTATE-YUKONRSR
+CSARDCSCH,551247,Strangomera bentincki,Chilean sardine,Chile-SUBPESCA-CH-CS
+CSHRIMPCWA,-977,Penaeus spp,Coastal shrimp,multinational-FAO-CWA
+CSKATMATLC,160855,Raja eglanteria,Clearnose skate,USA-NMFS-MATLC
+CTRACSA,168598,Trachurus capensis,Cape horse mackerel,South Africa-DETMCM-SASC
+CUSK4X,164740,Brosme brosme,Cusk,Canada-DFO-4X
+CUSKI-II,164740,Brosme brosme,Tusk,multinational-ICES-I-II
+CUSKNEATL,164740,Brosme brosme,Tusk,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-XII-XIV
+CUSKVa-XIV,164740,Brosme brosme,Tusk,multinational-ICES-Va-XIV
+CUSKVIb,164740,Brosme brosme,Tusk,multinational-ICES-VIb
+CUSKXII,164740,Brosme brosme,Tusk,multinational-ICES-XII
+CUTTLECWAGHA,-976,Sepia spp,Cuttlefish,multinational-FAO-CWAGHA
+DAB2232,172881,Limanda limanda,Dab,multinational-ICES-22-32
+DABIIIa-IV,172881,Limanda limanda,Dab,multinational-ICES-IIIa-IV
+DEEPCHAKESA,164796,Merluccius paradoxus,Deep water cape hake,South Africa-DETMCM-SA
+DEEPFLATHEADSE,644351,Platycephalus conatus,Deepwater flathead,Australia-AFMA-SE
+DKROCKPCOAST,166715,Sebastes crameri,Darkblotched rockfish,USA-NMFS-PCOAST
+DOYSFS,-970,Ostrea chilensis,Dredge oyster,New Zealand-MFish-FS
+DRSHRIMPCWA,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-FAO-CWA
+DSKSHARGMATL,160268,Carcharhinus obscurus,Dusky shark,USA-NMFS-GMATL
+DSOLEGA,172887,Microstomus pacificus,Dover sole,USA-NMFS-GA
+DSOLEPCOAST,172887,Microstomus pacificus,Dover sole,USA-NMFS-PCOAST
+DSSMELTPAC,623381,Glossanodon semifasciatus,Deep sea smelt,Japan-FAJ-PAC
+DSSMELTSOJ,623381,Glossanodon semifasciatus,Deep sea smelt,Japan-FAJ-SOJ
+DUSROCKGA,644604,Sebastes variabilis,Dusky rockfish,USA-NMFS-GA
+EBASSGSA7,170317,Dicentrarchus labrax,European seabass,multinational-GFCM-GSA7
+EBASSIVbc-VII,170317,Dicentrarchus labrax,European seabass,multinational-ICES-IVbc-VII
+EBASSVIa-VIIb-j,170317,Dicentrarchus labrax,European seabass,multinational-ICES-VIa-VIIb-j
+EBASSVIIIab,170317,Dicentrarchus labrax,European seabass,multinational-ICES-VIIIab
+EBASSVIIIc-IXa,170317,Dicentrarchus labrax,European seabass,multinational-ICES-VIIIc-IXa
+ECSOLESASC,173040,Austroglossus pectoralis,East coast sole,South Africa-DETMCM-SASC
+EFLOUN2223,172894,Platichthys flesus,European flounder,multinational-ICES-2223
+EFLOUN2425,172894,Platichthys flesus,European flounder,multinational-ICES-2425
+EFLOUN26-28,172894,Platichthys flesus,European flounder,multinational-ICES-2628
+EFLOUN27-2932,172894,Platichthys flesus,European flounder,multinational-ICES-27-2932
+EFLOUNIIIa-IV,172894,Platichthys flesus,European flounder,multinational-ICES-IIIa-IV
+EPOLLIV-IIIa,164728,Pollachius pollachius,European pollack,multinational-ICES-IIIa-IV
+EPOLLVIII-IXa,164728,Pollachius pollachius,European pollack,multinational-ICES-VIII-IXa
+ESOLEHS,172921,Parophrys vetulus,English sole,Canada-DFO-HS
+ESOLEPCOAST,172921,Parophrys vetulus,English sole,USA-NMFS-PCOAST
+EULAPCOASTCCDU,162051,Thaleichthys pacificus,Eulachon,Canada-DFO-PCOASTCCDU
+EULAPCOASTFRDU,162051,Thaleichthys pacificus,Eulachon,Canada-DFO-PCOASTFRDU
+EULAPCOASTNSDU,162051,Thaleichthys pacificus,Eulachon,Canada-DFO-PCOASTNSDU
+FHFLOUNSOJ,616041,Hippoglossoides dubius,Flathead flounder,Japan-FAJ-SOJ
+FLSOLEBSAI,172875,Hippoglossoides elassodon,Flathead sole,USA-NMFS-BSAI
+FLSOLEGA,172875,Hippoglossoides elassodon,Flathead sole,USA-NMFS-GA
+FMEG8c9a,172834,Lepidorhombus boscii,Fourspotted megrim,multinational-ICES-VIIIc-IXa
+FSCADNWA,641982,Caranx rhonchus,False scad,multinational-FAO-NWA
+FSNAPOKWI,168905,Etelis coruscans,Flame snapper,Japan-FAJ-OKWI
+FTOOTHSHARATL,160409,Carcharhinus isodon,Finetooth shark,USA-NMFS-ATL
+GAGGM,167759,Mycteroperca microlepis,Gag,USA-NMFS-GM
+GAGSATLC,167759,Mycteroperca microlepis,Gag,USA-NMFS-SATLC
+GEMFISHNZ,550883,Rexea solandri,Common gemfish,New Zealand-MFish-NZ
+GEMFISHSE,550883,Rexea solandri,Common gemfish,Australia-AFMA-SE
+GFORKBMEDGSA9,164751,Phycis blennoides,Greater forkbeard,multinational-GFCM-GSA9
+GFORKNEATL,164751,Phycis blennoides,Greater forkbeard,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-X-XII-XIV
+GGRUNTCWAGAB-AGO,-988,Pomadasys spp,Grey grunt,multinational-FAO-CWAGAB-AGO
+GGRUNTCWAGIN-LBR,-988,Pomadasys spp,Grey grunt,multinational-FAO-CWAGIN-LBR
+GGURNIIIa-IV-VIId,167044,Eutrigla gurnardus,Grey gurnard,multinational-ICES-IIIa-IV-VIId
+GHAL01ABCDEF,172930,Reinhardtius hippoglossoides,Greenland halibut,multinational-NAFO-01ABCDEF
+GHAL23KLMNO,172930,Reinhardtius hippoglossoides,Greenland halibut,multinational-NAFO-23KLMNO
+GHAL4RST,172930,Reinhardtius hippoglossoides,Greenland halibut,Canada-DFO-4RST
+GHALBSAI,172930,Reinhardtius hippoglossoides,Greenland halibut,USA-NMFS-BSAI
+GHALNEAR,172930,Reinhardtius hippoglossoides,Greenland halibut,multinational-ICES-I-II
+GHALV-VI-XII-XIV,172930,Reinhardtius hippoglossoides,Greenland halibut,multinational-ICES-V-VI-XII-XIV
+GHBRMGSA7,647901,Sparus aurata,Gilthead seabream,multinational-GFCM-GSA7
+GJOBMHI,168926,Aprion virescens,Green jobfish,USA-NMFS-MHI
+GKCRABAI,660179,Lithodes aequispinus,Golden king crab,USA-NMFS-AI
+GKCRABAIES,660179,Lithodes aequispinus,Golden king crab,USA-NMFS-AIES
+GKCRABAIWS,660179,Lithodes aequispinus,Golden king crab,USA-NMFS-AIWS
+GKCRABPI,660179,Lithodes aequispinus,Golden king crab,USA-NMFS-PI
+GLGROUPSATLCGM,167695,Epinephelus itajara,Goliath grouper,USA-NMFS-SATLCGM
+GOLDREDNEAR,166781,Sebastes norvegicus,Golden redfish,multinational-ICES-I-II
+GOLDREDV-VI-XII-XIV,166781,Sebastes norvegicus,Golden redfish,multinational-ICES-V-VI-XII-XIV
+GOPHERSPCOAST,166767,Sebastes carnatus,Gopher rockfish,USA-NMFS-SPCOAST
+GPOCTOBSAI,557227,Enteroctopus dofleini,Giant Pacific octopus,USA-NMFS-BSAI
+GPOCTOGA,557227,Enteroctopus dofleini,Giant Pacific octopus,USA-NMFS-GA
+GRAMBERGM,168689,Seriola dumerili,Greater amberjack,USA-NMFS-GM
+GRAMBERSATLC,168689,Seriola dumerili,Greater amberjack,USA-NMFS-SATLC
+GRNSTROCKPCOAST,166717,Sebastes elongatus,Greenstriped rockfish,USA-NMFS-PCOAST
+GRSHRIMPMEDGSA10,96056,Aristaeomorpha foliacea,Giant red shrimp,multinational-GFCM-GSA10
+GRSHRIMPMEDGSA11,96056,Aristaeomorpha foliacea,Giant red shrimp,multinational-GFCM-GSA11
+GRSHRIMPMEDGSA12-16,96056,Aristaeomorpha foliacea,Giant red shrimp,multinational-GFCM-GSA12-16
+GRSHRIMPMEDGSA18-19,96056,Aristaeomorpha foliacea,Giant red shrimp,multinational-GFCM-GSA18-19
+GRSHRIMPMEDGSA9,96056,Aristaeomorpha foliacea,Giant red shrimp,multinational-GFCM-GSA9
+GRSNAPGM,168848,Lutjanus griseus,Gray snapper,USA-NMFS-GM
+GRSPROCKNCAL,166748,Sebastes chlorostictus,Greenspotted rockfish,USA-NMFS-NPCOAST
+GRSPROCKSCAL,166748,Sebastes chlorostictus,Greenspotted rockfish,USA-NMFS-SPCOAST
+GSSMELTI-II-IIIa-IV,162064,Argentina silus,Greater silver smelt,multinational-ICES-I-II-IIIa-IV
+GSSMELTVa-XIV,162064,Argentina silus,Greater silver smelt,multinational-ICES-Va-XIV
+GSSMELTVb-VIa,162064,Argentina silus,Greater silver smelt,multinational-ICES-Vb-VIa
+GSSMELTVIb-VII-VIII-IX-X-XII,162064,Argentina silus,Greater silver smelt,multinational-ICES-VIb-VII-VIII-IX-X-XII
+GSTRGZRSTA7,171064,Kathetostoma giganteum,Giant stargazer,New Zealand-MFish-STA7
+GTPRAWNNAUST,95644,Penaeus semisulcatus,Grooved tiger prawn,Australia-AFMA-NAUST
+GTREVMHI,168618,Caranx ignobilis,Giant trevally,USA-NMFS-MHI
+GTRIGGM,173138,Balistes capriscus,Gray triggerfish,USA-NMFS-GM
+GURCH4RST,157969,Strongylocentrotus droebachiensis,Green sea urchin,Canada-DFO-4RST
+HAD3LNO,164744,Melanogrammus aeglefinus,Haddock,multinational-NAFO-3LNO
+HAD3Ps,164744,Melanogrammus aeglefinus,Haddock,Canada-DFO-3Ps
+HAD4X5Y,164744,Melanogrammus aeglefinus,Haddock,Canada-DFO-4X5Y
+HAD5Y,164744,Melanogrammus aeglefinus,Haddock,USA-NMFS-5Y
+HADFAPL,164744,Melanogrammus aeglefinus,Haddock,multinational-ICES-Vb1
+HADGB,164744,Melanogrammus aeglefinus,Haddock,USA-NMFS-GB
+HADICE,164744,Melanogrammus aeglefinus,Haddock,multinational-ICES-Va
+HADIS,164744,Melanogrammus aeglefinus,Haddock,multinational-ICES-VIIa
+HADNEAR,164744,Melanogrammus aeglefinus,Haddock,multinational-ICES-I-II
+HADNS-IIIa,164744,Melanogrammus aeglefinus,Haddock,multinational-ICES-IIIa-IV
+HADNS-IIIa-VIa,164744,Melanogrammus aeglefinus,Haddock,multinational-ICES-NS-IIIa-VIa
+HADROCK,164744,Melanogrammus aeglefinus,Haddock,multinational-ICES-VIb
+HADVIa,164744,Melanogrammus aeglefinus,Haddock,multinational-ICES-VIa
+HADVIIb-k,164744,Melanogrammus aeglefinus,Haddock,multinational-ICES-VIIb-k
+HAKEMEDGSA15-16,164795,Merluccius merluccius,Hake,multinational-GFCM-GSA15-16
+HAKEMEDGSA1-7,164795,Merluccius merluccius,Hake,multinational-GFCM-GSA1-7
+HAKEMEDGSA17-18,164795,Merluccius merluccius,Hake,multinational-GFCM-GSA17-18
+HAKEMEDGSA19,164795,Merluccius merluccius,Hake,multinational-GFCM-GSA19
+HAKEMEDGSA20,164795,Merluccius merluccius,Hake,multinational-GFCM-GSA20
+HAKEMEDGSA22-23,164795,Merluccius merluccius,Hake,multinational-GFCM-GSA22-23
+HAKEMEDGSA7,164795,Merluccius merluccius,Hake,multinational-GFCM-GSA7
+HAKEMEDGSA9-11,164795,Merluccius merluccius,Hake,multinational-GFCM-GSA9-11
+HAKENRTN,164795,Merluccius merluccius,Hake,multinational-ICES-IIIa-IV-VI-VII-VIIIabd
+HAKENWAMAR,164795,Merluccius merluccius,Hake,multinational-FAO-NWAMAR
+HAKESOTH,164795,Merluccius merluccius,Hake,multinational-ICES-VIIIc-IXa
+HAKESPPNWA,-963,Merluccius spp,Hake spp,multinational-FAO-NWA
+HAKESPPSAF,-963,Merluccius spp,Hake spp,Namibia-NMFMR-SAF
+HERR2224IIIa,161722,Clupea harengus,Herring,multinational-ICES-22-24-IIIa
+HERR2529-32,161722,Clupea harengus,Herring,multinational-ICES-2529-32
+HERR2532,161722,Clupea harengus,Herring,multinational-ICES-25-32
+HERR30,161722,Clupea harengus,Herring,multinational-ICES-30
+HERR30-31,161722,Clupea harengus,Herring,multinational-ICES-30-31
+HERR31,161722,Clupea harengus,Herring,multinational-ICES-31
+HERR4RFA,161722,Clupea harengus,Herring,Canada-DFO-4RFS
+HERR4RSP,161722,Clupea harengus,Herring,Canada-DFO-4RSS
+HERR4S,161722,Clupea harengus,Herring,Canada-DFO-4S
+HERR4SFS,161722,Clupea harengus,Herring,Canada-DFO-4SFS
+HERR4SSS,161722,Clupea harengus,Herring,Canada-DFO-4SSS
+HERR4TFA,161722,Clupea harengus,Herring,Canada-DFO-4TFS
+HERR4TSP,161722,Clupea harengus,Herring,Canada-DFO-4TSS
+HERR4VWX,161722,Clupea harengus,Herring,Canada-DFO-4VWX
+HERRCC,551209,Clupea pallasii,Pacific herring,Canada-DFO-CC
+HERRHOKK,551209,Clupea pallasii,Pacific herring,Japan-FAJ-HOKK
+HERRIsum,161722,Clupea harengus,Herring,multinational-ICES-VaSS
+HERRNFLDESC,161722,Clupea harengus,Herring,Canada-DFO-NFLDESC
+HERRNIRS,161722,Clupea harengus,Herring,multinational-ICES-VIIa
+HERRNORSS,161722,Clupea harengus,Herring,multinational-ICES-I-II-IVa-V-XIVaNSS
+HERRNS-IIIa-VIId,161722,Clupea harengus,Herring,multinational-ICES-IIIa-IV-VIId
+HERRNWATLC,161722,Clupea harengus,Herring,USA-NMFS-NWATLC
+HERRPRD,551209,Clupea pallasii,Pacific herring,Canada-DFO-PRD
+HERRPWS,551209,Clupea pallasii,Pacific herring,USA-AKSTATE-PWS
+HERRQCI,551209,Clupea pallasii,Pacific herring,Canada-DFO-QCI
+HERRRIGA,161722,Clupea harengus,Herring,multinational-ICES-RIGA
+HERRSIRS,161722,Clupea harengus,Herring,multinational-ICES-VIIa-g-h-j-k
+HERRSITKA,551209,Clupea pallasii,Pacific herring,USA-AKSTATE-SITKA
+HERRSOG,551209,Clupea pallasii,Pacific herring,Canada-DFO-SOG
+HERRTOG,551209,Clupea pallasii,Pacific herring,USA-AKSTATE-TOG
+HERRVIa,161722,Clupea harengus,Herring,multinational-ICES-VIa
+HERRVIaVIIbc,161722,Clupea harengus,Herring,multinational-ICES-VIa-VIIb-VIIc
+HERRWCVANI,551209,Clupea pallasii,Pacific herring,Canada-DFO-WCVANI
+HHTILEECS,645602,Branchiostegus japonicus,Horsehead tilefish,Japan-FAJ-ECS
+HMACKIIa-IVa-Vb-VIa-VII-VIII,168588,Trachurus trachurus,Horse mackerel,multinational-ICES-IIa-IVa-Vb-VIa-VII-VIII
+HMACKIIIa-IVbc-VIId,168588,Trachurus trachurus,Horse mackerel,multinational-ICES-IIIa-IVbc-VIId
+HMACKIXa,168588,Trachurus trachurus,Horse mackerel,multinational-ICES-IXa
+HMACKNWA,168588,Trachurus trachurus,Horse mackerel,multinational-FAO-NWA
+HOGFISHEGM,170566,Lachnolaimus maximus,Hogfish,USA-NMFS-EGM
+HOGFISHSEFL,170566,Lachnolaimus maximus,Hogfish,USA-NMFS-SEFL
+HOKIENZ,623193,Macruronus novaezelandiae,Hoki,New Zealand-MFish-ENZ
+HOKIWNZ,623193,Macruronus novaezelandiae,Hoki,New Zealand-MFish-WNZ
+ILLEXNWATLC,82521,Illex illecebrosus,Northern shortfin squid,USA-NMFS-NWATLC
+JAMBERJPN,168698,Seriola quinqueradiata,Japanese amberjack,Japan-FAJ-JPN
+JANCHOPJPN,161835,Engraulis japonicus,Japanese anchovy,Japan-FAJ-PJPN
+JANCHOSETO,161835,Engraulis japonicus,Japanese anchovy,Japan-FAJ-SETO
+JANCHOTSST,161835,Engraulis japonicus,Japanese anchovy,Japan-FAJ-TSST
+JCSQUIDJPNAR,557230,Todarodes pacificus,Japanese flying squid,Japan-FAJ-JPNAR
+JCSQUIDJPNWR,557230,Todarodes pacificus,Japanese flying squid,Japan-FAJ-JPNWR
+JMACKPJPN,642012,Trachurus japonicus,Japanese jack mackerel,Japan-FAJ-PJPN
+JMACKTSST,642012,Trachurus japonicus,Japanese jack mackerel,Japan-FAJ-TSST
+JPUFFIMKB,646410,Takifugu rubripes,Japanese pufferfish,Japan-FAJ-IMKB
+JPUFFSOJECSSI,646410,Takifugu rubripes,Japanese pufferfish,Japan-FAJ-SOJECSSI
+JSNAPOKWI,643076,Paracaesio caerulea,Japanese snapper,Japan-FAJ-OKWI
+KCROCKNPAC,166785,Sebastolobus macrochir,Kichiji rockfish,Japan-FAJ-NPAC
+KCROCKOKS,166785,Sebastolobus macrochir,Kichiji rockfish,Japan-FAJ-OKS
+KCROCKSWHOKK,166785,Sebastolobus macrochir,Kichiji rockfish,Japan-FAJ-SWHOKK
+KELPGREENLINGORECOAST,167110,Hexagrammos decagrammus,Kelp greenling,USA-NMFS-ORECOAST
+KFSHARNEATL,160651,Dalatias licha,Kitefin shark,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-X-XII-XIV
+KINGKLIPSA,165001,Genypterus capensis,Kingklip,South Africa-DETMCM-SA
+KMACKGM,172435,Scomberomorus cavalla,King mackerel,USA-NMFS-GM
+KMACKSATLC,172435,Scomberomorus cavalla,King mackerel,USA-NMFS-SATLC
+KMFLOUNBSAI,172861,Atheresthes evermanni,Kamchatka flounder,USA-NMFS-BSAI
+LCODLINGPAC,550672,Laemonema longipes,Longfin codling,Japan-FAJ-PAC
+LDENTCWAAGO,169221,Dentex macrophthalmus,Large eye dentex,multinational-FAO-CWAAGO
+LGSHARNEATL,160635,Centrophorus squamosus,Leafscale gulper shark,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-XII-XIV
+LHAIRTSOJECS,172385,Trichiurus lepturus,Largehead hairtail,Japan-FAJ-SOJECS
+LINGCODNPCOAST,167116,Ophiodon elongatus,Lingcod,USA-NMFS-NPCOAST
+LINGCODSOG,167116,Ophiodon elongatus,Lingcod,Canada-DFO-SOG
+LINGCODSPCOAST,167116,Ophiodon elongatus,Lingcod,USA-NMFS-SPCOAST
+LINGI-II,164760,Molva molva,Ling,multinational-ICES-I-II
+LINGNEATL,164760,Molva molva,Ling,multinational-ICES-IIIa-IVa-VI-VII-VIII-IX-XII-XIV
+LINGVa,164760,Molva molva,Ling,multinational-ICES-Va
+LINGVb,164760,Molva molva,Ling,multinational-ICES-Vb
+LISQUIDATLC,82372,Loligo pealeii,Longfin inshore squid,USA-NMFS-ATLC
+LJOBOKWI,168918,Pristipomoides sieboldii,Lavender jobfish,Japan-FAJ-OKWI
+LNOSESKA3CD,160851,Raja rhina,Longnose skate,Canada-DFO-WCVANI
+LNOSESKA4B,160851,Raja rhina,Longnose skate,Canada-DFO-SOG
+LNOSESKA5AB,160851,Raja rhina,Longnose skate,Canada-DFO-5AB
+LNOSESKA5CDE,160851,Raja rhina,Longnose skate,Canada-DFO-HS
+LNOSESKAPCOAST,160851,Raja rhina,Longnose skate,USA-NMFS-PCOAST
+LNSNAPGM,168860,Lutjanus synagris,Lane snapper,USA-NMFS-GM
+LOBSTERGB,97314,Homarus americanus,American lobster,USA-NMFS-5Z
+LOBSTERGOM,97314,Homarus americanus,American lobster,USA-NMFS-5Y
+LOBSTERLFA15-18,97314,Homarus americanus,American lobster,Canada-DFO-LFA15-18
+LOBSTERLFA19-21,97314,Homarus americanus,American lobster,Canada-DFO-LFA19-21
+LOBSTERLFA22,97314,Homarus americanus,American lobster,Canada-DFO-LFA22
+LOBSTERLFA23-26AB,97314,Homarus americanus,American lobster,Canada-DFO-LFA23-26AB
+LOBSTERLFA27-33,97314,Homarus americanus,American lobster,Canada-DFO-LFA27-33
+LOBSTERLFA3-14,97314,Homarus americanus,American lobster,Canada-DFO-LFA3-14
+LOBSTERLFA34,97314,Homarus americanus,American lobster,Canada-DFO-LFA34
+LOBSTERLFA35-38,97314,Homarus americanus,American lobster,Canada-DFO-LFA35-38
+LOBSTERLFA41,97314,Homarus americanus,American lobster,Canada-DFO-LFA41
+LOBSTERSNE,97314,Homarus americanus,American lobster,USA-NMFS-SNE
+LSDOGIIIa-IV-VIId,160065,Scyliorhinus canicula,Lesser spotted dogfish,multinational-ICES-IIIa-IV-VIId
+LSDOGVIIIabd,160065,Scyliorhinus canicula,Lesser spotted dogfish,multinational-ICES-VIIIabd
+LSDOGVIIIc-IXa,160065,Scyliorhinus canicula,Lesser spotted dogfish,multinational-ICES-VIIIc-IXa
+LSDOGVI-VIIabcefghij,160065,Scyliorhinus canicula,Lesser spotted dogfish,multinational-ICES-VI-VIIabcefghij
+LSKAT5YCHATT,564130,Leucoraja erinacea,Little skate,USA-NMFS-5YCHATT
+LSOLEIIIa-IV-VIId,172888,Microstomus kitt,Lemon sole,multinational-ICES-IIIa-IV-VIId
+LSTHORNHPCOAST,166784,Sebastolobus altivelis,Longspine thornyhead,USA-NMFS-PCOAST
+LUMP3Pn4RS,167612,Cyclopterus lumpus,Lumpfish,Canada-DFO-3Pn4RS
+MACK5YCHATT,172414,Scomber scombrus,Atlantic mackerel,USA-NMFS-5YCHATT
+MACKNEICES,172414,Scomber scombrus,Mackerel,multinational-ICES-IIa-IIIabd-IV-Vb-VI-VII-VIIIabcde-XII-XIV-Ixa
+MACKNWATLSA3-4,172414,Scomber scombrus,Mackerel,Canada-DFO-NWATLSA3-4
+MEG8c9a,172835,Lepidorhombus whiffiagonis,Megrim,multinational-ICES-VIIIc-IXa
+MEGSPPIVa-VIa,172833,Lepidorhombus spp,Megrim spp,multinational-ICES-IVa-VIa
+MEGSPPVIb,172833,Lepidorhombus spp,Megrim spp,multinational-ICES-VIb
+MEGVII-VIIIabd,172835,Lepidorhombus whiffiagonis,Megrim,multinational-ICES-VII-VIIIabd
+MENATGM,161734,Brevoortia patronus,Gulf menhaden,USA-NMFS-GM
+MENATLAN,161732,Brevoortia tyrannus,Atlantic menhaden,USA-NMFS-ATL
+MHMACKMEDGSA29,168590,Trachurus mediterraneus,Mediterranean horse mackerel,multinational-GFCM-GSA29
+MONK2J3KLNOPs,164499,Lophius americanus,Monkfish,Canada-DFO-2J3KLNOPs
+MONK3LNOPs,164499,Lophius americanus,Monkfish,Canada-DFO-3LNOPs
+MONKGOMNGB,164499,Lophius americanus,Monkfish,USA-NMFS-GOMNGB
+MONKSGBMATL,164499,Lophius americanus,Monkfish,USA-NMFS-SGBMATL
+MORWONGESE,170262,Nemadactylus macropterus,Jackass morwong,Australia-AFMA-ESE
+MORWONGSE,170262,Nemadactylus macropterus,Jackass morwong,Australia-AFMA-SE
+MORWONGWSE,170262,Nemadactylus macropterus,Jackass morwong,Australia-AFMA-WSE
+MSARDCWACIV-BEN,161831,Sardinella maderensis,Madeiran sardinella,multinational-FAO-CWACIV-BEN
+MSARDNWA,161831,Sardinella maderensis,Madeiran sardinella,multinational-FAO-NWA
+MULLQNSW,170335,Mugil cephalus,Sea mullet,Australia-DPIF-QNSW
+MUTSNAPSATLCGM,168849,Lutjanus analis,Mutton snapper,USA-NMFS-SATLCGM
+NEPHFU10,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU10
+NEPHFU11,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU11
+NEPHFU12,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU12
+NEPHFU13,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU13
+NEPHFU14,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU14
+NEPHFU15,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU15
+NEPHFU16,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU16
+NEPHFU17,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU17
+NEPHFU19,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU19
+NEPHFU2021,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU2021
+NEPHFU22,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU22
+NEPHFU25,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU25
+NEPHFU2627,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU2627
+NEPHFU2829,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU2829
+NEPHFU30,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU30
+NEPHFU31,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU31
+NEPHFU32,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU32
+NEPHFU33,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU33
+NEPHFU34,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU34
+NEPHFU3-4,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU3-4
+NEPHFU5,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU5
+NEPHFU6,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU6
+NEPHFU7,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU7
+NEPHFU8,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU8
+NEPHFU9,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-FU9
+NEPHIV,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-IV
+NEPHMEDGSA1,97317,Nephrops norvegicus,Norway lobster,multinational-GFCM-GSA1
+NEPHMEDGSA11,97317,Nephrops norvegicus,Norway lobster,multinational-GFCM-GSA11
+NEPHMEDGSA15-16,97317,Nephrops norvegicus,Norway lobster,multinational-GFCM-GSA15-16
+NEPHMEDGSA17,97317,Nephrops norvegicus,Norway lobster,multinational-GFCM-GSA17
+NEPHMEDGSA17-18,97317,Nephrops norvegicus,Norway lobster,multinational-GFCM-GSA17-18
+NEPHMEDGSA18,97317,Nephrops norvegicus,Norway lobster,multinational-GFCM-GSA18
+NEPHMEDGSA5,97317,Nephrops norvegicus,Norway lobster,multinational-GFCM-GSA5
+NEPHMEDGSA6,97317,Nephrops norvegicus,Norway lobster,multinational-GFCM-GSA6
+NEPHMEDGSA9,97317,Nephrops norvegicus,Norway lobster,multinational-GFCM-GSA9
+NEPHVIa,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-VIa
+NEPHVII,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-VII
+NEPHVIIIab,97317,Nephrops norvegicus,Norway lobster,multinational-ICES-VIIIab
+NPOUTIIIa-IV,164756,Trisopterus esmarkii,Norway pout,multinational-ICES-IIIa-IV
+NPOUTVIa,164756,Trisopterus esmarkii,Norway pout,multinational-ICES-VIa
+NROCKBSAI,166735,Sebastes polyspinis,Northern rockfish,USA-NMFS-BSAI
+NROCKGA,166735,Sebastes polyspinis,Northern rockfish,USA-NMFS-GA
+NRSOLEEBSAI,616392,Lepidopsetta polyxystra,Northern rock sole,USA-NMFS-EBSAI
+NRSOLEGA,616392,Lepidopsetta polyxystra,Northern rock sole,USA-NMFS-GA
+NSHRIMPCH,97075,Heterocarpus reedi,Nylon shrimp,Chile-SUBPESCA-CH
+NSHRIMPCSCH,97075,Heterocarpus reedi,Nylon shrimp,Chile-SUBPESCA-CH-CS
+NSHRIMPNCH,97075,Heterocarpus reedi,Nylon shrimp,Chile-SUBPESCA-CH-N
+NZLINGESE,165000,Genypterus blacodes,Ling,Australia-AFMA-SE
+NZLINGLIN3-4,165000,Genypterus blacodes,Ling,New Zealand-MFish-LIN3-4
+NZLINGLIN5-6,165000,Genypterus blacodes,Ling,New Zealand-MFish-LIN5-6
+NZLINGLIN6b,165000,Genypterus blacodes,Ling,New Zealand-MFish-LIN6b
+NZLINGLIN72,165000,Genypterus blacodes,Ling,New Zealand-MFish-LIN72
+NZLINGLIN7WC,165000,Genypterus blacodes,Ling,New Zealand-MFish-LIN7WC-WCSI
+NZLINGWSE,165000,Genypterus blacodes,Ling,Australia-AFMA-WSE
+NZSNAPNZ1BOP-HAGU,169231,Chrysophrys auratus,New Zealand snapper,New Zealand-MFish-SNA1-BOP-HAGU
+NZSNAPNZ1ENLD,169231,Chrysophrys auratus,New Zealand snapper,New Zealand-MFish-SNA-1-ENLD
+NZSNAPNZ7,169231,Chrysophrys auratus,New Zealand snapper,New Zealand-MFish-SNA-7
+NZSNAPNZ8,169231,Chrysophrys auratus,New Zealand snapper,New Zealand-MFish-8
+OCTOCWAGNB,82603,Octopus vulgaris,Octopus,multinational-FAO-CWAGNB
+OFLOUNECS,172744,Paralichthys olivaceus,Japanese flounder,Japan-FAJ-ECS
+OFLOUNNSJ,172744,Paralichthys olivaceus,Japanese flounder,Japan-FAJ-NSJ
+OFLOUNPAC,172744,Paralichthys olivaceus,Japanese flounder,Japan-FAJ-PAC
+OFLOUNSETO,172744,Paralichthys olivaceus,Japanese flounder,Japan-FAJ-SETO
+OPOUTNWATLC,630979,Zoarces americanus,Ocean pout,USA-NMFS-NWATLC
+OROUGHYCASCADE,166139,Hoplostethus atlanticus,Orange roughy,Australia-AFMA-CASCADE
+OROUGHYCH,166139,Hoplostethus atlanticus,Orange roughy,multinational-SPRFMO-CHL
+OROUGHYCR,166139,Hoplostethus atlanticus,Orange roughy,New Zealand-MFish-CR
+OROUGHYESCR,166139,Hoplostethus atlanticus,Orange roughy,New Zealand-MFish-ESCR
+OROUGHYNEATL,166139,Hoplostethus atlanticus,Orange roughy,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-XII-XIV
+OROUGHYNWCR,166139,Hoplostethus atlanticus,Orange roughy,New Zealand-MFish-NWCR
+OROUGHYNZ7A,166139,Hoplostethus atlanticus,Orange roughy,New Zealand-MFish-NZ7A
+OROUGHYNZMEC,166139,Hoplostethus atlanticus,Orange roughy,New Zealand-MFish-NZMEC
+OROUGHYSE,166139,Hoplostethus atlanticus,Orange roughy,Australia-AFMA-SE
+PACBTUNA,172422,Thunnus orientalis,Pacific bluefin tuna,multinational-ISC-PAC
+PANCHCCH,551340,Engraulis ringens,Peruvian anchoveta,Chile-SUBPESCA-CH-C
+PANCHCHVX,551340,Engraulis ringens,Peruvian anchoveta,Chile-SUBPESCA-CHV-X
+PANCHCSCH,551340,Engraulis ringens,Peruvian anchoveta,Chile-SUBPESCA-CH-CS
+PANCHNCH,551340,Engraulis ringens,Peruvian anchoveta,Chile-SUBPESCA-CH-N
+PANCHNCHSP,551340,Engraulis ringens,Peruvian anchoveta,Chile-SUBPESCA-NCH-SP
+PANCHPERUNC,551340,Engraulis ringens,Peruvian anchoveta,Peru-IMARPE-NC
+PANCHSCH,551340,Engraulis ringens,Peruvian anchoveta,Chile-SUBPESCA-CH-S
+PANDAL2G-3K,96967,Pandalus borealis,Northern shrimp,Canada-DFO-2G-3K
+PANDAL4RST,96967,Pandalus borealis,Northern shrimp,Canada-DFO-4RST
+PANDALGOM,96967,Pandalus borealis,Northern shrimp,USA-NMFS-5Y
+PANDALICBC,96970,Pandalus jordani,Ocean shrimp,Canada-DFO-ICBC
+PANDALI-II,96967,Pandalus borealis,Northern shrimp,multinational-ICES-I-II
+PANDALIIIaW-IVaE,96967,Pandalus borealis,Northern shrimp,multinational-ICES-IIIaW-IVaE
+PANDALIVa,96967,Pandalus borealis,Northern shrimp,multinational-ICES-IVa
+PANDALSFA13-15,96967,Pandalus borealis,Northern shrimp,Canada-DFO-SFA13-15
+PANDALSFA2-3,96967,Pandalus borealis,Northern shrimp,Canada-DFO-SFA2-3
+PANDALSFA4,96967,Pandalus borealis,Northern shrimp,Canada-DFO-SFA4
+PANDALSFA5,96967,Pandalus borealis,Northern shrimp,Canada-DFO-SFA5
+PANDALSFA6,96967,Pandalus borealis,Northern shrimp,Canada-DFO-SFA6
+PANDALSMA14,96970,Pandalus jordani,Ocean shrimp,Canada-DFO-SMA-14
+PANDALSMA16,96970,Pandalus jordani,Ocean shrimp,Canada-DFO-SMA-16
+PANDALSMA18-19,96970,Pandalus jordani,Ocean shrimp,Canada-DFO-SMA-18-19
+PANDALSMAFR,96970,Pandalus jordani,Ocean shrimp,Canada-DFO-SMA-FR
+PANDALSMAGTSE,96970,Pandalus jordani,Ocean shrimp,Canada-DFO-SMA-GTSE
+PANDALSMAPRD,96970,Pandalus jordani,Ocean shrimp,Canada-DFO-SMA-PRD
+PATCODARGS,550679,Salilota australis,Patagonian cod,Argentina-CFP-ARG-S
+PATGRENADIERCH,550662,Macruronus magellanicus,Patagonian grenadier,Chile-SUBPESCA-CH-CS
+PATGRENADIERSARG,550662,Macruronus magellanicus,Patagonian grenadier,Argentina-CFP-ARG-S
+PAUANPAU5A,-997,Haliotis iris,Paua,New Zealand-MFish-NPAU5A
+PAUAPAU5B,-997,Haliotis iris,Paua,New Zealand-MFish-PAU5B
+PAUAPAU5D,-997,Haliotis iris,Paua,New Zealand-MFish-PAU5D
+PAUAPAU7,-997,Haliotis iris,Paua,New Zealand-MFish-PAU7
+PAUASPAU5A,-997,Haliotis iris,Paua,New Zealand-MFish-SPAU5A
+PCEELARGS,165000,Genypterus blacodes,Pink cusk eel,Argentina-CFP-ARG-S
+PCEELCH,165000,Genypterus blacodes,Pink cusk eel,Chile-SUBPESCA-CH
+PCEELCSCH,165000,Genypterus blacodes,Pink cusk eel,Chile-SUBPESCA-CH-CS
+PCEELSCH,165000,Genypterus blacodes,Pink cusk eel,Chile-SUBPESCA-CH-S
+PCOD5AB,164711,Gadus macrocephalus,Pacific cod,Canada-DFO-5AB
+PCOD5ABCD,164711,Gadus macrocephalus,Pacific cod,Canada-DFO-5ABCD
+PCODAI,164711,Gadus macrocephalus,Pacific cod,USA-NMFS-AI
+PCODBS,164711,Gadus macrocephalus,Pacific cod,USA-NMFS-BS
+PCODBSAI,164711,Gadus macrocephalus,Pacific cod,USA-NMFS-BSAI
+PCODGA,164711,Gadus macrocephalus,Pacific cod,USA-NMFS-GA
+PCODHOKK,164711,Gadus macrocephalus,Pacific cod,Japan-FAJ-HOKK
+PCODHS,164711,Gadus macrocephalus,Pacific cod,Canada-DFO-HS
+PCODNPAC,164711,Gadus macrocephalus,Pacific cod,Japan-FAJ-NPAC
+PCODSOJ,164711,Gadus macrocephalus,Pacific cod,Japan-FAJ-SOJ
+PCODWCVANI,164711,Gadus macrocephalus,Pacific cod,Canada-DFO-WCVANI
+PERCHEBSAI,166707,Sebastes alutus,Pacific ocean perch,USA-NMFS-EBSAI
+PERCHQCI,166707,Sebastes alutus,Pacific ocean perch,Canada-DFO-HG
+PERCHWCVANI,166707,Sebastes alutus,Pacific ocean perch,Canada-DFO-WCVANI
+PGEODWA,81777,Panopea generosa,Pacific geoduck,USA-WASTATE-WA
+PHAKEPCOAST,164792,Merluccius productus,Pacific hake,USA-NMFS-PCOAST
+PHALNPAC,172932,Hippoglossus stenolepis,Pacific halibut,multinational-IPHC-NPAC
+PHFLOUNNHOKK,172966,Cleisthenes herzensteini,Pointhead flounder,Japan-FAJ-NHOKK
+PHFLOUNSOJ,172966,Cleisthenes herzensteini,Pointhead flounder,Japan-FAJ-SOJ
+PICAMEDGSA25,647991,Spicara smaris,Picarel,multinational-GFCM-GSA25
+PILCHPJPN,551222,Sardinops melanostictus,Japanese sardine,Japan-FAJ-PJPN
+PILCHTSST,551222,Sardinops melanostictus,Japanese sardine,Japan-FAJ-TSST
+PINKSHRIMPGM,551574,Farfantepenaeus duorarum,Pink shrimp,USA-NMFS-GM
+PLAIC2123,172902,Pleuronectes platessa,European plaice,multinational-ICES-2123
+PLAIC2432,172902,Pleuronectes platessa,European plaice,multinational-ICES-2432
+PLAIC7d,172902,Pleuronectes platessa,European plaice,multinational-ICES-VIId
+PLAICCELT,172902,Pleuronectes platessa,European plaice,multinational-ICES-VIIf-g
+PLAICECHW,172902,Pleuronectes platessa,European plaice,multinational-ICES-VIIe
+PLAICIIIa,172902,Pleuronectes platessa,European plaice,multinational-ICES-IIIa
+PLAICIS,172902,Pleuronectes platessa,European plaice,multinational-ICES-VIIa
+PLAICNS,172902,Pleuronectes platessa,European plaice,multinational-ICES-IV
+PLAICVIIbc,172902,Pleuronectes platessa,European plaice,multinational-ICES-VIIbc
+PLAICVIIh-k,172902,Pleuronectes platessa,European plaice,multinational-ICES-VIIh-k
+PLAICVIII-IXa,172902,Pleuronectes platessa,European plaice,multinational-ICES-VIII-IXa
+POLL3Ps,164727,Pollachius virens,Pollock,Canada-DFO-3Ps
+POLL4VWX,164727,Pollachius virens,Pollock,Canada-DFO-4VWX
+POLL4VWX5,164727,Pollachius virens,Pollock,Canada-DFO-4VWX5
+POLL5YZ,164727,Pollachius virens,Pollock,USA-NMFS-5YZ
+POLLFAPL,164727,Pollachius virens,Pollock,multinational-ICES-Vb1
+POLLIEG,164727,Pollachius virens,Pollock,multinational-ICES-Va
+POLLNEAR,164727,Pollachius virens,Pollock,multinational-ICES-I-II
+POLLNS-VI-IIIa,164727,Pollachius virens,Pollock,multinational-ICES-IIIa-IV-VI
+POPERCHGA,166707,Sebastes alutus,Pacific ocean perch,USA-NMFS-GA
+POPERCHPCOAST,166707,Sebastes alutus,Pacific ocean perch,USA-NMFS-PCOAST
+PORSHARATL,159911,Lamna nasus,Porbeagle shark,Canada-DFO-ATL
+PORSHARNEATL,159911,Lamna nasus,Porbeagle shark,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-X-XII-XIV
+PRCODMEDGSA9,164754,Trisopterus minutus,Poor cod,multinational-GFCM-GSA9
+PSALMA1,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A1
+PSALMA10,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A10
+PSALMA12,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A12
+PSALMA13,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A13
+PSALMA21-27,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A21-27
+PSALMA2E,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A2E
+PSALMA2W,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A2W
+PSALMA3,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A3
+PSALMA4,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A4
+PSALMA5,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A5
+PSALMA6,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A6
+PSALMA7,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A7
+PSALMA8,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A8
+PSALMA9,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-A9
+PSALMAFFLECKCI,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-AFFLECKCI
+PSALMAFOGNAKD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-AFOGNAKD
+PSALMAIALIKL,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-AIALIKL
+PSALMAKPNWD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-AKPNWD
+PSALMAKPSESCD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-AKPSESCD
+PSALMAKPSWUD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-AKPSWUD
+PSALMALITAKD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-ALITAKD
+PSALMAMAKC,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-AMAKC
+PSALMAMURPW,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-AMURPW
+PSALMANADYRPW,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-ANADYRPW
+PSALMANAN,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-ANAN
+PSALMATNARKO,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-ATNARKO
+PSALMAUKEC,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-AUKEC
+PSALMBARABARA,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-BARABARA
+PSALMBARANOFE,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-BARANOFE
+PSALMBKAMISHAKR,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-BKAMISHAKR
+PSALMBONDS,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-BONDS
+PSALMBRUINR,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-BRUINR
+PSALMBURNETT,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-BURNETT
+PSALMBURR,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-BURR
+PSALMBUTEI,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-BUTEI
+PSALMBWLAB,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-BWLAB
+PSALMCHIGNIKBD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-CHIGNIKBD
+PSALMCHIGNIKCD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-CHIGNIKCD
+PSALMCHIGNIKED,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-CHIGNIKED
+PSALMCHIGNIKWD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-CHIGNIKWD
+PSALMCHINAP,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-CHINAP
+PSALMCHV,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-CHV
+PSALMCOGHILLD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-COGHILLD
+PSALMDOGFISH,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-DOGFISH
+PSALMDOSEWHC,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-DOSEWHC
+PSALMDUCKA,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-DUCKA
+PSALMDUNGENHC,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-DUNGENHC
+PSALMEBEHM,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-EBEHM
+PSALMEDALL,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-EDALL
+PSALMEKAMPW,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-EKAMPW
+PSALMELIZAH,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-ELIZAH
+PSALMESAKPH,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-ESAKPH
+PSALMESAKPW,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-ESAKPW
+PSALMESHAMYD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-ESHAMYD
+PSALMESND,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-ESND
+PSALMFARRAGUT,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-FARRAGUT
+PSALMFRESHWB,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-FRESHWB
+PSALMGEOHOWE,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-GEOHOWE
+PSALMGOLOVIN,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-GOLOVIN
+PSALMHARR,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-HARR
+PSALMHETTA,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-HETTA
+PSALMHHAMMAHC,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-HHAMMAHC
+PSALMHOMES,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-HOMES
+PSALMHOMFROY,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-HOMFROY
+PSALMHOOKC,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-HOOKC
+PSALMHOONAHS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-HOONAHS
+PSALMHOUGHTON,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-HOUGHTON
+PSALMHSPH,161975,Oncorhynchus gorbuscha,Pink salmon,Japan-FAJ-HSPH
+PSALMHSPW,161975,Oncorhynchus gorbuscha,Pink salmon,Japan-FAJ-HSPW
+PSALMHUMPCY,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-HUMPCY
+PSALMHUMPYCCISD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-HUMPYCCISD
+PSALMIGUSHIK,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-IGUSHIK
+PSALMJAMESLOD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-JAMESLOD
+PSALMJCPH,161975,Oncorhynchus gorbuscha,Pink salmon,Japan-FAJ-JCPH
+PSALMJCPW,161975,Oncorhynchus gorbuscha,Pink salmon,Japan-FAJ-JCPW
+PSALMJERVISI,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-JERVISI
+PSALMJOHNS,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-JOHNS
+PSALMJOHNST,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-JOHNST
+PSALMKASAAN,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-KASAAN
+PSALMKELPB,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-KELPB
+PSALMKINGCOME,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-KINGCOME
+PSALMKLAWOCK,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-KLAWOCK
+PSALMKNIGHT,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-KNIGHT
+PSALMKODIAKMD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-KODIAKMD
+PSALMKODIAKWD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-KODIAKWD
+PSALMKUSKOKWIM,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-KUSKOKWIM
+PSALMLISIANSKI,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-LISIANSKI
+PSALMLKAMR,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-LKAMR
+PSALMLOUGHB,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-LOUGHB
+PSALMLYNNCD112,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-LYNNCD112
+PSALMLYNNCD115,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-LYNNCD115
+PSALMMALAS,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-MALAS
+PSALMMFRASE,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-MFRASE
+PSALMMOIRA,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-MOIRA
+PSALMMONTD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-MONTD
+PSALMMPNBNS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-MPNBNS
+PSALMNCHICHAGO,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-NCHICHAGO
+PSALMNISQPS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-NISQPS
+PSALMNKINGCOME,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-NKINGCOME
+PSALMNOME,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-NOME
+PSALMNOOKSPS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-NOOKSPS
+PSALMNUNAKWIKD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-NUNAKWIKD
+PSALMNUSHAGAKR,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-NUSHAGAKR
+PSALMOKPH,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-OKPH
+PSALMOKPW,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-OKPW
+PSALMPCHATHAM,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PCHATHAM
+PSALMPDICK,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PDICK
+PSALMPERRYVILLED,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PERRYVILLED
+PSALMPGRAHAMSD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PGRAHAMSD
+PSALMPORTAGEB,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PORTAGEB
+PSALMPORTLAND,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PORTLAND
+PSALMPORTLOCK,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PORTLOCK
+PSALMPRIMPW,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-PRIMPW
+PSALMPUYALLUPPS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-PUYALLUPPS
+PSALMPWSED,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PWSED
+PSALMPWSNWD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PWSNWD
+PSALMPWSSED,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PWSSED
+PSALMPWSSWD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PWSSWD
+PSALMPYBUSGA,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-PYBUSGA
+PSALMQUATR,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-QUATR
+PSALMRATZH,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-RATZH
+PSALMRESB,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-RESB
+PSALMROCKYROD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-ROCKYROD
+PSALMSAGINWB,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SAGINWB
+PSALMSAKP,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SAKP
+PSALMSALISBURY,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SALISBURY
+PSALMSASHINCNI,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SASHINCNI
+PSALMSBPCKD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SBPCKD
+PSALMSEAOTTER,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SEAOTTER
+PSALMSEBARAN,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SEBARAN
+PSALMSECHELT,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-SECHELT
+PSALMSELDOVIAB,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SELDOVIAB
+PSALMSETONA,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-SETONA
+PSALMSEYMOUR,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SEYMOUR
+PSALMSHAKTOOLIKNS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SHAKTOOLIKNS
+PSALMSHIPLEY,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SHIPLEY
+PSALMSITKAS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SITKAS
+PSALMSITUKR,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SITUKR
+PSALMSKAGPS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-SKAGPS
+PSALMSKEENALR,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-SKEENALR
+PSALMSLIAMMON,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-SLIAMMON
+PSALMSLOCUM,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SLOCUM
+PSALMSNAKER,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SNAKER
+PSALMSNOHPS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-SNOHPS
+PSALMSQUAMISH,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-SQUAMISH
+PSALMSTEPHENS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-STEPHENS
+PSALMSTIKINE,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-STIKINE
+PSALMSTILLAPS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-WASTATE-STILLAPS
+PSALMSUNDC,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-SUNDC
+PSALMSUTILC,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-SUTILC
+PSALMSWADMIR,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-SWADMIR
+PSALMTANAKEE,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-TANAKEE
+PSALMTEBENKOF,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-TEBENKOF
+PSALMTHOMPSON,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-THOMPSON
+PSALMTOBAI,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-TOBAI
+PSALMTOTEMB,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-TOTEMB
+PSALMTUTKASD,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-TUTKASD
+PSALMUCOOKI,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-UCOOKI
+PSALMUNALAKLEETNS,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-UNALAKLEETNS
+PSALMUNIONB,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-UNIONB
+PSALMVANCI,161975,Oncorhynchus gorbuscha,Pink salmon,Canada-DFO-VANCI
+PSALMWADMIRAL,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-WADMIRAL
+PSALMWBEHM,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-WBEHM
+PSALMWCRAWFISH,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-WCRAWFISH
+PSALMWHALEB,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-WHALEB
+PSALMWHALEP,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-WHALEP
+PSALMWINDYC,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-WINDYC
+PSALMWKAMPH,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-WKAMPH
+PSALMWKAMPW,161975,Oncorhynchus gorbuscha,Pink salmon,Russia-TINRO-WKAMPW
+PSALMWOODR,161975,Oncorhynchus gorbuscha,Pink salmon,USA-AKSTATE-WOODR
+PSANDLIMKB,630414,Ammodytes personatus,Pacific sandlance,Japan-FAJ-IMKB
+PSHRMPMEDGSA6,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA6
+PSLANCESYS,171672,Ammodytes hexapterus,Pacific sand lance,Japan-FAJ-SYS
+PSLANDLSETOE,630414,Ammodytes personatus,Pacific sandlance,Japan-FAJ-SETOE
+PSOLEPCOAST,172868,Eopsetta jordani,Petrale sole,USA-NMFS-PCOAST
+PTOOTHFISHCH,642807,Dissostichus eleginoides,Patagonian toothfish,multinational-SUBPESCA-CFP-SCH-ARG
+PTOOTHFISHMI,642807,Dissostichus eleginoides,Patagonian toothfish,Australia-AFMA-MI
+PTOOTHFISHPEI,642807,Dissostichus eleginoides,Patagonian toothfish,South Africa-DETMCM-PEI
+QROCKPCOASTIN,166726,Sebastes maliger,Quillback rockfish,Canada-DFO-PCOASTIN
+QROCKPCOASTOUT,166726,Sebastes maliger,Quillback rockfish,Canada-DFO-PCOASTOUT
+QUAHATLC,81343,Arctica islandica,Ocean quahog,USA-NMFS-ATLC
+RBRMECS,647892,Pagrus major,Red seabream,Japan-FAJ-ECS
+RBRMIX,169212,Pagellus bogaraveo,Red seabream,multinational-ICES-IX
+RBRMMEDGSA1-3,169212,Pagellus bogaraveo,Red seabream,multinational-GFCM-GSA1-3
+RBRMSETOE,647892,Pagrus major,Red seabream,Japan-FAJ-SETOE
+RBRMSETOW,647892,Pagrus major,Red seabream,Japan-FAJ-SETOW
+RBRMVI-VII-VIII,169212,Pagellus bogaraveo,Red seabream,multinational-ICES-VI-VII-VIII
+RBRMX,169212,Pagellus bogaraveo,Red seabream,multinational-ICES-X
+RDEEPCRABNWATL,620992,Chaceon quinquedens,Red deepsea crab,USA-NMFS-NWATL
+RDSHRMPMEDGSA1,96062,Aristeus antennatus,Red shrimp,multinational-GFCM-GSA1
+RDSHRMPMEDGSA10,96062,Aristeus antennatus,Red shrimp,multinational-GFCM-GSA10
+RDSHRMPMEDGSA15-16,96062,Aristeus antennatus,Red shrimp,multinational-GFCM-GSA15-16
+RDSHRMPMEDGSA6,96062,Aristeus antennatus,Red shrimp,multinational-GFCM-GSA6
+REDDEEP2J3K-3LNO,166756,Sebastes mentella,Deepwater redfish,Canada-DFO-2J3K-3LNO
+REDDEEPDP-1-2-V-XII-XIV,166756,Sebastes mentella,Beaked redfish,multinational-ICES-DP-1-2-V-XII-XIV
+REDDEEPI-II,166756,Sebastes mentella,Deepwater redfish,multinational-ICES-I-II
+REDDEEPSH1-2-V-XII-XIV,166756,Sebastes mentella,Beaked redfish,multinational-ICES-SH-1-2-V-XII-XIV
+REDDEEPUT12,166756,Sebastes mentella,Deepwater redfish,Canada-DFO-UT12
+REDDEEPVa-XIV,166756,Sebastes mentella,Beaked redfish,multinational-ICES-Va-XIV
+REDDEEPXIVb,166756,Sebastes mentella,Beaked redfish,multinational-ICES-XIVb
+REDFEAUS,622131,Centroberyx affinis,Redfish,Australia-AFMA-EAUS
+REDFISHSPP1,166705,Sebastes spp,Redfish species,multinational-NAFO-1
+REDFISHSPP23K,166705,Sebastes spp,Redfish species,Canada-DFO-23K
+REDFISHSPP3LN,166705,Sebastes spp,Redfish species,multinational-NAFO-3LN
+REDFISHSPP3M,166705,Sebastes spp,Redfish species,multinational-NAFO-3M
+REDFISHSPP3Pn4RSTVn,166705,Sebastes spp,Redfish species,Canada-DFO-3Pn4RSTVn
+REDFISHSPPUT1,166705,Sebastes spp,Redfish species,Canada-DFO-UT1
+REDFISHSPPUT2,166705,Sebastes spp,Redfish species,Canada-DFO-UT2
+REXSOLEGA,172978,Glyptocephalus zachirus,Rex sole,USA-NMFS-GA
+REXSOLEPCOAST,172978,Glyptocephalus zachirus,Rex sole,USA-NMFS-PCOAST
+REYEROCKBSAI,166706,Sebastes aleutianus,Rougheye rockfish,USA-NMFS-BSAI
+REYEROCKGA,166706,Sebastes aleutianus,Rougheye rockfish,USA-NMFS-GA
+RGROUPGM,167702,Epinephelus morio,Red grouper,USA-NMFS-GM
+RGROUPSATL,167702,Epinephelus morio,Red grouper,USA-NMFS-SATL
+RGURNNEATL,692071,Chelidonichthys cuculus,Red gurnard,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-XII-XIV
+RHAKEGOMNGB,164730,Urophycis chuss,Red hake,USA-NMFS-GOMNGB
+RHAKESGBMATL,164730,Urophycis chuss,Red hake,USA-NMFS-SGBMATL
+RHERRPAC,161743,Etrumeus teres,Round herring,Japan-FAJ-PAC
+RHERRTSST,161743,Etrumeus teres,Round herring,Japan-FAJ-TSST
+RHGRENNEATL,165421,Macrourus berglax,Roughhead grenadier,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-X-XII-XIV
+RKCRABAIWS,97935,Paralithodes camtschaticus,Red king crab,USA-NMFS-AIWS
+RKCRABBB,97935,Paralithodes camtschaticus,Red king crab,USA-NMFS-BB
+RKCRABNS,97935,Paralithodes camtschaticus,Red king crab,USA-NMFS-NS
+RKCRABPI,97935,Paralithodes camtschaticus,Red king crab,USA-NMFS-PI
+RMULLMEDGSA1,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA1
+RMULLMEDGSA10,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA10
+RMULLMEDGSA11,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA11
+RMULLMEDGSA15-16,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA15-16
+RMULLMEDGSA17-18,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA17-18
+RMULLMEDGSA19,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA19
+RMULLMEDGSA25,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA25
+RMULLMEDGSA29,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA29
+RMULLMEDGSA5,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA5
+RMULLMEDGSA6,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA6
+RMULLMEDGSA7,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA7
+RMULLMEDGSA9,169419,Mullus barbatus,Red mullet,multinational-GFCM-GSA9
+RNGENI-II-IV-Va2-VIII-IX-XIVab2,165350,Coryphaenoides rupestris,Roundnose grenadier,multinational-ICES-I-II-IV-Va2-VIII-IX-XIVab2
+RNGENMATLR,165350,Coryphaenoides rupestris,Roundnose grenadier,multinational-ICES-MATLR
+RNGENVb-VI-VII-XIIb,165350,Coryphaenoides rupestris,Roundnose grenadier,multinational-ICES-Vb-VI-VII-XIIb
+RNGRENIIIa,165350,Coryphaenoides rupestris,Roundnose grenadier,multinational-ICES-IIIa
+ROCKCRABLFA23-26,98679,Cancer irroratus,Rock crab,Canada-DFO-4T
+ROCKCRABQCW,98679,Cancer irroratus,Rock crab,Canada-DFO-QCW
+RPANDCWACIV-BEN,647898,Pagellus bellottii,Red pandora,multinational-FAO-CWACIV-BEN
+RPORGYSATLC,169207,Pagrus pagrus,Red porgy,USA-NMFS-SATLC
+RROCKLOBSTERCRA1,660225,Jasus edwardsii,Red rock lobster,New Zealand-MFish-CRA1
+RROCKLOBSTERCRA2,660225,Jasus edwardsii,Red rock lobster,New Zealand-MFish-CRA2
+RROCKLOBSTERCRA3,660225,Jasus edwardsii,Red rock lobster,New Zealand-MFish-CRA3
+RROCKLOBSTERCRA4,660225,Jasus edwardsii,Red rock lobster,New Zealand-MFish-CRA4
+RROCKLOBSTERCRA5,660225,Jasus edwardsii,Red rock lobster,New Zealand-MFish-CRA5
+RROCKLOBSTERCRA7,660225,Jasus edwardsii,Red rock lobster,New Zealand-MFish-CRA7
+RROCKLOBSTERCRA8,660225,Jasus edwardsii,Red rock lobster,New Zealand-MFish-CRA8
+RROCKLOBSTERSAUSNZ,660225,Jasus edwardsii,Rock lobster,Australia-SARDI-SAUSNZ
+RROCKLOBSTERSAUSSZ,660225,Jasus edwardsii,Rock lobster,Australia-SARDI-SAUSSZ
+RSARDCWACIV-BEN,161763,Sardinella aurita,Round sardinella,multinational-FAO-CWACIV-BEN
+RSARDNWA,161763,Sardinella aurita,Round sardinella,multinational-FAO-NWA
+RSFLOUNSOJ,172869,Eopsetta grigorjewi,Round nose flounder,Japan-FAJ-SOJ
+RSHRMPMEDGSA1,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA1
+RSHRMPMEDGSA10,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA10
+RSHRMPMEDGSA11,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA11
+RSHRMPMEDGSA12-16,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA12-16
+RSHRMPMEDGSA17-19,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA17-19
+RSHRMPMEDGSA18,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA18
+RSHRMPMEDGSA5,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA5
+RSHRMPMEDGSA9,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA9
+RSHRMPMEDGSA9-11,95733,Parapenaeus longirostris,Deep water rose shrimp,multinational-GFCM-GSA9-11
+RSKATMATLC,564136,Leucoraja garmani,Rosette skate,USA-NMFS-MATLC
+RSNAPGM,168853,Lutjanus campechanus,Red snapper,USA-NMFS-GM
+RSNAPSATLC,168853,Lutjanus campechanus,Red snapper,USA-NMFS-SATLC
+RSOLE5AB,172917,Lepidopsetta bilineata,Rock sole,Canada-DFO-5AB
+RSOLEGA,172917,Lepidopsetta bilineata,Rock sole,USA-NMFS-GA
+RSOLEHSTR,172917,Lepidopsetta bilineata,Rock sole,Canada-DFO-HS
+RSQLOBSTERCH,-993,Pleuroncodes monodon,Red squat lobster,Chile-SUBPESCA-CH
+RSQLOBSTERCSCH,-993,Pleuroncodes monodon,Red squat lobster,Chile-SUBPESCA-CH-CS
+RSQLOBSTERNCH,-993,Pleuroncodes monodon,Red squat lobster,Chile-SUBPESCA-CH-N
+RSROCKBCWN,166736,Sebastes proriger,Redstripe rockfish,Canada-DFO-BCWN
+RSROCKBCWS,166736,Sebastes proriger,Redstripe rockfish,Canada-DFO-BCWS
+RSSOLENPAC,172864,Clidoderma asperrimum,Roughscale sole,Japan-FAJ-NPAC
+SAABALONESA,-995,Haliotis midae,South African abalone,South Africa-DETMCM-SA
+SABLEFEBSAIGA,167123,Anoplopoma fimbria,Sablefish,USA-NMFS-EBSAIGA
+SABLEFPCAN,167123,Anoplopoma fimbria,Sablefish,Canada-DFO-PCOAST
+SABLEFPCOAST,167123,Anoplopoma fimbria,Sablefish,USA-NMFS-PCOAST
+SAILEATL,550888,Istiophorus albicans,Sailfish,multinational-ICCAT-EATL
+SAILWATL,550888,Istiophorus albicans,Sailfish,multinational-ICCAT-WATL
+SARDBC,161729,Sardinops sagax,Pacific sardine,Canada-DFO-PCOAST
+SARDINCWAGAB-AGO,-990,Sardinella spp,Sardinella,multinational-FAO-CWAGAB-AGO
+SARDINCWAGNB-LBR,-990,Sardinella spp,Sardinella,multinational-FAO-CWAGNB-LBR
+SARDINNWA,-990,Sardinella spp,Sardinella,multinational-FAO-NWA
+SARDMEDGSA1,161813,Sardina pilchardus,European pilchard,multinational-GFCM-GSA1
+SARDMEDGSA16,161813,Sardina pilchardus,Sardine,multinational-GFCM-GSA16
+SARDMEDGSA17,161813,Sardina pilchardus,Sardine,multinational-GFCM-GSA17
+SARDMEDGSA17-18,161813,Sardina pilchardus,Sardine,multinational-GFCM-GSA17-18
+SARDMEDGSA20,161813,Sardina pilchardus,European pilchard,multinational-GFCM-GSA20
+SARDMEDGSA22,161813,Sardina pilchardus,European pilchard,multinational-GFCM-GSA22
+SARDMEDGSA6,161813,Sardina pilchardus,European pilchard,multinational-GFCM-GSA6
+SARDMEDGSA7,161813,Sardina pilchardus,Sardine,multinational-GFCM-GSA7
+SARDMEDGSA9,161813,Sardina pilchardus,European pilchard,multinational-GFCM-GSA9
+SARDNWAZAB,161813,Sardina pilchardus,Sardine,multinational-FAO-NWAZAB
+SARDNWAZC,161813,Sardina pilchardus,Sardine,multinational-FAO-NWAZC
+SARDPCOAST,161729,Sardinops sagax,Pacific sardine,USA-NMFS-PCOAST
+SARDPVIIIc-IXa,161813,Sardina pilchardus,Sardine,multinational-ICES-VIIIc-IXa
+SARDSA,161729,Sardinops sagax,Sardine,South Africa-DETMCM-SA
+SARDSAS,161729,Sardinops sagax,Sardine,South Africa-DETMCM-SAS
+SARDSAW,161729,Sardinops sagax,Sardine,South Africa-DETMCM-SAW
+SARDVII,161813,Sardina pilchardus,Sardine,multinational-ICES-VII
+SARDVIIIabd,161813,Sardina pilchardus,Sardine,multinational-ICES-VIIIabd
+SARDVII-VIIIabd,161813,Sardina pilchardus,Sardine,multinational-ICES-VII-VIIIabd
+SARDWSE,161729,Sardinops sagax,Sardine,Australia-SARDI-WSE
+SAURNWPAC,165609,Cololabis saira,Pacific saury,multinational-NPFC-NWPAC
+SBARSHARATL,160289,Carcharhinus plumbeus,Sandbar shark,USA-NMFS-ATL
+SBELLYROCKPCOAST,166725,Sebastes jordani,Shortbelly rockfish,USA-NMFS-PCOAST
+SBREAMCH,168307,Epigonus crassicaudus,Deepwater cardinalfish,multinational-SPRFMO-CHL
+SBT,172431,Thunnus maccoyii,Southern bluefin tuna,multinational-CCSBT-SO
+SBWHITACIR,164775,Micromesistius australis,Southern blue whiting,New Zealand-MFish-CIR
+SBWHITARGS,164775,Micromesistius australis,Southern blue whiting,Argentina-CFP-ARG-S
+SBWHITCH,164775,Micromesistius australis,Southern blue whiting,Chile-SUBPESCA-CH-CS
+SCADSPPCWAGNB-LBR,-962,Decapterus spp,Scad spp,multinational-FAO-CWAGNB-LBR
+SCALL3Ps,79718,Placopecten magellanicus,Sea scallop,Canada-DFO-3Ps
+SCALL4T,79718,Placopecten magellanicus,Sea scallop,Canada-DFO-4T
+SCALL5ZMAB,79718,Placopecten magellanicus,Sea scallop,USA-NMFS-5ZMAB
+SCALLGB,79718,Placopecten magellanicus,Sea scallop,Canada-DFO-5Z
+SCALLNBB,79718,Placopecten magellanicus,Sea scallop,Canada-DFO-NBB
+SCALLSFA16-20,79718,Placopecten magellanicus,Sea scallop,Canada-DFO-SCFA16-20
+SCALLSPA1-6,79718,Placopecten magellanicus,Sea scallop,Canada-DFO-SPA1-6
+SCALLWSFA29,79718,Placopecten magellanicus,Sea scallop,Canada-DFO-WSFA29
+SCHHEADATL,160508,Sphyrna lewini,Scalloped hammerhead,USA-NMFS-ATL
+SCMPBP,552935,Metanephrops challengeri,Scampi,New Zealand-MFish-BOP
+SCMPMB,552935,Metanephrops challengeri,Scampi,New Zealand-MFish-MB
+SCMPWHB,552935,Metanephrops challengeri,Scampi,New Zealand-MFish-WHB
+SCUPNWATLC,169182,Stenotomus chrysops,Scup,USA-NMFS-NWATLC
+SDOG4VWX5,160617,Squalus acanthias,Spiny dogfish,Canada-DFO-4VWX5
+SDOGATLC,160617,Squalus acanthias,Spiny dogfish,USA-NMFS-ATLC
+SDOGBLKGSA29,160617,Squalus acanthias,Spiny dogfish,multinational-GFCM-GSA29
+SDRAYVI-VII,564128,Leucoraja circularis,Sandy ray,multinational-ICES-VI-VII
+SEELNSSA1,171671,Ammodytes spp,Sand eel,multinational-ICES-SA1
+SEELNSSA2,171671,Ammodytes spp,Sand eel,multinational-ICES-SA2
+SEELNSSA3,171671,Ammodytes spp,Sand eel,multinational-ICES-SA3
+SEELNSSA4,171671,Ammodytes spp,Sand eel,multinational-ICES-SA4
+SEELNSSA5,171671,Ammodytes spp,Sand eel,multinational-ICES-SA5
+SEELNSSA6,171671,Ammodytes spp,Sand eel,multinational-ICES-SA6
+SEELNSSA7,171671,Ammodytes spp,Sand eel,multinational-ICES-SA7
+SEELVIa,171671,Ammodytes spp,Sand eel,multinational-ICES-VIa
+SERAYVIIde,160882,Raja microocellata,Smalleyed ray,multinational-ICES-VIIde
+SERAYVIIf-g,160882,Raja microocellata,Smalleyed ray,multinational-ICES-VIIf-g
+SFLOUNMATLC,172735,Paralichthys dentatus,Summer flounder,USA-NMFS-MATLC
+SFMAKONPAC,159924,Isurus oxyrinchus,Shortfin mako,USA-NMFS-NPAC
+SFMAKONWPAC,159924,Isurus oxyrinchus,Shortfin mako,multinational-UNKNOWN-NWPAC
+SGRAYVI-VII,564134,Leucoraja fullonica,Shagreen ray,multinational-ICES-VI-VII
+SHAKE4VWX,164791,Merluccius bilinearis,Silver hake,Canada-DFO-4VWX
+SHAKEGOMNGB,164791,Merluccius bilinearis,Silver hake,USA-NMFS-5YZ
+SHAKESGBMATL,164791,Merluccius bilinearis,Silver hake,USA-NMFS-SGBMATL
+SHAKOIMKB,-964,Oratosquilla oratoria,Shako,Japan-FAJ-IMKB
+SHCROCKPCOAST,166744,Sebastes zacentrus,Sharpchin rockfish,USA-NMFS-PCOAST
+SHSPPNEATL,160226,Mustelus spp,Smooth hound,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-X-XII-XIV
+SILVERFISHSE,172534,Seriolella punctata,Silverfish,Australia-AFMA-SE
+SKJCIO,172401,Katsuwonus pelamis,Skipjack tuna,multinational-IOTC-IO
+SKJCWPAC,172401,Katsuwonus pelamis,Skipjack tuna,multinational-WCPFC-CWPAC
+SKJEATL,172401,Katsuwonus pelamis,Skipjack tuna,multinational-ICCAT-EATL
+SKJEPAC,172401,Katsuwonus pelamis,Skipjack tuna,multinational-IATTC-EPAC
+SKJWATL,172401,Katsuwonus pelamis,Skipjack tuna,multinational-ICCAT-WATL
+SKSNAPCARIB,168861,Lutjanus vivanus,Silk snapper,USA-NMFS-CARIB
+SMDOGATL,160230,Mustelus canis,Smooth dogfish,USA-NMFS-ATL
+SMOOTHOREOBP,625280,Pseudocyttus maculatus,Smooth oreo,New Zealand-MFish-BP
+SMOOTHOREOCR,625280,Pseudocyttus maculatus,Smooth oreo,New Zealand-MFish-CR
+SMOOTHOREOEPR,625280,Pseudocyttus maculatus,Smooth oreo,New Zealand-MFish-EPR
+SMOOTHOREOSLD,625280,Pseudocyttus maculatus,Smooth oreo,New Zealand-MFish-SLD
+SMOOTHOREOWECR,625280,Pseudocyttus maculatus,Smooth oreo,New Zealand-MFish-WECR
+SMOOTHSKA2J3K,564151,Malacoraja senta,Smooth skate,Canada-DFO-2J3K
+SMOOTHSKA4T,564151,Malacoraja senta,Smooth skate,Canada-DFO-4T
+SMSHRMPMEDGSA10,99152,Squilla mantis,Spottail mantis shrimp,multinational-GFCM-GSA10
+SMSHRMPMEDGSA17,99152,Squilla mantis,Spottail mantis shrimp,multinational-GFCM-GSA17
+SMSHRMPMEDGSA17-18,99152,Squilla mantis,Spottail mantis shrimp,multinational-GFCM-GSA17-18
+SMSHRMPMEDGSA9,99152,Squilla mantis,Spottail mantis shrimp,multinational-GFCM-GSA9
+SMULLMEDGSA15-16,169418,Mullus surmuletus,Surmullet,multinational-GFCM-GSA15-16
+SMULLMEDGSA5,169418,Mullus surmuletus,Surmullet,multinational-GFCM-GSA5
+SMULLMEDGSA9,169418,Mullus surmuletus,Surmullet,multinational-GFCM-GSA9
+SNAPSAUSNSG,169231,Chrysophrys auratus,Snapper,Australia-SARDI-SAUSNSG
+SNAPSAUSSGSV,169231,Chrysophrys auratus,Snapper,Australia-SARDI-SAUSSGSV
+SNAPSAUSSSG,169231,Chrysophrys auratus,Snapper,Australia-SARDI-SAUSSSG
+SNOSESHARATL,160200,Rhizoprionodon terraenovae,Atlantic sharpnose shark,USA-NMFS-ATL
+SNOWCRAB2HJ,98428,Chionoecetes opilio,Snow crab,Canada-DFO-2HJ
+SNOWCRAB2HJ3KLNOP4R,98428,Chionoecetes opilio,Snow crab,Canada-DFO-2HJ3KLNOP4R
+SNOWCRAB2J,98428,Chionoecetes opilio,Snow crab,Canada-DFO-2J
+SNOWCRAB3K,98428,Chionoecetes opilio,Snow crab,Canada-DFO-3K
+SNOWCRAB3LNO,98428,Chionoecetes opilio,Snow crab,Canada-DFO-3LNO
+SNOWCRAB3NO,98428,Chionoecetes opilio,Snow crab,Canada-DFO-3NO
+SNOWCRAB3Ps,98428,Chionoecetes opilio,Snow crab,Canada-DFO-3Ps
+SNOWCRAB4R3Pn,98428,Chionoecetes opilio,Snow crab,Canada-DFO-4R3Pn
+SNOWCRABBS,98428,Chionoecetes opilio,Snow crab,USA-NMFS-BS
+SNOWCRABESJ,98428,Chionoecetes opilio,Snow crab,Japan-FAJ-ESJ
+SNOWCRABHOKK,98428,Chionoecetes opilio,Snow crab,Japan-FAJ-HOKK
+SNOWCRABNPAC,98428,Chionoecetes opilio,Snow crab,Japan-FAJ-NPAC
+SNOWCRABOKS,98428,Chionoecetes opilio,Snow crab,Japan-FAJ-OKS
+SNOWCRABSCMA12-17,98428,Chionoecetes opilio,Snow crab,Canada-DFO-SCMA12-17
+SNOWCRABSGSL,98428,Chionoecetes opilio,Snow crab,Canada-DFO-4T
+SNOWCRABWSJ,98428,Chionoecetes opilio,Snow crab,Japan-FAJ-WSJ
+SNOWGROUPSATLC,167705,Epinephelus niveatus,Snowy grouper,USA-NMFS-SATLC
+SNROCKPCOAST,166716,Sebastes diploproa,Splitnose rockfish,USA-NMFS-PCOAST
+SOLECS,173002,Solea solea,Common sole,multinational-ICES-VIIf-g
+SOLECWAAGO,-986,Cynoglossus spp,Sole,multinational-FAO-CWAAGO
+SOLECWAGAB-COD,-986,Cynoglossus spp,Sole,multinational-FAO-CWAGAB-COD
+SOLECWAGIN-LBR,-986,Cynoglossus spp,Sole,multinational-FAO-CWAGIN-LBR
+SOLECWAGNB-GIN,-986,Cynoglossus spp,Sole,multinational-FAO-CWAGNB-GIN
+SOLEIIIa-2224,173002,Solea solea,Common sole,multinational-ICES-22-24-IIIa
+SOLEIS,173002,Solea solea,Common sole,multinational-ICES-VIIa
+SOLENS,173002,Solea solea,Common sole,multinational-ICES-IV
+SOLEVIIbc,173002,Solea solea,Common sole,multinational-ICES-VIIbc
+SOLEVIId,173002,Solea solea,Common sole,multinational-ICES-VIId
+SOLEVIIe,173002,Solea solea,Common sole,multinational-ICES-VIIe
+SOLEVIIh-k,173002,Solea solea,Common sole,multinational-ICES-VIIh-k
+SOLEVIIIab,173002,Solea solea,Common sole,multinational-ICES-VIIIab
+SOLEVIIIc-IXa,173002,Solea solea,Common sole,multinational-ICES-VIIIc-IXa
+SOLMEDGSA17,173002,Solea solea,Common sole,multinational-GFCM-GSA17
+SOLMEDGSA7,173002,Solea solea,Common sole,multinational-GFCM-GSA7
+SOUTHHAKECH,164797,Merluccius australis,Southern hake,Chile-SUBPESCA-CH-CS
+SOUTHHAKECR,164797,Merluccius australis,Southern hake,New Zealand-MFish-CR
+SOUTHHAKESA,164797,Merluccius australis,Southern hake,New Zealand-MFish-SA
+SOUTHHAKEWCSI,164797,Merluccius australis,Southern hake,New Zealand-MFish-WCSI
+SPANMACKECS,172446,Scomberomorus niphonius,Japanese Spanish mackerel,Japan-FAJ-ECS
+SPANMACKGM,172436,Scomberomorus maculatus,Spanish mackerel,USA-NMFS-GM
+SPANMACKSATLC,172436,Scomberomorus maculatus,Spanish mackerel,USA-NMFS-SATLC
+SPANMACKSETO,172446,Scomberomorus niphonius,Japanese Spanish mackerel,Japan-FAJ-SETO
+SPHAKECH,164799,Merluccius gayi,South Pacific hake,Chile-SUBPESCA-CH-CS
+SPRAT22-32,161789,Sprattus sprattus,Sprat,multinational-ICES-22-32
+SPRATIIIa,161789,Sprattus sprattus,Sprat,multinational-ICES-IIIa
+SPRATIIIa-IV,161789,Sprattus sprattus,Sprat,multinational-ICES-IIIa-IV
+SPRATNS,161789,Sprattus sprattus,Sprat,multinational-ICES-IV
+SPRATVIIde,161789,Sprattus sprattus,Sprat,multinational-ICES-VIIde
+SPRATVI-VIIabcfghijk,161789,Sprattus sprattus,Sprat,multinational-ICES-VI-VIIabcfghijk
+SPRAYIIIa-IV-VIId,160883,Raja montagui,Spotted ray,multinational-ICES-IIIa-IV-VIId
+SPRAYIXa,160883,Raja montagui,Spotted ray,multinational-ICES-IXa
+SPRAYVIIaefgh,160883,Raja montagui,Spotted ray,multinational-ICES-VIIaefgh
+SPRAYVIII,160883,Raja montagui,Spotted ray,multinational-ICES-VIII
+SPRAYVI-VIIbj,160883,Raja montagui,Spotted ray,multinational-ICES-VI-VIIbj
+SPRBLKGSA29,161789,Sprattus sprattus,Sprat,multinational-GFCM-GSA29
+SPSDOGPCOAST,160620,Squalus suckleyi,Spotted spiny dogfish,USA-NMFS-PCOAST
+SPSHRIMPCWA,551575,Farfantepenaeus notialis,Southern pink shrimp,multinational-FAO-CWA
+SPSQUIDPAC,556653,Loligo bleekeri,Spear squid,Japan-FAJ-PAC
+SPSQUIDTSSTWC,556653,Loligo bleekeri,Spear squid,Japan-FAJ-TSSTWC
+SPURDNEATL,160617,Squalus acanthias,Spurdog,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-X-XII-XIV
+SRAKEROCKBSAI,166712,Sebastes borealis,Shortraker rockfish,USA-NMFS-BSAI
+SRAKEROCKGA,166712,Sebastes borealis,Shortraker rockfish,USA-NMFS-GA
+SSALMA1,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A1
+SSALMA12,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A12
+SSALMA13,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A13
+SSALMA16,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A16
+SSALMA28,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A28
+SSALMA2E,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A2E
+SSALMA2W,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A2W
+SSALMA5,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A5
+SSALMA6,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A6
+SSALMA7,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A7
+SSALMA8,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-A8
+SSALMADAMS,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-ADAMS
+SSALMAKALURAL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-AKALURAL
+SSALMANADYRSW,161979,Oncorhynchus nerka,Sockeye salmon,Russia-TINRO-ANADYRSW
+SSALMATNARKO,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-ATNARKO
+SSALMAWKER,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-AWKER
+SSALMBARKS,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-BARKS
+SSALMBEARR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-BEARR
+SSALMBIRKENH,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-BIRKENH
+SSALMBLACKL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-BLACKL
+SSALMBOWRON,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-BOWRON
+SSALMBRANCH,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-BRANCH
+SSALMBUSKINL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-BUSKINL
+SSALMCAYENNE,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-CAYENNE
+SSALMCHIGNIKL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-CHIGNIKL
+SSALMCHILKATL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-CHILKATL
+SSALMCHILKO,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-CHILKO
+SSALMCHILKOOTL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-CHILKOOTL
+SSALMCHILKOS,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-CHILKOS
+SSALMCHILLIW,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-CHILLIW
+SSALMCOLR,161979,Oncorhynchus nerka,Sockeye salmon,USA-WASTATE-COLR
+SSALMCULTUS,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-CULTUS
+SSALMEALSEKDR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-EALSEKDR
+SSALMEGEGIK,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-EGEGIK
+SSALMEKAMSW,161979,Oncorhynchus nerka,Sockeye salmon,Russia-TINRO-EKAMSW
+SSALMEUPPERS,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-EUPPERS
+SSALMFENNELL,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-FENNELL
+SSALMGATES,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-GATES
+SSALMGATESC,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-GATESC
+SSALMHARRISON,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-HARRISON
+SSALMHORSEFLY,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-HORSEFLY
+SSALMHSSH,161979,Oncorhynchus nerka,Sockeye salmon,Japan-FAJ-HSSH
+SSALMHSSW,161979,Oncorhynchus nerka,Sockeye salmon,Japan-FAJ-HSSW
+SSALMIGUSHIK,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-IGUSHIK
+SSALMILNIKR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-ILNIKR
+SSALMITALOR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-ITALOR
+SSALMKARLUKL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-KARLUKL
+SSALMKIMSQUIT,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-KIMSQUIT
+SSALMKITLOPE,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-KITLOPE
+SSALMKLUKSHUR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-KLUKSHUR
+SSALMKUSKOKWIM,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-KUSKOKWIM
+SSALMKVICHAK,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-KVICHAK
+SSALMLLAKE,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-LLAKE
+SSALMLOSTR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-LOSTR
+SSALMLRIVER,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-LRIVER
+SSALMLSTUART,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-LSTUART
+SSALMLUPPERS,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-LUPPERS
+SSALMLWASH,161979,Oncorhynchus nerka,Sockeye salmon,USA-WASTATE-LWASH
+SSALMMALINAL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-MALINAL
+SSALMMCDONALD,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-MCDONALD
+SSALMMITCHELL,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-MITCHELL
+SSALMNADINA,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-NADINA
+SSALMNADINAC,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-NADINAC
+SSALMNAHANTLATCH,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-NAHANTLATCH
+SSALMNAKNEK,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-NAKNEK
+SSALMNASS,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-NASS
+SSALMNELSONR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-NELSONR
+SSALMNUSHAGAK,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-NUSHAGAK
+SSALMNUYAKUK,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-NUYAKUK
+SSALMOKSH,161979,Oncorhynchus nerka,Sockeye salmon,Russia-TINRO-OKSH
+SSALMOKSW,161979,Oncorhynchus nerka,Sockeye salmon,Russia-TINRO-OKSW
+SSALMORZINSKIL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-ORZINSKIL
+SSALMOWIKENOL,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-OWIKENOL
+SSALMPASAGSHAKR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-PASAGSHAKR
+SSALMPAULSBD,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-PAULSBD
+SSALMPITT,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-PITT
+SSALMPORTAGE,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-PORTAGE
+SSALMQUIN,161979,Oncorhynchus nerka,Sockeye salmon,USA-WASTATE-QUIN
+SSALMRAFT,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-RAFT
+SSALMREDOUBTL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-REDOUBTL
+SSALMSALTERYL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-SALTERYL
+SSALMSANDYR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-SANDYR
+SSALMSCOTCH,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-SCOTCH
+SSALMSEYMOUR,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-SEYMOUR
+SSALMSHUSWAP,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-SHUSWAP
+SSALMSITUKR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-SITUKR
+SSALMSKEENA,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-SKEENA
+SSALMSKIDEGATE,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-SKIDEGATE
+SSALMSPEELL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-SPEELL
+SSALMSTELLAKO,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-STELLAKO
+SSALMSTIKINE,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-STIKINE
+SSALMTAHLTAN,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-TAHLTAN
+SSALMTAKUR,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-TAKUR
+SSALMTASEKO,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-TASEKO
+SSALMTOGIAK,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-TOGIAK
+SSALMUCOOKI,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-UCOOKI
+SSALMUGANIKL,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-UGANIKL
+SSALMUGASHIK,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-UGASHIK
+SSALMWEAVER,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-WEAVER
+SSALMWEAVERC,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-WEAVERC
+SSALMWKAMSH,161979,Oncorhynchus nerka,Sockeye salmon,Russia-TINRO-WKAMSH
+SSALMWKAMSW,161979,Oncorhynchus nerka,Sockeye salmon,Russia-TINRO-WKAMSW
+SSALMWOOD,161979,Oncorhynchus nerka,Sockeye salmon,USA-AKSTATE-WOOD
+SSALMYAKOUN,161979,Oncorhynchus nerka,Sockeye salmon,Canada-DFO-YAKOUN
+SSANDNSJ,170916,Arctoscopus japonicus,Sailfin sandfish,Japan-FAJ-NSJ
+SSANDWSJ,170916,Arctoscopus japonicus,Sailfin sandfish,Japan-FAJ-WSJ
+SSARDCH,-994,Sprattus fuegensis,Southern sardine,Chile-SUBPESCA-CH-CS
+SSCLAMQCW,81692,Mya arenaria,Softshell clam ,Canada-DFO-QCW
+SSHRIMPSMAGTSE,96995,Pandalopsis dispar,Sidestripe shrimp,Canada-DFO-SMA-GTSE
+SSHRIMPSMAPRD,96995,Pandalopsis dispar,Sidestripe shrimp,Canada-DFO-SMA-PRD
+SSKAT5YZSNE,564151,Malacoraja senta,Smooth skate,USA-NMFS-5YZSNE
+SSLOBSTERSASC,552965,Palinurus gilchristi,Southern spiny lobster,South Africa-DETMCM-SASC
+SSSHRIMPICBC,96995,Pandalopsis dispar,Sidestripe shrimp,Canada-DFO-ICBC
+SSSHRIMPSMA14,96995,Pandalopsis dispar,Sidestripe shrimp,Canada-DFO-SMA-14
+SSSHRIMPSMA16,96995,Pandalopsis dispar,Sidestripe shrimp,Canada-DFO-SMA-16
+SSSHRIMPSMA18-19,96995,Pandalopsis dispar,Sidestripe shrimp,Canada-DFO-SMA-18-19
+SSSHRIMPSMAFR,96995,Pandalopsis dispar,Sidestripe shrimp,Canada-DFO-SMA-FR
+SSTHORNHGA,166783,Sebastolobus alascanus,Shortspine thornyhead,USA-NMFS-GA
+SSTHORNHPCOAST,166783,Sebastolobus alascanus,Shortspine thornyhead,USA-NMFS-PCOAST
+STFLOUNNPCOAST,172893,Platichthys stellatus,Starry flounder,USA-NMFS-NPCOAST
+STFLOUNSPCOAST,172893,Platichthys stellatus,Starry flounder,USA-NMFS-SPCOAST
+STMARLINIO,768127,Kajikia audax,Striped marlin,multinational-IOTC-IO
+STMARLINNEPAC,768127,Kajikia audax,Striped marlin,multinational-IATTC-NEPAC
+STMARLINNPAC,768127,Kajikia audax,Striped marlin,USA-NMFS-NPAC
+STMARLINSWPO,768127,Kajikia audax,Striped marlin,multinational-WCPFC-SWPAC
+STMARLINWCNPAC,768127,Kajikia audax,Striped marlin,multinational-ISC-WCNPAC
+STRAYII-IIIa-IV,564149,Amblyraja radiata,Starry ray,multinational-ICES-II-IIIa-IV
+STRIPEDBASSGOMCHATT,167680,Morone saxatilis,Striped bass,USA-NMFS-5YCHATT
+STRMULLIIIa-IV-VIId,169418,Mullus surmuletus,Striped red mullet,multinational-ICES-IIIa-IV-VIId
+STRMULLVI-VIIabcefghijk-VIII-IXa,169418,Mullus surmuletus,Striped red mullet,multinational-ICES-VI-VIIabcefghijk-VIII-IXa
+STROUT22-32,161997,Salmo trutta,Sea trout,multinational-ICES-22-32
+STRSHRIMPSFA2-3,96971,Pandalus montagui,Aesop shrimp,Canada-DFO-SFA2-3
+STSQUIDSOJECS,556657,Uroteuthis edulis,Swordtip squid,Japan-FAJ-SOJECS
+SUNIMHI,172294,Naso hexacanthus,Sleek unicornfish,USA-NMFS-MHI
+SURFMATLC,80944,Spisula solidissima,Atlantic surfclam,USA-NMFS-MATLC
+SWHITSE,646043,Sillago flindersi,School whiting,Australia-AFMA-SE
+SWORDEPAC,172482,Xiphias gladius,Swordfish,multinational-IATTC-EPAC
+SWORDIO,172482,Xiphias gladius,Swordfish,multinational-IOTC-IO
+SWORDMED,172482,Xiphias gladius,Swordfish,multinational-ICCAT-MED
+SWORDNATL,172482,Xiphias gladius,Swordfish,multinational-ICCAT-NATL
+SWORDNPAC,172482,Xiphias gladius,Swordfish,multinational-ISC-NPAC
+SWORDSATL,172482,Xiphias gladius,Swordfish,multinational-ICCAT-SATL
+TANNERCRABBSAI,98429,Chionoecetes bairdi,Tanner crab,USA-NMFS-BSAI
+TARAKNZ,170262,Nemadactylus macropterus,Tarakihi,New Zealand-MFish-SA
+TASGIANTCRABTAS,-999,Pseudocarcinus gigas,Tasmanian giant crab,Australia-AFMA-TAS
+TBSKAIIIa-IV-VIId,160901,Raja clavata,Thornback skate,multinational-ICES-IIIa-IV-VIId
+TBSKAIXa,160901,Raja clavata,Thornback skate,multinational-ICES-IXa
+TBSKAMEDGSA29,160901,Raja clavata,Thornback skate,multinational-GFCM-GSA29
+TBSKAVI,160901,Raja clavata,Thornback skate,multinational-ICES-VI
+TBSKAVIIafg,160901,Raja clavata,Thornback skate,multinational-ICES-VIIafg
+TBSKAVIIe,160901,Raja clavata,Thornback skate,multinational-ICES-VIIe
+TBSKAVIII,160901,Raja clavata,Thornback skate,multinational-ICES-VIII
+THREADCWACIV-BEN,645691,Galeoides decadactylus,Threadfin,multinational-FAO-CWACIV-BEN
+THREADCWAGAB-AGO,645691,Galeoides decadactylus,Threadfin,multinational-FAO-CWAGAB-AGO
+THREADCWAGIN-LBR,645691,Galeoides decadactylus,Threadfin,multinational-FAO-CWAGIN-LBR
+THRSHARNPAC,159916,Alopias vulpinus,Thresher shark,USA-NMFS-NPAC
+TIGERFLATSE,644187,Neoplatycephalus richardsoni,Tiger flathead,Australia-AFMA-SE
+TILEGM,168546,Lopholatilus chamaeleonticeps,Tilefish,USA-NMFS-GM
+TILEMATLC,168546,Lopholatilus chamaeleonticeps,Tilefish,USA-NMFS-MATLC
+TILESATLC,168546,Lopholatilus chamaeleonticeps,Tilefish,USA-NMFS-SATLC
+TPSHARNEATL,160181,Galeorhinus galeus,Tope shark,multinational-ICES-I-II-III-IV-V-VI-VII-VIII-IX-XII-XIV
+TREVALLYTRE7,168641,Pseudocaranx dentex,Trevally,New Zealand-MFish-TRE7
+TSGTFMHI,169450,Parupeneus bifasciatus,Twosaddle goatfish,USA-NMFS-MHI
+TSKA3LNOPs,564149,Amblyraja radiata,Thorny skate,multinational-NAFO-3LNOPs
+TSKA4T,564149,Amblyraja radiata,Thorny skate,Canada-DFO-4T
+TSKAT5YZSNE,564149,Amblyraja radiata,Thorny skate,USA-NMFS-5YZSNE
+TUR2232,172748,Scophthalmus maximus,Turbot,multinational-ICES-22-32
+TURBLKGSA29,616195,Psetta maxima,Turbot,multinational-GFCM-GSA29
+TURIIIa,172748,Scophthalmus maximus,Turbot,multinational-ICES-IIIa
+TURIV,172748,Scophthalmus maximus,Turbot,multinational-ICES-IV
+URAYVIIde,160900,Raja undulata,Undulate ray,multinational-ICES-VIIde
+URAYVIIIab,160900,Raja undulata,Undulate ray,multinational-ICES-VIIIab
+VSNAPGM,168909,Rhomboplites aurorubens,Vermilion snapper,USA-NMFS-GM
+VSNAPSATLC,168909,Rhomboplites aurorubens,Vermilion snapper,USA-NMFS-SATLC
+WANGLGSA1-7,164501,Lophius piscatorius,White anglerfish,multinational-GFCM-GSA1-7
+WANGLVIIIc-IXa,164501,Lophius piscatorius,White anglerfish,multinational-ICES-VIIIc-IXa
+WANGLVII-VIIIabd,164501,Lophius piscatorius,White anglerfish,multinational-ICES-VII-VIIIabd
+WAREHOUESE,172531,Seriolella brama,Blue warehou,Australia-AFMA-ESE
+WAREHOUWSE,172531,Seriolella brama,Blue warehou,Australia-AFMA-WSE
+WEAKFISHATLC,169241,Cynoscion regalis,Weakfish,USA-NMFS-ATLC
+WHAKE3NOPs,164732,Urophycis tenuis,White hake,multinational-NAFO-3NOPs
+WHAKE3Ps,164732,Urophycis tenuis,White hake,multinational-NAFO-3Ps
+WHAKE4RS,164732,Urophycis tenuis,White hake,Canada-DFO-4RS
+WHAKE4T,164732,Urophycis tenuis,White hake,Canada-DFO-4T
+WHAKE4VWX5,164732,Urophycis tenuis,White hake,Canada-DFO-4VWX5
+WHAKEGBGOM,164732,Urophycis tenuis,White hake,USA-NMFS-5YZ
+WHITIIIa,164758,Merlangius merlangus,Whiting,multinational-ICES-IIIa
+WHITMEDGSA29,164758,Merlangius merlangus,Whiting,multinational-GFCM-GSA29
+WHITNS-VIId,164758,Merlangius merlangus,Whiting,multinational-ICES-IV-VIId
+WHITVIa,164758,Merlangius merlangus,Whiting,multinational-ICES-VIa
+WHITVIb,164758,Merlangius merlangus,Whiting,multinational-ICES-VIb
+WHITVIIa,164758,Merlangius merlangus,Whiting,multinational-ICES-VIIa
+WHITVIIbce-k,164758,Merlangius merlangus,Whiting,multinational-ICES-VIIbce-k
+WHITVIII-IXa,164758,Merlangius merlangus,Whiting,multinational-ICES-VIII-IXa
+WINDOWGOMGB,172746,Scophthalmus aquosus,Windowpane flounder,USA-NMFS-5YZ
+WINDOWSNEMATL,172746,Scophthalmus aquosus,Windowpane flounder,USA-NMFS-SNEMATL
+WINFLOUN4T,172905,Pseudopleuronectes americanus,Winter flounder,Canada-DFO-4T
+WINFLOUN5Z,172905,Pseudopleuronectes americanus,Winter flounder,USA-NMFS-5Z
+WINFLOUND5Y,172905,Pseudopleuronectes americanus,Winter flounder,USA-NMFS-5Y
+WINFLOUNSNEMATL,172905,Pseudopleuronectes americanus,Winter flounder,USA-NMFS-SNEMATL
+WITFLOUN2J3KL,172873,Glyptocephalus cynoglossus,Witch flounder,Canada-DFO-2J3KL
+WITFLOUN3Ps,172873,Glyptocephalus cynoglossus,Witch flounder,Canada-DFO-3Ps
+WITFLOUN4RST,172873,Glyptocephalus cynoglossus,Witch flounder,Canada-DFO-4RST
+WITFLOUN5Y,172873,Glyptocephalus cynoglossus,Witch flounder,USA-NMFS-5Y
+WITFLOUNIIIa-IV-VIId,172873,Glyptocephalus cynoglossus,Witch flounder,multinational-ICES-IIIa-IV-VIId
+WLFLOUNNPAC,1007829,Tanakius kitaharae,Willowy flounder,Japan-FAJ-NPAC
+WMARLINATL,172499,Tetrapturus albidus,White marlin,multinational-ICCAT-ATL
+WPOLLAI,164722,Theragra chalcogramma,Walleye pollock,USA-NMFS-AI
+WPOLLBCWN,164722,Theragra chalcogramma,Walleye pollock,Canada-DFO-BCWN
+WPOLLBCWS,164722,Theragra chalcogramma,Walleye pollock,Canada-DFO-BCWS
+WPOLLBOGO,164722,Theragra chalcogramma,Walleye pollock,USA-NMFS-BOGO
+WPOLLEBS,164722,Theragra chalcogramma,Walleye pollock,USA-NMFS-EBS
+WPOLLGA,164722,Theragra chalcogramma,Walleye pollock,USA-NMFS-GA
+WPOLLNAVAR,164722,Theragra chalcogramma,Walleye pollock,Russia-RFFA-NAVAR
+WPOLLNSO,164722,Theragra chalcogramma,Walleye pollock,Russia-RFFA-NSO
+WPOLLWBS,164722,Theragra chalcogramma,Walleye pollock,Russia-RFFA-WBS
+WROCKBCW,166719,Sebastes entomelas,Widow rockfish,Canada-DFO-BCW
+WROCKPCOAST,166719,Sebastes entomelas,Widow rockfish,USA-NMFS-PCOAST
+WSCONGIMKB,635926,Conger myriaster,Whitespotted conger,Japan-FAJ-IMKB
+WSGTFMHI,169452,Parupeneus porphyreus,Whitesaddle goatfish,USA-NMFS-MHI
+WSHRIMPGM,551680,Litopenaeus setiferus,White shrimp,USA-NMFS-GM
+WSKAT5YCHATT,564145,Leucoraja ocellata,Winter skate,USA-NMFS-5YCHATT
+WVSCALLALASKA,79757,Patinopecten caurinus,Weathervane scallop,USA-NMFS-ALASKA
+WWHELKQCW,73795,Buccinum undatum,Waved whelk,Canada-DFO-QCW
+YEGROUPGM,167699,Epinephelus flavolimbatus,Yellowedge grouper,USA-NMFS-GM
+YELL3LNO,172909,Limanda ferruginea,Yellowtail flounder,multinational-NAFO-3LNO
+YELL4T,172909,Limanda ferruginea,Yellowtail flounder,Canada-DFO-4T
+YELLCCODGOM,172909,Limanda ferruginea,Yellowtail flounder,USA-NMFS-CCOD5Y
+YELLGB,172909,Limanda ferruginea,Yellowtail flounder,USA-NMFS-GB
+YELLSNEMATL,172909,Limanda ferruginea,Yellowtail flounder,USA-NMFS-SNEMATL
+YEYEROCKGA,166740,Sebastes ruberrimus,Yelloweye rockfish,USA-NMFS-GA
+YEYEROCKPCOAST,166740,Sebastes ruberrimus,Yelloweye rockfish,USA-NMFS-PCOAST
+YEYEROCKPCOASTIN,166740,Sebastes ruberrimus,Yelloweye rockfish,Canada-DFO-PCOASTIN
+YFGTFMHI,620976,Mulloides vanicolensis,Yellowfin goatfish,USA-NMFS-MHI
+YFINATL,172423,Thunnus albacares,Yellowfin tuna,multinational-ICCAT-ATL
+YFINCWPAC,172423,Thunnus albacares,Yellowfin tuna,multinational-WCPFC-CWPAC
+YFINEIO,172423,Thunnus albacares,Yellowfin tuna,multinational-IOTC-IO
+YFINEPAC,172423,Thunnus albacares,Yellowfin tuna,multinational-IATTC-EPAC
+YGSFISHNPAC,690538,Lophius litulon,Yellow goosefish,Japan-FAJ-NPAC
+YNOSESKACH,-991,Zearaja chilensis,Yellownose skate,Chile-SUBPESCA-CH
+YNOSESKACSCH,-991,Zearaja chilensis,Yellownose skate,Chile-SUBPESCA-CH-CS
+YNOSESKASCH,-991,Zearaja chilensis,Yellownose skate,Chile-SUBPESCA-CH-S
+YSFLOUNNHOKK,616071,Pseudopleuronectes herzensteini,Yellow striped flounder,Japan-FAJ-NHOKK
+YSFLOUNSOJ,616071,Pseudopleuronectes herzensteini,Yellow striped flounder,Japan-FAJ-SOJ
+YSGTFMHI,169409,Mulloidichthys flavolineatus,Yellowstripe goatfish,USA-NMFS-MHI
+YSOLEBSAI,172907,Limanda aspera,Yellowfin sole,USA-NMFS-BSAI
+YTROCKNPCOAST,166720,Sebastes flavidus,Yellowtail rockfish,USA-NMFS-NPCOAST
+YTSNAPSATLCGM,168907,Ocyurus chrysurus,Yellowtail snapper,USA-NMFS-SATLCGM

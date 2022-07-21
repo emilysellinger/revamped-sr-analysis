@@ -84,8 +84,10 @@ summary(fit)
 pdf(here("results/lifespan_analysis", "max_age_regime_plot.pdf"))
 a <- ggplot(env_change_pt) + 
   geom_point(aes(x = age, y = regime_length, color = as.factor(fishery_type))) + 
-  geom_abline(slope = 0.04876, intercept = 14.67006) +
-  ylab("regime length") + labs(col = "fishery type") + xlab("species maximum age")
+  geom_abline(slope = 0.04876, intercept = 14.67006) + 
+  ylab("regime length") + xlab("species maximum age") +
+  scale_color_manual(values = natparks.pals("Banff", n = 9, type = "continuous"), name = "fishery type") +
+  theme_minimal()
 print(a)
 dev.off()
 
@@ -94,14 +96,15 @@ dev.off()
 counts <- counts %>%
   left_join(lifespan)
 
-ggplot(counts) +
-  geom_histogram(aes(x = age, fill = fishery_type), position = "identity", alpha = 0.6, bins = 35)
+pdf(here("results/lifespan_analysis", "nregime_age_boxplot.pdf"))
+a <- ggplot(counts) +
+  geom_boxplot(aes(y = as.factor(nregimes), x = age), fill = "#00A1B7") + 
+  labs(x = "species maximum age", y = "number of recruitment regimes") +
+  theme_minimal()
+print(a)
+dev.off()
 
-ggplot(counts) +
-  geom_bar(aes(y = nregimes, fill = fishery_type))
 
-ggplot(counts) + 
-  geom_point(aes(x = age, y = nregimes))
 
 counts %>% filter(age <= 10) %>% summarise(avg_regimes = mean(n))
 counts %>% filter(age > 10) %>% filter(age <= 20) %>% summarise(avg_regimes = mean(n))
@@ -109,12 +112,14 @@ counts %>% filter(age > 20) %>% filter(age <= 40) %>% summarise(avg_regimes = me
 counts %>% filter(age > 40) %>% summarise(avg_regimes = mean(n))
 
 
-# Linear/GAM Model Tests  -----------------------------------------------------------
-library(mgcv)
-
-mod1 <- lm(log(regime_length)~log(age), data = env_change_pt)
-mod2 <- gam(regime_length~s(age, bs = "cr"), data = env_change_pt)
-
-
 # Median regime length ----------------------------------------------------
 quantile(env_change_pt$regime_length)
+
+
+
+# Stock area IDs ----------------------------------------------------
+stock_info <- read_csv(here("ram_stock_info.csv"))
+area_info <- read_csv(here("ram_area_ids.csv"))
+
+stock_info <- left_join(stock_info, area_info)
+write_csv(stock_info, file = here("stock_area_ids.csv"))

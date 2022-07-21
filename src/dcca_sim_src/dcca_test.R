@@ -113,56 +113,12 @@ get_corrs <- function(spawn, recruit, win_size, error, nu){
   return(corr_df)
 }
 
+
 # Simulations -------------------------------------------------------------
-bh_sims1 <- BevHolt_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = 0.5, R0 = 20, SPR0 = 3, h = 0.9)
-r_sims1 <- Ricker_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = 0.5, R0 = 20, h = 0.9, S0 = 150)
-
-bh_sims2 <- BevHoltAR_sim(Nsims = 10000, Nyears = 50, SB0 = 150, 
-                          depletion = 0.5, R0 = 20, SPR0 = 3, h = 0.9, arval = 0.5)
-
-
-# extract data
-bh_sb1 <- bh_sims1[[1]]
-bh_r1 <- bh_sims1[[2]]
-bh_sigmaR1 <- bh_sims1[[3]]
-
-r_sb1 <- r_sims1[[1]]
-r_r1 <- r_sims1[[2]]
-r_sigmaR1 <- r_sims1[[3]]
-
-# extract data (AR version)
-bh_sb2 <- bh_sims2[[1]]
-bh_r2 <- bh_sims2[[2]]
-bh_sigmaR2 <- bh_sims2[[3]]
-
-
-# calculate correlations
-bh_sim_corr1 <- get_corrs(spawn = bh_sb1, recruit = bh_r1, win_size = 10, nu = 1, error = bh_sigmaR1)
-r_sim_corr1 <- get_corrs(spawn = r_sb1, recruit = r_r1, win_size = 10, error = r_sigmaR1, nu = 1)
-
-bh_sim_corr2 <- get_corrs(spawn = bh_sb2, recruit = bh_r2, win_size = 10, nu = 1, error = bh_sigmaR2)
-
-# plot the results
-ggplot(data = bh_sim_corr2) + geom_point(aes(x = sigmaR, y = sp_rho), color = "red") +
-  geom_point(aes(x = sigmaR, y = dcca_rho), color = "blue", alpha = 0.5) + 
-  labs(title = "BH-AR SR curve \n depletion = 0.5, h = 0.9", x = "recruitment error", y = "correlation coef")
-
-ggplot(data = r_sim_corr1) + geom_point(aes(x = sigmaR, y = sp_rho), color = "red") +
-  geom_point(aes(x = sigmaR, y = dcca_rho), color = "blue", alpha = 0.5) +
-  labs(title = "Ricker SR curve \n depletion = 0.5, h = 0.9", x = "recruitment error", y = "correlation coef")
-
-# box plots
-bh_sim_corr1 <- bh_sim_corr1 %>% pivot_longer(!sigmaR, names_to = "corr_method", values_to = "rho")
-bh_sim_corr1$sigmaR <- as_factor(bh_sim_corr1$sigmaR)
-
-ggplot(data = bh_sim_corr1, aes(x = sigmaR, y = rho, fill = corr_method)) + 
-  geom_boxplot() + labs(title = )
-
-
 # plot multiple simulations
 deps <- c(0.1,0.5)
 steepness <- c(0.3,0.5,0.7,0.9)
-pdf("dcca_sim_figs/corr_sims_boxplot.pdf")
+pdf("results/dcca_sim/corr_sims_boxplot.pdf")
 for(i in deps){
   for(j in steepness){
     bh_sims <- BevHolt_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = i, R0 = 20, SPR0 = 3, h = j)
@@ -178,8 +134,8 @@ for(i in deps){
     r_sigmaR <- r_sims[[3]]
     
     # calculate correlations
-    bh_sim_corr <- get_corrs(spawn = bh_sb, recruit = bh_r, win_size = 5, nu = 2, error = bh_sigmaR)
-    r_sim_corr <- get_corrs(spawn = r_sb, recruit = r_r, win_size = 5, error = r_sigmaR, nu = 2)
+    bh_sim_corr <- get_corrs(spawn = bh_sb, recruit = bh_r, win_size = 15, nu = 2, error = bh_sigmaR)
+    r_sim_corr <- get_corrs(spawn = r_sb, recruit = r_r, win_size = 15, error = r_sigmaR, nu = 2)
     
     # rearrange data for box plots
     bh_sim_corr <- bh_sim_corr %>% pivot_longer(!sigmaR, names_to = "method", values_to = "rho")
@@ -190,14 +146,18 @@ for(i in deps){
     
     
     # box plots
-    a <- ggplot(data = bh_sim_corr, aes(x = sigmaR, y = rho, fill = method)) + 
-      geom_boxplot() + 
+    a <- ggplot(data = bh_sim_corr) + 
+      geom_boxplot(aes(x = sigmaR, y = rho, fill = method)) + 
       labs(title = "Simulated correlation values with BH curve", x = "Recruitment error", y = "Rho", 
-           fill = "Correlation Method", subtitle = paste("depletion =", i, "steepness =", j, sep = " "))
-    b <- ggplot(data = r_sim_corr, aes(x = sigmaR, y = rho, fill = method)) + 
-      geom_boxplot() + 
+           fill = "Correlation Method", subtitle = paste("depletion =", i, "steepness =", j, sep = " ")) +
+      scale_fill_manual(values = natparks.pals("Banff")) +
+      theme_minimal()
+    b <- ggplot(data = r_sim_corr) + 
+      geom_boxplot(aes(x = sigmaR, y = rho, fill = method)) + 
       labs(title = "Simulated correlation values with Ricker curve", x = "Recruitment error", y = "Rho", 
-           fill = "Correlation Method", subtitle = paste("depletion =", i, "steepness =", j, sep = " "))
+           fill = "Correlation Method", subtitle = paste("depletion =", i, "steepness =", j, sep = " ")) +
+      scale_fill_manual(values = natparks.pals("Banff")) +
+      theme_minimal()
     
     print(grid.arrange(a, b, nrow = 2))
     
@@ -209,7 +169,7 @@ dev.off()
 # AR Simulations ----------------------------------------------------------
 deps <- c(0.1,0.5)
 steepness <- c(0.3,0.5,0.7,0.9)
-pdf("dcca_sim_figs/AR_corr_sims_boxplot.pdf")
+pdf(here("results/dcca_sim/AR_corr_sims_boxplot.pdf"))
 for(i in deps){
   for(j in steepness){
     bh_sims <- BevHoltAR_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = i, R0 = 20, SPR0 = 3, h = j, arval = 0.5)
@@ -225,8 +185,8 @@ for(i in deps){
     r_sigmaR <- r_sims[[3]]
     
     # calculate correlations
-    bh_sim_corr <- get_corrs(spawn = bh_sb, recruit = bh_r, win_size = 5, nu = 2, error = bh_sigmaR)
-    r_sim_corr <- get_corrs(spawn = r_sb, recruit = r_r, win_size = 5, error = r_sigmaR, nu = 2)
+    bh_sim_corr <- get_corrs(spawn = bh_sb, recruit = bh_r, win_size = 15, nu = 2, error = bh_sigmaR)
+    r_sim_corr <- get_corrs(spawn = r_sb, recruit = r_r, win_size = 15, error = r_sigmaR, nu = 2)
     
     # rearrange data for box plots
     bh_sim_corr <- bh_sim_corr %>% pivot_longer(!sigmaR, names_to = "method", values_to = "rho")
@@ -237,14 +197,18 @@ for(i in deps){
     
     
     # box plots
-    a <- ggplot(data = bh_sim_corr, aes(x = sigmaR, y = rho, fill = method)) + 
-      geom_boxplot() + 
+    a <- ggplot(data = bh_sim_corr) + 
+      geom_boxplot( aes(x = sigmaR, y = rho, fill = method)) + 
       labs(title = "Simulated correlation values with BH AR curve", x = "Recruitment error", y = "Rho", 
-           fill = "Correlation Method", subtitle = paste("depletion =", i, "steepness =", j, sep = " "))
-    b <- ggplot(data = r_sim_corr, aes(x = sigmaR, y = rho, fill = method)) + 
-      geom_boxplot() + 
+           fill = "Correlation Method", subtitle = paste("depletion =", i, "steepness =", j, sep = " ")) +
+      scale_fill_manual(values = natparks.pals("Banff")) +
+      theme_minimal()
+    b <- ggplot(data = r_sim_corr) + 
+      geom_boxplot(aes(x = sigmaR, y = rho, fill = method)) + 
       labs(title = "Simulated correlation values with AR Ricker curve", x = "Recruitment error", y = "Rho", 
-           fill = "Correlation Method", subtitle = paste("depletion =", i, "steepness =", j, sep = " "))
+           fill = "Correlation Method", subtitle = paste("depletion =", i, "steepness =", j, sep = " ")) +
+      scale_fill_manual(values = natparks.pals("Banff")) +
+      theme_minimal()
     
     print(grid.arrange(a, b, nrow = 2))
     
@@ -260,6 +224,7 @@ window_test_stocks$driver <- c(rep("environment", 244), rep("edge", 127),
 window_test_stocks$win5_rho <- rep(NA, nrow(window_test_stocks))
 window_test_stocks$win10_rho <- rep(NA, nrow(window_test_stocks))
 window_test_stocks$win15_rho <- rep(NA, nrow(window_test_stocks))
+window_test_stocks <- window_test_stocks[,-c(3:10)]
 
 window_size <- c(5, 10, 15)
 
@@ -293,14 +258,20 @@ window_test_stocks2$window_size[window_test_stocks2$window_size == "win15_rho"] 
 
 pdf(here("results/dcca_sim", "window_rho_sensitivity.pdf"))
 aa <- ggplot(data = subset(window_test_stocks2, driver == "environment")) + 
-  geom_density(aes(x = dcca_rho, fill = as.factor(window_size)), position = "identity", alpha = 0.3) +
-  labs(x = "DCCA correlation coefficient", fill = "window size", subtitle = "(a) environmentally driven")
+  geom_density(aes(x = dcca_rho, fill = as.factor(window_size)), position = "identity", alpha = 0.5) +
+  labs(x = "DCCA correlation coefficient", fill = "window size", subtitle = "(a)") +
+  scale_fill_manual(values = c("#006475", "#586028", "#9DA7BF")) +
+  theme_minimal()
 bb <- ggplot(data = subset(window_test_stocks2, driver == "edge")) + 
-  geom_density(aes(x = dcca_rho, fill = as.factor(window_size)), position = "identity", alpha = 0.3) +
-  labs(x = "DCCA correlation coefficient", fill = "window size", subtitle = "(b) undetermined")
+  geom_density(aes(x = dcca_rho, fill = as.factor(window_size)), position = "identity", alpha = 0.5) +
+  labs(x = "DCCA correlation coefficient", fill = "window size", subtitle = "(b)") +
+  scale_fill_manual(values = c("#006475", "#586028", "#9DA7BF")) +
+  theme_minimal()
 cc <- ggplot(data = subset(window_test_stocks2, driver == "spawning biomass")) + 
-  geom_density(aes(x = dcca_rho, fill = as.factor(window_size)), position = "identity", alpha = 0.3) +
-  labs(x = "DCCA correlation coefficient", fill = "window size", subtitle = "(c) spawning biomass driven")
+  geom_density(aes(x = dcca_rho, fill = as.factor(window_size)), position = "identity", alpha = 0.5) +
+  labs(x = "DCCA correlation coefficient", fill = "window size", subtitle = "(c)") +
+  scale_fill_manual(values = c("#006475", "#586028", "#9DA7BF")) +
+  theme_minimal()
 print(grid.arrange(aa, bb, cc, nrow = 3))
 dev.off()
 

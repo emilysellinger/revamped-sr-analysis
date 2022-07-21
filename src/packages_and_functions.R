@@ -12,6 +12,7 @@ library(stats4)
 library(DCCA)
 library(MARSS)
 library(sf)
+library(NatParksPalettes)
 # Functions ---------------------------------------------------------------
 
 retrieve_sr_data <- function(x){

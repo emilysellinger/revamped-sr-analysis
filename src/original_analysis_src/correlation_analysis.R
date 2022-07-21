@@ -214,6 +214,7 @@ rho_comparison_sb %>%
   geom_vline(xintercept = 0, color = "black") +
   labs(x = "correlation coefficient", y = "stock identifier", 
        title = "Stocks with primary influence of spawning biomass on recruitment") +
+  scale_color_manual(values = natparks.pals("Banff")) +
   theme_minimal() +
   theme(legend.position = "bottom")
 ggsave(here("results/original_analysis/figures", "sb_rho_comp_dumbbell.pdf"), height = 10, width = 12)
@@ -227,6 +228,7 @@ rho_comparison_env %>%
   xlim(-1,1) +
   labs(x = "correlation coefficient", y = "stock identifier", 
        title = "Stocks with primary influence of environment on recruitment") +
+  scale_color_manual(values = natparks.pals("Banff")) +
   theme_minimal() +
   theme(legend.position = "bottom")
 ggsave(here("results/original_analysis/figures", "env_rho_comp_dumbbell.pdf"), height = 30, width = 12)
@@ -239,6 +241,7 @@ rho_comparison_edge %>%
   xlim(-1,1) + 
   labs(x = "correlation coefficient", y = "stock identifier", 
        title = "Edge case stocks") +
+  scale_color_manual(values = natparks.pals("Banff")) +
   theme_minimal() +
   theme(legend.position = "bottom")
 ggsave(here("results/original_analysis/figures", "edge_rho_comp_dumbbell.pdf"), height = 15)
@@ -272,23 +275,23 @@ ggsave(here("results/original_analysis/figures", "edge_case_rho_scatter.pdf"))
 # combine all scatter plots into 1 panel
 a <- rho_comparison %>% 
   filter(driver == "spawning biomass") %>% 
-  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point() +
+  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point(color = "#006475") +
   labs(x = "Spearman's correlation coefficient", y = "DCCA correlation coefficient",
-       title = "Spawning biomass stocks") + xlim(0, 1) + ylim(-1, 1) +
+       subtitle = "(a)") + xlim(0, 1) + ylim(-1, 1) +
   theme_minimal()
 
 b <- rho_comparison %>% 
   filter(driver == "environment") %>% 
-  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point() +
+  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point(color = "#006475") +
   labs(x = "Spearman's correlation coefficient", y = "DCCA correlation coefficient",
-       title = "Environment stocks") + xlim(-1, 1) + ylim(-1, 1) +
+       subtitle = "(b)") + xlim(-1, 1) + ylim(-1, 1) +
   theme_minimal()
 
 c <- rho_comparison %>% 
   filter(driver == "edge case") %>% 
-  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point() +
+  ggplot(aes(x = sp_zero_lag, y = dcca_rho)) + geom_point(color = "#006475") +
   labs(x = "Spearman's correlation coefficient", y = "DCCA correlation coefficient",
-       title = "Edge case stocks") + xlim(0, 1) + ylim(-1, 1) +
+       subtitle = "(c)") + xlim(0, 1) + ylim(-1, 1) +
   theme_minimal()
 
 pdf(here("results/original_analysis/figures", "combined_rho_scatter.pdf"))

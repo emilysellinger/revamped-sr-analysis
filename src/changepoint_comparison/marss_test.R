@@ -67,9 +67,10 @@ regime_change_plot <- function(x){
   rec_ts_plot <- ggplot(data = stock, aes(x = year, y = recruits)) +
     geom_line(size = 1) +
     geom_rect(data = rectangle_data, inherit.aes = FALSE, aes(xmin = xmin, xmax = xmax, ymin = ymin,
-                                                              ymax = ymax, fill = as.factor(color_factor)), alpha = 0.3) +
+                                                              ymax = ymax, fill = as.factor(color_factor)), alpha = 0.5) +
     guides(fill = "none") +
-    labs(x = "Year", y = "Recruits", title = stock_id, subtitle = paste(species_name, region, sep = "\n")) +
+    labs(x = "Year", y = "Recruits", title = stock_id, subtitle = paste(species_name, region, "(a)", sep = "\n")) +
+    scale_fill_manual(values = natparks.pals("Banff")) + 
     theme_minimal()
   
   # MARSS stochastic level model
@@ -97,7 +98,7 @@ regime_change_plot <- function(x){
   
   level_change_plot <- ggplot(data = level_changes, aes(x = year, y = std_resids)) + geom_line() +
     geom_hline(yintercept = -2, linetype = "dashed") + geom_hline(yintercept = 2, linetype = "dashed") +
-    ylim(-4,4) + labs(y = "standardized residuals", x = "year") + theme_minimal()
+    ylim(-4,4) + labs(y = "standardized residuals", x = "year", subtitle = "(b)") + theme_minimal()
   
   
   # BCP analysis of log recruitment change points
@@ -106,7 +107,7 @@ regime_change_plot <- function(x){
                     pt_prob = bcp_fit$posterior.prob)
   
   bcp_plot <- ggplot(data = bcp_dat, aes(x = year, y = pt_prob)) + geom_line() +
-    ylim(0, 1) + labs(x = "year", y = "posterior prob of change point") + 
+    ylim(0, 1) + labs(x = "year", y = "posterior prob of change point", subtitle = "(c)") + 
     geom_hline(yintercept = 0.75, linetype = 2) + theme_minimal()
   
   # print both graphs
@@ -134,39 +135,6 @@ View(cody_stocks)
 cody_stocks2 <- cody_stocks %>% 
   filter(original_driver != "spawning biomass") %>% 
   filter(is.na(change))
-
-# combine with regime count data
-cody_stocks2 <- cody_stocks2 %>% 
-  left_join(counts2, by = "stock_name")
-
-# remove stocks that were reclassified
-cody_stocks2 <- cody_stocks2 %>% 
-  filter(!is.na(nregimes))
-
-a <- cody_stocks2 %>% 
-  filter(regime_changes == nshifts)
-b <- cody_stocks2 %>% 
-  filter(regime_changes < nshifts)
-c <- cody_stocks2 %>% 
-  filter(regime_changes > nshifts)
-
-
-
-# STARS Algorithm ---------------------------------------
-# Note: is not working. I don't know why
-library(rshift)
-
-env_influenced <- rbind(env_driven_stocks, edge_stocks)
-stars_cpt <- tibble()
-
-stock <- retrieve_sr_data("CHTRACCH")
-fit <- Rodionov(stock, "resids", "year", 32, prob = 0.1, merge = TRUE)
-RSI_graph(fit, "resids", "year", "RSI")
-
-
-fit2 <- cpt.mean(stock$logR, method = "PELT", minseglen = 6, penalty = "BIC")
-
-stock$resids <- (stock$logR - mean(stock$logR))/sd(stock$logR)
 
 # Going to just compare the regimes over the original years of Cody's analysis
 cody_env_change_pt <- tibble(
@@ -199,13 +167,13 @@ for(x in cody_stocks2$stock_name){
 }
 
 
-counts <- cody_env_change_pt %>%
+cody_counts <- cody_env_change_pt %>%
   count(stock_name) %>% 
   rename(nregimes = n) %>%  # number of regimes in time series
   mutate(nshifts = nregimes - 1) # number of times regime shift (1 regime = 0 shifts)
 
 
-counts %>% filter(nshifts > 0) # 62 have regime shifts
+cody_counts %>% filter(nshifts > 0) # 62 have regime shifts
 
 # combine with regime count data
 cody_stocks2 <- cody_stocks2 %>% 
@@ -219,9 +187,9 @@ regime_comp <- cody_stocks2 %>%
   select(stock_name, nshifts, regime_changes) %>% 
   mutate(diffs = nshifts - regime_changes)
 
-pdf(here("results", "peltVstars.pdf"))
-a <- ggplot(regime_comp, aes(diffs)) + 
-  geom_histogram(color = "black", fill = "gray", binwidth = 1) + 
+pdf(here("results/changepoint_comparison", "peltVstars.pdf"))
+a <- ggplot(regime_comp) + 
+  geom_histogram(aes(diffs), color = "#006475", fill = "#00A1B7", alpha = 0.8, binwidth = 1) + 
   xlab("difference in number of identified regime shifts") +
   geom_vline(xintercept = -1.2, linetype = 2) +
   theme_minimal()

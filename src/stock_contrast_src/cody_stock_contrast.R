@@ -52,25 +52,12 @@ for(x in cody_stocks$stock_name){
   cody_stocks[row, "Cdepletion"] <- quants2[1]/quants2[2]
 }
 
-# print results
-cody_stocks3 <- pivot_longer(cody_stocks2, 
-                             !c(stock_name, old_min_year, old_max_year, original._driver, change, note),
-                             names_to = "analysis", values_to = "depletion")
-cody_stocks3$analysis <- sub("Odepletion", "Szuwalski et al", cody_stocks3$analysis)
-cody_stocks3$analysis <- sub("Cdepletion", "Current", cody_stocks3$analysis)
-
-pdf(here("sb_contrast", "cody_stocks_contrast_boxplot.pdf"))
-a <- ggplot(data = cody_stocks3) + geom_boxplot(aes(x = original._driver, y = depletion, fill = analysis)) + 
-  labs(x = "original recruitment driver classification", y = "depletion", 
-       title = "Historical spawning biomass depletion",
-       subtitle = "calculated for 178 of the 224 stocks in Szuwalski et al. (2015)")
-print(a)
-dev.off()
 
 # Box plot for the difference in original and current depletion
 cody_stocks$diff_deplet <- cody_stocks$Odepletion - cody_stocks$Cdepletion
 pdf(here("results/stock_contrast", "cody_stocks_diff_contrast_boxplot.pdf"))
-a <- ggplot(data = cody_stocks) + geom_boxplot(aes(x = original_driver, y = diff_deplet)) + 
-  labs(x = "original recruitment driver classification", y = "difference in depletion")
+a <- ggplot(data = cody_stocks) + geom_boxplot(aes(x = original_driver, y = diff_deplet), fill = "#00A1B7") + 
+  labs(x = "original recruitment driver classification", y = "difference in depletion") +
+  theme_minimal()
 print(a)
 dev.off()

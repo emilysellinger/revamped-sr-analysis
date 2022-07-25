@@ -1,15 +1,8 @@
-library(MARSS)
-library(tidyverse)
-library(here)
-library(onlineBcp)
-library(bcp)
-library(gridExtra)
+# MARSS Structural Break example
 RShowDoc("Chapter_StructuralBreaks.R", package = "MARSS")
 
-# MARSS Structural Break example
-# will use some of the data with identified regime changes (as indicated by PELT) 
 
-# Plotting function -------------------------------------------------------
+# Functions -------------------------------------------------------
 regime_change_plot <- function(x){
   row <- which(stock_model_fits$stock_name == x)
   
@@ -115,13 +108,86 @@ regime_change_plot <- function(x){
 }
 
 
-# want to do this with stocks I did change point detection on
+
+# Method Comparison -------------------------------------------------------
+
+# plot the recruitment regimes identified by each of the three methods
 pdf("results/changepoint_comparison/regime_detection_comparison.pdf")
 for(i in unique(env_change_pt$stock_name)){
   regime_change_plot(i)
 }
 dev.off()
 
+# Also want to determine the difference in the number of regimes for each of the stocks
+# create tibble with s-r data
+shift_comp <- counts %>% 
+  filter(nshifts > 0) %>% 
+  select(stock_name, nshifts) %>% 
+  rename(nshifts_PELT = nshifts) %>% 
+  add_column(nshifts_MARSS = rep(NA, 172),
+             nshifts_BCP = rep(NA, 172))
+
+# Looking at the graphs from above, I already know some have degenerate solutions for MARSS
+# will remove those stocks from the analysis below
+degen_stocks <- c("GHALNEAR", "SNAPSAUSSSG", "SOLENS", "ARFLOUNDPCOAST", "ATLCROAKMATLC", "CHILISPCOAST", 
+                  "GRSNAPGM", "HERR4RSP", "PHAKEPCOAST", "SABLEFEBSAIGA", "SEELNSSA4", "COD3M", "CSALMSSR", 
+                  "PSALMANADYRPW", "PSALMMONTD", "PSALMPDICK", "PSALMPRIMPW", "PSALMROCKYROD", "PSALMWINDYC",
+                  "SSALMSEYMOUR")
+non_degen_stocks <- shift_comp %>% 
+  select(stock_name) %>% 
+  filter(!(stock_name %in% degen_stocks))
+
+for(x in non_degen_stocks$stock_name){
+  row <- which(shift_comp$stock_name == x)
+  stock <- retrieve_sr_data(x)
+    
+  # MARSS stochastic level model
+  mod <- list(
+    Z = matrix(1), A = matrix(0), R = matrix("r"),
+    B = matrix(1), U = matrix(0), Q = matrix("q"),
+    x0 = matrix("pi")
+  )
+    
+  # fit model
+  dat <- t(as.matrix(log(stock$recruits)))
+  rownames(dat) <- "logrecruits"
+  kem.2 <- MARSS(dat, model = mod, silent = TRUE, method = "BFGS")
+    
+  # get residuals
+  resids <- MARSSresiduals(kem.2, type = "tT")$mar.residuals
+  state_resids <- resids[2,]
+  shift_comp[row, "nshifts_MARSS"] <- sum(state_resids > 2 | state_resids < -2, na.rm = T)
+    
+  # BCP method
+  bcp_fit <- bcp(log(stock$recruits))
+  posterior_probs <- bcp_fit$posterior.prob
+  shift_comp[row, "nshifts_BCP"] <- sum(posterior_probs >= 0.75, na.rm = T)
+  
+}
+
+for(x in degen_stocks){
+  row <- which(shift_comp$stock_name == x)
+  stock <- retrieve_sr_data(x)
+  
+  # BCP method
+  bcp_fit <- bcp(log(stock$recruits))
+  posterior_probs <- bcp_fit$posterior.prob
+  shift_comp[row, "nshifts_BCP"] <- sum(posterior_probs >= 0.75, na.rm = T)
+}
+
+shift_comp2 <- shift_comp %>% 
+  pivot_longer(!stock_name, names_to = "method", values_to = "nshifts")
+
+shift_comp2$method <- replace(shift_comp2$method, shift_comp2$method == "nshifts_PELT", "PELT")
+shift_comp2$method <- replace(shift_comp2$method, shift_comp2$method == "nshifts_MARSS", "MARSS")
+shift_comp2$method <- replace(shift_comp2$method, shift_comp2$method == "nshifts_BCP", "BCP")
+
+pdf(here("results/changepoint_comparison", "nshift_method_boxplot.pdf"))
+a <- ggplot(shift_comp2) + 
+  geom_boxplot(aes(x = method, y = nshifts), fill = "#00A1B7") + 
+  labs(y = "number of regime shifts") + theme_minimal()
+print(a)
+dev.off()
 
 
 # Comparison of regimes to Szuwalski et al --------------------------------

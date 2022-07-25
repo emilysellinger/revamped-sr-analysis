@@ -23,7 +23,7 @@ BevHolt_sim <- function(Nsims, Nyears, SB0, depletion, R0, h, SPR0){
     sim_info[i,1] <- sigmaR
     # sample spawning biomass values
     sb_sims[,i] <- runif(Nyears, min = depletion*SB0, max = SB0)
-    r_sims[,i] <- (0.8*R0*h*sb_sims[,i])/(0.2*SPR0*R0*(1 - h) + (h - 0.2)*sb_sims[,i])*exp(-rnorm(Nyears, 0, sigmaR))
+    r_sims[,i] <- (0.8*R0*h*sb_sims[,i])/(0.2*SPR0*R0*(1 - h) + (h - 0.2)*sb_sims[,i])*exp(rnorm(Nyears, 0, sigmaR) - (sigmaR^2)/2)
   }
   
   return(list(sb_sims, r_sims, sim_info))
@@ -43,7 +43,7 @@ Ricker_sim <- function(Nsims, Nyears, SB0, depletion, R0, h, S0){
     sim_info[i,1] <- sigmaR
     # sample spawning biomass values
     sb_sims[,i] <- runif(Nyears, min = depletion*SB0, max = SB0)
-    r_sims[,i] <- R0*(sb_sims[,i]/S0)*exp(log(5*h)*(1 - sb_sims[,i]/S0)/0.8)*exp(-rnorm(Nyears, 0, sigmaR))
+    r_sims[,i] <- R0*(sb_sims[,i]/S0)*exp(log(5*h)*(1 - sb_sims[,i]/S0)/0.8)*exp(rnorm(Nyears, 0, sigmaR) - (sigmaR^2)/2)
   }
   
   return(list(sb_sims, r_sims, sim_info))
@@ -63,7 +63,7 @@ BevHoltAR_sim <- function(Nsims, Nyears, SB0, depletion, R0, h, SPR0, arval){
     sim_info[i,1] <- sigmaR
     # sample spawning biomass values
     sb_sims[,i] <- arima.sim(list(order = c(1,0,0), ar = arval), n = Nyears, rand.gen = rnorm, sd = 10) + depletion*SB0
-    r_sims[,i] <- (0.8*R0*h*sb_sims[,i])/(0.2*SPR0*R0*(1 - h) + (h - 0.2)*sb_sims[,i])*exp(-rnorm(Nyears, 0, sigmaR))
+    r_sims[,i] <- (0.8*R0*h*sb_sims[,i])/(0.2*SPR0*R0*(1 - h) + (h - 0.2)*sb_sims[,i])*exp(rnorm(Nyears, 0, sigmaR) - (sigmaR^2)/2)
   }
   
   return(list(sb_sims, r_sims, sim_info))
@@ -82,7 +82,7 @@ RickerAR_sim <- function(Nsims, Nyears, SB0, depletion, R0, h, S0, arval){
     sim_info[i,1] <- sigmaR
     # sample spawning biomass values
     sb_sims[,i] <- arima.sim(list(order = c(1,0,0), ar = arval), n = Nyears, rand.gen = rnorm, sd = 10) + depletion*SB0
-    r_sims[,i] <- R0*(sb_sims[,i]/S0)*exp(log(5*h)*(1 - sb_sims[,i]/S0)/0.8)*exp(-rnorm(Nyears, 0, sigmaR))
+    r_sims[,i] <- R0*(sb_sims[,i]/S0)*exp(log(5*h)*(1 - sb_sims[,i]/S0)/0.8)*exp(rnorm(Nyears, 0, sigmaR) - (sigmaR^2)/2)
   }
   
   return(list(sb_sims, r_sims, sim_info))

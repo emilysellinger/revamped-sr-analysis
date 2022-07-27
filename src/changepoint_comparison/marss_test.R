@@ -91,7 +91,7 @@ regime_change_plot <- function(x){
   
   level_change_plot <- ggplot(data = level_changes, aes(x = year, y = std_resids)) + geom_line() +
     geom_hline(yintercept = -2, linetype = "dashed") + geom_hline(yintercept = 2, linetype = "dashed") +
-    ylim(-4,4) + labs(y = "standardized residuals", x = "year", subtitle = "(b)") + theme_minimal()
+    ylim(-4,4) + labs(y = "Standardized residuals", x = "Year", subtitle = "(b)") + theme_minimal()
   
   
   # BCP analysis of log recruitment change points
@@ -100,7 +100,7 @@ regime_change_plot <- function(x){
                     pt_prob = bcp_fit$posterior.prob)
   
   bcp_plot <- ggplot(data = bcp_dat, aes(x = year, y = pt_prob)) + geom_line() +
-    ylim(0, 1) + labs(x = "year", y = "posterior prob of change point", subtitle = "(c)") + 
+    ylim(0, 1) + labs(x = "Year", y = "Posterior prob of change point", subtitle = "(c)") + 
     geom_hline(yintercept = 0.75, linetype = 2) + theme_minimal()
   
   # print both graphs
@@ -185,7 +185,7 @@ shift_comp2$method <- replace(shift_comp2$method, shift_comp2$method == "nshifts
 pdf(here("results/changepoint_comparison", "nshift_method_boxplot.pdf"))
 a <- ggplot(shift_comp2) + 
   geom_boxplot(aes(x = method, y = nshifts), fill = "#00A1B7") + 
-  labs(y = "number of regime shifts") + theme_minimal()
+  labs(y = "Number of regime shifts", x = "Method") + theme_minimal()
 print(a)
 dev.off()
 
@@ -243,7 +243,7 @@ cody_counts %>% filter(nshifts > 0) # 62 have regime shifts
 
 # combine with regime count data
 cody_stocks2 <- cody_stocks2 %>% 
-  left_join(counts, by = "stock_name")
+  left_join(cody_counts, by = "stock_name")
 
 # remove stocks that were reclassified
 cody_stocks2 <- cody_stocks2 %>% 
@@ -256,7 +256,7 @@ regime_comp <- cody_stocks2 %>%
 pdf(here("results/changepoint_comparison", "peltVstars.pdf"))
 a <- ggplot(regime_comp) + 
   geom_histogram(aes(diffs), color = "#006475", fill = "#00A1B7", alpha = 0.8, binwidth = 1) + 
-  xlab("difference in number of identified regime shifts") +
+  xlab("Difference in number of identified regime shifts") + ylab("Count") +
   geom_vline(xintercept = -1.2, linetype = 2) +
   theme_minimal()
 print(a)

@@ -85,8 +85,8 @@ pdf(here("results/lifespan_analysis", "max_age_regime_plot.pdf"))
 a <- ggplot(env_change_pt) + 
   geom_point(aes(x = age, y = regime_length, color = as.factor(fishery_type))) + 
   geom_abline(slope = 0.04876, intercept = 14.67006) + 
-  ylab("regime length") + xlab("species maximum age") +
-  scale_color_manual(values = natparks.pals("Banff", n = 9, type = "continuous"), name = "fishery type") +
+  ylab("Regime length") + xlab("Species maximum age") +
+  scale_color_manual(values = natparks.pals("Banff", n = 9, type = "continuous"), name = "Fishery type") +
   theme_minimal()
 print(a)
 dev.off()
@@ -99,7 +99,7 @@ counts <- counts %>%
 pdf(here("results/lifespan_analysis", "nregime_age_boxplot.pdf"))
 a <- ggplot(counts) +
   geom_boxplot(aes(y = as.factor(nregimes), x = age), fill = "#00A1B7") + 
-  labs(x = "species maximum age", y = "number of recruitment regimes") +
+  labs(x = "Species maximum age", y = "Number of recruitment regimes") +
   theme_minimal()
 print(a)
 dev.off()

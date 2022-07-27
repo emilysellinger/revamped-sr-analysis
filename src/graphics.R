@@ -84,7 +84,7 @@ stock_info <- stock_info %>%
   rename(stock_name = stockid)
 
 
-pdf("results/original_analysis/figures/final_rec_sb.pdf")
+pdf("results/original_analysis/figures/final_rec_sb.pdf", width = 11, height = 8.5)
 for(x in stock_model_fits$stock_name){
   row <- which(stock_model_fits$stock_name == x)
   
@@ -173,7 +173,7 @@ for(x in stock_model_fits$stock_name){
   
   # spawning biomass time series plot
   sb_ts_plot <- ggplot(data = stock, aes(x = year, y = sb)) +
-    geom_line(linetype = 2, size = 0.8) + labs(y = "Spawning Biomass" ,  title = common_name, subtitle = paste(scientific_name, region, "(a)", sep = "\n")) + 
+    geom_line(linetype = 2, size = 0.8) + labs(y = "Spawning biomass" ,  title = common_name, subtitle = paste(scientific_name, region, "(a)", sep = "\n")) + 
     theme_minimal() + theme(axis.title.x = element_blank(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
   
   # recruitment time series plot
@@ -208,7 +208,7 @@ for(x in stock_model_fits$stock_name){
     labs(x = "Spawning Biomass", y = "Recruits", subtitle = "(b)") + 
     scale_linetype_discrete(labels = c(paste("Ricker", ricker_lik), paste("BevHolt", bev_lik))) +
     theme_minimal() +
-    theme(legend.position = c(0.1, 0.9), legend.background = element_rect(fill = FALSE, color = FALSE),
+    theme(legend.position = "top", legend.background = element_rect(fill = FALSE, color = FALSE),
           legend.title = element_blank())
   
   # cross-correlation plot
@@ -236,14 +236,14 @@ for(x in stock_model_fits$stock_name){
       geom_hline(aes(yintercept = 0)) + geom_segment(mapping = aes(xend = lag, yend = 0)) +
       geom_hline(aes(yintercept = lim1), linetype = 2, color = "#006475") +
       geom_hline(aes(yintercept = lim0), linetype = 2, color = "#006475") + ylim(-0.5,1) + xlim(-10,10) + 
-      labs(subtitle = "(c)", y = "cross correlation") + theme_minimal() + 
-      geom_text(data = lab_points, aes(label = formatC(ccf, digits = 2)), vjust = -1)
+      labs(subtitle = "(c)", y = "Cross correlation", x = "Lag") + theme_minimal() + 
+      geom_text(data = lab_points, aes(label = formatC(ccf, digits = 2)), vjust = -1, position = position_dodge(width = 0.2))
   }else{
     cc_plot <- ggplot(data = stock_ccf_df, aes(x = lag, y = ccf)) +
       geom_hline(aes(yintercept = 0)) + geom_segment(mapping = aes(xend = lag, yend = 0)) +
       geom_hline(aes(yintercept = lim1), linetype = 2, color = "#006475") +
       geom_hline(aes(yintercept = lim0), linetype = 2, color = "#006475") + ylim(-0.5,1) +
-      labs(subtitle = "(c)", y = "cross correlation") + theme_minimal()
+      labs(subtitle = "(c)", y = "Cross correlation", x = "Lag") + theme_minimal()
   }
   
   # plot graphs

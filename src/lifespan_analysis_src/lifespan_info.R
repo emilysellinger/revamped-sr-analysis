@@ -76,34 +76,26 @@ env_change_pt %>%
   summarise(unique(stock_name))
 
 
-
-
-# create a scatter plot of age versus regime length
-fit <- lm(regime_length ~ age, data = env_change_pt)
-summary(fit)
-pdf(here("results/lifespan_analysis", "max_age_regime_plot.pdf"))
-a <- ggplot(env_change_pt) + 
-  geom_point(aes(x = age, y = regime_length, color = as.factor(fishery_type))) + 
-  geom_abline(slope = 0.04876, intercept = 14.67006) + 
-  ylab("Regime length") + xlab("Species maximum age") +
-  scale_color_manual(values = natparks.pals("Banff", n = 9, type = "continuous"), name = "Fishery type") +
-  theme_minimal()
-print(a)
-dev.off()
-
-
 # want to investigate if the number of regime shifts is related to age of the species
 counts <- counts %>%
   left_join(lifespan)
 
-pdf(here("results/lifespan_analysis", "nregime_age_boxplot.pdf"))
-a <- ggplot(counts) +
-  geom_boxplot(aes(y = as.factor(nregimes), x = age), fill = "#00A1B7") + 
-  labs(x = "Species maximum age", y = "Number of recruitment regimes") +
+# create a scatter plot of age versus regime length
+fit <- lm(regime_length ~ age, data = env_change_pt)
+summary(fit)
+pdf(here("results/lifespan_analysis", "age_regime_plots.pdf"))
+a <- ggplot(env_change_pt) + 
+  geom_point(aes(x = age, y = regime_length, color = as.factor(fishery_type))) + 
+  geom_abline(slope = 0.04876, intercept = 14.67006) + 
+  ylab("Regime length") + xlab("Species maximum age") + labs(subtitle = "(a)") +
+  scale_color_manual(values = natparks.pals("Banff", n = 9, type = "continuous"), name = "Fishery type") +
   theme_minimal()
-print(a)
+b <- ggplot(counts) +
+  geom_boxplot(aes(y = as.factor(nregimes), x = age), fill = "#00A1B7") + 
+  labs(x = "Species maximum age", y = "Number of recruitment regimes", subtitle = "(b)") +
+  theme_minimal()
+print(grid.arrange(a, b, nrow = 2, ncol = 1))
 dev.off()
-
 
 
 counts %>% filter(age <= 10) %>% summarise(avg_regimes = mean(n))

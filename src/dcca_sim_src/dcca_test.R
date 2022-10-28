@@ -172,8 +172,8 @@ steepness <- c(0.3,0.5,0.7,0.9)
 pdf(here("results/dcca_sim/AR_corr_sims_boxplot.pdf"))
 for(i in deps){
   for(j in steepness){
-    bh_sims <- BevHoltAR_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = i, R0 = 20, SPR0 = 3, h = j, arval = 0.5)
-    r_sims <- RickerAR_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = i, R0 = 20, h = j, S0 = 150, arval = 0.5)
+    bh_sims <- BevHoltAR_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = i, R0 = 20, SPR0 = 3, h = j, arval = 0.7)
+    r_sims <- RickerAR_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = i, R0 = 20, h = j, S0 = 150, arval = 0.7)
     
     # extract data
     bh_sb <- bh_sims[[1]]
@@ -214,6 +214,103 @@ for(i in deps){
     
   }
 }
+dev.off()
+
+
+# Regression analysis -------------------------------------------------------------
+get_corrs_sig <- function(spawn, recruit, error, Nsims){
+  
+  # create matrix for results
+  Nsims <- dim(spawn)[2]
+  corr_df <- matrix(NA, nrow = Nsims, ncol = 3)
+  
+  # calculate correlation coefficients
+  for(i in 1:Nsims){
+    # spearman's correlation
+    sp_rho <- cor.test(rank(recruit[,i]), rank(spawn[,i]))
+    corr_df[i,1] <- sp_rho$estimate
+    corr_df[i,2] <- sp_rho$p.value
+    if(abs(sp_rho$p.value) <= 0.05){
+      corr_df[i,3] <- 1
+    }else{
+      corr_df[i,3] <- 0
+    }
+  }
+  
+  # create data frame
+  corr_df <- tibble(sigmaR = as.vector(error),
+                    spearman = corr_df[,1],
+                    spearman_pval = corr_df[,2],
+                    sig_pval = corr_df[,3])
+  
+  return(corr_df)
+}
+
+## Steepness -------------------------------------------------------------------
+steepness <- seq(0.3, 0.9, 0.1)
+steepness_df <- matrix(NA, nrow = length(steepness)*5, ncol = 3)
+
+for(i in 1:length(steepness)){
+  bh_sims2 <- BevHoltAR_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = 0.5, 
+                            R0 = 20, SPR0 = 3, h = steepness[i], arval = 0.7)
+  
+  # extract data
+  bh_sb2 <- bh_sims2[[1]]
+  bh_r2 <- bh_sims2[[2]]
+  bh_sigmaR2 <- bh_sims2[[3]]
+  
+  # calculate correlations
+  bh_sim_corr2 <- get_corrs_sig(spawn = bh_sb2, recruit = bh_r2, error = bh_sigmaR2, Nsims = 10000)
+  # summarize percent detection
+  a <- bh_sim_corr2 %>% group_by(sigmaR) %>% summarise(prop_correct = sum(sig_pval)/n())
+  
+  # add to dataframe
+  steepness_df[(i*5 - 4):(i*5),1] <- rep(steepness[i],5)
+  steepness_df[(i*5 - 4):(i*5),2] <- a$sigmaR
+  steepness_df[(i*5 - 4):(i*5),3] <- a$prop_correct
+}
+
+steepness_df <- as_tibble(steepness_df)
+colnames(steepness_df) <- c("steepness", "sigmaR", "detected")
+
+
+pdf(here("results/dcca_sim/AR_BH_steepness_regression.pdf"))
+print(ggplot(steepness_df) + geom_line(aes(x = sigmaR, y = detected, color = as.factor(steepness)), size = 1) +
+  labs(x = "Recruitment error", y = "Percent detected", color = "Steepness", subtitle = "depletion = 0.5") +
+  scale_color_manual(values = natparks.pals("Banff")) + theme_minimal())
+dev.off()
+
+## Depletion --------------------------------------------------------
+deplet <- seq(0.2, 0.8, 0.1)
+deplet_df <- matrix(NA, nrow = length(deplet)*5, ncol = 3)
+
+for(i in 1:length(deplet)){
+  bh_sims2 <- BevHoltAR_sim(Nsims = 10000, Nyears = 50, SB0 = 150, depletion = deplet[i], 
+                            R0 = 20, SPR0 = 3, h = 0.5, arval = 0.7)
+  
+  # extract data
+  bh_sb2 <- bh_sims2[[1]]
+  bh_r2 <- bh_sims2[[2]]
+  bh_sigmaR2 <- bh_sims2[[3]]
+  
+  # calculate correlations
+  bh_sim_corr2 <- get_corrs_sig(spawn = bh_sb2, recruit = bh_r2, error = bh_sigmaR2, Nsims = 10000)
+  # summarize percent detection
+  a <- bh_sim_corr2 %>% group_by(sigmaR) %>% summarise(prop_correct = sum(sig_pval)/n())
+  
+  # add to dataframe
+  deplet_df[(i*5 - 4):(i*5),1] <- rep(deplet[i],5)
+  deplet_df[(i*5 - 4):(i*5),2] <- a$sigmaR
+  deplet_df[(i*5 - 4):(i*5),3] <- a$prop_correct
+}
+
+deplet_df <- as_tibble(deplet_df)
+colnames(deplet_df) <- c("depletion", "sigmaR", "detected")
+
+pdf(here("results/dcca_sim/AR_BH_depletion_regression.pdf"))
+print(ggplot(deplet_df) + geom_line(aes(x = sigmaR, y = detected, color = as.factor(depletion)), size = 1) +
+        labs(x = "Recruitment error", y = "Percent detected", color = "Depletion", subtitle = "steepness = 0.5") +
+        scale_color_manual(values = natparks.pals("Banff")) + theme_minimal())
 dev.off()
 
 

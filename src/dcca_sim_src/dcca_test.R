@@ -273,11 +273,12 @@ for(i in 1:length(steepness)){
 steepness_df <- as_tibble(steepness_df)
 colnames(steepness_df) <- c("steepness", "sigmaR", "detected")
 
+caption <- str_wrap("Percentage of simulations with a significant Spearman's correlation coefficient as a function of recruitment error. Lines represent the steepness parameter in the Beverton-Holt stock-recruitment relationship. The spawning biomass time series was generated using a AR(1) process with a autocorrelation coefficient of 0.7.", 100)
 
 pdf(here("results/dcca_sim/AR_BH_steepness_regression.pdf"))
 print(ggplot(steepness_df) + geom_line(aes(x = sigmaR, y = detected, color = as.factor(steepness)), size = 1) +
-  labs(x = "Recruitment error", y = "Percent detected", color = "Steepness", subtitle = "depletion = 0.5") +
-  scale_color_manual(values = natparks.pals("Banff")) + theme_minimal())
+  labs(x = "Recruitment error", y = "Percent detected", color = "Steepness", subtitle = "Simulated historical depletion = 0.5",
+       caption = caption) + scale_color_manual(values = natparks.pals("Banff")) + theme_minimal() + theme(plot.caption = element_text(hjust = 0)))
 dev.off()
 
 ## Depletion --------------------------------------------------------
@@ -307,10 +308,13 @@ for(i in 1:length(deplet)){
 deplet_df <- as_tibble(deplet_df)
 colnames(deplet_df) <- c("depletion", "sigmaR", "detected")
 
+caption <- str_wrap("Percentage of simulations with a significant Spearman's correlation coefficient as a function of recruitment error. Lines represent the historical depletion of the stock biomass. The spawning biomass time series was generated using a AR(1) process with a autocorrelation coefficient of 0.7.", 100)
+
 pdf(here("results/dcca_sim/AR_BH_depletion_regression.pdf"))
 print(ggplot(deplet_df) + geom_line(aes(x = sigmaR, y = detected, color = as.factor(depletion)), size = 1) +
-        labs(x = "Recruitment error", y = "Percent detected", color = "Depletion", subtitle = "steepness = 0.5") +
-        scale_color_manual(values = natparks.pals("Banff")) + theme_minimal())
+        labs(x = "Recruitment error", y = "Percent detected", color = "Depletion", subtitle = "Simulated stock-recruitment steepness = 0.5",
+             caption = caption) + scale_color_manual(values = natparks.pals("Banff")) + theme_minimal() +
+        theme(plot.caption = element_text(hjust = 0)))
 dev.off()
 
 

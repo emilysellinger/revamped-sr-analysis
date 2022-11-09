@@ -10,7 +10,8 @@ regime_change_plot <- function(x){
   stock <- retrieve_sr_data(x)
   
   # Fit regime model
-  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
+  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="Manual",
+                     pen.value = "2*(diffparam+1)*(n/(n-diffparam-2))", minseglen=6)
   
   # save change point locations for regimes
   changes	<- fitPelt@cpts
@@ -112,7 +113,7 @@ regime_change_plot <- function(x){
 # Method Comparison -------------------------------------------------------
 
 # plot the recruitment regimes identified by each of the three methods
-pdf("results/changepoint_comparison/regime_detection_comparison.pdf")
+pdf("results/changepoint_comparison/regime_detection_comparison_AICC.pdf")
 for(i in unique(env_change_pt$stock_name)){
   regime_change_plot(i)
 }
@@ -120,12 +121,12 @@ dev.off()
 
 # Also want to determine the difference in the number of regimes for each of the stocks
 # create tibble with s-r data
-shift_comp <- counts %>% 
+shift_comp <- counts2 %>% 
   filter(nshifts > 0) %>% 
   select(stock_name, nshifts) %>% 
   rename(nshifts_PELT = nshifts) %>% 
-  add_column(nshifts_MARSS = rep(NA, 172),
-             nshifts_BCP = rep(NA, 172))
+  add_column(nshifts_MARSS = rep(NA, 163),
+             nshifts_BCP = rep(NA, 163))
 
 # Looking at the graphs from above, I already know some have degenerate solutions for MARSS
 # will remove those stocks from the analysis below
@@ -213,7 +214,8 @@ for(x in cody_stocks2$stock_name){
   
   stock <- stock[complete.cases(stock), ]
   # Fit regime model
-  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="AIC",minseglen=6)
+  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="Manual",
+                     pen.value = "2*(diffparam+1)*(n/(n-diffparam-2))", minseglen=6)
   changes	<- fitPelt@cpts
   #print(changes)
   # calculate regime length
@@ -239,7 +241,7 @@ cody_counts <- cody_env_change_pt %>%
   mutate(nshifts = nregimes - 1) # number of times regime shift (1 regime = 0 shifts)
 
 
-cody_counts %>% filter(nshifts > 0) # 62 have regime shifts
+cody_counts %>% filter(nshifts > 0) # 60 have regime shifts
 
 # combine with regime count data
 cody_stocks2 <- cody_stocks2 %>% 
@@ -253,11 +255,73 @@ regime_comp <- cody_stocks2 %>%
   select(stock_name, nshifts, regime_changes) %>% 
   mutate(diffs = nshifts - regime_changes)
 
-pdf(here("results/changepoint_comparison", "peltVstars.pdf"))
+plot_caption <- str_wrap("Histogram of the difference in the number of indentified regimes shifts for PELT and STARS. Recruitment regimes were identified for each of the 371 stocks with some influence of environment on recruitment. The dotted line represents the mean difference in the number of recruitment regimes. On average, PELT identified one fewer regime than STARS.", 110)
+
+pdf(here("results/changepoint_comparison", "peltVstars_AICC.pdf"))
 a <- ggplot(regime_comp) + 
   geom_histogram(aes(diffs), color = "#006475", fill = "#00A1B7", alpha = 0.8, binwidth = 1) + 
   xlab("Difference in number of identified regime shifts") + ylab("Count") +
-  geom_vline(xintercept = -1.2, linetype = 2) +
-  theme_minimal()
+  labs(caption = plot_caption) +
+  theme_minimal() +
+  theme(plot.caption = element_text(hjust = 0)) +
+  geom_vline(xintercept = -1.3, linetype = 2) 
 print(a)
 dev.off()
+
+
+# checking
+cody_stocks3 <- cody_stocks %>% 
+  filter(regime_changes > 0)
+
+cody_stocks3 <- left_join(cody_stocks3, all_drivers)
+
+cody_stocks3 <- cody_stocks3 %>% filter(original_driver != "spawning biomass") %>% 
+  filter(driver != "spawning biomass")
+
+cody_env_change_pt2 <- tibble(
+  stock_name = "",
+  regime_length = numeric())
+
+for(x in cody_stocks3$stock_name){
+  # get stock and recruitment data
+  stock <- retrieve_old_sr_data(x)
+  
+  stock <- stock[complete.cases(stock), ]
+  # Fit regime model
+  fitPelt	<-cpt.mean(log(stock$recruits),method="PELT",test.stat="Normal",penalty="Manual",
+                     pen.value = "2*(diffparam+1)*(n/(n-diffparam-2))", minseglen=6)
+  changes	<- fitPelt@cpts
+  #print(changes)
+  # calculate regime length
+  for(y in 1:length(changes))
+  {
+    if(y==1)
+      ind1	<- 1
+    if(y>1)
+      ind1	<-changes[y-1]+1
+    ind2	<-changes[y]
+    regime_length	<-length(stock$recruits[ind1:ind2])
+    
+    cody_env_change_pt <- cody_env_change_pt %>%
+      add_row(stock_name = x,
+              regime_length = regime_length)
+  }
+}
+
+
+cody_counts2 <- cody_env_change_pt2 %>%
+  count(stock_name) %>% 
+  rename(nregimes = n) %>%  # number of regimes in time series
+  mutate(nshifts = nregimes - 1) # number of times regime shift (1 regime = 0 shifts)
+
+
+cody_counts %>% filter(nshifts > 0) # 60 have regime shifts
+
+# combine with regime count data
+cody_stocks3 <- cody_stocks3 %>% 
+  left_join(cody_counts, by = "stock_name")
+
+regime_comp2 <- cody_stocks3 %>% 
+  select(stock_name, nshifts, regime_changes) %>% 
+  mutate(diffs = nshifts - regime_changes)
+View(regime_comp2)

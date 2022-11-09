@@ -64,7 +64,7 @@ env_change_pt %>%
 env_drivers <- rbind(env_driven_stocks, edge_stocks)
 
 # Add lifespan data to change point data ----------------------------------------------------------------------------
-env_change_pt <- left_join(env_change_pt, env_drivers)
+env_change_pt <- left_join(env_change_pt2, env_drivers)
 
 # calculate average regime length/sd across all ages
 env_change_pt %>%
@@ -77,20 +77,20 @@ env_change_pt %>%
 
 
 # want to investigate if the number of regime shifts is related to age of the species
-counts <- counts %>%
+counts2 <- counts2 %>%
   left_join(lifespan)
 
 # create a scatter plot of age versus regime length
 fit <- lm(regime_length ~ age, data = env_change_pt)
 summary(fit)
-pdf(here("results/lifespan_analysis", "age_regime_plots.pdf"))
+pdf(here("results/lifespan_analysis", "age_regime_plots_AICC.pdf"))
 a <- ggplot(env_change_pt) + 
   geom_point(aes(x = age, y = regime_length, color = as.factor(fishery_type))) + 
   geom_abline(slope = 0.04876, intercept = 14.67006) + 
   ylab("Regime length") + xlab("Species maximum age") + labs(subtitle = "(a)") +
   scale_color_manual(values = natparks.pals("Banff", n = 9, type = "continuous"), name = "Fishery type") +
   theme_minimal()
-b <- ggplot(counts) +
+b <- ggplot(counts2) +
   geom_boxplot(aes(y = as.factor(nregimes), x = age), fill = "#00A1B7") + 
   labs(x = "Species maximum age", y = "Number of recruitment regimes", subtitle = "(b)") +
   theme_minimal()

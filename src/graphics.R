@@ -66,7 +66,7 @@ fao_regions <- fao_regions %>%
 
 pdf("results/original_analysis/figures/stock_map.pdf")
 ggplot() +
-  geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = natparks.pals("Glacier", 10)) +
+  geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = natparks.pals("Glacier", 11)[2:11]) +
   theme_classic() 
 dev.off() 
 svg("results/original_analysis/figures/stock_map.svg")

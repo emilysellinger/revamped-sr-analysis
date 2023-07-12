@@ -1,6 +1,3 @@
-# MARSS Structural Break example
-RShowDoc("Chapter_StructuralBreaks.R", package = "MARSS")
-
 
 # Functions -------------------------------------------------------
 regime_change_plot <- function(x){

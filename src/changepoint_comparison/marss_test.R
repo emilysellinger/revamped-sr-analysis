@@ -1,8 +1,6 @@
 
 # Functions -------------------------------------------------------
 regime_change_plot <- function(x){
-  row <- which(stock_model_fits$stock_name == x)
-  
   # create tibble with s-r data
   stock <- retrieve_sr_data(x)
   
@@ -56,7 +54,7 @@ regime_change_plot <- function(x){
   
   # recruitment time series plot
   rec_ts_plot <- ggplot(data = stock, aes(x = year, y = recruits)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_rect(data = rectangle_data, inherit.aes = FALSE, aes(xmin = xmin, xmax = xmax, ymin = ymin,
                                                               ymax = ymax, fill = as.factor(color_factor)), alpha = 0.5) +
     guides(fill = "none") +
@@ -101,8 +99,9 @@ regime_change_plot <- function(x){
     ylim(0, 1) + labs(x = "Year", y = "Posterior prob of change point", subtitle = "(c)") + 
     geom_hline(yintercept = 0.75, linetype = 2) + theme_minimal()
   
-  # print both graphs
-  print(grid.arrange(rec_ts_plot, level_change_plot, bcp_plot, nrow = 3))
+  # print graphs
+  print(rec_ts_plot + level_change_plot + bcp_plot + plot_layout(nrow = 3))
+  #print(grid.arrange(rec_ts_plot, level_change_plot, bcp_plot, nrow = 3))
 }
 
 

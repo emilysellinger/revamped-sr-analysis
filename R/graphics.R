@@ -64,16 +64,16 @@ fao_regions <- fao_regions %>%
   mutate(num_stocks = replace_na(num_stocks, 0))
  
 
-pdf("results/original_analysis/figures/stock_map.pdf")
-ggplot() +
+pdf(here("results/original_analysis/figures/stock_map.pdf"))
+print(ggplot() +
   geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = natparks.pals("Glacier", 11)[2:11]) +
-  theme_classic() 
+  theme_classic()) 
 dev.off() 
-svg("results/original_analysis/figures/stock_map.svg")
-ggplot() +
-  geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = rev(brewer.pal(5, "YlGnBu"))) +
-  theme_classic() 
-dev.off() 
+# svg("results/original_analysis/figures/stock_map.svg")
+# ggplot() +
+#   geom_sf(data = fao_regions, aes(fill = num_stocks)) + scale_fill_gradientn("Number of Stocks", colors = rev(brewer.pal(5, "YlGnBu"))) +
+#   theme_classic() 
+# dev.off() 
 
 # Stock-recruitment curves -----------------------------------------------------------------------------------------
 stock_info <- read_csv(here("ram_stock_info.csv")) # has area IDs for each stock

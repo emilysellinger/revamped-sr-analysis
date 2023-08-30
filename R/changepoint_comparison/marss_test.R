@@ -101,7 +101,7 @@ regime_change_plot <- function(x){
   
   # print graphs
   print(rec_ts_plot + level_change_plot + bcp_plot + plot_layout(nrow = 3))
-  #print(grid.arrange(rec_ts_plot, level_change_plot, bcp_plot, nrow = 3))
+  
 }
 
 
@@ -110,7 +110,7 @@ regime_change_plot <- function(x){
 
 # plot the recruitment regimes identified by each of the three methods
 pdf("results/changepoint_comparison/regime_detection_comparison_AICC.pdf")
-for(i in unique(env_change_pt$stock_name)){
+for(i in unique(env_change_pt2$stock_name)){
   regime_change_plot(i)
 }
 dev.off()
